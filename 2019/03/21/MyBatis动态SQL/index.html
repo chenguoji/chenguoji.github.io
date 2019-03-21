@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<html lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="人生如戏，全靠颜值">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="数据库">
+
+
+    <meta name="description" content="温馨提示：文中代码看不全可左右滑动MyBatis 令人喜欢的一大特性就是动态 SQL。 在使用 JDBC 的过程中， 根据条件进行 SQL 的拼接是很麻烦且很容易出错的。 
+MyBatis 动态...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>MyBatis动态SQL | 人生如戏，全靠颜值</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="人生如戏，全靠颜值" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="chen guoji">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 人生如戏，全靠颜值 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">人生如戏，全靠颜值</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/面试/"><i class="fa "></i>面试</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/技术/"><i class="fa "></i>技术</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/关于/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="MyBatis动态SQL">
+            
+	            MyBatis动态SQL
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/技术/">技术</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/数据库/">数据库</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/03/21</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="温馨提示：文中代码看不全可左右滑动"><a href="#温馨提示：文中代码看不全可左右滑动" class="headerlink" title="温馨提示：文中代码看不全可左右滑动"></a>温馨提示：文中代码看不全可左右滑动</h1><p>MyBatis 令人喜欢的一大特性就是动态 SQL。 在使用 JDBC 的过程中， 根据条件进行 SQL 的拼接是很麻烦且很容易出错的。 </p>
+<p>MyBatis 动态 SQL 的出现， 解决了这个麻烦。</p>
+<p>MyBatis通过 OGNL 来进行动态 SQL 的使用的。目前， 动态 SQL 支持以下几种标签：</p>
+<img src="/2019/03/21/MyBatis动态SQL/动态SQL标签.jpg" title="这是一个新的博客的图片的说明">
+<a id="more"></a>
+<p>一、 数据准备</p>
+<p>为了后面的演示， 创建了一个 Maven 项目 mybatis-dynamic, 创建了对应的数据库和表</p>
+<p>DROP TABLE IF EXISTS <code>student</code>;</p>
+<p>CREATE TABLE <code>student</code> (<br>  <code>student_id</code> int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT ‘编号’,<br>  <code>name</code> varchar(20) DEFAULT NULL COMMENT ‘姓名’,<br>  <code>phone</code> varchar(20) DEFAULT NULL COMMENT ‘电话’,<br>  <code>email</code> varchar(50) DEFAULT NULL COMMENT ‘邮箱’,<br>  <code>sex</code> tinyint(4) DEFAULT NULL COMMENT ‘性别’,<br>  <code>locked</code> tinyint(4) DEFAULT NULL COMMENT ‘状态(0:正常,1:锁定)’,<br>  <code>gmt_created</code> datetime DEFAULT CURRENT_TIMESTAMP COMMENT ‘存入数据库的时间’,<br>  <code>gmt_modified</code> datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT ‘修改的时间’,<br>  <code>delete</code> int(11) DEFAULT NULL,<br>  PRIMARY KEY (<code>student_id</code>)<br>) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT=’学生表’;</p>
+<p>二、 if 标签</p>
+<p>if 标签是我们最常使用的。 在查询、删除、更新的时候很可能会使用到。 必须结合 test 属性联合使用。</p>
+<p>2.1 在 WHERE 条件中使用 if 标签</p>
+<p>这是常见的一种现象， 我们在进行按条件查询的时候， 可能会有多种情况。</p>
+<p>2.1.1 查询条件</p>
+<p>根据输入的学生信息进行条件检索</p>
+<p>当只输入用户名时， 使用用户名进行模糊检索；<br>当只输入性别时， 使用性别进行完全匹配<br>当用户名和性别都存在时， 用这两个条件进行查询匹配查询<br>2.1.2 动态 SQL</p>
+<p>接口函数</p>
+<p> /**</p>
+<ul>
+<li>根据输入的学生信息进行条件检索</li>
+<li><ol>
+<li>当只输入用户名时， 使用用户名进行模糊检索；</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>当只输入邮箱时， 使用性别进行完全匹配</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>当用户名和性别都存在时， 用这两个条件进行查询匹配的用</li>
+</ol>
+</li>
+<li>@param student</li>
+<li>@return<br>*/<br> List<student> selectByStudentSelective(Student student);</student></li>
+</ul>
+<p>对应的动态 SQL</p>
+  <select id="selectByStudentSelective" resultmap="BaseResultMap" parametertype="com.homejim.mybatis.entity.Student"><br>    select<br>    <include refid="Base_Column_List"><br>    from student<br>    where 1=1<br>    <if test="name != null and name !=''"><br>      and name like concat(‘%’, #{name}, ‘%’)<br>    </if><br>    <if test="sex != null"><br>      and sex=#{sex}<br>    </if><br>  </include></select>
+
+<p>在此 SQL 语句中， where 1=1 是多条件拼接时的小技巧， 后面的条件查询就可以都用 and 了。</p>
+<p>同时， 我们添加了 if 标签来处理动态 SQL </p>
+<if test="name != null and name !=''"><br>  and name like concat(‘%’, #{name}, ‘%’)<br></if><br><if test="sex != null"><br>  and sex=#{sex}<br></if>  
+
+<p>此 if 标签的 test 属性值是一个符合 OGNL 的表达式， 表达式可以是 true 或 false。 如果表达式返回的是数值， 则0为 false, 非 0 为 true;</p>
+<p>2.1.3 测试</p>
+<p>@Test<br>    public void selectByStudent() {<br>        SqlSession sqlSession = null;<br>        sqlSession = sqlSessionFactory.openSession();<br>        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);</p>
+<pre><code>Student search = new Student();
+search.setName(&quot;明&quot;);
+
+System.out.println(&quot;只有名字时的查询&quot;);
+List&lt;Student&gt; studentsByName = studentMapper.selectByStudentSelective(search);
+for (int i = 0; i &lt; studentsByName.size(); i++) {
+    System.out.println(ToStringBuilder.reflectionToString(studentsByName.get(i), ToStringStyle.MULTI_LINE_STYLE));
+}
+
+search.setName(null);
+search.setSex((byte) 1);
+System.out.println(&quot;只有性别时的查询&quot;);
+List&lt;Student&gt; studentsBySex = studentMapper.selectByStudentSelective(search);
+for (int i = 0; i &lt; studentsBySex.size(); i++) {
+    System.out.println(ToStringBuilder.reflectionToString(studentsBySex.get(i), ToStringStyle.MULTI_LINE_STYLE));
+}
+
+System.out.println(&quot;姓名和性别同时存在的查询&quot;);
+search.setName(&quot;明&quot;);
+List&lt;Student&gt; studentsByNameAndSex = studentMapper.selectByStudentSelective(search);
+for (int i = 0; i &lt; studentsByNameAndSex.size(); i++) {
+    System.out.println(ToStringBuilder.reflectionToString(studentsByNameAndSex.get(i), ToStringStyle.MULTI_LINE_STYLE));
+}
+
+sqlSession.commit();
+sqlSession.close();
+</code></pre><p>只有名字时的查询， 发送的语句和结果</p>
+<p>查询的条件只发送了</p>
+<p>where 1=1 and name like concat(‘%’, ?, ‘%’) </p>
+<p>只有性别时的查询， 发送的语句和结果</p>
+<p>查询的条件只发送了</p>
+<p>where 1=1 and sex=? </p>
+<p>姓名和性别同时存在的查询， 发送的语句和结果        </p>
+<p>查询条件</p>
+<p>where 1=1 and name like concat(‘%’, ?, ‘%’) and sex=? </p>
+<p>2.2 在 UPDATE 更新列中使用 if 标签</p>
+<p>有时候我们不希望更新所有的字段， 只更新有变化的字段。</p>
+<p>2.2.1 更新条件</p>
+<p>只更新有变化的字段， 空值不更新。</p>
+<p>2.2.1 动态 SQL</p>
+<p>接口方法</p>
+<pre><code>/**
+ * 更新非空属性
+ */
+int updateByPrimaryKeySelective(Student record);
+</code></pre><p>对应的 SQL</p>
+<p>  <update id="updateByPrimaryKeySelective" parametertype="com.homejim.mybatis.entity.Student"><br>    update student<br>    <set><br>      <if test="name != null"><br>        <code>name</code> = #{name,jdbcType=VARCHAR},<br>      </if><br>      <if test="phone != null"><br>        phone = #{phone,jdbcType=VARCHAR},<br>      </if><br>      <if test="email != null"><br>        email = #{email,jdbcType=VARCHAR},<br>      </if><br>      <if test="sex != null"><br>        sex = #{sex,jdbcType=TINYINT},<br>      </if><br>      <if test="locked != null"><br>        locked = #{locked,jdbcType=TINYINT},<br>      </if><br>      <if test="gmtCreated != null"><br>        gmt_created = #{gmtCreated,jdbcType=TIMESTAMP},<br>      </if><br>      <if test="gmtModified != null"><br>        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},<br>      </if><br>    </set><br>    where student_id = #{studentId,jdbcType=INTEGER}<br>2.2.3 测试</update></p>
+<pre><code>@Test
+public void updateByStudentSelective() {
+    SqlSession sqlSession = null;
+    sqlSession = sqlSessionFactory.openSession();
+    StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+
+    Student student = new Student();
+    student.setStudentId(1);
+    student.setName(&quot;明明&quot;);
+    student.setPhone(&quot;13838438888&quot;);
+    System.out.println(studentMapper.updateByPrimaryKeySelective(student));
+
+    sqlSession.commit();
+    sqlSession.close();2.3 在 INSERT 动态插入中使用 if 标签
+</code></pre><p>我们插入数据库中的一条记录， 不是每一个字段都有值的， 而是动态变化的。 在这时候使用 if 标签， 可帮我们解决这个问题。</p>
+<p>2.3.1 插入条件</p>
+<p>只有非空属性才插入。</p>
+<p>2.3.2 动态SQL</p>
+<p>接口方法</p>
+<pre><code>/**
+ * 非空字段才进行插入
+ */
+int insertSelective(Student record);
+</code></pre><p>对应的SQL</p>
+<p><insert id="insertSelective" parametertype="com.homejim.mybatis.entity.Student"><br>    insert into student<br>    <trim prefix="(" suffix=")" suffixoverrides=","><br>      <if test="studentId != null"><br>        student_id,<br>      </if><br>      <if test="name != null"><br>        <code>name</code>,<br>      </if><br>      <if test="phone != null"><br>        phone,<br>      </if><br>      <if test="email != null"><br>        email,<br>      </if><br>      <if test="sex != null"><br>        sex,<br>      </if><br>      <if test="locked != null"><br>        locked,<br>      </if><br>      <if test="gmtCreated != null"><br>        gmt_created,<br>      </if><br>      <if test="gmtModified != null"><br>        gmt_modified,<br>      </if><br>    </trim><br>    <trim prefix="values (" suffix=")" suffixoverrides=","><br>      <if test="studentId != null"></if></trim></insert></p>
+<pre><code>    #{studentId,jdbcType=INTEGER},
+  &lt;/if&gt;
+  &lt;if test=&quot;name != null&quot;&gt;
+    #{name,jdbcType=VARCHAR},
+  &lt;/if&gt;
+  &lt;if test=&quot;phone != null&quot;&gt;
+    #{phone,jdbcType=VARCHAR},
+  &lt;/if&gt;
+  &lt;if test=&quot;email != null&quot;&gt;
+    #{email,jdbcType=VARCHAR},
+  &lt;/if&gt;
+  &lt;if test=&quot;sex != null&quot;&gt;
+    #{sex,jdbcType=TINYINT},
+  &lt;/if&gt;
+  &lt;if test=&quot;locked != null&quot;&gt;
+    #{locked,jdbcType=TINYINT},
+  &lt;/if&gt;
+  &lt;if test=&quot;gmtCreated != null&quot;&gt;
+    #{gmtCreated,jdbcType=TIMESTAMP},
+  &lt;/if&gt;
+  &lt;if test=&quot;gmtModified != null&quot;&gt;
+    #{gmtModified,jdbcType=TIMESTAMP},
+  &lt;/if&gt;
+&lt;/trim&gt;
+</code></pre><p>  <br>这个 SQL 大家应该很熟悉， 毕竟是自动生成的。</p>
+<p>2.3.3 测试</p>
+<pre><code>@Test
+public void insertByStudentSelective() {
+    SqlSession sqlSession = null;
+    sqlSession = sqlSessionFactory.openSession();
+    StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+
+    Student student = new Student();
+    student.setName(&quot;小飞机&quot;);
+    student.setPhone(&quot;13838438899&quot;);
+    student.setEmail(&quot;xiaofeiji@qq.com&quot;);
+    student.setLocked((byte) 0);
+
+    System.out.println(studentMapper.insertSelective(student));
+
+    sqlSession.commit();
+    sqlSession.close();
+}
+</code></pre><p>SQL 中， 只有非空的字段才进行了插入。</p>
+<p>七、代码</p>
+<p>使用示例：</p>
+<p><a href="https://github.com/homejim/mybatis-examples" target="_blank" rel="noopener">https://github.com/homejim/mybatis-examples</a></p>
+<p>转载来源:<br>作者：阿进的写字台<br>cnblogs.com/homejim/p/9909657.html</p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="/img/reward-wepay.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="/img/wepay.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">如果本文对你有所帮助，请打赏 1元就足够感动我</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2019/03/21/qd/" class="pre-post btn btn-default" title="Web 实时推送技术的总结">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Web 实时推送技术的总结</span>
+        </a>
+    
+    
+        <a href="/2019/03/19/hexo搭建/" class="next-post btn btn-default" title="github+hexo搭建博客">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">github+hexo搭建博客</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#温馨提示：文中代码看不全可左右滑动"><span class="toc-text">温馨提示：文中代码看不全可左右滑动</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+				<span>本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议。</span><br>
+                <span>Copyright &copy; 2019-2021
+                </span> |
+                <span>
+                    开发陈博客 www.chenguoji.com 
+                </span> |
+				<span>
+                    基于 <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a> 搭建 主题 <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span> |
+                <span>
+                    <a href="/sitemap.xml" class="copyright-links" target="_blank" rel="nofollow">博客地图</a>
+                </span> |
+				<span>
+                    <a href="/atom.xml" class="copyright-links" target="_blank" rel="nofollow">RSS订阅</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
