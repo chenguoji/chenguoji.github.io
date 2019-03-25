@@ -16,10 +16,16 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content>
+    <meta name="keywords" content="java,面试">
 
 
-    <meta name="description" content>
+    <meta name="description" content="初级程序猿面试一般会问的问题。
+可以按照以下回答：
+1. final 可以用来修饰类、方法、变量。分别有不同的意义：
+
+final 修饰的 class 代表不可以继承扩展
+
+final 的变量是...">
 
 
 
@@ -31,7 +37,7 @@
     <!--Title-->
 
 
-<title>Category: 面试 | 人生如戏，全靠颜值</title>
+<title>谈谈final、finally、finalize有什么不同？ | 人生如戏，全靠颜值</title>
 
 
     <link rel="alternate" href="/atom.xml" title="人生如戏，全靠颜值" type="application/atom+xml">
@@ -132,67 +138,137 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <ol class="breadcrumb">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="谈谈final、finally、finalize有什么不同？">
+            
+	            谈谈final、finally、finalize有什么不同？
+            
+        </h1>
+        <div class="post-meta">
     
-    
-        <li>
-            面试
-        </li>
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/技术/">技术</a>
+        </span>
     
 
-</ol>
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/java/">java</a> <a class="tag-link" href="/tags/面试/">面试</a>
+                
+            </span>
+        </span>
+    
 
-
-    <article class="post">
+    
         
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/2019/03/25/面试官必问的8道volatile关键字命题，你答对了吗？/">面试官必问的8道volatile关键字命题，你答对了吗？</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime title>
-                        2019年03月25日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    在Java相关的岗位面试中，很多面试官都喜欢考察面试者对Java并发的了解程度，而以volatile关键字作为一个小的切入点，往往可以一问到底，
-把Java内存模型（JMM），Java并发编程的一些特性都牵扯出来，深入地话还可以考察J...
-                
-            </p>
-        </div>
-    </article>
- 
-    <article class="post">
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/03/23</span>
+        </span>
         
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/2019/03/21/Java面试/">Java面试中最高频的那20%知识点！</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime title>
-                        2019年03月21日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Java目前已经不仅仅是一门开发语言，而是一整套生态体系。
-作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。
-但是，无论是日常工作还是面试问题，也都符合二八原则。即...
-                
-            </p>
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>初级程序猿面试一般会问的问题。</p>
+<p>可以按照以下回答：</p>
+<h2 id="1-final-可以用来修饰类、方法、变量。"><a href="#1-final-可以用来修饰类、方法、变量。" class="headerlink" title="1. final 可以用来修饰类、方法、变量。"></a>1. final 可以用来修饰类、方法、变量。</h2><pre><code>分别有不同的意义：
+
+final 修饰的 class 代表不可以继承扩展
+
+final 的变量是不可以修改的
+
+final 的方法也是不可以重写的（override）
+</code></pre><h2 id="2-finally-则是-Java-保证重点代码一定要被执行的一种机制。"><a href="#2-finally-则是-Java-保证重点代码一定要被执行的一种机制。" class="headerlink" title="2. finally 则是 Java 保证重点代码一定要被执行的一种机制。"></a>2. finally 则是 Java 保证重点代码一定要被执行的一种机制。</h2><pre><code>我们可以使用 try-finally 或者 try-catch-finally 来进行类似关闭 JDBC 连接、保证 unlock 锁等动作。
+</code></pre><h2 id="3-finalize-是基础类-java-lang-Object-的一个方法。"><a href="#3-finalize-是基础类-java-lang-Object-的一个方法。" class="headerlink" title="3.finalize 是基础类 java.lang.Object 的一个方法。"></a>3.finalize 是基础类 java.lang.Object 的一个方法。</h2><pre><code>它的设计目的是保证对象在被垃圾收集前完成特定资源的回收。
+</code></pre><p>注意事项：<br>1，不要在 finally 中使用 return 语句。<br>2，finally 总是执行，除非程序或者线程被中断。</p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="/img/reward-alipay.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="/img/wepay.jpg"><b>微信打赏</b>
+                </span>
+            
         </div>
-    </article>
- 
+    </div>
+    <p class="reward-tip">如果本文对你有所帮助，请打赏 1元就足够感动我</p>
+</div>
 
 
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本站文章除注明转载/出处外，均为本站原创或翻译，商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2019/03/25/Redis的各项功能解决了哪些问题？/" class="pre-post btn btn-default" title redis的各项功能解决了哪些问题？''>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">'Redis的各项功能解决了哪些问题？'</span>
+        </a>
+    
+    
+        <a href="/2019/03/23/请对比Exception和Error有什么区别？/" class="next-post btn btn-default" title="请对比Exception和Error有什么区别？">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">请对比Exception和Error有什么区别？</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
+        })
+    </script>
+
+
+    </div>
 
 
 
@@ -200,114 +276,14 @@
 
                 </main>
                 
-                    
-    <aside class="col-md-4 sidebar">
-        
-        
+                    <aside id="article-toc" role="navigation" class="col-md-4">
     <div class="widget">
-        <h3 class="title">搜索</h3>
-        <div id="search-form">
-            <div id="result-mask" class="hide"></div>
-            <div class="search-area">
-                
-                    <input id="search-key" type="search" autocomplete="off" placeholder="搜索点啥呢？">
-                    <button type="button" class="search-form-submit" id="search-local">局部搜索</button>
-                
-                
-            </div>
-            <div id="result-wrap" class="hide">
-                <div id="search-result"></div>
-            </div>
-            <div class="hide">
-                <template id="search-tpl">
-                    <div class="item">
-                        <a href="/{path}" title="{title}">
-                            <div class="title">{title}</div>
-                            <div class="content">{content}</div>
-                        </a>
-                    </div>
-                </template>
-            </div>
-        </div>
-    </div>
-
+        <h3 class="title">目录</h3>
         
-        
-    <div class="widget">
-        <h3 class="title">网站公告</h3>
-        <div class="notification">
-            <p>
-    主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br>
-    主题使用：<a href="https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md#常见问题" title target="_blank">常见使用问题</a> <br>
-    支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
-</p>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget">
-      <h3 class="title">联系博主</h3> 
-        <div class="content social">
-            
-	            <a href="mailto:chenguo_ji@163.com" rel="external nofollow" title="邮箱" target="_blank">
-			    	<i class="envelope-o fa fa-envelope-o"></i>
-			    </a>
-            
-	            <a href="//wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes" rel="external nofollow" title="联系QQ" target="_blank">
-			    	<i class="qq fa fa-qq"></i>
-			    </a>
-            
-	            <a href="//jq.qq.com/?_wv=1027&k=5emDZTW" rel="external nofollow" title="QQ群" target="_blank">
-			    	<i class="users fa fa-users"></i>
-			    </a>
-            
-        </div>
-    </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">分类</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/关于/"><i class="fa" aria-hidden="true">关于</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/"><i class="fa" aria-hidden="true">技术</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试/"><i class="fa" aria-hidden="true">面试</i></a><span class="category-list-count">2</span></li></ul>
-    </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">归档</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/"><i class="fa" aria-hidden="true">2019年03月</i></a><span class="archive-list-count">9</span></li></ul>
-    </div>
-
-
-        
-        
-  <div class="widget">
-    <h3 class="title">标签云</h3>
-    <div class="content tag-cloud">
-        
-            <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/java、并发/" style="font-size: 10px;">java、并发</a> <a href="/tags/博客说明/" style="font-size: 10px;">博客说明</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-final-可以用来修饰类、方法、变量。"><span class="toc-text">1. final 可以用来修饰类、方法、变量。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-finally-则是-Java-保证重点代码一定要被执行的一种机制。"><span class="toc-text">2. finally 则是 Java 保证重点代码一定要被执行的一种机制。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-finalize-是基础类-java-lang-Object-的一个方法。"><span class="toc-text">3.finalize 是基础类 java.lang.Object 的一个方法。</span></a></li></ol>
         
     </div>
-  </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">友情链接</h3>
-        <div class="content friends-link">
-        
-            <a href="https://hexo.io/zh-cn/" class="fa" target="_blank">Hexo官网</a>
-        
-        </div>
-    </div>
-
-
-        
-    </aside>
+</aside>
 
                 
             </div>
@@ -357,8 +333,6 @@
     </div>
 </div>
 
-
-	<script src="/js/search.js?rev=@@hash"></script>
 
 
 
