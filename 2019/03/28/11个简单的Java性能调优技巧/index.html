@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<html lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="人生如戏，全靠颜值">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="java">
+
+
+    <meta name="description" content="大多数开发人员理所当然地以为性能优化很复杂，需要大量的经验和知识。好吧，不能说这是完全错误的。优化应用程序以获得最佳性能不是一件容易的事情。但是，这并不意味着如果你不具备这些知识，就不能做任何事...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>11个简单的Java性能调优技巧 | 人生如戏，全靠颜值</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="人生如戏，全靠颜值" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="chen guoji">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 人生如戏，全靠颜值 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">人生如戏，全靠颜值</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/面试/"><i class="fa "></i>面试</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/技术/"><i class="fa "></i>技术</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/关于/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="11个简单的Java性能调优技巧">
+            
+	            11个简单的Java性能调优技巧
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/面试/">面试</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/java/">java</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/03/28</span>
+        </span>
+        
+            <span class="fa-wrap">
+                <i class="fa fa-eye"></i>
+                <span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>大多数开发人员理所当然地以为性能优化很复杂，需要大量的经验和知识。好吧，不能说这是完全错误的。<br>优化应用程序以获得最佳性能不是一件容易的事情。但是，这并不意味着如果你不具备这些知识，就不能做任何事情。</p>
+<p>这里有11个易于遵循的建议和最佳实践可以帮助你创建一个性能良好的应用程序。</p>
+<p>大部分建议是针对Java的。但也有若干建议是与语言无关的，可以应用于所有应用程序和编程语言。<br>在讨论专门针对Java的性能调优技巧之前，让我们先来看看通用技巧。</p>
+<h1 id="1-在你知道必要之前不要优化"><a href="#1-在你知道必要之前不要优化" class="headerlink" title="1.在你知道必要之前不要优化"></a>1.在你知道必要之前不要优化</h1><p>这可能是最重要的性能调整技巧之一。你应该遵循常见的最佳实践做法并尝试高效地实现用例。<br>但是，这并不意味着在你证明必要之前，你应该更换任何标准库或构建复杂的优化。</p>
+<p>在大多数情况下，过早优化不但会占用大量时间，而且会使代码变得难以阅读和维护。<br>更糟糕的是，这些优化通常不会带来任何好处，因为你花费大量时间来优化的是应用程序的非关键部分。</p>
+<p>那么，你如何证明你需要优化一些东西呢？</p>
+<p>首先，你需要定义应用程序代码的速度得多快，例如，为所有API调用指定最大响应时间，或者指定在特定时间范围内要导入的记录数量。<br>在完成这些之后，你就可以测量应用程序的哪些部分太慢需要改进。然后，接着看第二个技巧。</p>
+<h1 id="2-使用分析器查找真正的瓶颈"><a href="#2-使用分析器查找真正的瓶颈" class="headerlink" title="2.使用分析器查找真正的瓶颈"></a>2.使用分析器查找真正的瓶颈</h1><p>在你遵循第一个建议并确定了应用程序的某些部分需要改进后，那么从哪里开始呢？</p>
+<p>你可以用两种方法来解决问题：</p>
+<pre><code>查看你的代码，并从看起来可疑或者你觉得可能会产生问题的部分开始。
+或者使用分析器并获取有关代码每个部分的行为和性能的详细信息。
+</code></pre><p>希望不需要我解释为什么应该始终遵循第二种方法的原因。</p>
+<p>很明显，基于分析器的方法可以让你更好地理解代码的性能影响，并使你能够专注于最关键的部分。<br>如果你曾使用过分析器，那么你一定记得曾经你是多么惊讶于一下就找到了代码的哪些部分产生了性能问题。<br>老实说，我第一次的猜测不止一次地导致我走错了方向。    </p>
+<h1 id="3-为整个应用程序创建性能测试套件"><a href="#3-为整个应用程序创建性能测试套件" class="headerlink" title="3.为整个应用程序创建性能测试套件"></a>3.为整个应用程序创建性能测试套件</h1><p>这是另一个通用技巧，可以帮助你避免在将性能改进部署到生产后经常会发生的许多意外问题。<br>你应该总是定义一个测试整个应用程序的性能测试套件，并在性能改进之前和之后运行它。</p>
+<p>这些额外的测试运行将帮助你识别更改的功能和性能副作用，并确保不会导致弊大于利的更新。<br>如果你工作于被应用程序若干不同部分使用的组件，如数据库或缓存，那么这一点就尤其重要。</p>
+<h1 id="4-首先处理最大的瓶颈"><a href="#4-首先处理最大的瓶颈" class="headerlink" title="4.首先处理最大的瓶颈"></a>4.首先处理最大的瓶颈</h1><p>在创建测试套件并使用分析器分析应用程序之后，你可以列出一系列需要解决以提高性能的问题。<br>这很好，但它仍然不能回答你应该从哪里开始的问题。你可以专注于速效方案，或从最重要的问题开始。<br><a href="https://mp.weixin.qq.com/s/yzSR_vkI7-WR71l2A0cq2w" target="_blank" rel="noopener">Java 程序员必须清楚的 7 个性能指标</a>，这个你也必须会。</p>
+<p>速效方案一开始可能会很有吸引力，因为你可以很快显示第一个成果。<br>但有时，可能需要你说服其他团队成员或管理层认为性能分析是值得的——因为暂时看不到效果。</p>
+<p>但总的来说，我建议首先处理最重要的性能问题。这将为你提供最大的性能改进，而且可能再也不需要去解决其中一些为了满足性能需求的问题。<br>常见的性能调整技巧到此结束。下面让我们仔细看看一些特定于Java的技巧。</p>
+<h1 id="5-使用StringBuilder以编程方式连接String"><a href="#5-使用StringBuilder以编程方式连接String" class="headerlink" title="5.使用StringBuilder以编程方式连接String"></a>5.使用StringBuilder以编程方式连接String</h1><p>有很多不同的选项来连接Java中的String。例如，你可以使用简单的+或+ =，以及StringBuffer或StringBuilder。String 真的是不可变的吗？</p>
+<p>那么，你应该选择哪种方法？</p>
+<p>答案取决于连接String的代码。如果你是以编程方式添加新内容到String中，例如在for循环中，那么你应该使用StringBuilder。<br>它很容易使用，并提供比StringBuffer更好的性能。但请记住，与StringBuffer相比，StringBuilder不是线程安全的，可能不适合所有用例。<br>StringBuffer 和 StringBuilder 的 3 个区别，这个你必须清楚。</p>
+<p>你只需要实例化一个新的StringBuilder并调用append方法来向String中添加一个新的部分。<br>在你添加了所有的部分之后，你就可以调用toString()方法来检索连接的String。</p>
+<p>下面的代码片段显示了一个简单的例子。在每次迭代期间，这个循环将i转换为一个String，并将它与一个空格一起添加到StringBuilder sb中。<br>所以，最后，这段代码将在日志文件中写入“This is a test0 1 2 3 4 5 6 7 8 9”。</p>
+<pre><code>StringBuilder sb = new StringBuilder(“This is a test”);
+for (int i=0; i&lt;10; i++) {
+sb.append(i);
+sb.append(” “);
+}
+log.info(sb.toString());
+</code></pre><p>正如在代码片段中看到的那样，你可以将String的第一个元素提供给构造方法。<br>这将创建一个新的StringBuilder，新的StringBuilder包含提供的String和16个额外字符的容量。<br>当你向StringBuilder添加更多字符时，JVM将动态增加StringBuilder的大小。</p>
+<p>如果你已经知道你的String将包含多少个字符，则可以将该数字提供给不同的构造方法以实例化具有定义容量的StringBuilder。<br>这进一步提高了效率，因为它不需要动态扩展其容量。</p>
+<h1 id="6-使用-连接一个语句中的String"><a href="#6-使用-连接一个语句中的String" class="headerlink" title="6.使用+连接一个语句中的String"></a>6.使用+连接一个语句中的String</h1><p>当你用Java实现你的第一个应用程序时，可能有人告诉过你不应该用+来连接String。如果你是在应用程序逻辑中连接字符串，这是正确的。<br>字符串是不可变的，每个字符串的连接结果都存储在一个新的String对象中。这需要额外的内存，会减慢你的应用程序，特别是如果你在一个循环内连接多个字符串的话。</p>
+<p>在这些情况下，你应该遵循技巧5并使用StringBuilder。</p>
+<p>但是，如果你只是将字符串分成多行来改善代码的可读性，那情况就不一样了。</p>
+<pre><code>Query q = em.createQuery(“SELECT a.id, a.firstName, a.lastName ”
++ “FROM Author a ”
++ “WHERE a.id = :id”);
+</code></pre><p>在这些情况下，你应该用一个简单的+来连接你的字符串。Java编译器会对此优化并在编译时执行连接。所以，在运行时，你的代码将只使用1个String，不需要连接。</p>
+<h1 id="7-尽可能使用基元"><a href="#7-尽可能使用基元" class="headerlink" title="7.尽可能使用基元"></a>7.尽可能使用基元</h1><p>避免任何开销并提高应用程序性能的另一个简便而快速的方法是使用基本类型而不是其包装类。<br>所以，最好使用int来代替Integer，使用double来代替Double。这允许JVM将值存储在堆栈而不是堆中以减少内存消耗，并作出更有效的处理。</p>
+<h1 id="8-试着避免BigInteger和BigDecimal"><a href="#8-试着避免BigInteger和BigDecimal" class="headerlink" title="8.试着避免BigInteger和BigDecimal"></a>8.试着避免BigInteger和BigDecimal</h1><p>既然我们在讨论数据类型，那么我们也快速浏览一下BigInteger和BigDecimal吧。<br>尤其是后者因其精确性而受到大家的欢迎。但是这是有代价的。</p>
+<p>BigInteger和BigDecimal比简单的long或double需要更多的内存，并且会显著减慢所有计算。<br>所以，你如果需要额外的精度，或者数字将超过long的范围，那么最好三思而后行。<br>这可能是你需要更改以解决性能问题的唯一方法，特别是在实现数学算法的时候。<br><a href="https://mp.weixin.qq.com/s/NFLfeZLjMuZELEh2Cx7cIA" target="_blank" rel="noopener">金融系统中正确的金额计算及存储方式</a>，这个你了解下。</p>
+<p>9.首先检查当前日志级别</p>
+<p>这个建议应该是显而易见的，但不幸的是，很多程序员在写代码的时候都会大多会忽略它。<br>在你创建调试消息之前，始终应该首先检查当前日志级别。否则，你可能会创建一个之后会被忽略的日志消息字符串。</p>
+<p>这里有两个反面例子。</p>
+<pre><code>// don’t do this
+log.debug(“User [” + userName + “] called method X with [” + i + “]”);
+
+// or this
+log.debug(String.format(“User [%s] called method X with [%d]”, userName, i));
+</code></pre><p>在上面两种情况中，你都将执行创建日志消息所有必需的步骤，在不知道日志框架是否将使用日志消息的前提下。<br>因此在创建调试消息之前，最好先检查当前的日志级别。</p>
+<pre><code>// do this
+if (log.isDebugEnabled()) { 
+  log.debug(“User [” + userName + “] called method X with [” + i + “]”);
+}
+</code></pre><h1 id="10-使用Apache-Commons-StringUtils-Replace而不是String-replace"><a href="#10-使用Apache-Commons-StringUtils-Replace而不是String-replace" class="headerlink" title="10.使用Apache Commons StringUtils.Replace而不是String.replace"></a>10.使用Apache Commons StringUtils.Replace而不是String.replace</h1><p>一般来说，String.replace方法工作正常，效率很高，尤其是在使用Java 9的情况下。<br>但是，如果你的应用程序需要大量的替换操作，并且没有更新到最新的Java版本，那么我们依然有必要查找更快和更有效的替代品。</p>
+<p>有一个备选答案是Apache Commons Lang的StringUtils.replace方法。<br>正如Lukas Eder在他最近的一篇博客文章中所描述的，StringUtils.replace方法远胜Java 8的String.replace方法。</p>
+<p>而且它只需要很小的改动。即添加Apache Commons Lang项目的Maven依赖项到应用程序pom.xml中，并将String.replace方法的所有调用替换为StringUtils.replace方法。</p>
+<pre><code>// replace this
+test.replace(“test”, “simple test”);
+
+// with this
+StringUtils.replace(test, “test”, “simple test”);
+</code></pre><h1 id="11-缓存昂贵的资源，如数据库连接"><a href="#11-缓存昂贵的资源，如数据库连接" class="headerlink" title="11.缓存昂贵的资源，如数据库连接"></a>11.缓存昂贵的资源，如数据库连接</h1><p>缓存是避免重复执行昂贵或常用代码片段的流行解决方案。总的思路很简单：重复使用这些资源比反复创建新的资源要便宜。</p>
+<p>一个典型的例子是缓存池中的数据库连接。新连接的创建需要时间，如果你重用现有连接，则可以避免这种情况。</p>
+<p>你还可以在Java语言本身找到其他例子。例如，Integer类的valueOf方法缓存了-128到127之间的值。<br>你可能会说创建一个新的Integer并不是太昂贵，但是由于它经常被使用，以至于缓存最常用的值也可以提供性能优势。</p>
+<p>但是，当你考虑缓存时，请记住缓存实现也会产生开销。你需要花费额外的内存来存储可重用资源，因此你可能需要管理缓存以使资源可访问，以及删除过时的资源。</p>
+<p>所以，在开始缓存任何资源之前，请确保实施缓存是值得的，也就是说必须足够多地使用它们。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>正如你所看到的，有时不需要太多工作就可以提高应用程序的性能。本文中的大部分建议只需要你稍作努力就可以将它们应用于你的代码。</p>
+<p>但是，最重要的还是那些与是什么编程语言无关的技巧：</p>
+<pre><code>在你知道必要之前不要优化
+使用分析器查找真正的瓶颈
+首先处理最大的瓶颈
+</code></pre><p>来源：<br>原文：11 Simple Java Performance Tuning Tips<br>译文：<a href="http://www.codeceo.com/article/11-simple-java-performance-tips.html" target="_blank" rel="noopener">http://www.codeceo.com/article/11-simple-java-performance-tips.html</a> </p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="/img/reward-alipay.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="/img/wepay.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">如果本文对你有所帮助，请打赏 1元就足够感动我</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本站文章除注明转载/出处外，均为本站原创或翻译，商业转载请联系作者获得授权,非商业转载请注明出处
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2019/03/26/面试不懂「微服务架构」原理？不怕被pass了？/" class="next-post btn btn-default" title="面试不懂「微服务架构」原理？不怕被pass了？">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">面试不懂「微服务架构」原理？不怕被pass了？</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-在你知道必要之前不要优化"><span class="toc-text">1.在你知道必要之前不要优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-使用分析器查找真正的瓶颈"><span class="toc-text">2.使用分析器查找真正的瓶颈</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-为整个应用程序创建性能测试套件"><span class="toc-text">3.为整个应用程序创建性能测试套件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-首先处理最大的瓶颈"><span class="toc-text">4.首先处理最大的瓶颈</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-使用StringBuilder以编程方式连接String"><span class="toc-text">5.使用StringBuilder以编程方式连接String</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-使用-连接一个语句中的String"><span class="toc-text">6.使用+连接一个语句中的String</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-尽可能使用基元"><span class="toc-text">7.尽可能使用基元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-试着避免BigInteger和BigDecimal"><span class="toc-text">8.试着避免BigInteger和BigDecimal</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-使用Apache-Commons-StringUtils-Replace而不是String-replace"><span class="toc-text">10.使用Apache Commons StringUtils.Replace而不是String.replace</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-缓存昂贵的资源，如数据库连接"><span class="toc-text">11.缓存昂贵的资源，如数据库连接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+        本站总访问量:
+        <strong id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </strong>
+		次		
+		<span class="post-meta-divider">|</span>
+        本站访客数:
+        <strong id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </strong>
+		人
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+				<span>本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议。</span><br>				
+                <span>Copyright &copy; 2019-2021
+                </span> |
+                <span>
+                    开发陈博客 www.chenguoji.com 
+                </span> |
+				<span>
+                    基于 <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a> 搭建 主题 <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span> |
+                <span>
+                    <a href="/sitemap.xml" class="copyright-links" target="_blank" rel="nofollow">博客地图</a>
+                </span> |
+				<span>
+                    <a href="/atom.xml" class="copyright-links" target="_blank" rel="nofollow">RSS订阅</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
