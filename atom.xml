@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-03-28T02:52:08.792Z</updated>
+  <updated>2019-04-03T09:07:23.040Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高级程序员VS普通程序员，差距到底在哪？</title>
+    <link href="http://chenguoji.com/2019/04/03/gao-ji-cheng-xu-yuan-vs-pu-tong-cheng-xu-yuan-chai-ju-dao-di-zai-na/"/>
+    <id>http://chenguoji.com/2019/04/03/gao-ji-cheng-xu-yuan-vs-pu-tong-cheng-xu-yuan-chai-ju-dao-di-zai-na/</id>
+    <published>2019-04-03T09:02:45.000Z</published>
+    <updated>2019-04-03T09:07:23.040Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;踏上了编程之路，也就意味着你选择了一种终身学习的生活方式。每一个程序员都要练就十八般武艺，而掌握数据结构与算法就像修炼了九阳神功。&lt;br&gt;换句话说，掌握了数据结构与算法，你的内功修炼速度就会有质的飞跃。&lt;/p&gt;
+&lt;p&gt;“初级程序员才比招式，高级程序员只看内功”，数据结构与算
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>11个简单的Java性能调优技巧</title>
