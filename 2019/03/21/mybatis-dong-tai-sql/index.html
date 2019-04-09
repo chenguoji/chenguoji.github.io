@@ -259,7 +259,7 @@ MyBatis通过 OGNL 来进行动态 ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/941c556940bf9e188066dee66be6bf51.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -433,7 +433,8 @@ MyBatis通过 OGNL 来进行动态 ">
                 <p>MyBatis 令人喜欢的一大特性就是动态 SQL。 在使用 JDBC 的过程中， 根据条件进行 SQL 的拼接是很麻烦且很容易出错的。 </p>
 <p>MyBatis 动态 SQL 的出现， 解决了这个麻烦。</p>
 <p>MyBatis通过 OGNL 来进行动态 SQL 的使用的。目前， 动态 SQL 支持以下几种标签：</p>
-<img src="/2019/03/21/mybatis-dong-tai-sql/动态SQL标签.jpg" title="这是一个新的博客的图片的说明">
+<p><img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/03/21/74d5732940437c6580ab7927f618e755.jpg" data-filename="image name" style="width: 636px;"><br></p>
+
 <a id="more"></a>
 <h1 id="一、-数据准备"><a href="#一、-数据准备" class="headerlink" title="一、 数据准备"></a>一、 数据准备</h1><p>为了后面的演示， 创建了一个 Maven 项目 mybatis-dynamic, 创建了对应的数据库和表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">DROP TABLE IF EXISTS `student`;</span><br><span class="line"></span><br><span class="line">CREATE TABLE `student` (</span><br><span class="line">  `student_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;编号&apos;,</span><br><span class="line">  `name` varchar(20) DEFAULT NULL COMMENT &apos;姓名&apos;,</span><br><span class="line">  `phone` varchar(20) DEFAULT NULL COMMENT &apos;电话&apos;,</span><br><span class="line">  `email` varchar(50) DEFAULT NULL COMMENT &apos;邮箱&apos;,</span><br><span class="line">  `sex` tinyint(4) DEFAULT NULL COMMENT &apos;性别&apos;,</span><br><span class="line">  `locked` tinyint(4) DEFAULT NULL COMMENT &apos;状态(0:正常,1:锁定)&apos;,</span><br><span class="line">  `gmt_created` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &apos;存入数据库的时间&apos;,</span><br><span class="line">  `gmt_modified` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT &apos;修改的时间&apos;,</span><br><span class="line">  `delete` int(11) DEFAULT NULL,</span><br><span class="line">  PRIMARY KEY (`student_id`)</span><br><span class="line">) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT=&apos;学生表&apos;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -898,21 +899,19 @@ MyBatis通过 OGNL 来进行动态 ">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/">
+                <a href="/2019/03/21/java-mian-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Java转型大数据开发技能">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/8c49182140953b97801519267be9bb3b.jpg" class="responsive-img" alt="Java面试中最高频的那20%知识点！">
                         
-                        <span class="card-title">Java转型大数据开发技能</span>
+                        <span class="card-title">Java面试中最高频的那20%知识点！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。
-什么意思呢？
-就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。
-如此多的技术，怎么学得过来呢？
-我觉得以你</div>
+                    <div class="summary block-with-text">Java目前已经不仅仅是一门开发语言，而是一整套生态体系。
+作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。
+但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握2</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
@@ -921,8 +920,8 @@ MyBatis通过 OGNL 来进行动态 ">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                    技术
+                            <a href="/categories/面试/" class="post-category" target="_blank">
+                                    面试
                                 </a>
                             
                             
@@ -934,10 +933,6 @@ MyBatis通过 OGNL 来进行动态 ">
                     
                     <a href="/tags/java/" target="_blank">
                         <span class="chip bg-color">java</span>
-                    </a>
-                    
-                    <a href="/tags/大数据/" target="_blank">
-                        <span class="chip bg-color">大数据</span>
                     </a>
                     
                 </div>
@@ -955,7 +950,7 @@ MyBatis通过 OGNL 来进行动态 ">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="MyBatis动态SQL">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/941c556940bf9e188066dee66be6bf51.jpg" class="responsive-img" alt="MyBatis动态SQL">
                         
                         <span class="card-title">MyBatis动态SQL</span>
                     </div>
