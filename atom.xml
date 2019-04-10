@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-04-03T09:07:23.040Z</updated>
+  <updated>2019-04-10T07:22:13.208Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java中的锁[原理、锁优化、CAS、AQS]</title>
+    <link href="http://chenguoji.com/2019/04/10/java-zhong-de-suo-yuan-li-suo-you-hua-cas-aqs/"/>
+    <id>http://chenguoji.com/2019/04/10/java-zhong-de-suo-yuan-li-suo-you-hua-cas-aqs/</id>
+    <published>2019-04-10T01:38:52.000Z</published>
+    <updated>2019-04-10T07:22:13.208Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1、为什么要用锁？&quot;&gt;&lt;a href=&quot;#1、为什么要用锁？&quot; class=&quot;headerlink&quot; title=&quot;1、为什么要用锁？&quot;&gt;&lt;/a&gt;1、为什么要用锁？&lt;/h1&gt;&lt;p&gt;锁-是为了解决并发操作引起的脏读、数据不一致的问题。&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>高级程序员VS普通程序员，差距到底在哪？</title>
@@ -101,7 +128,7 @@
     <link href="http://chenguoji.com/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/"/>
     <id>http://chenguoji.com/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/</id>
     <published>2019-03-25T07:27:28.000Z</published>
-    <updated>2019-03-25T07:46:47.317Z</updated>
+    <updated>2019-04-10T01:35:29.062Z</updated>
     
     <summary type="html">
     
@@ -124,11 +151,11 @@
   </entry>
   
   <entry>
-    <title>&#39;Redis的各项功能解决了哪些问题？&#39;</title>
+    <title>Redis的各项功能解决了哪些问题？</title>
     <link href="http://chenguoji.com/2019/03/25/redis-de-ge-xiang-gong-neng-jie-jue-liao-na-xie-wen-ti/"/>
     <id>http://chenguoji.com/2019/03/25/redis-de-ge-xiang-gong-neng-jie-jue-liao-na-xie-wen-ti/</id>
     <published>2019-03-25T07:21:51.000Z</published>
-    <updated>2019-03-25T07:43:43.499Z</updated>
+    <updated>2019-04-10T01:35:04.244Z</updated>
     
     <summary type="html">
     
@@ -208,11 +235,11 @@
   </entry>
   
   <entry>
-    <title>JS面试之数组</title>
-    <link href="http://chenguoji.com/2019/03/23/js-mian-shi-zhi-shu-zu/"/>
-    <id>http://chenguoji.com/2019/03/23/js-mian-shi-zhi-shu-zu/</id>
-    <published>2019-03-23T02:39:50.000Z</published>
-    <updated>2019-03-23T02:32:35.089Z</updated>
+    <title>Java面试中最高频的那20%知识点！</title>
+    <link href="http://chenguoji.com/2019/03/21/java-mian-shi/"/>
+    <id>http://chenguoji.com/2019/03/21/java-mian-shi/</id>
+    <published>2019-03-21T02:39:50.000Z</published>
+    <updated>2019-04-10T01:33:52.007Z</updated>
     
     <summary type="html">
     
@@ -220,16 +247,44 @@
       
         
         
-          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;Java目前已经不仅仅是一门开发语言，而是一整套生态体系。&lt;/p&gt;
+&lt;p&gt;作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。&lt;/p&gt;
+&lt;p&gt;但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的
         
       
     
     </summary>
     
-      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="JS" scheme="http://chenguoji.com/tags/JS/"/>
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于</title>
+    <link href="http://chenguoji.com/2019/03/21/about/"/>
+    <id>http://chenguoji.com/2019/03/21/about/</id>
+    <published>2019-03-21T02:39:50.000Z</published>
+    <updated>2019-03-22T02:18:37.994Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;关于博主&quot;&gt;&lt;a href=&quot;#关于博主&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="关于" scheme="http://chenguoji.com/categories/%E5%85%B3%E4%BA%8E/"/>
+    
+    
+      <category term="博客说明" scheme="http://chenguoji.com/tags/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
     
   </entry>
   
@@ -261,80 +316,6 @@
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
       <category term="大数据" scheme="http://chenguoji.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于</title>
-    <link href="http://chenguoji.com/2019/03/21/about/"/>
-    <id>http://chenguoji.com/2019/03/21/about/</id>
-    <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-03-22T02:18:37.994Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;关于博主&quot;&gt;&lt;a href=&quot;#关于博主&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="关于" scheme="http://chenguoji.com/categories/%E5%85%B3%E4%BA%8E/"/>
-    
-    
-      <category term="博客说明" scheme="http://chenguoji.com/tags/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java面试中最高频的那20%知识点！</title>
-    <link href="http://chenguoji.com/2019/03/21/java-mian-shi/"/>
-    <id>http://chenguoji.com/2019/03/21/java-mian-shi/</id>
-    <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-03-23T02:34:45.258Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Java目前已经不仅仅是一门开发语言，而是一整套生态体系。&lt;/p&gt;
-&lt;p&gt;作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。&lt;/p&gt;
-&lt;p&gt;但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MyBatis动态SQL</title>
-    <link href="http://chenguoji.com/2019/03/21/mybatis-dong-tai-sql/"/>
-    <id>http://chenguoji.com/2019/03/21/mybatis-dong-tai-sql/</id>
-    <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-04-08T09:12:24.287Z</updated>
-    
-    <summary type="html">
-    
-      认真看看， 以后写SQL就爽多了
-    
-    </summary>
-    
-      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   

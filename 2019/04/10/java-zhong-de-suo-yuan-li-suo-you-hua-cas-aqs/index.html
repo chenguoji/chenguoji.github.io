@@ -4,10 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="MyBatis动态SQL, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；">
-    <meta name="description" content="MyBatis 令人喜欢的一大特性就是动态 SQL。 在使用 JDBC 的过程中， 根据条件进行 SQL 的拼接是很麻烦且很容易出错的。 
-MyBatis 动态 SQL 的出现， 解决了这个麻烦。
-MyBatis通过 OGNL 来进行动态 ">
+    <meta name="keywords" content="Java中的锁[原理、锁优化、CAS、AQS], 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；">
+    <meta name="description" content="1、为什么要用锁？锁-是为了解决并发操作引起的脏读、数据不一致的问题。
+2、锁实现的基本原理2.1、volatileJava编程语言允许线程访问共享变量， 为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。
+Ja">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@ MyBatis通过 OGNL 来进行动态 ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MyBatis动态SQL | 深夜猿</title>
+    <title>Java中的锁[原理、锁优化、CAS、AQS] | 深夜猿</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -259,13 +259,13 @@ MyBatis通过 OGNL 来进行动态 ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/941c556940bf9e188066dee66be6bf51.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/d9f6770240f9b021804da775c8502be5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        MyBatis动态SQL
+                        Java中的锁[原理、锁优化、CAS、AQS]
                     </div>
                 </div>
             </div>
@@ -376,8 +376,8 @@ MyBatis通过 OGNL 来进行动态 ">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/数据库/" target="_blank">
-                                <span class="chip bg-color">数据库</span>
+                            <a href="/tags/java/" target="_blank">
+                                <span class="chip bg-color">java</span>
                             </a>
                         
                     </div>
@@ -400,21 +400,21 @@ MyBatis通过 OGNL 来进行动态 ">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-03-21
+                    2019-04-10
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.8k
+                        2.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        8 分
+                        7 分
                     </div>
                     
                 
@@ -430,44 +430,99 @@ MyBatis通过 OGNL 来进行动态 ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>MyBatis 令人喜欢的一大特性就是动态 SQL。 在使用 JDBC 的过程中， 根据条件进行 SQL 的拼接是很麻烦且很容易出错的。 </p>
-<p>MyBatis 动态 SQL 的出现， 解决了这个麻烦。</p>
-<p>MyBatis通过 OGNL 来进行动态 SQL 的使用的。目前， 动态 SQL 支持以下几种标签：</p>
-<p><img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/03/21/74d5732940437c6580ab7927f618e755.jpg" data-filename="image name" style="width: 636px;"><br></p>
+                <h1 id="1、为什么要用锁？"><a href="#1、为什么要用锁？" class="headerlink" title="1、为什么要用锁？"></a>1、为什么要用锁？</h1><p>锁-是为了解决并发操作引起的脏读、数据不一致的问题。</p>
+<h1 id="2、锁实现的基本原理"><a href="#2、锁实现的基本原理" class="headerlink" title="2、锁实现的基本原理"></a>2、锁实现的基本原理</h1><h2 id="2-1、volatile"><a href="#2-1、volatile" class="headerlink" title="2.1、volatile"></a>2.1、volatile</h2><pre><code>Java编程语言允许线程访问共享变量， 为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。
+Java语言提供了volatile，在某些情况下比锁要更加方便。
 
-<a id="more"></a>
-<h1 id="一、-数据准备"><a href="#一、-数据准备" class="headerlink" title="一、 数据准备"></a>一、 数据准备</h1><p>为了后面的演示， 创建了一个 Maven 项目 mybatis-dynamic, 创建了对应的数据库和表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">DROP TABLE IF EXISTS `student`;</span><br><span class="line"></span><br><span class="line">CREATE TABLE `student` (</span><br><span class="line">  `student_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;编号&apos;,</span><br><span class="line">  `name` varchar(20) DEFAULT NULL COMMENT &apos;姓名&apos;,</span><br><span class="line">  `phone` varchar(20) DEFAULT NULL COMMENT &apos;电话&apos;,</span><br><span class="line">  `email` varchar(50) DEFAULT NULL COMMENT &apos;邮箱&apos;,</span><br><span class="line">  `sex` tinyint(4) DEFAULT NULL COMMENT &apos;性别&apos;,</span><br><span class="line">  `locked` tinyint(4) DEFAULT NULL COMMENT &apos;状态(0:正常,1:锁定)&apos;,</span><br><span class="line">  `gmt_created` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &apos;存入数据库的时间&apos;,</span><br><span class="line">  `gmt_modified` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT &apos;修改的时间&apos;,</span><br><span class="line">  `delete` int(11) DEFAULT NULL,</span><br><span class="line">  PRIMARY KEY (`student_id`)</span><br><span class="line">) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT=&apos;学生表&apos;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="二、-if-标签"><a href="#二、-if-标签" class="headerlink" title="二、 if 标签"></a>二、 if 标签</h1><p>if 标签是我们最常使用的。 在查询、删除、更新的时候很可能会使用到。 必须结合 test 属性联合使用。</p>
-<h2 id="2-1-在-WHERE-条件中使用-if-标签"><a href="#2-1-在-WHERE-条件中使用-if-标签" class="headerlink" title="2.1 在 WHERE 条件中使用 if 标签"></a>2.1 在 WHERE 条件中使用 if 标签</h2><p>这是常见的一种现象， 我们在进行按条件查询的时候， 可能会有多种情况。</p>
-<h3 id="2-1-1-查询条件"><a href="#2-1-1-查询条件" class="headerlink" title="2.1.1 查询条件"></a>2.1.1 查询条件</h3><p>根据输入的学生信息进行条件检索</p>
-<p>当只输入用户名时， 使用用户名进行模糊检索；<br>当只输入性别时， 使用性别进行完全匹配<br>当用户名和性别都存在时， 用这两个条件进行查询匹配查询</p>
-<h3 id="2-1-2-动态-SQL"><a href="#2-1-2-动态-SQL" class="headerlink" title="2.1.2 动态 SQL"></a>2.1.2 动态 SQL</h3><p>接口函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> /**</span><br><span class="line"> * 根据输入的学生信息进行条件检索</span><br><span class="line"> * 1. 当只输入用户名时， 使用用户名进行模糊检索；</span><br><span class="line"> * 2. 当只输入邮箱时， 使用性别进行完全匹配</span><br><span class="line"> * 3. 当用户名和性别都存在时， 用这两个条件进行查询匹配的用</span><br><span class="line"> * @param student</span><br><span class="line"> * @return</span><br><span class="line"> */</span><br><span class="line">List&lt;Student&gt; selectByStudentSelective(Student student);</span><br><span class="line"></span><br><span class="line">对应的动态 SQL</span><br><span class="line"></span><br><span class="line">  &lt;select id=&quot;selectByStudentSelective&quot; resultMap=&quot;BaseResultMap&quot; parameterType=&quot;com.homejim.mybatis.entity.Student&quot;&gt;</span><br><span class="line">    select</span><br><span class="line">    &lt;include refid=&quot;Base_Column_List&quot; /&gt;</span><br><span class="line">    from student</span><br><span class="line">    where 1=1</span><br><span class="line">    &lt;if test=&quot;name != null and name !=&apos;&apos;&quot;&gt;</span><br><span class="line">      and name like concat(&apos;%&apos;, #&#123;name&#125;, &apos;%&apos;)</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;sex != null&quot;&gt;</span><br><span class="line">      and sex=#&#123;sex&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>  </p>
-<p>在此 SQL 语句中， where 1=1 是多条件拼接时的小技巧， 后面的条件查询就可以都用 and 了。</p>
-<p>同时， 我们添加了 if 标签来处理动态 SQL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;if test=&quot;name != null and name !=&apos;&apos;&quot;&gt;</span><br><span class="line">  and name like concat(&apos;%&apos;, #&#123;name&#125;, &apos;%&apos;)</span><br><span class="line">&lt;/if&gt;</span><br><span class="line">&lt;if test=&quot;sex != null&quot;&gt;</span><br><span class="line">  and sex=#&#123;sex&#125;</span><br><span class="line">&lt;/if&gt;  </span><br></pre></td></tr></table></figure></p>
-<p>此 if 标签的 test 属性值是一个符合 OGNL 的表达式， 表达式可以是 true 或 false。 如果表达式返回的是数值， 则0为 false, 非 0 为 true;</p>
-<h3 id="2-1-3-测试"><a href="#2-1-3-测试" class="headerlink" title="2.1.3 测试"></a>2.1.3 测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">    public void selectByStudent() &#123;</span><br><span class="line">        SqlSession sqlSession = null;</span><br><span class="line">        sqlSession = sqlSessionFactory.openSession();</span><br><span class="line">        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);</span><br><span class="line"></span><br><span class="line">        Student search = new Student();</span><br><span class="line">        search.setName(&quot;明&quot;);</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;只有名字时的查询&quot;);</span><br><span class="line">        List&lt;Student&gt; studentsByName = studentMapper.selectByStudentSelective(search);</span><br><span class="line">        for (int i = 0; i &lt; studentsByName.size(); i++) &#123;</span><br><span class="line">            System.out.println(ToStringBuilder.reflectionToString(studentsByName.get(i), ToStringStyle.MULTI_LINE_STYLE));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        search.setName(null);</span><br><span class="line">        search.setSex((byte) 1);</span><br><span class="line">        System.out.println(&quot;只有性别时的查询&quot;);</span><br><span class="line">        List&lt;Student&gt; studentsBySex = studentMapper.selectByStudentSelective(search);</span><br><span class="line">        for (int i = 0; i &lt; studentsBySex.size(); i++) &#123;</span><br><span class="line">            System.out.println(ToStringBuilder.reflectionToString(studentsBySex.get(i), ToStringStyle.MULTI_LINE_STYLE));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;姓名和性别同时存在的查询&quot;);</span><br><span class="line">        search.setName(&quot;明&quot;);</span><br><span class="line">        List&lt;Student&gt; studentsByNameAndSex = studentMapper.selectByStudentSelective(search);</span><br><span class="line">        for (int i = 0; i &lt; studentsByNameAndSex.size(); i++) &#123;</span><br><span class="line">            System.out.println(ToStringBuilder.reflectionToString(studentsByNameAndSex.get(i), ToStringStyle.MULTI_LINE_STYLE));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        sqlSession.commit();</span><br><span class="line">        sqlSession.close();</span><br></pre></td></tr></table></figure>
-<p>只有名字时的查询， 发送的语句和结果</p>
-<p>查询的条件只发送了 </p>
-<p>where 1=1 and name like concat(‘%’, ?, ‘%’) </p>
-<p>只有性别时的查询， 发送的语句和结果</p>
-<p>查询的条件只发送了</p>
-<p>where 1=1 and sex=? </p>
-<p>姓名和性别同时存在的查询， 发送的语句和结果        </p>
-<p>查询条件</p>
-<p>where 1=1 and name like concat(‘%’, ?, ‘%’) and sex=? </p>
-<h2 id="2-2-在-UPDATE-更新列中使用-if-标签"><a href="#2-2-在-UPDATE-更新列中使用-if-标签" class="headerlink" title="2.2 在 UPDATE 更新列中使用 if 标签"></a>2.2 在 UPDATE 更新列中使用 if 标签</h2><p>有时候我们不希望更新所有的字段， 只更新有变化的字段。</p>
-<h3 id="2-2-1-更新条件"><a href="#2-2-1-更新条件" class="headerlink" title="2.2.1 更新条件"></a>2.2.1 更新条件</h3><p>只更新有变化的字段， 空值不更新。</p>
-<h3 id="2-2-1-动态-SQL"><a href="#2-2-1-动态-SQL" class="headerlink" title="2.2.1 动态 SQL"></a>2.2.1 动态 SQL</h3><p>接口方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">    /**</span><br><span class="line">     * 更新非空属性</span><br><span class="line">     */</span><br><span class="line">    int updateByPrimaryKeySelective(Student record);</span><br><span class="line">	</span><br><span class="line">对应的 SQL</span><br><span class="line"></span><br><span class="line">  &lt;update id=&quot;updateByPrimaryKeySelective&quot; parameterType=&quot;com.homejim.mybatis.entity.Student&quot;&gt;</span><br><span class="line">    update student</span><br><span class="line">    &lt;set&gt;</span><br><span class="line">      &lt;if test=&quot;name != null&quot;&gt;</span><br><span class="line">        `name` = #&#123;name,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;phone != null&quot;&gt;</span><br><span class="line">        phone = #&#123;phone,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;email != null&quot;&gt;</span><br><span class="line">        email = #&#123;email,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;sex != null&quot;&gt;</span><br><span class="line">        sex = #&#123;sex,jdbcType=TINYINT&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;locked != null&quot;&gt;</span><br><span class="line">        locked = #&#123;locked,jdbcType=TINYINT&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gmtCreated != null&quot;&gt;</span><br><span class="line">        gmt_created = #&#123;gmtCreated,jdbcType=TIMESTAMP&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gmtModified != null&quot;&gt;</span><br><span class="line">        gmt_modified = #&#123;gmtModified,jdbcType=TIMESTAMP&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">    &lt;/set&gt;</span><br><span class="line">    where student_id = #&#123;studentId,jdbcType=INTEGER&#125;</span><br><span class="line">	</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-2-3-测试"><a href="#2-2-3-测试" class="headerlink" title="2.2.3 测试"></a>2.2.3 测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void updateByStudentSelective() &#123;</span><br><span class="line">    SqlSession sqlSession = null;</span><br><span class="line">    sqlSession = sqlSessionFactory.openSession();</span><br><span class="line">    StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);</span><br><span class="line"></span><br><span class="line">    Student student = new Student();</span><br><span class="line">    student.setStudentId(1);</span><br><span class="line">    student.setName(&quot;明明&quot;);</span><br><span class="line">    student.setPhone(&quot;13838438888&quot;);</span><br><span class="line">    System.out.println(studentMapper.updateByPrimaryKeySelective(student));</span><br><span class="line"></span><br><span class="line">    sqlSession.commit();</span><br><span class="line">    sqlSession.close();</span><br><span class="line">		</span><br></pre></td></tr></table></figure>
-<h2 id="2-3-在-INSERT-动态插入中使用-if-标签"><a href="#2-3-在-INSERT-动态插入中使用-if-标签" class="headerlink" title="2.3 在 INSERT 动态插入中使用 if 标签"></a>2.3 在 INSERT 动态插入中使用 if 标签</h2><p>我们插入数据库中的一条记录， 不是每一个字段都有值的， 而是动态变化的。 在这时候使用 if 标签， 可帮我们解决这个问题。</p>
-<h3 id="2-3-1-插入条件"><a href="#2-3-1-插入条件" class="headerlink" title="2.3.1 插入条件"></a>2.3.1 插入条件</h3><p>只有非空属性才插入。</p>
-<h3 id="2-3-2-动态SQL"><a href="#2-3-2-动态SQL" class="headerlink" title="2.3.2 动态SQL"></a>2.3.2 动态SQL</h3><p>接口方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">    /**</span><br><span class="line">     * 非空字段才进行插入</span><br><span class="line">     */</span><br><span class="line">    int insertSelective(Student record);</span><br><span class="line">	</span><br><span class="line">对应的SQL</span><br><span class="line"></span><br><span class="line">&lt;insert id=&quot;insertSelective&quot; parameterType=&quot;com.homejim.mybatis.entity.Student&quot;&gt;</span><br><span class="line">    insert into student</span><br><span class="line">    &lt;trim prefix=&quot;(&quot; suffix=&quot;)&quot; suffixOverrides=&quot;,&quot;&gt;</span><br><span class="line">      &lt;if test=&quot;studentId != null&quot;&gt;</span><br><span class="line">        student_id,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;name != null&quot;&gt;</span><br><span class="line">        `name`,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;phone != null&quot;&gt;</span><br><span class="line">        phone,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;email != null&quot;&gt;</span><br><span class="line">        email,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;sex != null&quot;&gt;</span><br><span class="line">        sex,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;locked != null&quot;&gt;</span><br><span class="line">        locked,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gmtCreated != null&quot;&gt;</span><br><span class="line">        gmt_created,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gmtModified != null&quot;&gt;</span><br><span class="line">        gmt_modified,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">    &lt;/trim&gt;</span><br><span class="line">    &lt;trim prefix=&quot;values (&quot; suffix=&quot;)&quot; suffixOverrides=&quot;,&quot;&gt;</span><br><span class="line">      &lt;if test=&quot;studentId != null&quot;&gt;</span><br><span class="line">        #&#123;studentId,jdbcType=INTEGER&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;name != null&quot;&gt;</span><br><span class="line">        #&#123;name,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;phone != null&quot;&gt;</span><br><span class="line">        #&#123;phone,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;email != null&quot;&gt;</span><br><span class="line">        #&#123;email,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;sex != null&quot;&gt;</span><br><span class="line">        #&#123;sex,jdbcType=TINYINT&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;locked != null&quot;&gt;</span><br><span class="line">        #&#123;locked,jdbcType=TINYINT&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gmtCreated != null&quot;&gt;</span><br><span class="line">        #&#123;gmtCreated,jdbcType=TIMESTAMP&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gmtModified != null&quot;&gt;</span><br><span class="line">        #&#123;gmtModified,jdbcType=TIMESTAMP&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">    &lt;/trim&gt;</span><br><span class="line">  &lt;/insert&gt;</span><br><span class="line">  </span><br><span class="line"> </span><br></pre></td></tr></table></figure> </p>
-<p>这个 SQL 大家应该很熟悉， 毕竟是自动生成的。</p>
-<h3 id="2-3-3-测试"><a href="#2-3-3-测试" class="headerlink" title="2.3.3 测试"></a>2.3.3 测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void insertByStudentSelective() &#123;</span><br><span class="line">    SqlSession sqlSession = null;</span><br><span class="line">    sqlSession = sqlSessionFactory.openSession();</span><br><span class="line">    StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);</span><br><span class="line"></span><br><span class="line">    Student student = new Student();</span><br><span class="line">    student.setName(&quot;小飞机&quot;);</span><br><span class="line">    student.setPhone(&quot;13838438899&quot;);</span><br><span class="line">    student.setEmail(&quot;xiaofeiji@qq.com&quot;);</span><br><span class="line">    student.setLocked((byte) 0);</span><br><span class="line"></span><br><span class="line">    System.out.println(studentMapper.insertSelective(student));</span><br><span class="line"></span><br><span class="line">    sqlSession.commit();</span><br><span class="line">    sqlSession.close();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br></pre></td></tr></table></figure> 
-<p>SQL 中， 只有非空的字段才进行了插入。</p>
-<h1 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h1><p>使用示例：<a href="https://github.com/homejim/mybatis-examples" target="_blank" rel="noopener">https://github.com/homejim/mybatis-examples</a></p>
-<p>来源:<br>作者：阿进的写字台<br>cnblogs.com/homejim/p/9909657.html</p>
+volatile在多处理器开发中保证了共享变量的“ 可见性”。
+可见性的意思是当一个线程修改一个共享变量时，另外一个线程能读到这个修改的值。
+</code></pre><p><img src="//upload-images.jianshu.io/upload_images/5401760-9f7389128a85f7c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/765/format/webp"></p>
+<p>结论：如果volatile变量修饰符使用恰当的话，它比synchronized的使用和执行成本更低，因为它不会引起线程上下文的切换和调度。</p>
+<h2 id="2-2、synchronized"><a href="#2-2、synchronized" class="headerlink" title="2.2、synchronized"></a>2.2、synchronized</h2><pre><code>synchronized通过锁机制实现同步。
+</code></pre><p>先来看下利用synchronized实现同步的基础：Java中的每一个对象都可以作为锁。<br>具体表现为以下3种形式。</p>
+<p>对于普通同步方法，锁是当前实例对象。<br>对于静态同步方法，锁是当前类的Class对象。<br>对于同步方法块，锁是Synchonized括号里配置的对象。</p>
+<p>当一个线程试图访问同步代码块时，它首先必须得到锁，退出或抛出异常时必须释放锁。</p>
+<h3 id="2-2-1-synchronized实现原理"><a href="#2-2-1-synchronized实现原理" class="headerlink" title="2.2.1 synchronized实现原理"></a>2.2.1 synchronized实现原理</h3><pre><code>synchronized是基于Monitor来实现同步的。
+</code></pre><p>Monitor从两个方面来支持线程之间的同步：</p>
+<pre><code>互斥执行
+协作
+</code></pre><p>1、Java 使用对象锁 ( 使用 synchronized 获得对象锁 ) 保证工作在共享的数据集上的线程互斥执行。<br>2、使用 notify/notifyAll/wait 方法来协同不同线程之间的工作。<br>3、Class和Object都关联了一个Monitor。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-de9a8db9928ca68a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500/format/webp"><br>Monitor 的工作机理</p>
+<p>.线程进入同步方法中。<br>.为了继续执行临界区代码，线程必须获取 Monitor 锁。如果获取锁成功，将成为该监视者对象的拥有者。任一时刻内，监视者对象只属于一个活动线程（The Owner）<br>.拥有监视者对象的线程可以调用 wait() 进入等待集合（Wait Set），同时释放监视锁，进入等待状态。<br>.其他线程调用 notify() / notifyAll() 接口唤醒等待集合中的线程，这些等待的线程需要重新获取监视锁后才能执行 wait() 之后的代码。<br>.同步方法执行完毕了，线程退出临界区，并释放监视锁。</p>
+<p>参考文档：<a href="https://www.ibm.com/developerworks/cn/java/j-lo-synchronized" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/java/j-lo-synchronized</a></p>
+<h3 id="2-2-2-synchronized具体实现"><a href="#2-2-2-synchronized具体实现" class="headerlink" title="2.2.2 synchronized具体实现"></a>2.2.2 synchronized具体实现</h3><p>1、同步代码块采用monitorenter、monitorexit指令显式的实现。</p>
+<p>2、同步方法则使用ACC_SYNCHRONIZED标记符隐式的实现。</p>
+<p>通过实例来看看具体实现：</p>
+<pre><code>public class SynchronizedTest {
+
+    public synchronized void method1(){
+        System.out.println(&quot;Hello World!&quot;);
+    }
+
+    public  void method2(){
+        synchronized (this){
+            System.out.println(&quot;Hello World!&quot;);
+        }
+    }
+}
+</code></pre><p>javap编译后的字节码如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-0d29b096e9c77f09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>monitorenter</p>
+<p>每一个对象都有一个monitor，一个monitor只能被一个线程拥有。当一个线程执行到monitorenter指令时会尝试获取相应对象的monitor，获取规则如下：</p>
+<pre><code>.如果monitor的进入数为0，则该线程可以进入monitor，并将monitor进入数设置为1，该线程即为monitor的拥有者。
+.如果当前线程已经拥有该monitor，只是重新进入，则进入monitor的进入数加1，所以synchronized关键字实现的锁是可重入的锁。
+.如果monitor已被其他线程拥有，则当前线程进入阻塞状态，直到monitor的进入数为0，再重新尝试获取monitor。
+</code></pre><p>monitorexit</p>
+<pre><code>只有拥有相应对象的monitor的线程才能执行monitorexit指令。每执行一次该指令monitor进入数减1，
+当进入数为0时当前线程释放monitor，此时其他阻塞的线程将可以尝试获取该monitor。
+</code></pre><h3 id="2-2-3-锁存放的位置"><a href="#2-2-3-锁存放的位置" class="headerlink" title="2.2.3 锁存放的位置"></a>2.2.3 锁存放的位置</h3><p>锁标记存放在Java对象头的Mark Word中。<br><img src="https://upload-images.jianshu.io/upload_images/5401760-f794a9da707c8884.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"><br>Java对象头长度<br><img src="https://upload-images.jianshu.io/upload_images/5401760-423237ba213114c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"><br>32位JVM Mark Word 结构<br><img src="https://upload-images.jianshu.io/upload_images/5401760-d88cbe17d78b4ef4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"><br>32位JVM Mark Word 状态变化<br><img src="https://upload-images.jianshu.io/upload_images/5401760-dd289041866d7cb6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"><br>64位JVM Mark Word 结构</p>
+<h3 id="2-2-4-synchronized的锁优化"><a href="#2-2-4-synchronized的锁优化" class="headerlink" title="2.2.4 synchronized的锁优化"></a>2.2.4 synchronized的锁优化</h3><p>JavaSE1.6为了减少获得锁和释放锁带来的性能消耗，引入了“偏向锁”和“轻量级锁”。</p>
+<p>在JavaSE1.6中，锁一共有4种状态，级别从低到高依次是：无锁状态、偏向锁状态、轻量级锁状态和重量级锁状态，这几个状态会随着竞争情况逐渐升级。</p>
+<p>锁可以升级但不能降级，意味着偏向锁升级成轻量级锁后不能降级成偏向锁。这种锁升级却不能降级的策略，目的是为了提高获得锁和释放锁的效率。</p>
+<p>偏向锁：</p>
+<pre><code>无锁竞争的情况下为了减少锁竞争的资源开销，引入偏向锁。
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/5401760-c1f25c4a5f0001af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>轻量级锁：</p>
+<pre><code>轻量级锁所适应的场景是线程交替执行同步块的情况。
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/5401760-4f4487faff288712.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>锁粗化（Lock Coarsening）：<br>    也就是减少不必要的紧连在一起的unlock，lock操作，将多个连续的锁扩展成一个范围更大的锁。</p>
+<p>锁消除（Lock Elimination）：<br>    锁削除是指虚拟机即时编译器在运行时，对一些代码上要求同步，但是被检测到不可能存在共享数据竞争的锁进行削除。</p>
+<p>适应性自旋（Adaptive Spinning）：<br>    自适应意味着自旋的时间不再固定了，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定。<br>如果在同一个锁对象上，自旋等待刚刚成功获得过锁，并且持有锁的线程正在运行中，那么虚拟机就会认为这次自旋也很有可能再次成功，<br>进而它将允许自旋等待持续相对更长的时间，比如100个循环。另一方面，如果对于某个锁，自旋很少成功获得过，<br>那在以后要获取这个锁时将可能省略掉自旋过程，以避免浪费处理器资源。</p>
+<h3 id="2-2-5-锁的优缺点对比"><a href="#2-2-5-锁的优缺点对比" class="headerlink" title="2.2.5 锁的优缺点对比"></a>2.2.5 锁的优缺点对比</h3><p><img src="https://upload-images.jianshu.io/upload_images/5401760-dc1cb474286e917c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">    </p>
+<h2 id="2-3、CAS"><a href="#2-3、CAS" class="headerlink" title="2.3、CAS"></a>2.3、CAS</h2><pre><code>CAS，在Java并发应用中通常指CompareAndSwap或CompareAndSet，即比较并交换。
+</code></pre><p>1、CAS是一个原子操作，它比较一个内存位置的值并且只有相等时修改这个内存位置的值为新的值，保证了新的值总是基于最新的信息计算的，<br>如果有其他线程在这期间修改了这个值则CAS失败。CAS返回是否成功或者内存位置原来的值用于判断是否CAS成功。</p>
+<p>2、JVM中的CAS操作是利用了处理器提供的CMPXCHG指令实现的。<br>优点：</p>
+<pre><code>竞争不大的时候系统开销小。
+</code></pre><p>缺点：</p>
+<pre><code>循环时间长开销大。
+ABA问题。
+只能保证一个共享变量的原子操作。
+</code></pre><h1 id="3、Java中的锁实现"><a href="#3、Java中的锁实现" class="headerlink" title="3、Java中的锁实现"></a>3、Java中的锁实现</h1><h2 id="3-1、队列同步器（AQS）"><a href="#3-1、队列同步器（AQS）" class="headerlink" title="3.1、队列同步器（AQS）"></a>3.1、队列同步器（AQS）</h2><pre><code>队列同步器AbstractQueuedSynchronizer（以下简称同步器），是用来构建锁或者其他同步组件的基础框架。
+</code></pre><h3 id="3-1-1、它使用了一个int成员变量表示同步状态。"><a href="#3-1-1、它使用了一个int成员变量表示同步状态。" class="headerlink" title="3.1.1、它使用了一个int成员变量表示同步状态。"></a>3.1.1、它使用了一个int成员变量表示同步状态。</h3><p><img src="https://upload-images.jianshu.io/upload_images/5401760-58ec8eff9511a3e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<h3 id="3-1-2、通过内置的FIFO双向队列来完成获取锁线程的排队工作。"><a href="#3-1-2、通过内置的FIFO双向队列来完成获取锁线程的排队工作。" class="headerlink" title="3.1.2、通过内置的FIFO双向队列来完成获取锁线程的排队工作。"></a>3.1.2、通过内置的FIFO双向队列来完成获取锁线程的排队工作。</h3><p>同步器包含两个节点类型的应用，一个指向头节点，一个指向尾节点，未获取到锁的线程会创建节点线程安全（compareAndSetTail）的加入队列尾部。<br>同步队列遵循FIFO，首节点是获取同步状态成功的节点。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-30e2658e38e1966c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>未获取到锁的线程将创建一个节点，设置到尾节点。如下图所示：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-addd5edd9723c8db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>首节点的线程在释放锁时，将会唤醒后继节点。而后继节点将会在获取锁成功时将自己设置为首节点。如下图所示：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-d118af99f2bacad5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<h3 id="3-1-3、独占式-共享式锁获取"><a href="#3-1-3、独占式-共享式锁获取" class="headerlink" title="3.1.3、独占式/共享式锁获取"></a>3.1.3、独占式/共享式锁获取</h3><pre><code>独占式：有且只有一个线程能获取到锁，如：ReentrantLock。&lt;/pre&gt;
+共享式：可以多个线程同时获取到锁，如：CountDownLatch
+</code></pre><p>独占式</p>
+<p>每个节点自旋观察自己的前一节点是不是Header节点，如果是，就去尝试获取锁。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-943a473d1d87cc7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>独占式锁获取流程：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-50bc00c23df33d60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>共享式：</p>
+<p>共享式与独占式的区别：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-d0031b43b65487d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>共享锁获取流程：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-8f66fdebba19eff8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/759/format/webp"></p>
+<h1 id="4、锁的使用用例"><a href="#4、锁的使用用例" class="headerlink" title="4、锁的使用用例"></a>4、锁的使用用例</h1><h2 id="4-1、ConcurrentHashMap的实现原理及使用"><a href="#4-1、ConcurrentHashMap的实现原理及使用" class="headerlink" title="4.1、ConcurrentHashMap的实现原理及使用"></a>4.1、ConcurrentHashMap的实现原理及使用</h2><p><img src="https://upload-images.jianshu.io/upload_images/5401760-460898019c2b5b0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>ConcurrentHashMap类图</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5401760-f2f0bb8727e6d4b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></p>
+<p>ConcurrentHashMap数据结构</p>
+<p>结论：ConcurrentHashMap使用的锁分段技术。首先将数据分成一段一段地存储，然后给每一段数据配一把锁，当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问。</p>
+<p>来源：<br><a href="https://www.jianshu.com/p/e674ee68fd3f" target="_blank" rel="noopener">https://www.jianshu.com/p/e674ee68fd3f</a></p>
 
             </div>
             <hr>
@@ -615,7 +670,7 @@ MyBatis通过 OGNL 来进行动态 ">
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">深夜猿</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/03/21/mybatis-dong-tai-sql/" class="b-link-green">MyBatis动态SQL</a>
+                    <a href="/2019/04/10/java-zhong-de-suo-yuan-li-suo-you-hua-cas-aqs/" class="b-link-green">Java中的锁[原理、锁优化、CAS、AQS]</a>
                 </p>
             </div>
         </div>
@@ -897,71 +952,25 @@ MyBatis通过 OGNL 来进行动态 ">
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/03/21/java-mian-shi/">
+                <a href="/2019/04/10/java-zhong-de-suo-yuan-li-suo-you-hua-cas-aqs/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/8c49182140953b97801519267be9bb3b.jpg" class="responsive-img" alt="Java面试中最高频的那20%知识点！">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/d9f6770240f9b021804da775c8502be5.jpg" class="responsive-img" alt="Java中的锁[原理、锁优化、CAS、AQS]">
                         
-                        <span class="card-title">Java面试中最高频的那20%知识点！</span>
+                        <span class="card-title">Java中的锁[原理、锁优化、CAS、AQS]</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">Java目前已经不仅仅是一门开发语言，而是一整套生态体系。
-作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。
-但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握2</div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/面试/" class="post-category" target="_blank">
-                                    面试
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/" target="_blank">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/03/21/mybatis-dong-tai-sql/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/941c556940bf9e188066dee66be6bf51.jpg" class="responsive-img" alt="MyBatis动态SQL">
-                        
-                        <span class="card-title">MyBatis动态SQL</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">MyBatis 令人喜欢的一大特性就是动态 SQL。 在使用 JDBC 的过程中， 根据条件进行 SQL 的拼接是很麻烦且很容易出错的。 
-MyBatis 动态 SQL 的出现， 解决了这个麻烦。
-MyBatis通过 OGNL 来进行动态 </div>
+                    <div class="summary block-with-text">1、为什么要用锁？锁-是为了解决并发操作引起的脏读、数据不一致的问题。
+2、锁实现的基本原理2.1、volatileJava编程语言允许线程访问共享变量， 为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。
+Ja</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-10
                             </span>
                         <span class="publish-author">
                             
@@ -979,8 +988,54 @@ MyBatis通过 OGNL 来进行动态 </div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/数据库/" target="_blank">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/04/03/gao-ji-cheng-xu-yuan-vs-pu-tong-cheng-xu-yuan-chai-ju-dao-di-zai-na/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/ef23d9c5405250e5803dabd2fa3090e0.jpg" class="responsive-img" alt="高级程序员VS普通程序员，差距到底在哪？">
+                        
+                        <span class="card-title">高级程序员VS普通程序员，差距到底在哪？</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">踏上了编程之路，也就意味着你选择了一种终身学习的生活方式。每一个程序员都要练就十八般武艺，而掌握数据结构与算法就像修炼了九阳神功。换句话说，掌握了数据结构与算法，你的内功修炼速度就会有质的飞跃。
+“初级程序员才比招式，高级程序员只看内功”，</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/技术/" class="post-category" target="_blank">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
