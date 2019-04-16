@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-04-10T07:22:13.208Z</updated>
+  <updated>2019-04-16T11:20:02.470Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于springboot开发的java web网页版电子商城网站</title>
+    <link href="http://chenguoji.com/2019/04/16/ji-yu-springboot-kai-fa-de-java-web-wang-ye-ban-dian-zi-shang-cheng-wang-zhan/"/>
+    <id>http://chenguoji.com/2019/04/16/ji-yu-springboot-kai-fa-de-java-web-wang-ye-ban-dian-zi-shang-cheng-wang-zhan/</id>
+    <published>2019-04-16T08:01:31.000Z</published>
+    <updated>2019-04-16T11:20:02.470Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;项目描述&lt;/p&gt;
+&lt;p&gt;基于spring boot与mybatis整合的java
+        
+      
+    
+    </summary>
+    
+    
+      <category term="毕业设计" scheme="http://chenguoji.com/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Java中的锁[原理、锁优化、CAS、AQS]</title>
