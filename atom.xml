@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>深夜猿</title>
+  <title>陈国际博客</title>
   
   <subtitle>人生如戏，全靠颜值</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-04-16T11:26:54.674Z</updated>
+  <updated>2019-04-17T08:30:04.539Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java开发者必须要具备的专业技能</title>
+    <link href="http://chenguoji.com/2019/04/17/java-kai-fa-zhe-bi-xu-yao-ju-bei-de-zhuan-ye-ji-neng/"/>
+    <id>http://chenguoji.com/2019/04/17/java-kai-fa-zhe-bi-xu-yao-ju-bei-de-zhuan-ye-ji-neng/</id>
+    <published>2019-04-17T08:09:23.000Z</published>
+    <updated>2019-04-17T08:30:04.539Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;想要成为合格的Java程序员或工程师到底需要具备哪些专业技能，面试者在面试之前到底需要准备哪些东西呢？&lt;/p&gt;
+&lt;p&gt;本文陈列的这些内容既可以作为个人简历中的内容，也可以作为面试的时候跟面试官聊的东西，你可以把这些内容写到你的简历中，当然更需要的是你在面试的时候向面试官展示
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>基于springboot开发的java web网页版电子商城网站</title>
@@ -102,7 +131,7 @@
     <link href="http://chenguoji.com/2019/03/28/11-ge-jian-dan-de-java-xing-neng-diao-you-ji-qiao/"/>
     <id>http://chenguoji.com/2019/03/28/11-ge-jian-dan-de-java-xing-neng-diao-you-ji-qiao/</id>
     <published>2019-03-28T02:35:17.000Z</published>
-    <updated>2019-03-28T02:52:08.792Z</updated>
+    <updated>2019-04-17T08:21:01.975Z</updated>
     
     <summary type="html">
     
@@ -122,6 +151,8 @@
     
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
+      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
   </entry>
   
   <entry>
@@ -129,7 +160,7 @@
     <link href="http://chenguoji.com/2019/03/26/mian-shi-bu-dong-wei-fu-wu-jia-gou-yuan-li-bu-pa-bei-pass-liao/"/>
     <id>http://chenguoji.com/2019/03/26/mian-shi-bu-dong-wei-fu-wu-jia-gou-yuan-li-bu-pa-bei-pass-liao/</id>
     <published>2019-03-26T05:49:37.000Z</published>
-    <updated>2019-03-26T05:53:58.217Z</updated>
+    <updated>2019-04-17T08:20:51.280Z</updated>
     
     <summary type="html">
     
@@ -146,7 +177,9 @@
       <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="微服务、原理" scheme="http://chenguoji.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E3%80%81%E5%8E%9F%E7%90%86/"/>
+      <category term="微服务" scheme="http://chenguoji.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+      <category term="原理" scheme="http://chenguoji.com/tags/%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -155,7 +188,7 @@
     <link href="http://chenguoji.com/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/"/>
     <id>http://chenguoji.com/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/</id>
     <published>2019-03-25T07:27:28.000Z</published>
-    <updated>2019-04-10T01:35:29.062Z</updated>
+    <updated>2019-04-17T08:21:22.320Z</updated>
     
     <summary type="html">
     
@@ -173,7 +206,9 @@
       <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="java、并发" scheme="http://chenguoji.com/tags/java%E3%80%81%E5%B9%B6%E5%8F%91/"/>
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+      <category term="并发" scheme="http://chenguoji.com/tags/%E5%B9%B6%E5%8F%91/"/>
     
   </entry>
   
@@ -238,7 +273,7 @@
     <link href="http://chenguoji.com/2019/03/23/qing-dui-bi-exception-he-error-you-shi-me-qu-bie/"/>
     <id>http://chenguoji.com/2019/03/23/qing-dui-bi-exception-he-error-you-shi-me-qu-bie/</id>
     <published>2019-03-23T02:43:42.000Z</published>
-    <updated>2019-03-25T07:23:17.073Z</updated>
+    <updated>2019-04-17T08:20:45.398Z</updated>
     
     <summary type="html">
     
@@ -266,7 +301,7 @@
     <link href="http://chenguoji.com/2019/03/21/java-mian-shi/"/>
     <id>http://chenguoji.com/2019/03/21/java-mian-shi/</id>
     <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-04-10T01:33:52.007Z</updated>
+    <updated>2019-04-17T08:21:11.942Z</updated>
     
     <summary type="html">
     
@@ -286,6 +321,37 @@
     
     
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java转型大数据开发技能</title>
+    <link href="http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
+    <id>http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</id>
+    <published>2019-03-21T02:39:50.000Z</published>
+    <updated>2019-04-17T08:11:39.976Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。&lt;/p&gt;
+&lt;p&gt;什么意思呢？&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="大数据" scheme="http://chenguoji.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
@@ -312,37 +378,6 @@
     
     
       <category term="博客说明" scheme="http://chenguoji.com/tags/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java转型大数据开发技能</title>
-    <link href="http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
-    <id>http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</id>
-    <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-03-23T02:57:08.875Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。&lt;/p&gt;
-&lt;p&gt;什么意思呢？&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-      <category term="大数据" scheme="http://chenguoji.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
