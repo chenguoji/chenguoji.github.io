@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-04-17T08:30:04.539Z</updated>
+  <updated>2019-04-18T06:30:41.254Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让你如何在一分钟内搞定面试官？</title>
+    <link href="http://chenguoji.com/2019/04/18/rang-ni-ru-he-zai-yi-fen-zhong-nei-gao-ding-mian-shi-guan/"/>
+    <id>http://chenguoji.com/2019/04/18/rang-ni-ru-he-zai-yi-fen-zhong-nei-gao-ding-mian-shi-guan/</id>
+    <published>2019-04-18T06:14:59.000Z</published>
+    <updated>2019-04-18T06:30:41.254Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;“请做个自我介绍。”&quot;&gt;&lt;a href=&quot;#“请做个自我介绍。”&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="java面试" scheme="http://chenguoji.com/tags/java%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Java开发者必须要具备的专业技能</title>
@@ -297,36 +323,6 @@
   </entry>
   
   <entry>
-    <title>Java面试中最高频的那20%知识点！</title>
-    <link href="http://chenguoji.com/2019/03/21/java-mian-shi/"/>
-    <id>http://chenguoji.com/2019/03/21/java-mian-shi/</id>
-    <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-04-17T08:21:11.942Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Java目前已经不仅仅是一门开发语言，而是一整套生态体系。&lt;/p&gt;
-&lt;p&gt;作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。&lt;/p&gt;
-&lt;p&gt;但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java转型大数据开发技能</title>
     <link href="http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
     <id>http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</id>
@@ -378,6 +374,36 @@
     
     
       <category term="博客说明" scheme="http://chenguoji.com/tags/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java面试中最高频的那20%知识点！</title>
+    <link href="http://chenguoji.com/2019/03/21/java-mian-shi/"/>
+    <id>http://chenguoji.com/2019/03/21/java-mian-shi/</id>
+    <published>2019-03-21T02:39:50.000Z</published>
+    <updated>2019-04-17T08:21:11.942Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Java目前已经不仅仅是一门开发语言，而是一整套生态体系。&lt;/p&gt;
+&lt;p&gt;作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。&lt;/p&gt;
+&lt;p&gt;但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
