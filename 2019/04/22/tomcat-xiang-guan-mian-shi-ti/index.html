@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java开发者必须要具备的专业技能, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；">
-    <meta name="description" content="想要成为合格的Java程序员或工程师到底需要具备哪些专业技能，面试者在面试之前到底需要准备哪些东西呢？
-本文陈列的这些内容既可以作为个人简历中的内容，也可以作为面试的时候跟面试官聊的东西，你可以把这些内容写到你的简历中，当然更需要的是你在面">
+    <meta name="keywords" content="Tomcat相关面试题, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；">
+    <meta name="description" content="Tomcat相关的面试题出场的几率并不高，正式因为如此，很多人忽略了对Tomcat相关技能的掌握，这次整理了Tomcat相关的系统架构，介绍了Server、Service、Connector、Container之间的关系，各个模块的功能，可">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java开发者必须要具备的专业技能 | 陈国际博客</title>
+    <title>Tomcat相关面试题 | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -276,13 +275,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/fbfa2f1f4083e4fd8082f83e2130fdd6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/c60610e5400d79e280c36eec24aa9ef7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Java开发者必须要具备的专业技能
+                        Tomcat相关面试题
                     </div>
                 </div>
             </div>
@@ -393,12 +392,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/" target="_blank">
-                                <span class="chip bg-color">java</span>
-                            </a>
-                        
-                            <a href="/tags/面试/" target="_blank">
-                                <span class="chip bg-color">面试</span>
+                            <a href="/tags/Tomcat/" target="_blank">
+                                <span class="chip bg-color">Tomcat</span>
                             </a>
                         
                     </div>
@@ -421,21 +416,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-04-17
+                    2019-04-22
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        825
+                        2.7k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        9 分
                     </div>
                     
                 
@@ -451,21 +446,76 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>想要成为合格的Java程序员或工程师到底需要具备哪些专业技能，面试者在面试之前到底需要准备哪些东西呢？</p>
-<p>本文陈列的这些内容既可以作为个人简历中的内容，也可以作为面试的时候跟面试官聊的东西，你可以把这些内容写到你的简历中，当然更需要的是你在面试的时候向面试官展示这些专业技能。</p>
-<p>相信此文对正在寻觅Java程序员（Java工程师）职位的freshman以及希望成为中高级Java开发者的junior都会有所帮助。</p>
-<p>专业技能</p>
-<p>1.熟练的使用Java语言进行面向对象程序设计，有良好的编程习惯，熟悉常用的Java API，包括集合框架、多线程（并发编程）、I/O（NIO）、Socket、JDBC、XML、反射等。</p>
-<p>2.熟悉基于JSP和Servlet的Java Web开发，对Servlet和JSP的工作原理和生命周期有深入了解，熟练的使用JSTL和EL编写无脚本动态页面，<br>有使用监听器、过滤器等Web组件以及MVC架构模式进行Java Web项目开发的经验。</p>
-<p>3.对Spring的IoC容器和AOP原理有深入了解，熟练的运用Spring框架管理各种Web组件及其依赖关系，熟练的使用Spring进行事务、日志、安全性等的管理，<br>有使用Spring MVC作为表示层技术以及使用Spring提供的持久化支持进行Web项目开发的经验，熟悉Spring对其他框架的整合。</p>
-<p>4.熟练的使用Hibernate、MyBatis等ORM框架，熟悉Hibernate和MyBatis的核心API，对Hibernate的关联映射、继承映射、组件映射、缓存机制、事务管理以及性能调优等有深入的理解。</p>
-<p>5.熟练的使用HTML、CSS和JavaScript进行Web前端开发，熟悉jQuery和Bootstrap，对Ajax技术在Web项目中的应用有深入理解，<br>有使用前端MVC框架（AngularJS）和JavaScript模板引擎（HandleBars）进行项目开发的经验。</p>
-<p>6.熟悉常用的关系型数据库产品（MySQL、Oracle），熟练的使用SQL和PL/SQL进行数据库编程。</p>
-<p>7.熟悉面向对象的设计原则，对GoF设计模式和企业应用架构模式有深入的了解和实际开发的相关经验，熟练的使用UML进行面向对象的分析和设计，有TDD（测试驱动开发）和DDD（领域驱动设计）的经验。</p>
-<p>8.熟悉Apache、NginX、Tomcat、WildFly、Weblogic等Web服务器和应用服务器的使用，熟悉多种服务器整合、集群和负载均衡的配置。</p>
-<p>9熟练的使用产品原型工具Axure，熟练的使用设计建模工具PowerDesigner和Enterprise Architect，熟练的使用Java开发环境Eclipse和IntelliJ，<br>熟练的使用前端开发环境WebStorm，熟练的使用软件版本控制工具SVN和Git，熟练的使用项目构建和管理工具Maven和Gradle。</p>
-<p>说明：上面罗列的这些东西并不是每一项你都要烂熟于心，根据企业招聘的具体要求可以做相应的有针对性的准备。</p>
-<p>我个人觉得前6项应该是最低要求，是作为一个Java开发者必须要具备的专业技能。</p>
+                <p>Tomcat相关的面试题出场的几率并不高，正式因为如此，很多人忽略了对Tomcat相关技能的掌握，这次整理了Tomcat相关的系统架构，<br>介绍了Server、Service、Connector、Container之间的关系，各个模块的功能，可以说把这几个掌握住了，Tomcat相关的面试题你就不会有任何问题了！<br>另外，在面试的时候你还要有意识无意识的往Tomcat这个地方引，就比如说常见的Spring MVC的执行流程，一个URL的完整调用链路，<br>这些相关的题目你是可以再往Tomcat处理请求的这个过程去说的！掌握注Tomcat这些技能了，面试官一定会佩服你的！</p>
+<p>学了本节之后你应该明白的是：</p>
+<p>Server、Service、Connector、Container四大组件之间的关系和联系，以及他们的主要功能点；</p>
+<p>Tomcat执行的整体架构，请求是如何被一步步处理的；</p>
+<p>Engine、Host、Context、Wrapper相关的概念关系；</p>
+<p>Container是如何处理请求的；</p>
+<p>Tomcat用到的相关设计模式；</p>
+<h1 id="一、Tomcat顶层架构"><a href="#一、Tomcat顶层架构" class="headerlink" title="一、Tomcat顶层架构"></a>一、Tomcat顶层架构</h1><p>俗话说，站在巨人的肩膀上看世界，一般学习的时候也是先总览一下整体，然后逐个部分个个击破，最后形成思路，了解具体细节，Tomcat的结构很复杂，但是 Tomcat 非常的模块化，找到了 Tomcat最核心的模块，问题才可以游刃而解，了解了Tomcat的整体架构对以后深入了解Tomcat来说至关重要！</p>
+<p>先上一张Tomcat的顶层结构图（图A），如下：</p>
+<p><img src="https://img-blog.csdn.net/20180108192645999?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>Tomcat中最顶层的容器是Server，代表着整个服务器，从上图中可以看出，一个Server可以包含至少一个Service，用于具体提供服务。</p>
+<p>Service主要包含两个部分：Connector和Container。从上图中可以看出 Tomcat 的心脏就是这两个组件，他们的作用如下：</p>
+<p>1、Connector用于处理连接相关的事情，并提供Socket与Request和Response相关的转化; </p>
+<p>2、Container用于封装和管理Servlet，以及具体处理Request请求；</p>
+<p>一个Tomcat中只有一个Server，一个Server可以包含多个Service，一个Service只有一个Container，但是可以有多个Connectors，这是因为一个服务可以有多个连接，如同时提供Http和Https链接，也可以提供向相同协议不同端口的连接,示意图如下（Engine、Host、Context下边会说到）：</p>
+<p><img src="https://img-blog.csdn.net/20180108204347710?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>多个 Connector 和一个 Container 就形成了一个 Service，有了 Service 就可以对外提供服务了，但是 Service 还要一个生存的环境，必须要有人能够给她生命、掌握其生死大权，那就非 Server 莫属了！所以整个 Tomcat 的生命周期由 Server 控制。</p>
+<p>另外，上述的包含关系或者说是父子关系，都可以在tomcat的conf目录下的server.xml配置文件中看出，下图是删除了注释内容之后的一个完整的server.xml配置文件（Tomcat版本为8.0）</p>
+<p><img src="https://img-blog.csdn.net/20180108194753633?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>详细的配置文件文件内容可以到Tomcat官网查看：</p>
+<p><a href="http://tomcat.apache.org/tomcat-8.0-doc/index.html" target="_blank" rel="noopener">http://tomcat.apache.org/tomcat-8.0-doc/index.html</a></p>
+<p>上边的配置文件，还可以通过下边的一张结构图更清楚的理解：</p>
+<p><img src="https://img-blog.csdn.net/20180108194817763?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>Server标签设置的端口号为8005，shutdown=”SHUTDOWN” ，表示在8005端口监听“SHUTDOWN”命令，如果接收到了就会关闭Tomcat。一个Server有一个Service，当然还可以进行配置，一个Service有多个，Service左边的内容都属于Container的，Service下边是Connector。</p>
+<h1 id="二、Tomcat顶层架构小结："><a href="#二、Tomcat顶层架构小结：" class="headerlink" title="二、Tomcat顶层架构小结："></a>二、Tomcat顶层架构小结：</h1><p>（1）Tomcat中只有一个Server，一个Server可以有多个Service，一个Service可以有多个Connector和一个Container；<br>（2） Server掌管着整个Tomcat的生死大权；<br>（4）Service 是对外提供服务的；<br>（5）Connector用于接受请求并将请求封装成Request和Response来具体处理；<br>（6）Container用于封装和管理Servlet，以及具体处理request请求；</p>
+<p>知道了整个Tomcat顶层的分层架构和各个组件之间的关系以及作用，对于绝大多数的开发人员来说Server和Service对我们来说确实很远，而我们开发中绝大部分进行配置的内容是属于Connector和Container的，所以接下来介绍一下Connector和Container。</p>
+<h1 id="三、Connector和Container的微妙关系"><a href="#三、Connector和Container的微妙关系" class="headerlink" title="三、Connector和Container的微妙关系"></a>三、Connector和Container的微妙关系</h1><p>由上述内容我们大致可以知道一个请求发送到Tomcat之后，首先经过Service然后会交给我们的Connector，Connector用于接收请求并将接收的请求封装为Request和Response来具体处理，Request和Response封装完之后再交由Container进行处理，Container处理完请求之后再返回给Connector，最后在由Connector通过Socket将处理的结果返回给客户端，这样整个请求的就处理完了！</p>
+<p>Connector最底层使用的是Socket来进行连接的，Request和Response是按照HTTP协议来封装的，所以Connector同时需要实现TCP/IP协议和HTTP协议！</p>
+<p>Tomcat既然处理请求，那么肯定需要先接收到这个请求，接收请求这个东西我们首先就需要看一下Connector！</p>
+<h1 id="四、Connector架构分析"><a href="#四、Connector架构分析" class="headerlink" title="四、Connector架构分析"></a>四、Connector架构分析</h1><p>Connector用于接受请求并将请求封装成Request和Response，然后交给Container进行处理，Container处理完之后在交给Connector返回给客户端。</p>
+<p>因此，我们可以把Connector分为四个方面进行理解：</p>
+<p>（1）Connector如何接受请求的？</p>
+<p>（2）如何将请求封装成Request和Response的？</p>
+<p>（3）封装完之后的Request和Response如何交给Container进行处理的？</p>
+<p>（4）Container处理完之后如何交给Connector并返回给客户端的？</p>
+<p>首先看一下Connector的结构图（图B），如下所示：</p>
+<p><img src="https://img-blog.csdn.net/20180108205854139?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>Connector就是使用ProtocolHandler来处理请求的，不同的ProtocolHandler代表不同的连接类型，比如：Http11Protocol使用的是普通Socket来连接的，Http11NioProtocol使用的是NioSocket来连接的。</p>
+<p>其中ProtocolHandler由包含了三个部件：Endpoint、Processor、Adapter。</p>
+<p>（1）Endpoint用来处理底层Socket的网络连接，Processor用于将Endpoint接收到的Socket封装成Request，Adapter用于将Request交给Container进行具体的处理。</p>
+<p>（2）Endpoint由于是处理底层的Socket网络连接，因此Endpoint是用来实现TCP/IP协议的，而Processor用来实现HTTP协议的，Adapter将请求适配到Servlet容器进行具体的处理。</p>
+<p>（3）Endpoint的抽象实现AbstractEndpoint里面定义的Acceptor和AsyncTimeout两个内部类和一个Handler接口。Acceptor用于监听请求，AsyncTimeout用于检查异步Request的超时，Handler用于处理接收到的Socket，在内部调用Processor进行处理。</p>
+<p>至此，我们应该很轻松的回答（1）（2）（3）的问题了，但是（4）还是不知道，那么我们就来看一下Container是如何进行处理的以及处理完之后是如何将处理完的结果返回给Connector的？</p>
+<h1 id="五、Container架构分析"><a href="#五、Container架构分析" class="headerlink" title="五、Container架构分析"></a>五、Container架构分析</h1><p>Container用于封装和管理Servlet，以及具体处理Request请求，在Connector内部包含了4个子容器，结构图如下（图C）：</p>
+<p><img src="https://img-blog.csdn.net/20180108201104048?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>4个子容器的作用分别是：</p>
+<p>（1）Engine：引擎，用来管理多个站点，一个Service最多只能有一个Engine；</p>
+<p>（2）Host：代表一个站点，也可以叫虚拟主机，通过配置Host就可以添加站点；</p>
+<p>（3）Context：代表一个应用程序，对应着平时开发的一套程序，或者一个WEB-INF目录以及下面的web.xml文件；</p>
+<p>（4）Wrapper：每一Wrapper封装着一个Servlet；</p>
+<p>下面找一个Tomcat的文件目录对照一下，如下图所示：</p>
+<p><img src="https://img-blog.csdn.net/20180108201901382?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>Context和Host的区别是Context表示一个应用，我们的Tomcat中默认的配置下webapps下的每一个文件夹目录都是一个Context，其中ROOT目录中存放着主应用，其他目录存放着子应用，而整个webapps就是一个Host站点。</p>
+<p>我们访问应用Context的时候，如果是ROOT下的则直接使用域名就可以访问，例如：<a href="http://www.ledouit.com,如果是Host（webapps）下的其他应用，则可以使用www.ledouit.com/docs进行访问，当然默认指定的根应用（ROOT）是可以进行设定的，只不过Host站点下默认的主营用是ROOT目录下的。" target="_blank" rel="noopener">www.ledouit.com,如果是Host（webapps）下的其他应用，则可以使用www.ledouit.com/docs进行访问，当然默认指定的根应用（ROOT）是可以进行设定的，只不过Host站点下默认的主营用是ROOT目录下的。</a></p>
+<p>看到这里我们知道Container是什么，但是还是不知道Container是如何进行处理的以及处理完之后是如何将处理完的结果返回给Connector的？别急！下边就开始探讨一下Container是如何进行处理的！</p>
+<h1 id="六、Container如何处理请求的"><a href="#六、Container如何处理请求的" class="headerlink" title="六、Container如何处理请求的"></a>六、Container如何处理请求的</h1><p>Container处理请求是使用Pipeline-Valve管道来处理的！（Valve是阀门之意）</p>
+<p>Pipeline-Valve是责任链模式，责任链模式是指在一个请求处理的过程中有很多处理者依次对请求进行处理，每个处理者负责做自己相应的处理，处理完之后将处理后的请求返回，再让下一个处理着继续处理。</p>
+<p><img src><a href="https://img-blog.csdn.net/20180108212100441?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" target="_blank" rel="noopener">https://img-blog.csdn.net/20180108212100441?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast</a></p>
+<p>但是！Pipeline-Valve使用的责任链模式和普通的责任链模式有些不同！区别主要有以下两点：</p>
+<p>（1）每个Pipeline都有特定的Valve，而且是在管道的最后一个执行，这个Valve叫做BaseValve，BaseValve是不可删除的；</p>
+<p>（2）在上层容器的管道的BaseValve中会调用下层容器的管道。</p>
+<p>我们知道Container包含四个子容器，而这四个子容器对应的BaseValve分别在：StandardEngineValve、StandardHostValve、StandardContextValve、StandardWrapperValve。</p>
+<p>Pipeline的处理流程图如下（图D）：</p>
+<p><img src="https://img-blog.csdn.net/20180116093931129?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGxnZW4xNTczODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>（1）Connector在接收到请求后会首先调用最顶层容器的Pipeline来处理，这里的最顶层容器的Pipeline就是EnginePipeline（Engine的管道）；</p>
+<p>（2）在Engine的管道中依次会执行EngineValve1、EngineValve2等等，最后会执行StandardEngineValve，在StandardEngineValve中会调用Host管道，然后再依次执行Host的HostValve1、HostValve2等，最后在执行StandardHostValve，然后再依次调用Context的管道和Wrapper的管道，最后执行到StandardWrapperValve。</p>
+<p>（3）当执行到StandardWrapperValve的时候，会在StandardWrapperValve中创建FilterChain，并调用其doFilter方法来处理请求，这个FilterChain包含着我们配置的与请求相匹配的Filter和Servlet，其doFilter方法会依次调用所有的Filter的doFilter方法和Servlet的service方法，这样请求就得到了处理！</p>
+<p>（4）当所有的Pipeline-Valve都执行完之后，并且处理完了具体的请求，这个时候就可以将返回的结果交给Connector了，Connector在通过Socket的方式将结果返回给客户端。</p>
+<h1 id="七、总结"><a href="#七、总结" class="headerlink" title="七、总结"></a>七、总结</h1><p>至此，我们已经对Tomcat的整体架构有了大致的了解，从图A、B、C、D可以看出来每一个组件的基本要素和作用。我们在脑海里应该有一个大概的轮廓了！如果你面试的时候，让你简单的聊一下Tomcat，上面的内容你能脱口而出吗？当你能够脱口而出的时候，这位面试官一定会对你刮目相看的！</p>
+<p>原文：<a href="https://blog.csdn.net/u010870518/article/details/79006434" target="_blank" rel="noopener">https://blog.csdn.net/u010870518/article/details/79006434</a></p>
 
             </div>
             <hr>
@@ -613,7 +663,7 @@
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/04/17/java-kai-fa-zhe-bi-xu-yao-ju-bei-de-zhuan-ye-ji-neng/" class="b-link-green">Java开发者必须要具备的专业技能</a>
+                    <a href="/2019/04/22/tomcat-xiang-guan-mian-shi-ti/" class="b-link-green">Tomcat相关面试题</a>
                 </p>
             </div>
         </div>
@@ -895,25 +945,24 @@
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/04/18/rang-ni-ru-he-zai-yi-fen-zhong-nei-gao-ding-mian-shi-guan/">
+                <a href="/2019/04/22/tomcat-xiang-guan-mian-shi-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg" class="responsive-img" alt="让你如何在一分钟内搞定面试官？">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/c60610e5400d79e280c36eec24aa9ef7.jpg" class="responsive-img" alt="Tomcat相关面试题">
                         
-                        <span class="card-title">让你如何在一分钟内搞定面试官？</span>
+                        <span class="card-title">Tomcat相关面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">“请做个自我介绍。”有的人，可以口若悬河、妙语连珠讲3分钟，有的人，可能磕磕巴巴，讲了30秒，前者一定能胜过后者，然则未必，
-今天就来聊一聊，面试的经典问题——自我介绍。
-为什么要做自我介绍通常说来，大大小小的面试，尤其是针对基础岗位，都会</div>
+                    <div class="summary block-with-text">Tomcat相关的面试题出场的几率并不高，正式因为如此，很多人忽略了对Tomcat相关技能的掌握，这次整理了Tomcat相关的系统架构，介绍了Server、Service、Connector、Container之间的关系，各个模块的功能，可</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -926,11 +975,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java面试/" target="_blank">
-                        <span class="chip bg-color">java面试</span>
+                    <a href="/tags/Tomcat/" target="_blank">
+                        <span class="chip bg-color">Tomcat</span>
                     </a>
                     
                 </div>
@@ -944,32 +994,28 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/04/16/ji-yu-springboot-kai-fa-de-java-web-wang-ye-ban-dian-zi-shang-cheng-wang-zhan/">
+                <a href="/2019/04/19/sql-union-cao-zuo-fu/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg" class="responsive-img" alt="基于springboot开发的java web网页版电子商城网站">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/f8a1ed5040523fe7803294cd9045c304.jpg" class="responsive-img" alt="数据库-操作符记录">
                         
-                        <span class="card-title">基于springboot开发的java web网页版电子商城网站</span>
+                        <span class="card-title">数据库-操作符记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">项目描述
-基于spring boot与mybatis整合的java web网页版电子商城网站，采用maven构建，数据库用的是mysql
-运行环境
-jdk8+tomcat7+mysql+eclipse+maven
-项目技术(必填)
-后台使用</div>
+                    <div class="summary block-with-text">SQL UNION 操作符UNION 操作符用于合并两个或多个 SELECT 语句的结果集。
+请注意，UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-16
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/毕业设计/" class="post-category" target="_blank">
-                                    毕业设计
+                            <a href="/categories/数据库/" class="post-category" target="_blank">
+                                    数据库
                                 </a>
                             
                             
@@ -979,8 +1025,8 @@ jdk8+tomcat7+mysql+eclipse+maven
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/毕业设计/" target="_blank">
-                        <span class="chip bg-color">毕业设计</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-04-18T06:30:41.254Z</updated>
+  <updated>2019-04-22T08:34:44.922Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -17,11 +17,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Tomcat相关面试题</title>
+    <link href="http://chenguoji.com/2019/04/22/tomcat-xiang-guan-mian-shi-ti/"/>
+    <id>http://chenguoji.com/2019/04/22/tomcat-xiang-guan-mian-shi-ti/</id>
+    <published>2019-04-22T05:41:34.000Z</published>
+    <updated>2019-04-22T08:34:44.922Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Tomcat相关的面试题出场的几率并不高，正式因为如此，很多人忽略了对Tomcat相关技能的掌握，这次整理了Tomcat相关的系统架构，&lt;br&gt;介绍了Server、Service、Connector、Container之间的关系，各个模块的功能，可以说把这几个掌握住了，To
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="Tomcat" scheme="http://chenguoji.com/tags/Tomcat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库-操作符记录</title>
+    <link href="http://chenguoji.com/2019/04/19/sql-union-cao-zuo-fu/"/>
+    <id>http://chenguoji.com/2019/04/19/sql-union-cao-zuo-fu/</id>
+    <published>2019-04-19T05:41:34.000Z</published>
+    <updated>2019-04-22T08:26:33.569Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;SQL-UNION-操作符&quot;&gt;&lt;a href=&quot;#SQL-UNION-操作符&quot; class=&quot;headerlink&quot; title=&quot;SQL UNION 操作符&quot;&gt;&lt;/a&gt;SQL UNION 操作符&lt;/h1&gt;&lt;p&gt;UNION 操作符用于合并两个或多个 SELECT
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>让你如何在一分钟内搞定面试官？</title>
     <link href="http://chenguoji.com/2019/04/18/rang-ni-ru-he-zai-yi-fen-zhong-nei-gao-ding-mian-shi-guan/"/>
     <id>http://chenguoji.com/2019/04/18/rang-ni-ru-he-zai-yi-fen-zhong-nei-gao-ding-mian-shi-guan/</id>
     <published>2019-04-18T06:14:59.000Z</published>
-    <updated>2019-04-18T06:30:41.254Z</updated>
+    <updated>2019-04-18T07:13:10.379Z</updated>
     
     <summary type="html">
     
