@@ -375,11 +375,11 @@
   </entry>
   
   <entry>
-    <title>Java转型大数据开发技能</title>
-    <link href="http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
-    <id>http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</id>
+    <title>Java面试中最高频的那20%知识点！</title>
+    <link href="http://chenguoji.com/2019/03/21/java-mian-shi/"/>
+    <id>http://chenguoji.com/2019/03/21/java-mian-shi/</id>
     <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-04-17T08:11:39.976Z</updated>
+    <updated>2019-04-17T08:21:11.942Z</updated>
     
     <summary type="html">
     
@@ -387,19 +387,20 @@
       
         
         
-          &lt;p&gt;很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。&lt;/p&gt;
-&lt;p&gt;什么意思呢？&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+          &lt;p&gt;Java目前已经不仅仅是一门开发语言，而是一整套生态体系。&lt;/p&gt;
+&lt;p&gt;作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。&lt;/p&gt;
+&lt;p&gt;但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的
         
       
     
     </summary>
     
-      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="大数据" scheme="http://chenguoji.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -430,11 +431,11 @@
   </entry>
   
   <entry>
-    <title>Java面试中最高频的那20%知识点！</title>
-    <link href="http://chenguoji.com/2019/03/21/java-mian-shi/"/>
-    <id>http://chenguoji.com/2019/03/21/java-mian-shi/</id>
+    <title>Java转型大数据开发技能</title>
+    <link href="http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
+    <id>http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</id>
     <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-04-17T08:21:11.942Z</updated>
+    <updated>2019-04-17T08:11:39.976Z</updated>
     
     <summary type="html">
     
@@ -442,20 +443,19 @@
       
         
         
-          &lt;p&gt;Java目前已经不仅仅是一门开发语言，而是一整套生态体系。&lt;/p&gt;
-&lt;p&gt;作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。&lt;/p&gt;
-&lt;p&gt;但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的
+          &lt;p&gt;很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。&lt;/p&gt;
+&lt;p&gt;什么意思呢？&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
         
       
     
     </summary>
     
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="大数据" scheme="http://chenguoji.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
