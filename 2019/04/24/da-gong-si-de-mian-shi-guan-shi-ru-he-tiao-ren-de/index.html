@@ -4,10 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java面试中最高频的那20%知识点！, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；">
-    <meta name="description" content="Java目前已经不仅仅是一门开发语言，而是一整套生态体系。
-作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。
-但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握2">
+    <meta name="keywords" content="大公司的面试官是如何挑人的？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；">
+    <meta name="description" content="又到一年一度的跳槽求职高峰季，很多人问我，你们公司还需要人么，你们用的技术栈是哪些，有哪些是你们比较关注技术重点？
+没错，作为负责技术面试的我，面对数十甚至上百封简历，肯定要做一轮筛选。究竟哪些技术点或方向在我筛选或面试时，留下深刻印象呢？">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java面试中最高频的那20%知识点！ | 陈国际博客</title>
+    <title>大公司的面试官是如何挑人的？ | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -217,13 +216,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/8c49182140953b97801519267be9bb3b.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/33b2ca3040787acb8050e4b280ee99fc.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Java面试中最高频的那20%知识点！
+                        大公司的面试官是如何挑人的？
                     </div>
                 </div>
             </div>
@@ -338,10 +337,6 @@
                                 <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/面试/" target="_blank">
-                                <span class="chip bg-color">面试</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -362,21 +357,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-03-21
+                    2019-04-24
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        355
+                        1.7k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        5 分
                     </div>
                     
                 
@@ -392,28 +387,50 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Java目前已经不仅仅是一门开发语言，而是一整套生态体系。</p>
-<p>作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。</p>
-<p>但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的知识，就能解决80%的问题。</p>
-<p>那么，Java程序员必须掌握的20%知识点都有哪些呢？</p>
-<p>个人认为包括以下内容：</p>
-<pre><code>Java基础知识，如集合类、IO、泛型等。
+                <p>又到一年一度的跳槽求职高峰季，很多人问我，你们公司还需要人么，你们用的技术栈是哪些，有哪些是你们比较关注技术重点？</p>
+<p>没错，作为负责技术面试的我，面对数十甚至上百封简历，肯定要做一轮筛选。究竟哪些技术点或方向在我筛选或面试时，留下深刻印象呢？</p>
+<p>我觉得优秀的，有潜质的程序员可以从下面几点体现。</p>
+<h1 id="1、性能调优"><a href="#1、性能调优" class="headerlink" title="1、性能调优"></a>1、性能调优</h1><p>几乎每个JAVA后端开发程序员，都会在面试时碰到诸如如何性能调优的问题，如何回答好这个问题，不仅仅是对JVM，内存模型等的理解，更重要的是碰到性能问题时，排查问题的方法论和思路。</p>
+<p>典型的一个场景是：在压力测试时，发现FullGC频率很高，如何解决？</p>
+<p>此类问题一般从以下几点入手：</p>
+<pre><code>1. 观察GC日志，判断是否有内存泄漏，或者存在的内部不合理点。此处要求能熟悉各种linux命令，可以快速查看和定位。
 
-JVM底层知识，如类加载机制、GC、JVM内存结构等。
+2. 调整JVM 参数，如新生代，年老代大小，S0和S1大小比例，不同垃圾回收器的采用。并结合业务特点做进一步分析。这里不但要求扎实的JVM内存模型和理论，还要求对JVM的各种参数设置耳熟能详，并能实践操作。
 
-Java并发编程知识，如Java内存模型、并发包、线程池、netty等。
+3. Dump内存，做进一步的对象分析。
 
-开发框架知识，如Spring、mybatis、springboot、springMVC等。
+4. 压测脚本的编写，性能问题解决前可以发现问题，并能在问题解决后真实的验证。
+</code></pre><p>此类优化不仅仅是照本宣科式的回答，面试官一定会喜欢问实际中操作的场景，和解决问题的思路。因为性能问题的原因是多种多样的，但是解决问题的思路和方法论是可以明确的。</p>
+<h1 id="2、网络框架的理解和使用"><a href="#2、网络框架的理解和使用" class="headerlink" title="2、网络框架的理解和使用"></a>2、网络框架的理解和使用</h1><p>大家一定都听过或使用过网络异步框架Netty，甚至使用netty框架开发过一些应用和功能。</p>
+<p>但是大部分人仅限于对Netty的使用，甚至仅仅知道其他一些开源框架使用了Netty，但是在资深面试官眼里，Netty有很多值得学习和借鉴的地方，使用过Netty并且能对Netty的一些原理有一定的了解且能学以致用的Java程序员格外受欢迎。</p>
+<p>一般来说，要求较高的面试官和技术经理喜欢从Netty的设计模式角度深入的考察技术人员对网络开发和相关理论的理解如：</p>
+<pre><code>1. Netty的Reactor模型如何设计，反应在应用里的模型是如何。
 
-分布式相关知识，如CAP理论、分布式锁、分布式事务、Zookeeper、spring Cloud等。
+2. Netty的pipeline 责任链如何使用，业务场景中是否有类似的实践经验。
 
-其他基础知识，编程语言、网络方面、数据库、数据结构和算法。
+3. 项目中有无使用Netty，并利用Netty进行私有化协议设计。
+</code></pre><p>同学们不仅要求能使用Netty，通过阅读其源码，理解其中的精髓，并能应用在自己的实践项目中，这个才是亮点和加分项。</p>
+<h1 id="3、开源服务化RPC框架的理解和使用"><a href="#3、开源服务化RPC框架的理解和使用" class="headerlink" title="3、开源服务化RPC框架的理解和使用"></a>3、开源服务化RPC框架的理解和使用</h1><p>互联网经过十几年的发展，早已经从单体应用发展为服务化应用，大厂里系统和服务尤其如此。</p>
+<p>拿经典的dubbo  服务化框架举例，当前市面上有很多dubbo相关的文章和介绍，这里撇开不谈，从技术负责人的角度来，我会更关心下面有关几个dubbo相关的问题。</p>
+<h2 id="1-技术选型：为什么选择dubbo，而不选择其他如spring-cloud框架"><a href="#1-技术选型：为什么选择dubbo，而不选择其他如spring-cloud框架" class="headerlink" title="1. 技术选型：为什么选择dubbo，而不选择其他如spring cloud框架?"></a>1. 技术选型：为什么选择dubbo，而不选择其他如spring cloud框架?</h2><p>我认为可以从如下考虑：</p>
+<pre><code>A）业务的特点以及可预见的后续的发展。作为高级技术人员，必须需要对业务的的发展做预计和规划。
 
-中间件相关知识，如Redis、rabbitMQ、Dubbo等。
+B）可用性要求，是否需要达到4个99（99.99%），需要支撑的峰值QPS，是否有业务的集中爆发点，如电商大促
 
-服务器相关知识，如tomcat、jetty、jboss等。
-</code></pre><p>以上这些知识，就是最高频的面试问题，以及工作中需要用到的知识。当然，一个程序员想要掌握以上所有知识，可能需要花费很长时间。这个过程注定是漫长且孤独的。</p>
-<p>来源：<br><a href="https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw</a></p>
+C）团队的成熟度，一个成熟的团队可以很好的hold住复杂的开源框架，甚至做定制化开发。
+
+D）技术选型这个话题虽然宽泛，但是最能体现更能体现技术人员的综合能力，尤其是结合业务特点后对技术深度和广度的驾驭能力。
+</code></pre><h2 id="2-Dubbo底层走的是什么协议，如何处理异步转同步？"><a href="#2-Dubbo底层走的是什么协议，如何处理异步转同步？" class="headerlink" title="2. Dubbo底层走的是什么协议，如何处理异步转同步？"></a>2. Dubbo底层走的是什么协议，如何处理异步转同步？</h2><p>大部分的Java开发都会直接使用dubbo，而不会去关心其底层一些技术细节，但是一些细节，如dubbo如何对对象进行序列化，用了哪些序列化方式，这些在分布式项目中对提高应用的处理速度，减少网络开销，都很大帮助。</p>
+<p>同时RPC框架里如何将异步转同步，也是需要技术人员非常关注的一面，里面相关的设计模式，多线程程高并发场景都是很多业务系统里真实需要和借鉴的。</p>
+<h2 id="3-Dubbo在高并发高可用等实践场景需要认真考虑的其他问题"><a href="#3-Dubbo在高并发高可用等实践场景需要认真考虑的其他问题" class="headerlink" title="3. Dubbo在高并发高可用等实践场景需要认真考虑的其他问题"></a>3. Dubbo在高并发高可用等实践场景需要认真考虑的其他问题</h2><p>使用了dubbo后，很多人觉得万事大吉，其实并不是这样，下面几点还需要关心，并且这些就是体现你价值的地方</p>
+<pre><code>A) dubbo依赖了zooKeeper，但是万一ZooKeeper宕机了怎么办
+
+B) 如果ZooKeeper假死，客户端对服务端的调用是否会全部下线，如果是该如何避免
+
+C) 如何监控duubo的调用，并做到优雅的客户端无感发布
+</code></pre><h1 id="4、自身多年的面试体会"><a href="#4、自身多年的面试体会" class="headerlink" title="4、自身多年的面试体会"></a>4、自身多年的面试体会</h1><p>1.项目中尽量多思考，迎难而上，如碰到复杂的性能，内存泄露等问题的问题，往往是提升自己的机会，千万要仔细研究解决，可以参考其他解决类似问题的文章和实践经验，对技术深度的提升是很大的，关键时候可以让你的面试官突然觉得面耳目一新。</p>
+<p>2.重视解决问题的思路和方法，很多时候技术人员可以快速设计一个系统或解决一个问题，但是在资深工程师或面试官眼里可能并不是最优方案。如何解决？</p>
+<p>很多技术人员的项目和技术相对单一，长久以往，容易造成技术思路和视野的狭窄，接触不到行业最新思路和动态或者当前疑难问题的最佳解决方案。    </p>
 
             </div>
             <hr>
@@ -561,7 +578,7 @@ Java并发编程知识，如Java内存模型、并发包、线程池、netty等�
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/03/21/java-mian-shi/" class="b-link-green">Java面试中最高频的那20%知识点！</a>
+                    <a href="/2019/04/24/da-gong-si-de-mian-shi-guan-shi-ru-he-tiao-ren-de/" class="b-link-green">大公司的面试官是如何挑人的？</a>
                 </p>
             </div>
         </div>
@@ -843,44 +860,43 @@ Java并发编程知识，如Java内存模型、并发包、线程池、netty等�
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/">
+                <a href="/2019/04/24/da-gong-si-de-mian-shi-guan-shi-ru-he-tiao-ren-de/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/957f331740fdadbd807ad2c832fcb0e5.jpg" class="responsive-img" alt="Java转型大数据开发技能">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/33b2ca3040787acb8050e4b280ee99fc.jpg" class="responsive-img" alt="大公司的面试官是如何挑人的？">
                         
-                        <span class="card-title">Java转型大数据开发技能</span>
+                        <span class="card-title">大公司的面试官是如何挑人的？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。
-什么意思呢？
-就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。
-如此多的技术，怎么学得过来呢？
-我觉得以你</div>
+                    <div class="summary block-with-text">又到一年一度的跳槽求职高峰季，很多人问我，你们公司还需要人么，你们用的技术栈是哪些，有哪些是你们比较关注技术重点？
+没错，作为负责技术面试的我，面对数十甚至上百封简历，肯定要做一轮筛选。究竟哪些技术点或方向在我筛选或面试时，留下深刻印象呢？</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                    技术
+                            <a href="/categories/面试/" class="post-category" target="_blank">
+                                    面试
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/大数据/" target="_blank">
-                        <span class="chip bg-color">大数据</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -894,31 +910,28 @@ Java并发编程知识，如Java内存模型、并发包、线程池、netty等�
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/03/21/about/">
+                <a href="/2019/04/23/ruan-jian-gong-cheng-shi-sheng-cun-zhi-nan-mian-shi-zhun-bei-gong-zuo-jing-yan-he-shi-yong-gong-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg" class="responsive-img" alt="关于">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/c43ffb16405ae370807d3cebc1dd6d38.jpg" class="responsive-img" alt="软件工程师生存指南：面试准备、工作经验和实用工具">
                         
-                        <span class="card-title">关于</span>
+                        <span class="card-title">软件工程师生存指南：面试准备、工作经验和实用工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">关于博主博主是一名Java码农。
-虽然还未走上人生巅峰，但是一直保持着一个码农的自我修养。
-用一句话概括博主：每天瞎逼忙，还没赚到钱。
-但是博主有一颗分享技术的心，我会尽量用通俗易懂的方式，分享个人的知识。
-博客的宗旨就是分享知识，分享技术</div>
+                    <div class="summary block-with-text">编者按：软件工程师是令人羡慕的职业。但是如何才能拿到这份工作？又如何才能做好这份工作呢？拥有相关经验的 Valeri Alexiev 提供了相关建议和工具。其中包括了如何准备面试、如何以软件工程师的身份工作以及如何持续改进方面的经验之谈。
+</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/关于/" class="post-category" target="_blank">
-                                    关于
+                            <a href="/categories/面试/" class="post-category" target="_blank">
+                                    面试
                                 </a>
                             
                             
@@ -928,8 +941,8 @@ Java并发编程知识，如Java内存模型、并发包、线程池、netty等�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/博客说明/" target="_blank">
-                        <span class="chip bg-color">博客说明</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>

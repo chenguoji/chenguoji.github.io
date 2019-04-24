@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-04-23T06:03:15.618Z</updated>
+  <updated>2019-04-24T09:05:15.713Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大公司的面试官是如何挑人的？</title>
+    <link href="http://chenguoji.com/2019/04/24/da-gong-si-de-mian-shi-guan-shi-ru-he-tiao-ren-de/"/>
+    <id>http://chenguoji.com/2019/04/24/da-gong-si-de-mian-shi-guan-shi-ru-he-tiao-ren-de/</id>
+    <published>2019-04-24T05:41:34.000Z</published>
+    <updated>2019-04-24T09:05:15.713Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;又到一年一度的跳槽求职高峰季，很多人问我，你们公司还需要人么，你们用的技术栈是哪些，有哪些是你们比较关注技术重点？&lt;/p&gt;
+&lt;p&gt;没错，作为负责技术面试的我，面对数十甚至上百封简历，肯定要做一轮筛选。究竟哪些技术点或方向在我筛选或面试时，留下深刻印象呢？&lt;/p&gt;
+&lt;p&gt;我觉
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>软件工程师生存指南：面试准备、工作经验和实用工具</title>
@@ -430,32 +458,6 @@
   </entry>
   
   <entry>
-    <title>关于</title>
-    <link href="http://chenguoji.com/2019/03/21/about/"/>
-    <id>http://chenguoji.com/2019/03/21/about/</id>
-    <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-03-22T02:18:37.994Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;关于博主&quot;&gt;&lt;a href=&quot;#关于博主&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="关于" scheme="http://chenguoji.com/categories/%E5%85%B3%E4%BA%8E/"/>
-    
-    
-      <category term="博客说明" scheme="http://chenguoji.com/tags/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java面试中最高频的那20%知识点！</title>
     <link href="http://chenguoji.com/2019/03/21/java-mian-shi/"/>
     <id>http://chenguoji.com/2019/03/21/java-mian-shi/</id>
@@ -482,6 +484,32 @@
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
       <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于</title>
+    <link href="http://chenguoji.com/2019/03/21/about/"/>
+    <id>http://chenguoji.com/2019/03/21/about/</id>
+    <published>2019-03-21T02:39:50.000Z</published>
+    <updated>2019-03-22T02:18:37.994Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;关于博主&quot;&gt;&lt;a href=&quot;#关于博主&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="关于" scheme="http://chenguoji.com/categories/%E5%85%B3%E4%BA%8E/"/>
+    
+    
+      <category term="博客说明" scheme="http://chenguoji.com/tags/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
     
   </entry>
   
