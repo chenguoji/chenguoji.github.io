@@ -416,6 +416,33 @@
     
     
     <entry>
+      <title>Java面试中最高频的那20%知识点！</title>
+      <link href="/2019/03/21/java-mian-shi/"/>
+      <url>/2019/03/21/java-mian-shi/</url>
+      
+        <content type="html"><![CDATA[<p>Java目前已经不仅仅是一门开发语言，而是一整套生态体系。</p><p>作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。</p><p>但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的知识，就能解决80%的问题。</p><p>那么，Java程序员必须掌握的20%知识点都有哪些呢？</p><p>个人认为包括以下内容：</p><pre><code>Java基础知识，如集合类、IO、泛型等。JVM底层知识，如类加载机制、GC、JVM内存结构等。Java并发编程知识，如Java内存模型、并发包、线程池、netty等。开发框架知识，如Spring、mybatis、springboot、springMVC等。分布式相关知识，如CAP理论、分布式锁、分布式事务、Zookeeper、spring Cloud等。其他基础知识，编程语言、网络方面、数据库、数据结构和算法。中间件相关知识，如Redis、rabbitMQ、Dubbo等。服务器相关知识，如tomcat、jetty、jboss等。</code></pre><p>以上这些知识，就是最高频的面试问题，以及工作中需要用到的知识。当然，一个程序员想要掌握以上所有知识，可能需要花费很长时间。这个过程注定是漫长且孤独的。</p><p>来源：<br><a href="https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于</title>
       <link href="/2019/03/21/about/"/>
       <url>/2019/03/21/about/</url>
@@ -458,33 +485,6 @@
         <tags>
             
             <tag> 大数据 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Java面试中最高频的那20%知识点！</title>
-      <link href="/2019/03/21/java-mian-shi/"/>
-      <url>/2019/03/21/java-mian-shi/</url>
-      
-        <content type="html"><![CDATA[<p>Java目前已经不仅仅是一门开发语言，而是一整套生态体系。</p><p>作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。</p><p>但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的知识，就能解决80%的问题。</p><p>那么，Java程序员必须掌握的20%知识点都有哪些呢？</p><p>个人认为包括以下内容：</p><pre><code>Java基础知识，如集合类、IO、泛型等。JVM底层知识，如类加载机制、GC、JVM内存结构等。Java并发编程知识，如Java内存模型、并发包、线程池、netty等。开发框架知识，如Spring、mybatis、springboot、springMVC等。分布式相关知识，如CAP理论、分布式锁、分布式事务、Zookeeper、spring Cloud等。其他基础知识，编程语言、网络方面、数据库、数据结构和算法。中间件相关知识，如Redis、rabbitMQ、Dubbo等。服务器相关知识，如tomcat、jetty、jboss等。</code></pre><p>以上这些知识，就是最高频的面试问题，以及工作中需要用到的知识。当然，一个程序员想要掌握以上所有知识，可能需要花费很长时间。这个过程注定是漫长且孤独的。</p><p>来源：<br><a href="https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-            <tag> 面试 </tag>
             
         </tags>
       
