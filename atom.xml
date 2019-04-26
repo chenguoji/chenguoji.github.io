@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-04-24T09:05:15.713Z</updated>
+  <updated>2019-04-26T05:23:05.460Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【漫画】996对程序员的伤害，一看你就懂</title>
+    <link href="http://chenguoji.com/2019/04/26/man-hua-996-dui-cheng-xu-yuan-de-shang-hai-yi-kan-ni-jiu-dong/"/>
+    <id>http://chenguoji.com/2019/04/26/man-hua-996-dui-cheng-xu-yuan-de-shang-hai-yi-kan-ni-jiu-dong/</id>
+    <published>2019-04-26T05:41:34.000Z</published>
+    <updated>2019-04-26T05:23:05.460Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我在一家互联网大厂上班，我很骄傲，有一天，上司递给我一张协议&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>大公司的面试官是如何挑人的？</title>
@@ -320,7 +346,7 @@
     <link href="http://chenguoji.com/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/"/>
     <id>http://chenguoji.com/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/</id>
     <published>2019-03-25T07:27:28.000Z</published>
-    <updated>2019-04-17T08:21:22.320Z</updated>
+    <updated>2019-04-26T03:21:04.425Z</updated>
     
     <summary type="html">
     
@@ -429,6 +455,32 @@
   </entry>
   
   <entry>
+    <title>关于</title>
+    <link href="http://chenguoji.com/2019/03/21/about/"/>
+    <id>http://chenguoji.com/2019/03/21/about/</id>
+    <published>2019-03-21T02:39:50.000Z</published>
+    <updated>2019-03-22T02:18:37.994Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;关于博主&quot;&gt;&lt;a href=&quot;#关于博主&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="关于" scheme="http://chenguoji.com/categories/%E5%85%B3%E4%BA%8E/"/>
+    
+    
+      <category term="博客说明" scheme="http://chenguoji.com/tags/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java转型大数据开发技能</title>
     <link href="http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
     <id>http://chenguoji.com/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</id>
@@ -484,32 +536,6 @@
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
       <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于</title>
-    <link href="http://chenguoji.com/2019/03/21/about/"/>
-    <id>http://chenguoji.com/2019/03/21/about/</id>
-    <published>2019-03-21T02:39:50.000Z</published>
-    <updated>2019-03-22T02:18:37.994Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;关于博主&quot;&gt;&lt;a href=&quot;#关于博主&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="关于" scheme="http://chenguoji.com/categories/%E5%85%B3%E4%BA%8E/"/>
-    
-    
-      <category term="博客说明" scheme="http://chenguoji.com/tags/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
     
   </entry>
   

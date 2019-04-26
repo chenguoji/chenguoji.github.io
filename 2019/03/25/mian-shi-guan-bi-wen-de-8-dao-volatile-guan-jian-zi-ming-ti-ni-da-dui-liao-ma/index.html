@@ -403,7 +403,7 @@
 <p>在Java内存模型里，对上述的优化又进行了一波抽象。JMM规定所有变量都是存在主存中的，类似于上面提到的普通内存，每个线程又包含自己的工作内存，</p>
 <p>方便理解就可以看成CPU上的寄存器或者高速缓存。所以线程的操作都是以工作内存为主，它们只能访问自己的工作内存，且工作前后都要把值在同步回主内存。</p>
 <p>这么说得我自己都有些不清楚了，拿张纸画一下：</p>
-
+<img src="/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/20190325153020.jpg">
 <p>在线程执行时，首先会从主存中read变量值，再load到工作内存中的副本中，然后再传给处理器执行，执行完毕后再给工作内存中的副本赋值，随后工作内存再把值传回给主存，主存中的值才更新。</p>
 <p>使用工作内存和主存，虽然加快的速度，但是也带来了一些问题。比如看下面一个例子：</p>
 <pre><code>i = i + 1;
@@ -450,7 +450,7 @@ int ret = a * a;//4
 
 }    
 </code></pre><p>假如有两个线程执行上述代码段，线程1先执行write，随后线程2再执行multiply，最后ret的值一定是4吗？结果不一定：</p>
-
+<img src="/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/20190325153601.jpg" title="这是一个新的博客的图片的说明">
 <p>如图所示，write方法里的1和2做了重排序，线程1先对flag赋值为true，随后执行到线程2，ret直接计算出结果，再到线程1，这时候a才赋值为2,很明显迟了一步。</p>
 <p>这时候可以为flag加上volatile关键字，禁止重排序，可以确保程序的“有序性”，也可以上重量级的synchronized和Lock来保证有序性,它们能保证那一块区域里的代码都是一次性执行完毕的。</p>
 <p>另外，JMM具备一些先天的有序性,即不需要通过任何手段就可以保证的有序性，通常称为happens-before原则。&lt;&lt;JSR-133：Java Memory Model and Thread Specification&gt;&gt;定义了如下happens-before规则：</p>
