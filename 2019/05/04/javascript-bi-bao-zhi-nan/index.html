@@ -4,10 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="让你如何在一分钟内搞定面试官？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；">
-    <meta name="description" content="“请做个自我介绍。”有的人，可以口若悬河、妙语连珠讲3分钟，有的人，可能磕磕巴巴，讲了30秒，前者一定能胜过后者，然则未必，
-今天就来聊一聊，面试的经典问题——自我介绍。
-为什么要做自我介绍通常说来，大大小小的面试，尤其是针对基础岗位，都会">
+    <meta name="keywords" content="JavaScript 闭包指南, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="闭包是函数创建时作用域内所有变量的集合。要使用闭包，需要在另一个函数中创建一个函数，这种函数被称为嵌套函数。内部函数可以访问外部函数作用域中的变量（依靠闭包可以访问外部函数作用域），即使在返回外部函数之后也是如此。每次创建嵌套函数时都会创建">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>让你如何在一分钟内搞定面试官？ | 陈国际博客</title>
+    <title>JavaScript 闭包指南 | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -217,13 +215,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/957f331740fdadbd807ad2c832fcb0e5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        让你如何在一分钟内搞定面试官？
+                        JavaScript 闭包指南
                     </div>
                 </div>
             </div>
@@ -334,8 +332,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java面试/" target="_blank">
-                                <span class="chip bg-color">java面试</span>
+                            <a href="/tags/JavaScript/" target="_blank">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -346,8 +344,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/面试/" class="post-category" target="_blank">
-                                面试
+                            <a href="/categories/技术/" class="post-category" target="_blank">
+                                技术
                             </a>
                         
                     </div>
@@ -358,21 +356,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-04-18
+                    2019-05-04
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.2k
+                        1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        7 分
+                        3 分
                     </div>
                     
                 
@@ -388,60 +386,81 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="“请做个自我介绍。”"><a href="#“请做个自我介绍。”" class="headerlink" title="“请做个自我介绍。”"></a>“请做个自我介绍。”</h2><pre><code>有的人，可以口若悬河、妙语连珠讲3分钟，有的人，可能磕磕巴巴，讲了30秒，前者一定能胜过后者，然则未必，
-今天就来聊一聊，面试的经典问题——自我介绍。
-</code></pre><h2 id="为什么要做自我介绍"><a href="#为什么要做自我介绍" class="headerlink" title="为什么要做自我介绍"></a>为什么要做自我介绍</h2><pre><code>通常说来，大大小小的面试，尤其是针对基础岗位，都会被问到这个问题，甚至有些面试技术还有些生硬的面试官，
-屁股还没坐稳，就把这个问题抛给应聘人员了，那么作为求职者，要首先明白，面试官为什么要让你做自我介绍？
-简单说来，包括以下几个原因：    
+                <p>闭包是函数创建时作用域内所有变量的集合。要使用闭包，需要在另一个函数中创建一个函数，这种函数被称为嵌套函数。内部函数可以访问外部函数作用域中的变量（依靠闭包可以访问外部函数作用域），即使在返回外部函数之后也是如此。每次创建嵌套函数时都会创建闭包。</p>
+<p>在继续了解闭包之前，首先了解一下JavaScript中的作用域链。</p>
+<p>通常，有两种类型的作用域：<br>    全局作用域<br>    局部作用域</p>
+<p>在JavaScript中，函数内部的变量在外部是不可见的。但是在块内的变量（if 或 while 之类）是可见的。</p>
+<p>因此，JavaScript有函数作用域。没有块作用域。</p>
+<pre><code>var a = 10;
+function app(){
+   var b = 2;
+   console.log(a); // 10
+   console.log(b); // 2
+}
+console.log(b); //   ReferenceError: b is not defined
+app();
+</code></pre><p>正像我们已知的那样，a 是一个全局变量并且 b 是一个局部变量，它是app函数独有的。</p>
+<p>我们无法从局部作用域之外获取局部变量的值。</p>
+<p>使用嵌套函数 —— 函数内部的函数</p>
+<pre><code>var a = 10;
+function app(){
+     var b = 2;
+     var d = 3;
+  function add(){
+     var c = a + b;
+   }
+ return add;
+}
+var x = app();
+console.dir(x);
+</code></pre><p>在这里app是父函数，add函数是子函数。</p>
+<pre><code>1.代码中没有用 console.log 而是用了console.dir 来输出指定JavaScript对象的所有属性，这有助于开发人员获取对象的属性
+2.变量 x 被分配给app函数，app函数返回add函数。因此我们可以看到add函数的所有对象属性。
+</code></pre><p>如果在浏览器中查看控制台，可以在Scopes数组中看到Closure对象。</p>
+<p><img src="https://image-static.segmentfault.com/311/424/3114243464-5ccecabd8a11e_articlex"></p>
+<p>由于内部函数add访问外部函数变量b 和 d，因此这2个变量将被添加到Closure对象中以供引用。</p>
+<p>让我们看看下一个例子：</p>
+<pre><code>var a = 10;
+var startFunc;
+function app(){
+      var b = 2;
+   function add(){
+      var c = a + b;
+      console.log(c);
+   }
+   startFunc = add();
+}
+app(); // 调用app函数
+startFunc; // 上面调用的app函数会将add函数赋值给startFunc并输出c的值
+</code></pre><p>1.一个名为 startFunc 的全局函数被分配给add函数，该函数是 app 函数的子函数。<br>2.这只有在调用 app 函数后才有可能，否则 startFunc 将作为全局变量而不被分配任何值</p>
+<p>在JavaScript中使用闭包</p>
+<p>很多人在编码时会用到闭包，但是不明白用它的原因。 JavaScript没有像其他面向对象语言一样的访问修饰符，例如 private，public，protected。不过我们可以利用函数来保护命名空间免受外部代码使用的影响。</p>
+<p>特别是在函数中，立即执行函数表达式（IIFE）是在声明之后会立即执行的函数表达式。在声明函数之后，你不需要去调用该函数。</p>
+<p>IIFE的语法定义是：</p>
+<pre><code>(function(){
+             //函数内部的变量和作用域
+})();
+</code></pre><p>举个例子：</p>
+<pre><code>var studnetEnrollment = (function () {
+    //私有变量，任何人都无法改变
+    //除了下面声明的函数
+     var count = 0;
+     var prefix = &quot;S&quot;;
+    // 返回一个命名函数表达式
+     function innerFunc() {
+         count = count + 1;
+         return prefix + count;
+     };
+ return innerFunc;
+})();
+var x = studnetEnrollment(); // S1
+console.log(x);
+var y = studnetEnrollment(); // S2 
+console.log(y);
+</code></pre><p>count和prefix是两个私有变量，任何人都无法进行更改，只能访问内部函数（即代码中的innerFunc）。只有名为闭包的功能才能对此进行访问。</p>
+<p>1.第一次调用studentEnrollment函数时，函数内的count变量由innerFunc函数递增加1。<br>2.第二次，增加上一个计数值，即 1 增加到 2<br>3.Closure功能可以实现这些功能。</p>
+<p>结论<br>    闭包是外部函数中的变量集合，它提供对内部函数作用域的访问以保护全局命名空间。<br>    闭包使开发人员能够编写像面向对象语言那样的干净代码，这些代码不会混淆全局和局部变量的名称。</p>
 
-1、面试官的技巧还不是很娴熟，使用面试的惯常流程；
-
-2、通过自我介绍，判断求职者的基本素质（比如口头语言表达能力、逻辑能力等）；
-
-3、通过自我介绍，找到简历上缺失的或者不一致的细节，后续追问；
-
-4、通过自我介绍，建立对应聘者的立体、整体的初步印象和概念。
-</code></pre><p>简言之，自我介绍的意义和价值就在于，通过简短的口头语言陈述，让面试官初步了解你是一个什么样的面试候选人。</p>
-<h2 id="如何做好自我介绍"><a href="#如何做好自我介绍" class="headerlink" title="如何做好自我介绍"></a>如何做好自我介绍</h2><h3 id="1、先说核心内容："><a href="#1、先说核心内容：" class="headerlink" title="1、先说核心内容："></a>1、先说核心内容：</h3><p>前面已经介绍了这一问题的考察点，那么接下来就对症下药，做一个高质量的自我介绍，给整场面试开一个好头。自我介绍过程就是人岗匹配度的核查与确认，这样描述有点抽象，举个例子来说： </p>
-<p>应聘职位：招聘助理</p>
-<p>应聘人员：有一定HR初级经验</p>
-<p>假设自我介绍-1：“……我在原来公司从事过HR助理工作，主要以员工关系工作为主，招聘任务重的时候，也协助做一些招聘工作，比如面试的约谈，面试过程的记录以及相关数据的汇总等等”；</p>
-<p>假设自我介绍-2：“……我在原来公司从事过HR助理工作，主要以员工关系工作为主，没怎么做过招聘，招聘任务重的时候，会给招聘小组的同事们帮帮忙……”</p>
-<p>对比上面的两个自我介绍，也就不难看出质量的优劣，在做介绍的过程中，首要原则，多介绍以往工作经验中跟当前应聘岗位有交集的地方，而且尽可能描述到细节，切勿顾左右而言他。</p>
-<p>有的人可能会说了，我正在寻求转行，没有相关经验怎么办？</p>
-<p>只要记住以下几点：<br>    如果这家公司在看过你简历的情况下依然通知你面试，那么也就代表以往的工作经验并非是该岗位的必要要素。</p>
-<p>此处还要多说一句，如果你是打算转行，收到心仪的职位时，先不要过于激动，而是要在面试电话中先冷静地跟通知你的人确认一下你要面试的职位，<br>不排除当下有些公司会挂着羊头卖狗肉，打着文职的旗号招销售，专门诱骗小姑娘们，所以此类公司，要更加慎重，<br>可以用该公司的名称到网络上去搜索一下他们家的招聘信息，如果铺天盖地都是销售岗位的招聘，那么，可能就只是个幌子而已了。<br>其实非专业技术型的岗位，尤其是偏基础性质的职位，企业不会特别看重以往经验的对口与否，衡量工作的胜任能力，一方面是技能，一方面是态度，</p>
-<p>技能培养如果可以在企业内部培训的基础上快速实现，往往更加看重你的个人态度层面，所以不必过分纠结经验问题。再举个例子来说：</p>
-<p>应聘职位：销售支持</p>
-<p>应聘人员：有一定的话务客服经验</p>
-<p>自我介绍：“……在之前的工作中，我从事的是话务客服的工作，虽然跟贵公司招聘的销售支持职务有差别，但我详细阅读了贵公司的岗位介绍，销售支持的工作需要良好的服务意识，细心的工作态度以及对产品知识的了解，从事过客服工作，我的服务意识以及细心程度都没有问题，专业知识相信经过公司的培训之后，自己也能熟练掌握……”</p>
-<p>也就是说，如果你是转行，应聘不需要专业的技能和知识的岗位，尽可能寻找以往工作中的软性能力与当前应聘职位之间的关系，多表现自己良好的职业素质层面的东西即可。</p>
-<h3 id="2、再说说辅助内容："><a href="#2、再说说辅助内容：" class="headerlink" title="2、再说说辅助内容："></a>2、再说说辅助内容：</h3><p>上述内容针对的是自我介绍的核心内容，但自我介绍的内容不仅仅是这些，还需要有一些其他的内容作为辅助，才显得更加自然和饱满，简言之，一篇完成的自我介绍要涵盖以下内容：</p>
-<p>自我基本情况；</p>
-<pre><code>以往工作经验与应聘岗位链接；
-
-个人的职业发展设想；
-
-对应聘企业的个人认同感；
-
-至于个人的兴趣爱好之类的，可以简单带过即可。
-</code></pre><p>上述的五个简单部分，2、3、4为主，前后两部分为辅助，再加上一些简单的寒暄的话语即可。</p>
-<h3 id="3、还有几个误区，需要大家绕开："><a href="#3、还有几个误区，需要大家绕开：" class="headerlink" title="3、还有几个误区，需要大家绕开："></a>3、还有几个误区，需要大家绕开：</h3><p>自我介绍不是检查背诵能力，切勿千篇一律。有的人准备一套说辞，背的滚瓜烂熟，见谁都是这一套，这样是不稳妥的，要把自己的情况跟企业的职位做链接，这样方才更加吸引面试官；</p>
-<p>做自我介绍的时候卡壳了，怎么办？不要紧张的手足无措，可以坦然地笑笑，跟面试官说，不好意思，我有点紧张，然后继续就好了；</p>
-<p>做自我介绍的时候，两眼直勾勾看桌子或者天花板，没有跟面试官的眼神接触。如果有好几个面试官，不要盯着一个人，都扫几眼；</p>
-<p>做自我介绍的时候，不要做小动作，落落大方，不要抖腿，掰手指头等等；</p>
-<h4 id="注意跟简历内容相一致，不要出现信息不对称。"><a href="#注意跟简历内容相一致，不要出现信息不对称。" class="headerlink" title="注意跟简历内容相一致，不要出现信息不对称。"></a>注意跟简历内容相一致，不要出现信息不对称。</h4><p>简单粗暴的给个模板</p>
-<p>不给模板的干货都是伪干货，上面七七八八说了这么多，给个范本仅供参考：</p>
-<p>“面试官您好，非常荣幸参与贵公司**职位的应聘，下面我简单介绍一下我的个人情况，基本信息之类的简历上都有，就不再重复。</p>
-<p>首先介绍一下之前的工作经验……（挑一些跟应聘岗位有链接的内容说，如果有工作荣誉，前往不要漏掉）……</p>
-<p>之所以离开上一家公司是出于……考虑（离职理由要争当，尽可能从职业发展的角度出发）……</p>
-<p>通过<strong>渠道关注到贵公司</strong>岗位的招聘信息，该职位跟我未来的职业发展相对契合，而且贵公司的业务（或者企业实力、行业口碑、企业文化等）对我都非常有吸引力，非常渴望能够进入贵公司发展……</p>
-<p>我个人的基本情况是（受教育情况、婚育、住所、家庭简单情况），闲暇之余，我一般会做些**事情（有意义的）……</p>
-<p>或许在所有的求职者当中，我不是最优秀的，但如果贵公司能够给我这个工作机会，我有信心，也有决心做好这份工作，以上是我的个人基本情况，希望今天自己面试有好的表现，未来有幸与诸位面试官共事，也预祝各位度过美好的一天。”</p>
-<h4 id="最后再做个总结："><a href="#最后再做个总结：" class="headerlink" title="最后再做个总结："></a>最后再做个总结：</h4><pre><code>自我介绍是整个面试的开始，首因效应之下，第一印象还是很重要滴，在做介绍的过程中，
-尽可能多去说有些跟岗位工作有关的过往经验，不要生搬硬套，注意灵活应对，
-可以事先有针对性做一个草稿，但针对框架内容要了熟于心，针对企业岗位有的放矢，落落大方，注意条理。
-</code></pre>
             </div>
             <hr>
 
@@ -588,7 +607,7 @@
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/04/18/rang-ni-ru-he-zai-yi-fen-zhong-nei-gao-ding-mian-shi-guan/" class="b-link-green">让你如何在一分钟内搞定面试官？</a>
+                    <a href="/2019/05/04/javascript-bi-bao-zhi-nan/" class="b-link-green">JavaScript 闭包指南</a>
                 </p>
             </div>
         </div>
@@ -872,22 +891,68 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/04/19/sql-union-cao-zuo-fu/">
+                <a href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/f8a1ed5040523fe7803294cd9045c304.jpg" class="responsive-img" alt="数据库-操作符记录">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/ef23d9c5405250e5803dabd2fa3090e0.jpg" class="responsive-img" alt="我们搞开发的为什么会感觉到累">
                         
-                        <span class="card-title">数据库-操作符记录</span>
+                        <span class="card-title">我们搞开发的为什么会感觉到累</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">SQL UNION 操作符UNION 操作符用于合并两个或多个 SELECT 语句的结果集。
-请注意，UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同</div>
+                    <div class="summary block-with-text">引题昨天下班坐公车，听到一个和我年纪相仿的哥们儿打电话，隐约听到电话那边好像是他女朋友问他现在饿不饿，他说“我已经饿的不饿啦”。
+饿的不饿了，听起来很幽默，对我很有触动，我在思考，我此时站在公车中部，手扶着杆有点酸，你问我手有多酸，借用打电</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-19
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-05
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/开发/" class="post-category" target="_blank">
+                                    开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/开发/" target="_blank">
+                        <span class="chip bg-color">开发</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/03/zhen-zheng-li-jie-mysql-de-si-chong-ge-chi-ji-bie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/8c49182140953b97801519267be9bb3b.jpg" class="responsive-img" alt="真正理解Mysql的四种隔离级别">
+                        
+                        <span class="card-title">真正理解Mysql的四种隔离级别</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">什么是事务事务是应用程序中一系列严密的操作，所有操作必须成功完成，否则在每个操作中所作的所有更改都会被撤消。也就是事务具有原子性，一个事务中的一系列的操作要么全部成功，要么一个都不做。
+事务的结束有两种，当事务中的所以步骤全部成功执行时，事</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -903,58 +968,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/" target="_blank">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/04/17/java-kai-fa-zhe-bi-xu-yao-ju-bei-de-zhuan-ye-ji-neng/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/fbfa2f1f4083e4fd8082f83e2130fdd6.jpg" class="responsive-img" alt="Java开发者必须要具备的专业技能">
-                        
-                        <span class="card-title">Java开发者必须要具备的专业技能</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">想要成为合格的Java程序员或工程师到底需要具备哪些专业技能，面试者在面试之前到底需要准备哪些东西呢？
-本文陈列的这些内容既可以作为个人简历中的内容，也可以作为面试的时候跟面试官聊的东西，你可以把这些内容写到你的简历中，当然更需要的是你在面</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/面试/" class="post-category" target="_blank">
-                                    面试
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/" target="_blank">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                    <a href="/tags/面试/" target="_blank">
-                        <span class="chip bg-color">面试</span>
+                    <a href="/tags/数据库/" target="_blank">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>
