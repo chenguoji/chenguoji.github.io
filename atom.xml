@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-05-06T08:09:31.127Z</updated>
+  <updated>2019-05-06T09:26:34.868Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>花了 2 亿多，等了近 2 年，结果连个可用的网站都没有</title>
+    <link href="http://chenguoji.com/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/"/>
+    <id>http://chenguoji.com/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/</id>
+    <published>2019-05-06T08:39:50.000Z</published>
+    <updated>2019-05-06T09:26:34.868Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;有个国外匿名吐槽网站，名字叫 Clients From Hell，意思就是来自地狱的客户。程序员和设计师们纷纷晒出自己经历过的奇葩客户。我们以前翻过上面的一些案例，比如：&lt;/p&gt;
+&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="网站" scheme="http://chenguoji.com/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    
+      <category term="网站" scheme="http://chenguoji.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>趣图：外包的真相</title>
+    <link href="http://chenguoji.com/2019/05/06/qu-tu-wai-bao-de-zhen-xiang/"/>
+    <id>http://chenguoji.com/2019/05/06/qu-tu-wai-bao-de-zhen-xiang/</id>
+    <published>2019-05-06T02:39:50.000Z</published>
+    <updated>2019-05-06T08:42:03.079Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="趣图" scheme="http://chenguoji.com/categories/%E8%B6%A3%E5%9B%BE/"/>
+    
+    
+      <category term="趣图" scheme="http://chenguoji.com/tags/%E8%B6%A3%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>我们搞开发的为什么会感觉到累</title>
@@ -494,63 +547,6 @@
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
       <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试不懂「微服务架构」原理？不怕被pass了？</title>
-    <link href="http://chenguoji.com/2019/03/26/mian-shi-bu-dong-wei-fu-wu-jia-gou-yuan-li-bu-pa-bei-pass-liao/"/>
-    <id>http://chenguoji.com/2019/03/26/mian-shi-bu-dong-wei-fu-wu-jia-gou-yuan-li-bu-pa-bei-pass-liao/</id>
-    <published>2019-03-26T05:49:37.000Z</published>
-    <updated>2019-04-17T08:20:51.280Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;近几年，微服务架构迅速在整个技术社区窜红，被认为是 IT
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="微服务" scheme="http://chenguoji.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-      <category term="原理" scheme="http://chenguoji.com/tags/%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试官必问的8道volatile关键字命题，你答对了吗？</title>
-    <link href="http://chenguoji.com/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/"/>
-    <id>http://chenguoji.com/2019/03/25/mian-shi-guan-bi-wen-de-8-dao-volatile-guan-jian-zi-ming-ti-ni-da-dui-liao-ma/</id>
-    <published>2019-03-25T07:27:28.000Z</published>
-    <updated>2019-04-26T03:21:04.425Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在Java相关的岗位面试中，很多面试官都喜欢考察面试者对Java并发的了解程度，而以volatile关键字作为一个小的切入点，往往可以一问到底，&lt;/p&gt;
-&lt;p&gt;把Java内存模型（JMM），Java并发编程的一些特性都牵扯出来，深入地话还可以考察JVM底层实现以及操作系统的
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-      <category term="并发" scheme="http://chenguoji.com/tags/%E5%B9%B6%E5%8F%91/"/>
     
   </entry>
   

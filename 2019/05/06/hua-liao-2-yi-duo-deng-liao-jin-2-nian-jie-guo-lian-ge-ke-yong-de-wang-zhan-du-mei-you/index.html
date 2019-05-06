@@ -4,10 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="请对比Exception和Error有什么区别？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="面试一般是这样问：运行时异常与一般异常有什么区别？    
-简单点来讲就是：运行时异常可以不处理，一般异常必须处理。
-运行时异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。面对这种异常不管我们是否愿意，只能自己去">
+    <meta name="keywords" content="花了 2 亿多，等了近 2 年，结果连个可用的网站都没有, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="有个国外匿名吐槽网站，名字叫 Clients From Hell，意思就是来自地狱的客户。程序员和设计师们纷纷晒出自己经历过的奇葩客户。我们以前翻过上面的一些案例，比如：
+
+今天推文，还是和地狱设计有关。不过这回是角色互换了，是来自地狱的开">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>请对比Exception和Error有什么区别？ | 陈国际博客</title>
+    <title>花了 2 亿多，等了近 2 年，结果连个可用的网站都没有 | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -217,13 +217,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/f8a1ed5040523fe7803294cd9045c304.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/ef23d9c5405250e5803dabd2fa3090e0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        请对比Exception和Error有什么区别？
+                        花了 2 亿多，等了近 2 年，结果连个可用的网站都没有
                     </div>
                 </div>
             </div>
@@ -334,12 +334,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/" target="_blank">
-                                <span class="chip bg-color">java</span>
-                            </a>
-                        
-                            <a href="/tags/面试/" target="_blank">
-                                <span class="chip bg-color">面试</span>
+                            <a href="/tags/网站/" target="_blank">
+                                <span class="chip bg-color">网站</span>
                             </a>
                         
                     </div>
@@ -350,8 +346,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                技术
+                            <a href="/categories/网站/" class="post-category" target="_blank">
+                                网站
                             </a>
                         
                     </div>
@@ -362,21 +358,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-03-23
+                    2019-05-06
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        280
+                        1.8k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        6 分
                     </div>
                     
                 
@@ -392,15 +388,55 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>面试一般是这样问：运行时异常与一般异常有什么区别？    </p>
-<p>简单点来讲就是：运行时异常可以不处理，一般异常必须处理。</p>
-<p>运行时异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。面对这种异常不管我们是否愿意，只能自己去写一大堆catch块去处理可能的异常。</p>
-<p>一般异常，JAVA编译器强制要求用户必需对出现的这些异常进行catch并处理，否则程序就不能编译通过。</p>
-<p>不同点：</p>
-<p>1.从继承来讲，Exception 和 Error都继承自Throwable类。</p>
-<p>2.Exception 和 Error 体现了 Java 平台设计者对不同异常情况的分类。</p>
-<p>Exception 是程序正常运行中，可以预料的意外情况，可能并且应该被捕获，进行相应处理。</p>
-<p>Error 是指在正常情况下，不大可能出现的情况，绝大部分的 Error 都会导致程序（比如 JVM 自身）处于非正常的、不可恢复状态。</p>
+                <p>有个国外匿名吐槽网站，名字叫 Clients From Hell，意思就是来自地狱的客户。程序员和设计师们纷纷晒出自己经历过的奇葩客户。我们以前翻过上面的一些案例，比如：</p>
+<img src="/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/1.jpg">
+<p>今天推文，还是和地狱设计有关。不过这回是角色互换了，是来自地狱的开发商。</p>
+<p>4 月 23 日，外媒 The Register 发了一篇报道，愤怒的汽车租赁巨头 Hertz 已经向纽约法庭起诉埃森哲了。</p>
+<p>Hertz 在起诉书称，尽管支付了 3200 万美元（折合人民币 2.1 亿多）费用，但埃森哲从未交付过一个可用的网站或移动应用。</p>
+<p>这到底是怎么一回事呢？</p>
+<p>在 2016 年，美国汽车租赁巨头 Hertz 有一个雄心勃勃的计划，想转变其数字身份。该计划的目标是想重新设计 Hertz 数字平台，重新开发做一个市场领先的网站 Hertz.com 和一套互补的移动应用程序。新网站不仅可用于 Hertz 品牌，也要适用于旗下其他租赁品牌 Dollar 和 Thrifty。</p>
+<p>为此，Hertz 花费数月，为这个计划评估电商现状，确定数字业务的目标和战略，规划实现愿景的路线图等等。</p>
+<p>但是，Hertz 自家内部没有专业知识或资源来执行如此大规模的任务。所以需要和一家世界级的技术服务公司来合作。筛选潜在合作方后，Hertz 把选择缩小到埃森哲和另外一家。</p>
+<p>在埃森哲为 Hertz 做了一次令人印象深刻的为期一天演示后，Hertz 选择埃森哲来设计、构建、测试和部署 Hertz 的新网站和移动应用程序。( 敲黑板：PPT 真是一门学问 )</p>
+<p>于是在 2016 年 8 月，Hertz 和埃森哲愉快地签合同了。按最初计划，新网站上线时间定在 2017 年 12 月。</p>
+<p>但由于多种原因，上线时间推迟到了 2018 年 1 月，然后又推迟到了 2018 年 4 月。</p>
+<p>接二连三的延迟，Hertz 都忍了，但后来发现了一个让人吐血的事情：新网站进展居然没有达到最初整体要求的一半！</p>
+<p>这下忍不了了！对埃森哲是否能顺利完成项目，Hertz 没有任何信心。于是在 2018 年 5 月终止合作。</p>
+<p>随后，Hert 起诉埃森哲，要求赔偿 3200 万美元以及相应损失。</p>
+<pre><code>起诉书：
+https://regmedia.co.uk/2019/04/23/hertz-accenture-website.pdf
+</code></pre><p>Hertz 在起诉书中，列出了埃森哲在很多方面的「罪状」：</p>
+<h3 id="1、不完全支持响应式布局"><a href="#1、不完全支持响应式布局" class="headerlink" title="1、不完全支持响应式布局"></a>1、不完全支持响应式布局</h3><p>在签署的合同中，Hertz 明确要求埃森哲做 3 种网站布局：小型（支持手机访问）、中型（支持平板电脑）、大型（支持桌面电脑）。</p>
+<p>埃森哲只做了小型和大型布局。想支持平板电脑访问？Hertz 需再另外交钱！</p>
+<h3 id="2、无视可扩展性"><a href="#2、无视可扩展性" class="headerlink" title="2、无视可扩展性"></a>2、无视可扩展性</h3><p>在架构规范中，Hertz 明确要求埃森哲设计开发的网站要有可扩展性。即：设计一个公共的核心库，可以扩展到整个网站和移动应用程序，从而支持 Hertz 旗下所有品牌。</p>
+<p>但是，埃森哲完全忽视这个要求，只针对 Hertz 北美站，无法用于 Hertz 全球站、Heartz 旗下 Dollar 和 Thrift 网站。</p>
+<p> Hertz 向埃森哲提出这个问题后，项目负责人曾回应称，「我们认为创建一个通用代码库，Hertz 从其扩展，这样可用性更低，效率也更低。」</p>
+<h3 id="3、前端代码烂透顶了！后端-Java-代码也不遵循规范"><a href="#3、前端代码烂透顶了！后端-Java-代码也不遵循规范" class="headerlink" title="3、前端代码烂透顶了！后端 Java 代码也不遵循规范"></a>3、前端代码烂透顶了！后端 Java 代码也不遵循规范</h3><p>Hertz 方面表示，埃森哲写的前端代码很糟糕，有着严重的安全问题和性能问题。</p>
+<p>后来 Hertz 做了评测，发现埃森哲的前端代码问题太多了，无法补救，不得不放弃。系统的其他部分，部分代码也是不可用的。</p>
+<p>2018 年 1 月，埃森哲曾在项目进展会议中的演示中承认了失败，并表示「前端技术（Angular2）对我们交付项目是一大挑战。」</p>
+<p>埃森哲的 Java 代码，并没有遵循 Java 规范，逻辑差，并且难以维护。</p>
+<h3 id="4、没有合理的测试"><a href="#4、没有合理的测试" class="headerlink" title="4、没有合理的测试"></a>4、没有合理的测试</h3><p>埃森哲未能对其开发的软件进行适当的测试，对系统许多组件压根没有测试。</p>
+<p>而他们做测试时，又大都采用「Happy Path 测试法」。换句话说，在假设客户按照预期使用的场景下，测试查看网站或移动应用程序是否执行。</p>
+<p>很显然，「Happy Path 测试法」是不够的，因为它没有评估真实场景下的性能，也无法测试错误处理。</p>
+<h3 id="5、其他控诉"><a href="#5、其他控诉" class="headerlink" title="5、其他控诉"></a>5、其他控诉</h3><p>还有好多瓜，比如：</p>
+<p>推荐买不会用的技术</p>
+<p>埃森哲推荐 Hertz 购买 RAPID 许可。Hertz 买了后，但埃森哲又不会用，花了很多时间用于整合 RAPID 。</p>
+<p>失败的项目管理，加剧了技术难题</p>
+<p>埃森哲失败的项目管理，加剧了技术难题。比如：项目进行到第二阶段中期时，埃森哲调走（remove)一批重要的团队成员，包括产品负责人和微服务架构师。而新来者没有前任同等水平，人员替换过程中无形丢失了很多项目知识。埃森哲也向 Hertz 承认过项目延期部分原因是「重要资源」的流失。</p>
+<p>内容管理系统存在严重问题</p>
+<p>埃森哲开发的 AEM 模块（内容管理系统）存在严重缺陷。其代码和文件结构，没有基于 Adobe AEM 原型，导致程序不可靠，并且难以维护。</p>
+<p>违背承诺，另收费用</p>
+<p>埃森哲曾答应 Hertz 不会因项目延期而另外再收取费用，后来出尔发尔，要求 Hertz 支付额外费用。</p>
+<h3 id="【说明】：以上都是基于-Hertz-起诉书摘译，仅代表-Hertz-的观点，不代表我们的看法。"><a href="#【说明】：以上都是基于-Hertz-起诉书摘译，仅代表-Hertz-的观点，不代表我们的看法。" class="headerlink" title="【说明】：以上都是基于 Hertz 起诉书摘译，仅代表 Hertz 的观点，不代表我们的看法。"></a>【说明】：以上都是基于 Hertz 起诉书摘译，仅代表 Hertz 的观点，不代表我们的看法。</h3><p>对于 Hertz 的指控，埃森哲方面回应 Register 称「起诉毫无根据」，并没有过多置评。</p>
+<p>这个案子后续会如何发展，我们会持续关注。</p>
+<p>网友评论</p>
+<p>@老码农的自留地 : 咨询公司江河日下，除了高大上的规划PPT，连做网站这种搬砖钱也挣[允悲]</p>
+<p>@ayumi_0213：accenture除了咨询，还有另外两个bu，其中一个是it 外包，这个业务十几年前就已经有了。而现在除了accenture，普华永道和安永等四大会计师事务所也有it外包的业务喔～</p>
+<p>@Sansiro_Santon：可能是转外包给印度学生做的[doge]</p>
+<p>@冰箱里的小怪兽：美国还是竞争小啊，2016年8月立项，上线时间居然定到1年零4个月以后，而且还能容忍再推迟4个月。这玩意儿要是搁国内，竞品早把你打得🐴 都不认识了</p>
+<p>@巴扎嗨嘿嘿嘿嘿：学好PPT，鬼都能忽悠来给你推磨[笑而不语]</p>
+<p>@爱吃萝卜叶叶的毛毛虫：给中国公司两个亿，你想要啥样子的网站都可以</p>
+<p>原创：程序员的那些事（id：iProgrammer）<br>来源：<a href="https://mp.weixin.qq.com/s/KR8yk64426civfA0fyHBTQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/KR8yk64426civfA0fyHBTQ</a></p>
 
             </div>
             <hr>
@@ -548,7 +584,7 @@
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/03/23/qing-dui-bi-exception-he-error-you-shi-me-qu-bie/" class="b-link-green">请对比Exception和Error有什么区别？</a>
+                    <a href="/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/" class="b-link-green">花了 2 亿多，等了近 2 年，结果连个可用的网站都没有</a>
                 </p>
             </div>
         </div>
@@ -830,52 +866,44 @@
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/03/23/tan-tan-final-finally-finalize-you-shi-me-bu-tong/">
+                <a href="/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg" class="responsive-img" alt="谈谈final、finally、finalize有什么不同？">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/ef23d9c5405250e5803dabd2fa3090e0.jpg" class="responsive-img" alt="花了 2 亿多，等了近 2 年，结果连个可用的网站都没有">
                         
-                        <span class="card-title">谈谈final、finally、finalize有什么不同？</span>
+                        <span class="card-title">花了 2 亿多，等了近 2 年，结果连个可用的网站都没有</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">初级程序猿面试一般会问的问题。
-可以按照以下回答：
-1. final 可以用来修饰类、方法、变量。分别有不同的意义：
+                    <div class="summary block-with-text">有个国外匿名吐槽网站，名字叫 Clients From Hell，意思就是来自地狱的客户。程序员和设计师们纷纷晒出自己经历过的奇葩客户。我们以前翻过上面的一些案例，比如：
 
-final 修饰的 class 代表不可以继承扩展
-
-final 的变量是不可以修改的
-
-final 的方法也是不可以重</div>
+今天推文，还是和地狱设计有关。不过这回是角色互换了，是来自地狱的开</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                    技术
+                            <a href="/categories/网站/" class="post-category" target="_blank">
+                                    网站
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/" target="_blank">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                    <a href="/tags/面试/" target="_blank">
-                        <span class="chip bg-color">面试</span>
+                    <a href="/tags/网站/" target="_blank">
+                        <span class="chip bg-color">网站</span>
                     </a>
                     
                 </div>
@@ -889,31 +917,27 @@ final 的方法也是不可以重</div>
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/03/21/about/">
+                <a href="/2019/05/06/qu-tu-wai-bao-de-zhen-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg" class="responsive-img" alt="关于">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg" class="responsive-img" alt="趣图：外包的真相">
                         
-                        <span class="card-title">关于</span>
+                        <span class="card-title">趣图：外包的真相</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">关于博主博主是一名Java码农。
-虽然还未走上人生巅峰，但是一直保持着一个码农的自我修养。
-用一句话概括博主：每天瞎逼忙，还没赚到钱。
-但是博主有一颗分享技术的心，我会尽量用通俗易懂的方式，分享个人的知识。
-博客的宗旨就是分享知识，分享技术</div>
+                    <div class="summary block-with-text"></div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/关于/" class="post-category" target="_blank">
-                                    关于
+                            <a href="/categories/趣图/" class="post-category" target="_blank">
+                                    趣图
                                 </a>
                             
                             
@@ -923,8 +947,8 @@ final 的方法也是不可以重</div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/博客说明/" target="_blank">
-                        <span class="chip bg-color">博客说明</span>
+                    <a href="/tags/趣图/" target="_blank">
+                        <span class="chip bg-color">趣图</span>
                     </a>
                     
                 </div>
