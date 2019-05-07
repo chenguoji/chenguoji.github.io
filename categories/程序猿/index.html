@@ -1,0 +1,723 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="分类: 程序猿, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="分类: 程序猿 | 陈国际博客">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>分类: 程序猿 | 陈国际博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">陈国际博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories/毕业设计/" class="waves-effect waves-light">
+            
+            <i class="fa fa-align-justify"></i>
+            
+            <span>毕设</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">陈国际博客</div>
+        <div class="logo-desc">
+            
+            努力做有价值的技术文章
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories/毕业设计/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-align-justify"></i>
+                
+                毕设
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    人生如戏，全靠颜值
+                
+            </div>
+
+            <div class="description center-align">
+                
+                    努力做有价值的技术文章
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+// 每天切换 banner 图.  Switch banner image every day.
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+</script>
+    </div>
+</div>
+
+<main class="content">
+
+    
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/面试/" title="面试: 13">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #F9EBEA;">面试
+                        <span class="tag-length">13</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/技术/" title="技术: 8">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #F5EEF8;">技术
+                        <span class="tag-length">8</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/程序猿/" title="程序猿: 6">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active " style="background-color: #D5F5E3;">程序猿
+                        <span class="tag-length">6</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/数据库/" title="数据库: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #E8F8F5;">数据库
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/关于/" title="关于: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #FEF9E7;">关于
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/毕业设计/" title="毕业设计: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #F8F9F9;">毕业设计
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/开发/" title="开发: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #82E0AA;">开发
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/网站/" title="网站: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #D7BDE2;">网站
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/趣图/" title="趣图: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #A3E4D7;">趣图
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/08/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/1950528240dfcd2580de4f4062b6ee88.jpg" class="responsive-img" alt="程序员的眼界真的不要，也不能只局限于技术">
+                            
+                            <span class="card-title">程序员的眼界真的不要，也不能只局限于技术</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                前几天在读《极客时间》专栏的时候，看到这么一段话：
+对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
+对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-08
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/程序猿/" target="_blank">
+                            <span class="chip bg-color">程序猿</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/07/ning-nan-shan-shuo-xia-996/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/e0d898ad40c404d8804b66326ebc9a6e.jpg" class="responsive-img" alt="宁南山：说下996">
+                            
+                            <span class="card-title">宁南山：说下996</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                作者：宁南山
+一个国家，少数优秀人士和少数头部企业拼命干活就可以了，
+一个是因为这个世界的经济竞争还是很残酷，中国要在不同行业赶超欧美，如果连精英人物和龙头企业都下午五点就下班，赶超不知道什么时候才能完成，甚至说永远不能完成。
+你技术不如人
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/程序猿/" target="_blank">
+                            <span class="chip bg-color">程序猿</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg" class="responsive-img" alt="965 是一种生活态度，996 也是">
+                            
+                            <span class="card-title">965 是一种生活态度，996 也是</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。在今天的大多数看来，在一家公司里待满 5 年，
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/程序猿/" target="_blank">
+                            <span class="chip bg-color">程序猿</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/04/cheng-xu-yuan-ni-gai-wei-zi-ji-jia-xin-yong-qian-sheng-qian/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/4c92e58a40b59e5580b1111a2f8debbb.jpg" class="responsive-img" alt="程序猿，你该为自己加薪--用钱生钱">
+                            
+                            <span class="card-title">程序猿，你该为自己加薪--用钱生钱</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                “如果你没找到一个当你睡觉时还能挣钱的方法，你将工作到死。” ——巴菲特
+前言唯金钱与技术不可辜负。
+作为智商比较高的程序员，这么难的程序都能学会，投资理财就更不用说啦。
+金钱是有规律的，只要掌握了一定的规律，虽说不能一夜暴富，但是把掌握的
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-04
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/程序猿/" target="_blank">
+                            <span class="chip bg-color">程序猿</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/02/bei-ming-cheng-hai-sheng-996-qi-shi-mei-shi-me-luan-yong/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/d9f6770240f9b021804da775c8502be5.jpg" class="responsive-img" alt="北冥乘海生：996其实没什么卵用">
+                            
+                            <span class="card-title">北冥乘海生：996其实没什么卵用</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                996一词，是某巨头的一个中层提出来的，最初只是个忽悠老板的口号，哪知道如今应者云集，简直成了创业精神的代名词。007一词，则是我提出来的(《江湖丛谈》与互联网三不要)，虽说是直钩钓鱼，居然也有人信以为真，还打算试试。
+注意，不要把这些词恶
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/程序猿/" target="_blank">
+                            <span class="chip bg-color">程序猿</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/02/chan-pin-jing-li-ru-he-rang-cheng-xu-yuan-fang-xia-shou-zhong-de-dao/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/d9f6770240f9b021804da775c8502be5.jpg" class="responsive-img" alt="产品经理如何让程序员放下手中的刀？">
+                            
+                            <span class="card-title">产品经理如何让程序员放下手中的刀？</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                摘要： 友好合作是一门艺术。
+原文：如何让程序员放下手中的刀？作者：VickyFundebug经授权转载，版权归原作者所有。
+产品经理和程序员似乎是天生的一对死对头，在面对产品经理不断更改的需求时，脾气再好的程序员也会情绪暴走，如何巧妙地避
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/程序猿/" target="_blank">
+                            <span class="chip bg-color">程序猿</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://github.com/chenguoji" target="_blank"> chenguoji </a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
+			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
+			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:chenguo_ji@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=971919782" class="tooltipped" data-tooltip="QQ联系我: 971919782" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

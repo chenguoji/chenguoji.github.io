@@ -1,0 +1,1156 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="产品经理如何让程序员放下手中的刀？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="摘要： 友好合作是一门艺术。
+原文：如何让程序员放下手中的刀？作者：VickyFundebug经授权转载，版权归原作者所有。
+产品经理和程序员似乎是天生的一对死对头，在面对产品经理不断更改的需求时，脾气再好的程序员也会情绪暴走，如何巧妙地避">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>产品经理如何让程序员放下手中的刀？ | 陈国际博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">陈国际博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories/毕业设计/" class="waves-effect waves-light">
+            
+            <i class="fa fa-align-justify"></i>
+            
+            <span>毕设</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">陈国际博客</div>
+        <div class="logo-desc">
+            
+            努力做有价值的技术文章
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories/毕业设计/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-align-justify"></i>
+                
+                毕设
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/d9f6770240f9b021804da775c8502be5.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        产品经理如何让程序员放下手中的刀？
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/程序猿/" target="_blank">
+                                <span class="chip bg-color">程序猿</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                程序猿
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-05-02
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        2.6k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        8 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>摘要： 友好合作是一门艺术。</p>
+<p>原文：如何让程序员放下手中的刀？<br>作者：Vicky<br>Fundebug经授权转载，版权归原作者所有。</p>
+<p>产品经理和程序员似乎是天生的一对死对头，在面对产品经理不断更改的需求时，脾气再好的程序员也会情绪暴走，如何巧妙地避免这种情况的发生呢？</p>
+<p>众所周知，产品经理跟程序员属于死对头岗位，程序员跟产品经理因为需求打起来的新闻更是屡见不鲜，甚至还出现过程序员暴力砍人的事件，因此一干产品甚至开玩笑说产品这个行业属于高危行业，随时面临着被砍，被套麻袋，被群殴等各种问题。</p>
+<p>虽说没有到描述的这么可怕，但是在面对不断更新需求即将爆发的程序，如何让他们放下手中的刀，确实尤为重要。</p>
+<p>这里主要分析的场是面对需求频繁更改已经处于暴走边缘的程序员如何安抚的场景。</p>
+<p>造成需求不断更改的原因有很多：</p>
+<pre><code>客户突然更改的想法并且要求必须实现。
+领导突然又看到了一个app并要求按照此app做出更改。
+之前由于考虑不周后期需要填坑。
+技术之前就没理解需求，出现了问题需要大改。
+</code></pre><p>……<br>面对一改再改的需求，脾气再好的程序员也会变身暴躁龙，身为产品狗的我们为了需求能尽快落地，先稳住开发是非常重要的。</p>
+<p>稳住开发是关键</p>
+<h2 id="1-解释需求更改的原因，该认错认错，不是自己的错也先背着（毕竟产品背锅侠）。"><a href="#1-解释需求更改的原因，该认错认错，不是自己的错也先背着（毕竟产品背锅侠）。" class="headerlink" title="1. 解释需求更改的原因，该认错认错，不是自己的错也先背着（毕竟产品背锅侠）。"></a>1. 解释需求更改的原因，该认错认错，不是自己的错也先背着（毕竟产品背锅侠）。</h2><p>需要更改一个需求之前，先让技术知道更改的原因，所有的需求调整都是有理有据，不是灵光一闪。</p>
+<p>产品经理作为贯穿整个产品研发周期的责任人，不管产品出现什么问题，首当其冲站出来，能提高团队的信赖感。</p>
+<h2 id="2-怀柔政策，可以跟技术表现同仇敌忾，一致对外。"><a href="#2-怀柔政策，可以跟技术表现同仇敌忾，一致对外。" class="headerlink" title="2. 怀柔政策，可以跟技术表现同仇敌忾，一致对外。"></a>2. 怀柔政策，可以跟技术表现同仇敌忾，一致对外。</h2><p>这个让技术产生共情心理，告诉他们我们其实是一个战线的，让他们产生一种是自己人的感觉，在后续更好的去说服技术人员进行调整。</p>
+<h2 id="3-肯定技术的能力。"><a href="#3-肯定技术的能力。" class="headerlink" title="3. 肯定技术的能力。"></a>3. 肯定技术的能力。</h2><p>技术是需要认同的，之前工作的心血因为一个调整可能就全部付诸流水了，心理难免要炸。所以一定要先肯定技术的能力，每个技术都是需要夸奖的，适当并且到位的夸奖能降低技术对需求更改的抵触心理。</p>
+<h2 id="4-调整需求的时候，更多的让技术参与这个过程，让他们产生认同感。"><a href="#4-调整需求的时候，更多的让技术参与这个过程，让他们产生认同感。" class="headerlink" title="4. 调整需求的时候，更多的让技术参与这个过程，让他们产生认同感。"></a>4. 调整需求的时候，更多的让技术参与这个过程，让他们产生认同感。</h2><p>我们在确认某个功能需求调整之后，可以先试探的性的跟技术沟通，对于这个功能是否觉得有不合理的地方，是不是应该进行一下调整会更好，让技术发表自己的意见然后慢慢引导，最终导向我们希望的结果，这个过程技术参与进来，会让他们产生一种认同感，这个能更好的让技术接受需求调整这个结果。</p>
+<p>一个产品开发的生命周期会收到来自各个相关方的意见反馈，作为产品经理，除了不可抗力的更改因素外，更多的是要考虑产品的完善性，减少因为前期准备不足导致的后期修补性的更改，这些更改会造成人力成本的提高，以及项目团队的不和谐。</p>
+<p>除了不可抗力因素外，产品能把控的就是在产品规划前期对产品需求的描述，这里会决定开发最终交付的成果是否能达到产品的要求。</p>
+<p>我们分析一下产品跟技术对立对需求想法不一致的源头，两者所占的角度不同，看问题的点也不一样，所以我们最常听到的两者争吵的语句就是以下：</p>
+<p><img src="https://image.fundebug.com/2019-0428-000001.png"></p>
+<p>双方都有自己的立足点，看问题的角度不一样，开始可能是讨论，后面就可能演变为争论。</p>
+<p>产品的立点：</p>
+<pre><code>产品定位；
+需求场景；
+用户体验；
+业务目标。
+</code></pre><p>技术的立点：</p>
+<pre><code>功能实现；
+开发难易；
+后期维护；
+改动成本。
+</code></pre><p>前期做好准备<br>双方站在自己的领域范围下，都是有理有据，但是放到一起，产品的开发过程就会举步维艰，产品要这个功能明天实现，技术考虑这个功能起码一个星期甚至说这个需求根本不可能实现，要么砍需求要么改需求，产品也不会答应，你来我往，双方就此展开撕逼。</p>
+<p>这里总结了几点产品经理在前期做好可以减少很多不必要的争吵经验。</p>
+<h2 id="1-需求明确，逻辑清晰，思维缜密，不要让程序猜。"><a href="#1-需求明确，逻辑清晰，思维缜密，不要让程序猜。" class="headerlink" title="1. 需求明确，逻辑清晰，思维缜密，不要让程序猜。"></a>1. 需求明确，逻辑清晰，思维缜密，不要让程序猜。</h2><p>我们在制作产品原型以及编写PRD文档的时候，一定要清晰准确的描述需求目的，所有的需求都是从合理的角度出发，有理有据，减少带个人主观性的语言描述（比如我觉得，我认为），这样的描述会给开发留下一种产品没有从实际出发，所有功能都是拍脑袋想出来的，团队会存在不信任感，也会给开发留下一种能力不行的印象，会导致后面的需求更难落地。</p>
+<p>在对功能做描述的时候，尽可能详细的考虑到多种场景，减少程序的想象空间，我们想的越多，考虑的越全，程序在开发的过程中才能更贴近我们的原本需求。</p>
+<p>比如对一个输入框做说明，我们要考虑的首先是字符长度边界、可支持输入的字符类型（比如手机号码输入就是数字型，但是备注输入就是没有限制）、是否必填、是否有默认值、是否有提示语、错误输入的状态提示等常规性的描述。但是还有一些特殊场景，比如输入文本时，需要自动带出之前输入过的字符，支持直接快速选中快速录入，是否支持粘贴等这些也是要考虑进去的。总之产品前期考虑的越全，程序开发才会更容易，后期也不会因为产品漏了一些场景而产生不要的变更。</p>
+<h2 id="2-尊重并理解技术人员。"><a href="#2-尊重并理解技术人员。" class="headerlink" title="2. 尊重并理解技术人员。"></a>2. 尊重并理解技术人员。</h2><p>调查了一下身边的程序员，最烦听到的来自产品的话语：“这个需求很简单……”荣登榜首，反思一下，主要是因为一部分产品不懂技术，仅通过主观臆断就决定开发周期的长短。</p>
+<p>举个例子：需求是去超市买瓶水；技术要考虑的可能就是路程有多远，走路合适还是需要坐车；一共有几条路可以到超市；水是只有一种还是有多种；如果有很多人一起买水是需要排队还是可以多线程…….</p>
+<p>所以我们再给出需求之后，可以多听听程序的意见，不要通过主观想法开口就是“这个需求很简单……”。同时我们也要多学习一点的技术，不懂就问，平时可以多去一些技术论坛逛逛，也是为了避免一个需求评审完，技术报了3天，结果两小时就做完了这种情况。</p>
+<h2 id="3-小事线上沟通，大事当面沟通，所有的调整都要做好书面记录。"><a href="#3-小事线上沟通，大事当面沟通，所有的调整都要做好书面记录。" class="headerlink" title="3. 小事线上沟通，大事当面沟通，所有的调整都要做好书面记录。"></a>3. 小事线上沟通，大事当面沟通，所有的调整都要做好书面记录。</h2><p>程序在开发的过程中是需要大量进行思考，所以中途被打断，可能前面的准备就前功尽弃了，所有没有什么特别重要的通知的时候，可以通过线上交流，等技术忙完自然会去看。</p>
+<p>对于很重要的事情，一定要当面沟通，不要因为害怕冲突就发邮件通知。书面内容每个人在理解的时候很可能产生误差，最后造成更大的问题。积极主动，加上真诚，和善的态度，是避免冲突的良好开始。</p>
+<p>最重要的一点，所有的调整在通知并确定方案后一定要书面记录，程序每天要接收很多讯息，很多需求我们在沟通后他们不一定会及时去处理，甚至小一点的变动可能会漏掉，所以在沟通清楚后，一定要记录在便于程序查看的位置，也方便后面测试可以了解。</p>
+<p>一般我们可以在原型前增加一页，专门用来记录调整的需求，并且对每个调整的页面后放置快速跳转链接，便于程序快速定位。如下图：</p>
+<p><img src="https://image.fundebug.com/2019-0428-000002.png"></p>
+<h2 id="4-私下交流，合理套路。"><a href="#4-私下交流，合理套路。" class="headerlink" title="4. 私下交流，合理套路。"></a>4. 私下交流，合理套路。</h2><p>人都是有感情的动物，关系亲近也会有利于冲突的减少。很多人喜欢把工作和生活区分对待，但实际上我们的生活大部分时间都在工作，工作中的程序和产品私底下也可能是很好的朋友，了解每个人的工作方式和沟通喜好，更有利于对症下药，当对每个程序进行性格的个体分析后，就可以合理套路了。</p>
+<p>产品跟程序没有职属关系，但是在推动研发按时交付时，就只能靠人格魅力了，平时大家关系很好点点滴滴都看在眼里，程序自然也不想产品为难，能做的就做了，做不完的可能加班也给做了。</p>
+<p>产品经理负责产品各项事物的协调和推进，需要有强大的心脏以及很高的情商，多站在对方的角度看待问题，做出正确的判断，专业素质越强，程序才能越信服，沟通才会更加顺畅。    </p>
+<p>作者: Fundebug<br>来源：<a href="https://blog.fundebug.com/2019/04/28/how-does-product-manager-cooperate-with-programmer/" target="_blank" rel="noopener">https://blog.fundebug.com/2019/04/28/how-does-product-manager-cooperate-with-programmer/</a>    </p>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2019/05/02/chan-pin-jing-li-ru-he-rang-cheng-xu-yuan-fang-xia-shou-zhong-de-dao/" class="b-link-green">产品经理如何让程序员放下手中的刀？</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'sLQDMQ9rXtxonsupRe4YLCBD-gzGzoHsz',
+        appKey: 'eiVU90k574vUVACVPNeizAv9',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '说点什么吧'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/05/02/bei-ming-cheng-hai-sheng-996-qi-shi-mei-shi-me-luan-yong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/d9f6770240f9b021804da775c8502be5.jpg" class="responsive-img" alt="北冥乘海生：996其实没什么卵用">
+                        
+                        <span class="card-title">北冥乘海生：996其实没什么卵用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">996一词，是某巨头的一个中层提出来的，最初只是个忽悠老板的口号，哪知道如今应者云集，简直成了创业精神的代名词。007一词，则是我提出来的(《江湖丛谈》与互联网三不要)，虽说是直钩钓鱼，居然也有人信以为真，还打算试试。
+注意，不要把这些词恶</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/程序猿/" target="_blank">
+                        <span class="chip bg-color">程序猿</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/02/jin-san-yin-si-tong-wu-tie-liu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/941c556940bf9e188066dee66be6bf51.jpg" class="responsive-img" alt="金三银四铜五铁六">
+                        
+                        <span class="card-title">金三银四铜五铁六</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">鲁班简称LB
+　　据说，金三银四，截止今天为止面试黄金时间已经过去十之八九，而LB恰逢是这批面试大军其中的一名小兵，很不幸今年恰逢遇上了互联网寒冬（即各大公司都在裁员，对外提供岗位相对较少的，这意味着很多猿即将面临着更多的竞争对手和相对较少</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/面试/" class="post-category" target="_blank">
+                                    面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/面试/" target="_blank">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1,h2, h3, h4,h5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4,h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://github.com/chenguoji" target="_blank"> chenguoji </a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
+			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
+			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:chenguo_ji@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=971919782" class="tooltipped" data-tooltip="QQ联系我: 971919782" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
