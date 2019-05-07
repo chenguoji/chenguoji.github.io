@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-05-06T09:26:34.868Z</updated>
+  <updated>2019-05-07T02:19:49.327Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
+    <link href="http://chenguoji.com/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
+    <id>http://chenguoji.com/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</id>
+    <published>2019-05-07T02:39:50.000Z</published>
+    <updated>2019-05-07T02:19:49.327Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？&lt;br&gt;今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>花了 2 亿多，等了近 2 年，结果连个可用的网站都没有</title>
     <link href="http://chenguoji.com/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/"/>
     <id>http://chenguoji.com/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/</id>
     <published>2019-05-06T08:39:50.000Z</published>
-    <updated>2019-05-06T09:26:34.868Z</updated>
+    <updated>2019-05-06T09:30:25.526Z</updated>
     
     <summary type="html">
     
@@ -518,35 +545,6 @@
     
     
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>11个简单的Java性能调优技巧</title>
-    <link href="http://chenguoji.com/2019/03/28/11-ge-jian-dan-de-java-xing-neng-diao-you-ji-qiao/"/>
-    <id>http://chenguoji.com/2019/03/28/11-ge-jian-dan-de-java-xing-neng-diao-you-ji-qiao/</id>
-    <published>2019-03-28T02:35:17.000Z</published>
-    <updated>2019-04-17T08:21:01.975Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;大多数开发人员理所当然地以为性能优化很复杂，需要大量的经验和知识。好吧，不能说这是完全错误的。&lt;br&gt;优化应用程序以获得最佳性能不是一件容易的事情。但是，这并不意味着如果你不具备这些知识，就不能做任何事情。&lt;/p&gt;
-&lt;p&gt;这里有11个易于遵循的建议和最佳实践可以帮助你创建一
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   

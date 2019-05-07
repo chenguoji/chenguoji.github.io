@@ -4,10 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java面试中最高频的那20%知识点！, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="Java目前已经不仅仅是一门开发语言，而是一整套生态体系。
-作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。
-但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握2">
+    <meta name="keywords" content="SpringMVC方法四种类型返回值总结，你用过几种？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java面试中最高频的那20%知识点！ | 陈国际博客</title>
+    <title>SpringMVC方法四种类型返回值总结，你用过几种？ | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -217,13 +215,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/8c49182140953b97801519267be9bb3b.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/b2d678074028cac3803fb24756838310.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Java面试中最高频的那20%知识点！
+                        SpringMVC方法四种类型返回值总结，你用过几种？
                     </div>
                 </div>
             </div>
@@ -338,10 +336,6 @@
                                 <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/面试/" target="_blank">
-                                <span class="chip bg-color">面试</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -350,8 +344,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/面试/" class="post-category" target="_blank">
-                                面试
+                            <a href="/categories/技术/" class="post-category" target="_blank">
+                                技术
                             </a>
                         
                     </div>
@@ -362,21 +356,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-03-21
+                    2019-05-07
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        355
+                        1.3k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        5 分
                     </div>
                     
                 
@@ -392,28 +386,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Java目前已经不仅仅是一门开发语言，而是一整套生态体系。</p>
-<p>作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。</p>
-<p>但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的知识，就能解决80%的问题。</p>
-<p>那么，Java程序员必须掌握的20%知识点都有哪些呢？</p>
-<p>个人认为包括以下内容：</p>
-<pre><code>Java基础知识，如集合类、IO、泛型等。
-
-JVM底层知识，如类加载机制、GC、JVM内存结构等。
-
-Java并发编程知识，如Java内存模型、并发包、线程池、netty等。
-
-开发框架知识，如Spring、mybatis、springboot、springMVC等。
-
-分布式相关知识，如CAP理论、分布式锁、分布式事务、Zookeeper、spring Cloud等。
-
-其他基础知识，编程语言、网络方面、数据库、数据结构和算法。
-
-中间件相关知识，如Redis、rabbitMQ、Dubbo等。
-
-服务器相关知识，如tomcat、jetty、jboss等。
-</code></pre><p>以上这些知识，就是最高频的面试问题，以及工作中需要用到的知识。当然，一个程序员想要掌握以上所有知识，可能需要花费很长时间。这个过程注定是漫长且孤独的。</p>
-<p>来源：<br><a href="https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw</a></p>
+                <p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p>
+<h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：<br>    @RequestMapping(“/test1”)<br>    public ModelAndView getAllTest1()<br>    {<br>        ModelAndView mv = new ModelAndView();<br>        List<book> books = new ArrayList&lt;&gt;();<br>        Book b1 = new Book();<br>        b1.setId(1);<br>        b1.setName(“三国演义”);<br>        b1.setAuthor(“罗贯中”);<br>        books.add(b1);<br>        Book b2 = new Book();<br>        b2.setId(2);<br>        b2.setName(“红楼梦”);<br>        b2.setAuthor(“曹雪芹”);<br>        books.add(b2);<br>        // 指定数据模型<br>        mv.addObject(“bs”, books);<br>        mv.setViewName(“book”);<br>        // 指定视图名<br>        return mv;<br>    }<br>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</book></p>
+<h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p>
+<h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：<br>    @RequestMapping(“/test2”)<br>    @ResponseBody<br>    public void test2() {<br>        // 你的代码<br>    }</p>
+<h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：<br>    @RequestMapping(“/test3”)<br>    @ResponseBody<br>    public void test3(HttpServletResponse resp) {<br>        resp.setStatus(302);<br>        resp.addHeader(“Location”, “/html/index”);<br>    }<br>也可以像下面这样直接调用重定向的方法：<br>    @RequestMapping(“/test3”)<br>    @ResponseBody<br>    public void test3(HttpServletResponse resp) {<br>        resp.sendRedirect(“/html/index”);<br>    }<br>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p>
+<h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：<br>    @GetMapping(“/test4”)<br>    public void test4(HttpServletRequest req, HttpServletResponse resp)<br>    {<br>        req.getRequestDispatcher(“/WEB-INF/jsp/index.jsp”).forward(req, resp);<br>    }</p>
+<h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：<br>    @RequestMapping(“/test5”)<br>    @ResponseBody<br>    public void test5(HttpServletResponse resp) throws IOException<br>    {<br>        resp.setContentType(“application/json;charset=utf-8”);<br>        PrintWriter out = resp.getWriter();<br>        List<book> books = new ArrayList&lt;&gt;();<br>        Book b1 = new Book();<br>        b1.setId(1);<br>        b1.setName(“三国演义”);<br>        b1.setAuthor(“罗贯中”);<br>        books.add(b1);<br>        Book b2 = new Book();<br>        b2.setId(2);<br>        b2.setName(“红楼梦”);<br>        b2.setAuthor(“曹雪芹”);<br>        books.add(b2);<br>        String s = new Gson().toJson(books);<br>        out.write(s);<br>        out.flush();<br>        out.close();<br>    }<br>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</book></p>
+<h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p>
+<h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：<br>    @RequestMapping(“/hello”)<br>    public String aaa(Model model)<br>    {<br>        model.addAttribute(“username”, “张三”);<br>        return “hello”;<br>    }<br>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p>
+<h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：<br>    @RequestMapping(“/test6”)<br>    public String test6()<br>    {<br>        return “redirect:/html/index”;<br>    }</p>
+<h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：<br>    @RequestMapping(“/test7”)<br>    public String test7()<br>    {<br>        return “forward:/WEB-INF/jsp/order.jsp”;<br>    }</p>
+<h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：<br>    @RestController<br>    public class HelloController {<br>        @GetMapping(“/hello”)<br>        public String hello() {<br>            return “hello provider!”;<br>        }<br>    }<br>也可以像下面这样：<br>    @Controller<br>    public class HelloController<br>    {<br>        @GetMapping(“/hello”)<br>        @ResponseBody<br>        public String hello()<br>        {<br>            return “hello provider!”;<br>        }<br>    }<br>这是返回值为 String 的几种情况。</p>
+<h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：<br>    @GetMapping(“/user”)<br>    @ResponseBody<br>    public User getUser() {<br>        User user = new User();<br>        List<string> favorites = new ArrayList&lt;&gt;();<br>        favorites.add(“足球”);<br>        favorites.add(“篮球”);<br>        user.setFavorites(favorites);<br>        user.setUsername(“chenguoji”);<br>        user.setPassword(“123”);<br>        return user;<br>    }</string></p>
+<pre><code>@GetMapping(&quot;/users&quot;)
+@ResponseBody
+public List&lt;User&gt; getALlUser() {
+    List&lt;User&gt; users = new ArrayList&lt;&gt;();
+    for (int i = 0; i &lt; 100; i++) {
+        User e = new User();
+        e.setUsername(&quot;username:&quot; + i);
+        e.setPassword(&quot;pwd:&quot; + i);
+        users.add(e);
+    }
+    return users;
+}
+</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>
 
             </div>
             <hr>
@@ -561,7 +559,7 @@ Java并发编程知识，如Java内存模型、并发包、线程池、netty等�
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/03/21/java-mian-shi/" class="b-link-green">Java面试中最高频的那20%知识点！</a>
+                    <a href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/" class="b-link-green">SpringMVC方法四种类型返回值总结，你用过几种？</a>
                 </p>
             </div>
         </div>
@@ -843,77 +841,23 @@ Java并发编程知识，如Java内存模型、并发包、线程池、netty等�
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/03/23/qing-dui-bi-exception-he-error-you-shi-me-qu-bie/">
+                <a href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/f8a1ed5040523fe7803294cd9045c304.jpg" class="responsive-img" alt="请对比Exception和Error有什么区别？">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/b2d678074028cac3803fb24756838310.jpg" class="responsive-img" alt="SpringMVC方法四种类型返回值总结，你用过几种？">
                         
-                        <span class="card-title">请对比Exception和Error有什么区别？</span>
+                        <span class="card-title">SpringMVC方法四种类型返回值总结，你用过几种？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">面试一般是这样问：运行时异常与一般异常有什么区别？    
-简单点来讲就是：运行时异常可以不处理，一般异常必须处理。
-运行时异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。面对这种异常不管我们是否愿意，只能自己去</div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-23
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/" target="_blank">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                    <a href="/tags/面试/" target="_blank">
-                        <span class="chip bg-color">面试</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/957f331740fdadbd807ad2c832fcb0e5.jpg" class="responsive-img" alt="Java转型大数据开发技能">
-                        
-                        <span class="card-title">Java转型大数据开发技能</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。
-什么意思呢？
-就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。
-如此多的技术，怎么学得过来呢？
-我觉得以你</div>
+                    <div class="summary block-with-text">SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-07
                             </span>
                         <span class="publish-author">
                             
@@ -927,11 +871,59 @@ Java并发编程知识，如Java内存模型、并发包、线程池、netty等�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/大数据/" target="_blank">
-                        <span class="chip bg-color">大数据</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/ef23d9c5405250e5803dabd2fa3090e0.jpg" class="responsive-img" alt="花了 2 亿多，等了近 2 年，结果连个可用的网站都没有">
+                        
+                        <span class="card-title">花了 2 亿多，等了近 2 年，结果连个可用的网站都没有</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">有个国外匿名吐槽网站，名字叫 Clients From Hell，意思就是来自地狱的客户。程序员和设计师们纷纷晒出自己经历过的奇葩客户。我们以前翻过上面的一些案例，比如：
+
+今天推文，还是和地狱设计有关。不过这回是角色互换了，是来自地狱的开</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/网站/" class="post-category" target="_blank">
+                                    网站
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/网站/" target="_blank">
+                        <span class="chip bg-color">网站</span>
                     </a>
                     
                 </div>
