@@ -392,7 +392,7 @@
 <p>第二种：网络IO瓶颈，请求的数据太多，网络带宽不够 -&gt; 分库。</p>
 <h2 id="2、CPU瓶颈"><a href="#2、CPU瓶颈" class="headerlink" title="2、CPU瓶颈"></a>2、CPU瓶颈</h2><p>第一种：SQL问题，如SQL中包含join，group by，order by，非索引字段条件查询等，增加CPU运算的操作 -&gt; SQL优化，建立合适的索引，在业务Service层进行业务计算。</p>
 <p>第二种：单表数据量太大，查询时扫描的行太多，SQL效率低，增加CPU运算的操作 -&gt; 水平分表。</p>
-<h1 id="二、分库分表"><a href="#二、分库分表" class="headerlink" title="二、分库分表"></a>二、分库分表</h1><h2 id="1、水平分库"><a href="#1、水平分库" class="headerlink" title="1、水平分库"></a>1、水平分库</h2><p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180806205041600-432363041.png"></p>
+<h1 id="二、分库分表"><a href="#二、分库分表" class="headerlink" title="二、分库分表"></a>二、分库分表</h1><h2 id="1、水平分库"><a href="#1、水平分库" class="headerlink" title="1、水平分库"></a>1、水平分库</h2><img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/水平分库.png">
 <p>1、概念：以字段为依据，按照一定策略（hash、range等），将一个库中的数据拆分到多个库中。</p>
 <p>2、结果：</p>
 <pre><code>每个库的结构都一样；
@@ -400,7 +400,7 @@
 所有库的并集是全量数据；
 </code></pre><p>3、场景：系统绝对并发量上来了，分表难以根本上解决问题，并且还没有明显的业务归属来垂直分库。</p>
 <p>4、分析：库多了，io和cpu的压力自然可以成倍缓解。</p>
-<h2 id="2、水平分表"><a href="#2、水平分表" class="headerlink" title="2、水平分表"></a>2、水平分表</h2><p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180806210016545-644285275.png"></p>
+<h2 id="2、水平分表"><a href="#2、水平分表" class="headerlink" title="2、水平分表"></a>2、水平分表</h2><img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/水平分表.png">
 <p>1、概念：以字段为依据，按照一定策略（hash、range等），将一个表中的数据拆分到多个表中。</p>
 <p>2、结果：</p>
 <pre><code>每个表的结构都一样；
@@ -408,7 +408,7 @@
 所有表的并集是全量数据；
 </code></pre><p>3、场景：系统绝对并发量并没有上来，只是单表的数据量太多，影响了SQL效率，加重了CPU负担，以至于成为瓶颈。</p>
 <p>4、分析：表的数据量少了，单次SQL执行效率高，自然减轻了CPU的负担。</p>
-<h2 id="3、垂直分库"><a href="#3、垂直分库" class="headerlink" title="3、垂直分库"></a>3、垂直分库</h2><p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180806211319921-1425169745.png"></p>
+<h2 id="3、垂直分库"><a href="#3、垂直分库" class="headerlink" title="3、垂直分库"></a>3、垂直分库</h2><img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/垂直分库.png">
 <p>1、概念：以表为依据，按照业务归属不同，将不同的表拆分到不同的库中。</p>
 <p>2、结果：</p>
 <pre><code>每个库的结构都不一样；
@@ -416,7 +416,7 @@
 所有库的并集是全量数据；
 </code></pre><p>3、场景：系统绝对并发量上来了，并且可以抽象出单独的业务模块。</p>
 <p>4、分析：到这一步，基本上就可以服务化了。例如，随着业务的发展一些公用的配置表、字典表等越来越多，这时可以将这些表拆到单独的库中，甚至可以服务化。<br>再有，随着业务的发展孵化出了一套业务模式，这时可以将相关的表拆到单独的库中，甚至可以服务化。</p>
-<h2 id="4、垂直分表"><a href="#4、垂直分表" class="headerlink" title="4、垂直分表"></a>4、垂直分表</h2><p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180806212658885-2067482042.png"></p>
+<h2 id="4、垂直分表"><a href="#4、垂直分表" class="headerlink" title="4、垂直分表"></a>4、垂直分表</h2><img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/垂直分表.png">
 <p>1、概念：以字段为依据，按照字段的活跃性，将表中字段拆到不同的表（主表和扩展表）中。</p>
 <p>2、结果：</p>
 <pre><code>2.1、每个表的结构都不一样；
@@ -429,22 +429,26 @@
 <p>注：工具的利弊，请自行调研，官网和社区优先。</p>
 <h1 id="四、分库分表步骤"><a href="#四、分库分表步骤" class="headerlink" title="四、分库分表步骤"></a>四、分库分表步骤</h1><p>根据容量（当前容量和增长量）评估分库或分表个数 -&gt; 选key（均匀）-&gt; 分表规则（hash或range等）-&gt; 执行（一般双写）-&gt; 扩容问题（尽量减少数据的移动）。</p>
 <h1 id="五、分库分表问题"><a href="#五、分库分表问题" class="headerlink" title="五、分库分表问题"></a>五、分库分表问题</h1><h2 id="1、非partition-key的查询问题（水平分库分表，拆分策略为常用的hash法）"><a href="#1、非partition-key的查询问题（水平分库分表，拆分策略为常用的hash法）" class="headerlink" title="1、非partition key的查询问题（水平分库分表，拆分策略为常用的hash法）"></a>1、非partition key的查询问题（水平分库分表，拆分策略为常用的hash法）</h2><p>1、端上除了partition key只有一个非partition key作为条件查询</p>
-<p>映射法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807105926589-1001810279.png"></p>
-<p>基因法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807131414339-111952151.png"></p>
+<p>映射法  </p>
+<img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/映射法1.png">
+<p>基因法 </p>
+<img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/基因法1.png">
 <p>注：写入时，基因法生成userid，如图。关于xbit基因，例如要分8张表，23=8，故x取3，即3bit基因。根据userid查询时可直接取模路由到对应的分库或分表。<br>根据username查询时，先通过usernamecode生成函数生成username_code再对其取模路由到对应的分库或分表。id生成常用snowflake算法。</p>
 <p>2、端上除了partition key不止一个非partition key作为条件查询</p>
-<p>映射法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807110030707-42616490.png"></p>
-<p>冗余法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807171456867-464776606.png"></p>
+<p>映射法 </p>
+<img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/映射法2.png">
+<p>冗余法 </p>
+<img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/冗余法2.png">
 <p>注：按照orderid或buyerid查询时路由到dbobuyer库中，按照sellerid查询时路由到dbo_seller库中。感觉有点本末倒置！有其他好的办法吗？改变技术栈呢？</p>
 <p>3、后台除了partition key还有各种非partition key组合条件查询</p>
-<p>NoSQL法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807164252157-849366697.png"></p>
-<p>冗余法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807164356760-1225281969.png"> </p>
+<p>NoSQL法<br><img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/NoSQL法3.png"></p>
+<p>冗余法<br><img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/冗余法3.png"></p>
 <h2 id="2、非partition-key跨库跨表分页查询问题（水平分库分表，拆分策略为常用的hash法）"><a href="#2、非partition-key跨库跨表分页查询问题（水平分库分表，拆分策略为常用的hash法）" class="headerlink" title="2、非partition key跨库跨表分页查询问题（水平分库分表，拆分策略为常用的hash法）"></a>2、非partition key跨库跨表分页查询问题（水平分库分表，拆分策略为常用的hash法）</h2><p>注：用NoSQL法解决（ES等）。</p>
 <h2 id="3、扩容问题（水平分库分表，拆分策略为常用的hash法）"><a href="#3、扩容问题（水平分库分表，拆分策略为常用的hash法）" class="headerlink" title="3、扩容问题（水平分库分表，拆分策略为常用的hash法）"></a>3、扩容问题（水平分库分表，拆分策略为常用的hash法）</h2><p>1、水平扩容库（升级从库法）</p>
-<p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807222601104-674464032.png"></p>
+<img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/水平扩容库.png">
 <p>注：扩容是成倍的。</p>
 <p>2、水平扩容表（双写迁移法）</p>
-<p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807230203075-707265239.png"></p>
+<img src="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/水平扩容表.png">
 <p>第一步：（同步双写）应用配置双写，部署；</p>
 <p>第二步：（同步双写）将老库中的老数据复制到新库中；</p>
 <p>第三步：（同步双写）以老库为准校对新库中的老数据；第四步：（同步双写）应用去掉双写，部署；</p>
