@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>以我的亲身经历，告诉大家写简历和面试的技巧！</title>
+      <link href="/2019/05/08/yi-wo-de-qin-shen-jing-li-gao-su-da-jia-xie-jian-li-he-mian-shi-de-ji-qiao/"/>
+      <url>/2019/05/08/yi-wo-de-qin-shen-jing-li-gao-su-da-jia-xie-jian-li-he-mian-shi-de-ji-qiao/</url>
+      
+        <content type="html"><![CDATA[<p>之前我也写过不少介绍面试相关的博文，有些文章的点击量还不低，这些面试相关的经验大多都是从我面试别人的过程中提炼出来了。</p><p>在18年底到19年3月，陆续面试了几家公司，有成有不成的，最终进了一家比较满意的知名外企。在本文里，我将介绍我这段时间里更新简历和面试的相关经历。<br>可能面试相关的一些方法，大家能从我之前的博文里看到，但在本文里，大家更能从相关实战性的例子中进一步体会到面试技巧的使用方法。</p><h1 id="一、刚开始一定得通过一些小公司练手"><a href="#一、刚开始一定得通过一些小公司练手" class="headerlink" title="一、刚开始一定得通过一些小公司练手"></a>一、刚开始一定得通过一些小公司练手</h1><p>我打算要换工作，就更新了简历，这时就有不少猎头来找我，刚开始，我不敢面大公司，只是去些规模小的互联网公司。因为一方面，当时我很久不面试了，面试实战技能难免有些荒废，另一方面，离我之前的面试毕竟过了一阵，我不知道当前市面上哪些技术比较值钱。</p><p>而且，我在面试前会准备一些针对项目和值钱技术的说辞，这些说辞总要经过实战来演练下。事实上，在和小公司沟通的过程中，进一步提升了我的相关表述能力和相关话术，相当于用小公司来踩坑。相反，如果用大公司的面试失败来换得这些进步，就未免有些可惜了。</p><p>所以，我和猎头明说，我想去大公司，但之前，你得让我到一些小公司去练练手，同时，我面试好以后，会告诉你这些小公司的面试题和相关技巧。这样一些猎头就肯先推荐我去小公司了。</p><h1 id="二、投简历前，微调简历描述的技巧"><a href="#二、投简历前，微调简历描述的技巧" class="headerlink" title="二、投简历前，微调简历描述的技巧"></a>二、投简历前，微调简历描述的技巧</h1><ol><li><p>公司A在职位介绍里，提到对分布式组件有要求，尤其是负载均衡集群。这块技术我在通用版简历中只是笼统写了下，有nginx+lvs实际经验，既然这个公司有类似要求，我就在简历中细化了这块：用到了lvs+keepalive集群和nginx，它们分别工作在4层和7层，（后省略相关技术使用点描述），最后介绍下效果：用了这个负载均衡组件外，我们系统承受住了xx的并发量。</p></li><li><p>在公司B的职位介绍里，提到了高并发的需求，那么我就着重写了我压测的相关经验，包括压测环境怎么部署，用到哪些组件，再同时列了些压测后改善系统性能的若干方法。</p></li><li><p>公司C比较小，需要一位比较资深的能带团队的架构师，那么我在简历中除了介绍技术外，还着重写了带团队的若干经验。</p></li></ol><p>对大家来说，其实面试任何一家公司，它们的职位要求绝对不可能一样。这时大家最好是微调下简历。这种微调，绝对不是胡乱编写，比如上个项目干的是测试，简历中改成开发。而是挖掘下侧重点。</p><p>就像我之前给出的案例，对于分布式技术，我上个项目确实用过，但简历中篇幅有限，我不可能面面俱到地写，但既然你们公司有要求，那么我就针对性地详细介绍。</p><p>其实这块谈不上是面试技巧，而是语文技巧。首先是审题，理解职位介绍的主要内容，然后再像写作文那样，详细扩展下上个项目里相关技术点。甚至这只是中考语文的考点而不是高考的，但我自己的体会是，在这段时间里针对每份职位介绍我都做了微调，所以基本上是投一份简历就能得到一次面试机会。</p><h1 id="三、在换工作前，需要定下预期目标，同时要观察公司的情况"><a href="#三、在换工作前，需要定下预期目标，同时要观察公司的情况" class="headerlink" title="三、在换工作前，需要定下预期目标，同时要观察公司的情况"></a>三、在换工作前，需要定下预期目标，同时要观察公司的情况</h1><p>我见过不少人，面试成了就进去了，结果虽然钱达到预期，但工作环境和行业背景都不是自己想要的，对自己未来发展很不利。</p><p>目前不少公司的情况，比如行业背景（比如金融保险电商等）还有工作强度（加班情况）在网上都能查到，用什么技术（比如分布式技术还是云还是AI）通过打听也能问到。互联网是万能的，甚至如果仔细些，一些离职率，每年工资的增长幅度，甚至这个公司是第几轮融资，一般也能看到。</p><p>而且，大家在面试的时候，可以通过现场观察以及和面试官交流，旁敲侧击地打探到上述情况。在这个基础上，大家需要结合自己当前的需求和未来3到5年的发展方向，找若干类适合自己的公司，下面就给些我个人的和我所见到的例子。</p><ol><li><p>比如我不大愿意进创业型公司，也比较排斥长时间的996，所以这类公司我只是拿来练手。（这是我个人的观点）</p></li><li><p>有段时间，不少P2P金融公司踩雷，所以哪怕面试时，这类公司的面试官会说得天花乱坠（很少有说自己不好的），但这类公司得慎重。</p></li><li><p>有次我到一个现场去面试，发现公司规模不大，是在一个园区里占1个楼层，且大多是业务人员，开发的不多，而且人事总会说自己公司正在融资，那么这个公司就有可能不稳定，在有其它选项时，我就没去。</p></li><li><p>我认识一个人，他想在Java分布式这块有所发展，他5年后的目标是架构师，在面试过程中，他就详细问了未来新进组的技术栈，等确定可以了再入职。    </p></li></ol><p>换工作是个折腾人的事情，虽然没有十全十美的事情，进新公司后一定会发现和当初的预期有所不同，但如果事先不调查，那么入职后后悔这还是小事，耽搁自己的发展才是大事。</p><h1 id="四、面试前，我总要查看职位介绍，以此准备项目介绍"><a href="#四、面试前，我总要查看职位介绍，以此准备项目介绍" class="headerlink" title="四、面试前，我总要查看职位介绍，以此准备项目介绍"></a>四、面试前，我总要查看职位介绍，以此准备项目介绍</h1><p>在上文里，我一直介绍的是准备简历和定目标，从这部分开始，将介绍准备面试。在之前的博文里，我一直强调项目介绍的重要性，所以当我自己出去面试的时候，这块绝对重视。在准备项目介绍前，我还是会通读应聘职位的技术介绍，然后按如下的步骤来准备。</p><ol><li><p>介绍项目的基本情况，比如这个项目是干嘛的，有哪些模块流程是什么，自己做了哪些，持续了多久，有多少个人参与。这块切记，可以谈下业务，但别深入，因为面试官不熟悉，也不想熟悉候选人的业务，这块时间控制在1分钟之内。</p></li><li><p>通过介绍项目用到的软件，以及项目的管理方式，来进一步验证项目的真实性，否则很难和培训班给出的项目有差别。</p></li></ol><p>我介绍的时候，就说，项目管理用Maven，部署用jenkins，静态扫描用Sonar，任务管理和bug管理用jira，平时采用敏捷的项目迭代方式，每天有站会，大约1月一个迭代版本。这块大家可以根据自己的情况来介绍，时间也别太长，估计用1分钟也就够了。</p><ol start="3"><li>这块最重要，是结合业务，抛出项目用到的技术，但别展开。</li></ol><p>比如我见过一个职位介绍，里面写到需要有数据库优化的经验，那么我就说，项目里我用过MyCat作为分库分表，（不展开技术），结果上线后，我们数据库能承受住每秒2000个并发请求（说下用好的结果）。</p><p>又如一个JD里说要用到微服务技术，那么我就说，项目里用到了Spring Cloud框架，用到了Ribbon，Eureka等组件，容器是Docker。用好以后，在发布时会发现，各模块之间的调用耦合性大大降低。</p><p>这块为什么不用展开？第一，当前还在介绍项目，如果展开技术，就会主次不分，面试官会对你的逻辑思路产生质疑。第二，由于在JD里有要求，面试官一定会深入来问，别人问你说总比自己自吹自擂要好。 第三，就好比之前考文科内容，当前在介绍项目时，先应当把所有的点说出来，面上自有机会发挥。</p><h1 id="五、准备项目介绍时，我是如何准备值钱技术的"><a href="#五、准备项目介绍时，我是如何准备值钱技术的" class="headerlink" title="五、准备项目介绍时，我是如何准备值钱技术的"></a>五、准备项目介绍时，我是如何准备值钱技术的</h1><p>这块其实和介绍项目经验时密不可分，这里就拿我介绍过的Netty组件来说明。</p><ol><li>准备如何过渡到相关技术的说辞。</li></ol><p>这里一定别让面试官感觉你在自说自话。比如我准备的方案1是，在介绍好项目背景后，如果面试官没打断，我就询问，能否介绍其中的Netty细节？得到允许后再说。方案2是把这些技术关联到面试官可能会问的问题上，比如问及网络通讯时介绍Netty，这个事先我会整理一个问题列表，遇到此类问题，我会抛出Netty说辞。对于其他技术也可以照此准备。</p><ol start="2"><li>结合业务需求点，说下为什么要用这个技术，以及用了有什么好处。</li></ol><p>比如为了优化网络通讯协议，所以用基于TCP协议的Netty，我业务模块里的xxx功能是用到netty，再稍微结合业务和Netty展开下。这样的话，面试官就会感觉这个技术你不是仅仅在学习中用到，而且在项目业务里用到。</p><ol start="3"><li>准备下这个技术里我踩过的坑。</li></ol><p>比如通讯过程中我遇到了半包和粘包问题，对此我更是深入了底层代码说明，还有Netty里的堆外内存管理问题，我准备了一个由于管理不善而导致的OOM问题的排查和解决过程（这类问题网上相关的也很多）。</p><ol start="4"><li>我再准备了用了这个技术后对项目的帮助。</li></ol><p>比如Netty是基于TCP协议的，它要比Http协议要轻，所以通讯性能高，且Netty内部的Reactor线程模型对系统的IO帮助很大。</p><p>其实准备到这个程度，一般的面试官就不怎么再问了，哪怕面试官再问了一个我不知道的问题，我也可以理直气壮地说不知道了，毕竟我之前已经介绍了不少底层代码，再精通Netty的人也未必能面面俱到地在脱稿的情况下回答出任何问题。</p><p>但为了以防万一，我更准备了“源于项目但高于项目”的说辞，一方面证明我平时还会不断专研，另一方面进一步证明我熟悉并能合理使用Netty的底层代码。这方面我准备了如下的内容：</p><pre><code>Netty的重要组件以及一个请求过来时各模块工作的时序图。Netty内部零拷贝的原理和好处，对此还专门准备了代码。Netty读写索引的工作方式。Netty异步处理的机制。</code></pre><p>大家可以想象下，如果在面试中，大家很自信地边写底层代码边解释问题，面试官会对大家有什么评价？其实这些都是可以准备的，我一直没明白，为什么有些人面试前不做任何准备？这些准备的素材又不是找不到~</p><p>下面我再略讲下我MyCAT的准备要点：</p><pre><code>还是讲下业务背景，为什么要用？如何使用，无非是设置分库规则，改写SQL语句等。准备下踩到的坑，比如自增长主键在每台机器上都要保证唯一。然后再结合些底层代码，准备下一条SQL语句是如何分发到对应的分库上的，然后执行好以后又如何返回的。</code></pre><p>基本上我面试时说到这个程度后，面试官就不怎么问了。</p><h1 id="六、事前评估好自己的薄弱点，想办法让面试官忽略"><a href="#六、事前评估好自己的薄弱点，想办法让面试官忽略" class="headerlink" title="六、事前评估好自己的薄弱点，想办法让面试官忽略"></a>六、事前评估好自己的薄弱点，想办法让面试官忽略</h1><p>哪怕事先再准备，我们也不能保证自己一定能达到职位介绍里的要求，这时候就得准备一个自己薄弱技术的列表，然后想办法在面试中绕过去，如果绕不过去，就找些替代方案。</p><p>比如我对消息通讯组件不熟悉，在面试前我哪怕看代码看文档也无法进一步理解，我就在面试中，故意不提这个环节，抛出其它值钱技术，引诱面试官来问，一般交流一个技术点大约耗时10分钟（边画图边介绍再提问），所以面试过程中详细交流到的最多也就5个点，少的话就3个，在不少面试里就根本没涉及到这块。</p><p>有两场面试，技术面试官问及到了，我就说项目里用过，同时多介绍些使用场景，比如用Kafka进行异步消息通知，通过消息中间件来保证交易的幂等性。这样面试官听到我介绍了应用场景，就至少会认为我用过。只有一场面试，面试官在kafka方面问得很细，问到如何集群内防止消息重发的细节，我就没回答上。</p><p>也就是说，我通过刻意回避外加介绍业务应用场景，很大程度上隐藏了我了解不深的技术。相反，如果我在简历中大大咧咧地写上用过kafka，那么可能每场面试都会被问到，毕竟在面试中被问倒不是件好事。 </p><p>又如，我对分布式集群里的失效转移底层细节始终没理解透彻，那么在相关问题上就得非常小心。</p><p>有一场面试里，我被问到dubbo+zk集群，这块如果细问，一定会问到失效转移的选举算法，我对此不熟，那么我就先说dubbo的通讯协议，序列化方式以及通过设置超时时间实现服务降级的思路，然后再说zk的部署。最终面试官果然问到选举算法，但之前我已经结合业务谈了dubbo底层代码和zk的相关部署，所以不理解选举算法并没有产生太大的影响。</p><p>这里用到的技巧是“偷换概念”，一个问题有多个回答方向，你先让面试官感觉到你在很多领域非常熟悉，那么在个别领域不熟悉就无伤大雅了。</p><h1 id="七、和猎头和人事的沟通要点"><a href="#七、和猎头和人事的沟通要点" class="headerlink" title="七、和猎头和人事的沟通要点"></a>七、和猎头和人事的沟通要点</h1><ol><li><p>猎头和我们是一伙的，我们成了猎头也能拿到提成，所以和猎头谈时一定得坦诚，把你优点和弱点都说，猎头会帮忙想办法（比如问面试题）或者是帮忙优化简历。</p></li><li><p>面试前，一定和猎头谈次，或者问下对这家公司该说什么话，以及之前人的成功失败经验，如果问题，去问下面试题（包括笔试题和口头技术问题）。</p></li><li><p>面试后，一定第一时间和猎头沟通，这时个人直接去问不合适。而且还可以通过猎头说，哪怕这个岗位没面上，还可以尝试这个公司的其它岗位。</p></li><li><p>谈工资时一定得先听猎头的建议，不少人对当前行情不了解，或者信心不足，工资没要足，这时让猎头谈是比较合适的，因为猎头就干这个的。一般来说，跳槽后，工资大约有20%到50%的涨幅，有些公司会要前家公司的收入证明，相关问题也可以问猎头。</p></li></ol><p>但和人事谈，就要小心了，毕竟人事是公司开工资的。</p><p>人事会问之前公司的离职原因，这时千万别让人事感觉出你不稳定，你可以说为了进一步提升自己的能力，此类问题网上太多，大家可以自己查。</p><p>在谈发展方向时，别和JD上的背离。比如JD上是招个技术开发人才，你却和人事说，干了1年后想转Team leader管理岗位，或者说同时想做测试，那么人事就会感觉到，你未来的发展规划和公司想要的不匹配。</p><p>总之，面试时人事会非常nice地和你交流，有时候甚至是套话，看你是否稳定，是否能很好地和团队协作，能否加班，我就见过有人卡在人事这关，甚至还不知道为啥被拒。</p><p>而且一般你在和人事谈工资前，最好向猎头打探下这个职位的工资范围，在此基础上，如果你感觉面试非常好，或者他们着急要人，或者你感觉加班会很多，可以适当多要些，相反如果你非常想进这个公司，那么就自己斟酌。</p><h1 id="八、总结：不能常跳槽，但得经常更新自己的技能"><a href="#八、总结：不能常跳槽，但得经常更新自己的技能" class="headerlink" title="八、总结：不能常跳槽，但得经常更新自己的技能"></a>八、总结：不能常跳槽，但得经常更新自己的技能</h1><p>在上文里，我通过最近换工作的经历，向大家介绍了相关经验，自认为本文介绍的技巧更有实战性。</p><p>我不推荐经常换工作，比如一年换个两家，那么公司会质疑稳定性，但对于我们做IT的人来说，如果手头技术停滞不前，那么自己的竞争高工资的能力也会大大降低。</p><p>那么目前该了解哪些技术？以及在这个技术方面我当前掌握得如何？这固然可以通过工作来检验，但工作中接触到的技术毕竟是有限的，这时就可以通过面试来检验自己当前的学习情况，同时也可以通过面试题去了解自己的努力方向。</p><p>来源：cnblogs.com/JavaArchitect/p/10720897.html</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spring Boot + MyBatis + Maven论坛内容管理系统源码</title>
       <link href="/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/"/>
       <url>/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/</url>
@@ -54,23 +79,23 @@
     
     
     <entry>
-      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
-      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
-      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
+      <title>965 是一种生活态度，996 也是</title>
+      <link href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
+      <url>/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</url>
       
-        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
+        <content type="html"><![CDATA[<p>996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。<br>在今天的大多数看来，在一家公司里待满 5 年，可能不是件有意思的事——生活总会有各种的无奈。</p><p>5 年的时间，不长也不短。朋友变成了同事，网友变成了同事，同事变成了前同事，前同事变成了同事（笑~）。人呢，都是有自己的想法：</p><p>1.965 的工作太『安逸』——赚不了多少钱。</p><p>2.996 的生活太『辛苦』——没时间去花钱。</p><p>矛盾之下，有人选择将 965 的生活，变成了 996；有些则是选择将 996 的生活，变成了 965。</p><p>生活总是这么有趣。有光的一画，自然而然地，也就有阴影的一面；被某些人喜欢着，也必然意味着被某些人讨厌着；有很多的粉丝， 也同时意味着有很多的黑粉。</p><p>没有对与错，只有自己的选择与利益。</p><h1 id="965"><a href="#965" class="headerlink" title="965"></a>965</h1><p>作为一个农村里出来的穷孩子，我在今年里存款才突破 100,000——2018 年存下的，相当于现在大部分程序员一年的存款。以前的钱呢，都在帮家里还钱。你要是说呢，钱对于我也很重要，但是还有很多事情也很重要——生活、爱情、自我。所以，选择 965，对于我来说是一种平衡。</p><p>编程是一种兴趣。编程说是我的兴趣吧，倒也不是，我只是喜欢创造，就好比是个手工艺人一样。</p><p>生活是一种平衡。人是有生活的，机器人才没有。</p><p>家庭是一个归属。你有男朋友/老婆/儿子/女儿，你需要花时间在他/她们身上。</p><p>从这等角度来看，我到底是那种喜欢马拉松式生活的人，缓慢而又持久（笑）。所以我喜欢制定一个长期的计划，然后慢慢去执行，每天总能收获一点点。从长期来看，养成了一个好的习惯，就能构建长久的职业生涯。哪怕是有一天出去创业了，好的习惯也会带来一定的助力。</p><p>说是 965，但是这并不意味着不加班，只是很多工作可以回家里完成。如果从这等角度上来看，我到底也是加班过的：</p><p>1、深入研究项目上的技术栈</p><p>2、调研项目要使用的新技术栈</p><p>只是呢，这算是加班吗？哈哈~，我回家也是研究技术。若是自己能力不足，这种加班倒是也</p><h1 id="996"><a href="#996" class="headerlink" title="996"></a>996</h1><p>所以呢，为了钱去选择 996 也是一种生活态度。赚够钱了呢，就可以过退休般的生活，每天花很多时间去写想写的代码。前期呢，累是累了点，但是总是值得的。</p><p>赚钱是一种需求。总有那么一些人，就喜欢赚钱，赚钱是一种快感，比如唐老鸭的叔叔——最有钱的虚拟人物。</p><p>证明自己是一种需求。有的人，选择 996 的大公司，出自于自我实现的需要。在大的平台上，去创造一系列的精彩，而自己便是优秀的那个人。</p><p>在不了解自己想要什么，迷茫的时候，选择 996 是一种更有效的方式。对于你而言，965 带给你反而是一种时间上的浪费。6 点多回到了家里，却也不知道做些什么。那还不如，在公司混混沌沌地把钱赚了。</p><p>也因此呢，还有一种情况是：</p><p>在公司加班是一种享受。令人津津乐道的是，对于如我一样来大城市 “务工” 的程序员来说，回到住的地方反而更无聊。在公司里，还有同事可以聊天 ，还有零食可以吃，还有帅哥和靓妹可以看，何乐而不为。加班时，有免费的晚饭吃，到了 9 点回家还可以打车报销。</p><p>我们在说 996 的时候，指的是强制性的加班，而不是这种自主性的加班。</p><h1 id="965-与-996-徘徊者"><a href="#965-与-996-徘徊者" class="headerlink" title="965 与 996 徘徊者"></a>965 与 996 徘徊者</h1><p>在 TWU 的时候，我的人生有过一次的转变。那时是在 2014 年 10 月，我第一次了解到除了男性、女性，还有其 x 的性别。然后，性别在我的眼里，就变成了五种选项。从现象上来看，他/她们可能是 996 的人，又或者是 965 的人，但是实际上可能是：</p><pre><code>965 的人996 的人995 但是认为自己是 996 的人996 但是认为自己是 995 的人即不是 995 也不是 996 的人</code></pre><p>可是呢，生活是一种选择。选择了 965，可能就没有 996 的工资；选择了 996，可能就没有 965 的工资。</p><p>让我们来做个简单的自述，把你的 996 的工作变成了 965，算算你的时薪，看看你还能在现在拿多少钱？以一个月四周来看：</p><pre><code>965 意味着，一天 8 小时，一周 40 小时，一个月 160 小时。996 意味着，一天 10 小时，一周 60 小时，一个月 240 小时。</code></pre><p>所以，如果把你的 965 的工作时间换成了 996，那么你的工资应该至少要涨 50%（不包含加班费）。把你的 996 的工作时间换成了 965，那么你的工资应该减少 1/3。</p><p>最后，问题也就来了，你现在的工资少 1/3，你干吗？——你可能马上骂娘了。</p><p>你，可能会立马变成那个吐槽为什么不 996 的人呢？所以，生活并不会有太多的选择。你既要 996，又想要保持现在的工资和绩效，有点难——站着，还把钱赚了，不是一件容易的事。</p><p>生活就是这么需要一些同理心，人呢，有时要站在别人的角度来考虑问题。</p><h1 id="那么，你呢？"><a href="#那么，你呢？" class="headerlink" title="那么，你呢？"></a>那么，你呢？</h1><p>当然了，这些道理，我们都是知道的。</p><p>你呢，若是你，你会选择 965，又或者是 996，为什么呢？</p><p>来源：mp.weixin.qq.com/s/x8d4yRY6o_HISn4fqwx-Ig</p>]]></content>
       
       
       <categories>
           
-          <category> 技术 </category>
+          <category> 程序猿 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
+            <tag> 程序猿 </tag>
             
         </tags>
       
@@ -104,23 +129,23 @@
     
     
     <entry>
-      <title>965 是一种生活态度，996 也是</title>
-      <link href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
-      <url>/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</url>
+      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
+      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
+      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
       
-        <content type="html"><![CDATA[<p>996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。<br>在今天的大多数看来，在一家公司里待满 5 年，可能不是件有意思的事——生活总会有各种的无奈。</p><p>5 年的时间，不长也不短。朋友变成了同事，网友变成了同事，同事变成了前同事，前同事变成了同事（笑~）。人呢，都是有自己的想法：</p><p>1.965 的工作太『安逸』——赚不了多少钱。</p><p>2.996 的生活太『辛苦』——没时间去花钱。</p><p>矛盾之下，有人选择将 965 的生活，变成了 996；有些则是选择将 996 的生活，变成了 965。</p><p>生活总是这么有趣。有光的一画，自然而然地，也就有阴影的一面；被某些人喜欢着，也必然意味着被某些人讨厌着；有很多的粉丝， 也同时意味着有很多的黑粉。</p><p>没有对与错，只有自己的选择与利益。</p><h1 id="965"><a href="#965" class="headerlink" title="965"></a>965</h1><p>作为一个农村里出来的穷孩子，我在今年里存款才突破 100,000——2018 年存下的，相当于现在大部分程序员一年的存款。以前的钱呢，都在帮家里还钱。你要是说呢，钱对于我也很重要，但是还有很多事情也很重要——生活、爱情、自我。所以，选择 965，对于我来说是一种平衡。</p><p>编程是一种兴趣。编程说是我的兴趣吧，倒也不是，我只是喜欢创造，就好比是个手工艺人一样。</p><p>生活是一种平衡。人是有生活的，机器人才没有。</p><p>家庭是一个归属。你有男朋友/老婆/儿子/女儿，你需要花时间在他/她们身上。</p><p>从这等角度来看，我到底是那种喜欢马拉松式生活的人，缓慢而又持久（笑）。所以我喜欢制定一个长期的计划，然后慢慢去执行，每天总能收获一点点。从长期来看，养成了一个好的习惯，就能构建长久的职业生涯。哪怕是有一天出去创业了，好的习惯也会带来一定的助力。</p><p>说是 965，但是这并不意味着不加班，只是很多工作可以回家里完成。如果从这等角度上来看，我到底也是加班过的：</p><p>1、深入研究项目上的技术栈</p><p>2、调研项目要使用的新技术栈</p><p>只是呢，这算是加班吗？哈哈~，我回家也是研究技术。若是自己能力不足，这种加班倒是也</p><h1 id="996"><a href="#996" class="headerlink" title="996"></a>996</h1><p>所以呢，为了钱去选择 996 也是一种生活态度。赚够钱了呢，就可以过退休般的生活，每天花很多时间去写想写的代码。前期呢，累是累了点，但是总是值得的。</p><p>赚钱是一种需求。总有那么一些人，就喜欢赚钱，赚钱是一种快感，比如唐老鸭的叔叔——最有钱的虚拟人物。</p><p>证明自己是一种需求。有的人，选择 996 的大公司，出自于自我实现的需要。在大的平台上，去创造一系列的精彩，而自己便是优秀的那个人。</p><p>在不了解自己想要什么，迷茫的时候，选择 996 是一种更有效的方式。对于你而言，965 带给你反而是一种时间上的浪费。6 点多回到了家里，却也不知道做些什么。那还不如，在公司混混沌沌地把钱赚了。</p><p>也因此呢，还有一种情况是：</p><p>在公司加班是一种享受。令人津津乐道的是，对于如我一样来大城市 “务工” 的程序员来说，回到住的地方反而更无聊。在公司里，还有同事可以聊天 ，还有零食可以吃，还有帅哥和靓妹可以看，何乐而不为。加班时，有免费的晚饭吃，到了 9 点回家还可以打车报销。</p><p>我们在说 996 的时候，指的是强制性的加班，而不是这种自主性的加班。</p><h1 id="965-与-996-徘徊者"><a href="#965-与-996-徘徊者" class="headerlink" title="965 与 996 徘徊者"></a>965 与 996 徘徊者</h1><p>在 TWU 的时候，我的人生有过一次的转变。那时是在 2014 年 10 月，我第一次了解到除了男性、女性，还有其 x 的性别。然后，性别在我的眼里，就变成了五种选项。从现象上来看，他/她们可能是 996 的人，又或者是 965 的人，但是实际上可能是：</p><pre><code>965 的人996 的人995 但是认为自己是 996 的人996 但是认为自己是 995 的人即不是 995 也不是 996 的人</code></pre><p>可是呢，生活是一种选择。选择了 965，可能就没有 996 的工资；选择了 996，可能就没有 965 的工资。</p><p>让我们来做个简单的自述，把你的 996 的工作变成了 965，算算你的时薪，看看你还能在现在拿多少钱？以一个月四周来看：</p><pre><code>965 意味着，一天 8 小时，一周 40 小时，一个月 160 小时。996 意味着，一天 10 小时，一周 60 小时，一个月 240 小时。</code></pre><p>所以，如果把你的 965 的工作时间换成了 996，那么你的工资应该至少要涨 50%（不包含加班费）。把你的 996 的工作时间换成了 965，那么你的工资应该减少 1/3。</p><p>最后，问题也就来了，你现在的工资少 1/3，你干吗？——你可能马上骂娘了。</p><p>你，可能会立马变成那个吐槽为什么不 996 的人呢？所以，生活并不会有太多的选择。你既要 996，又想要保持现在的工资和绩效，有点难——站着，还把钱赚了，不是一件容易的事。</p><p>生活就是这么需要一些同理心，人呢，有时要站在别人的角度来考虑问题。</p><h1 id="那么，你呢？"><a href="#那么，你呢？" class="headerlink" title="那么，你呢？"></a>那么，你呢？</h1><p>当然了，这些道理，我们都是知道的。</p><p>你呢，若是你，你会选择 965，又或者是 996，为什么呢？</p><p>来源：mp.weixin.qq.com/s/x8d4yRY6o_HISn4fqwx-Ig</p>]]></content>
+        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
       
       
       <categories>
           
-          <category> 程序猿 </category>
+          <category> 技术 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 程序猿 </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -179,31 +204,6 @@
     
     
     <entry>
-      <title>我们搞开发的为什么会感觉到累</title>
-      <link href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
-      <url>/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</url>
-      
-        <content type="html"><![CDATA[<h1 id="引题"><a href="#引题" class="headerlink" title="引题"></a>引题</h1><p>昨天下班坐公车，听到一个和我年纪相仿的哥们儿打电话，隐约听到电话那边好像是他女朋友问他现在饿不饿，他说“我已经饿的不饿啦”。</p><p>饿的不饿了，听起来很幽默，对我很有触动，我在思考，我此时站在公车中部，手扶着杆有点酸，你问我手有多酸，借用打电话的那个哥们的话，随着日复一日这样的酸痛感受的反复刺激，已经酸的不酸了，你问我饿不饿，我也说不上来，飘飘渺渺，因为做编程这行几年下来，我自己的感受是，虽到了吃饭时间，但是感觉似饿非饿，吃饭感觉只是个形式。</p><p>以上都是是大多数在一线城市奋斗的人们所经历的可以忽略不计的一些事，我这里想聊聊为什么我们做IT的大多数都很累？</p><p>什么叫累，古代私塾先生教书的时候解释说，累字拆分意义是田系在头上，白话文讲就是“头上有田方知累也”。这是上古时代“累”的含义，当然现在还有大多数人为了我们国家的发展在辛勤劳累的种田，他们很辛苦。</p><h2 id="我们的累"><a href="#我们的累" class="headerlink" title="我们的累"></a>我们的累</h2><pre><code>回到标题，我觉得我门做编程的大多数人都很累，为什么累呢？</code></pre><p>到一个新公司上班，公司预先说要做一个项目或产品，你不知道到底有多复杂或简单，心里些许担心或不安，因为这些东西有可能在你预想的基础上会变的。</p><p>准备启动项目或产品，开始做需求，由于老板把时间压得紧，需求可能有些粗糙，开发时间也被压很短，因为这样，担心和紧张感铺面而来，需求会不会变，会不会遇到技术障碍，都是可变的。</p><p>开发过程中，由于需求做的不够精细（这太正常了，客户或老板都不知道他要什么），接二连三的变动和更改，紧张万分，不知道哪一会儿会又变动。</p><p>累死累活做完了，开始测试了，啊，XXX这里点击没反应，邮件怎么没发送成功，怎么发送成功了没收到，又报黄页，js错误……时刻有可能出bug。</p><p>终于上线了，客户出了个error，你帮忙看看吧（测试阶段都没有这问题哦）；日志记录了不少错误哦，你给定位下；客户投单没成功，肯定他妈的第三方接口问题；客户IE6下按钮点不了，下拉框出不来；oh shit ……</p><p>又开始新的项目了，新的一轮紧张挑战拉开帷幕……之前上线的项目或产品还会时不时给你来些心跳，下一秒未可知，明天未可知。</p><p>循环ing……</p><p>大伙可能要说担心或不安是多余的，那是你技术水平太垃圾吧，我之前的技术leader技术很好，很牛逼，平常他说的最多的是未雨绸缪，居安思危，人无远虑必有近忧这些句话。他时常会研究新东西，新技术，给我们安排好书去读让我们保持进步，说实话过程中有点反感但从中受益。</p><p>有时候我们自己需要被迫去变，因为现在大的背景变化非常大，PC向移动的迁移，时刻在变，我们也时刻因为这些变而被动变，或被这些变影响我们的生活，苹果开发初级10k左右起，直接秒了我们大部分搞了3年左右.net或java的人，听过好多身边做pc开发的都呐喊过说想变，但是真正主动承受痛苦去变成功的没多少人。</p><p>有的人可能会说了，赶紧努力吧，做管理，当领导，呵呵，我发现那些大部分位置越高的人头发越稀落，医学上说头发稀落和肾功能衰弱有关，常言道，恐伤肾，可想是担受了多少惊恐与变数，过几年你很有可能就成了他们。中层领导有来自高层的压力，高层来自boss的压力，boss来自生存的压力和股东投资者的压力等……有时候麻雀没有变成凤凰未尝不是一种解脱啊，我说这话你可以说我是个loser思维，我也诚然。我想告诉大家的是珍惜当下吧！我现在特别怀念刚参加工作那会儿，激情，敢说敢做，敢表现神经质……</p><p>所以说，我们累是因为我们所从事的事情变数很多，人最恐惧未来，因为未来不可知，上至诸侯王下至编户百姓无一幸免，我们就活在这样变化无常的区域里面，紧张嘻嘻，正是这样，久而久之变得抑郁，神经衰弱，麻木不仁，懒得动，懒得说话……恶性循环。</p><p>我们现在就是忙于应付这些变，所以搞的自己紧张忙碌，最终却没多大所获。这是我们大多数人的现状。</p><h1 id="新生"><a href="#新生" class="headerlink" title="新生"></a>新生</h1><p>  希望2019大伙都少些加班，把有限的业余时间拿来好好放松自己，勤跑步，多看书，充实自己，做到可持续发展，主动改变自己，无论您今年多大了都应该充满理想，因为中国历史上历来不缺少枯木逢春、老来发迹的例子。大器晚成的人他没有年少轻狂，没有少不更事；年轮的重叠使他们更加珍视机遇，岁月的磨砺让他们事事洞明、人情练达。我希望大伙都能达到自己的理想，并且在很嫩的时候。</p><p>  最后，关于加班我讲个小故事，希望能影响到一点点正在加班的同胞们，故事名字叫奴性是怎样练成的：第1天抽他100鞭子，他很愤怒但没敢说；第2天抽他80鞭子，他看到了生活的希望；第3天抽他50鞭子，他夸抽他的人进步了；第4天抽了他30鞭子，他跪下感动流涕；第5天抽他了20鞭子，他感恩戴德；第6天7天他已习惯了在感动中挨鞭子。并开始用鞭子抽那些同情他的人。</p><p>来源：施瓦小辛格<br><a href="http://www.cnblogs.com/wenyang-rio/p/4261987.html" target="_blank" rel="noopener">www.cnblogs.com/wenyang-rio/p/4261987.html</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 开发 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>程序员的眼界真的不要，也不能只局限于技术</title>
       <link href="/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
       <url>/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</url>
@@ -221,6 +221,31 @@
         <tags>
             
             <tag> 程序猿 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我们搞开发的为什么会感觉到累</title>
+      <link href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
+      <url>/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</url>
+      
+        <content type="html"><![CDATA[<h1 id="引题"><a href="#引题" class="headerlink" title="引题"></a>引题</h1><p>昨天下班坐公车，听到一个和我年纪相仿的哥们儿打电话，隐约听到电话那边好像是他女朋友问他现在饿不饿，他说“我已经饿的不饿啦”。</p><p>饿的不饿了，听起来很幽默，对我很有触动，我在思考，我此时站在公车中部，手扶着杆有点酸，你问我手有多酸，借用打电话的那个哥们的话，随着日复一日这样的酸痛感受的反复刺激，已经酸的不酸了，你问我饿不饿，我也说不上来，飘飘渺渺，因为做编程这行几年下来，我自己的感受是，虽到了吃饭时间，但是感觉似饿非饿，吃饭感觉只是个形式。</p><p>以上都是是大多数在一线城市奋斗的人们所经历的可以忽略不计的一些事，我这里想聊聊为什么我们做IT的大多数都很累？</p><p>什么叫累，古代私塾先生教书的时候解释说，累字拆分意义是田系在头上，白话文讲就是“头上有田方知累也”。这是上古时代“累”的含义，当然现在还有大多数人为了我们国家的发展在辛勤劳累的种田，他们很辛苦。</p><h2 id="我们的累"><a href="#我们的累" class="headerlink" title="我们的累"></a>我们的累</h2><pre><code>回到标题，我觉得我门做编程的大多数人都很累，为什么累呢？</code></pre><p>到一个新公司上班，公司预先说要做一个项目或产品，你不知道到底有多复杂或简单，心里些许担心或不安，因为这些东西有可能在你预想的基础上会变的。</p><p>准备启动项目或产品，开始做需求，由于老板把时间压得紧，需求可能有些粗糙，开发时间也被压很短，因为这样，担心和紧张感铺面而来，需求会不会变，会不会遇到技术障碍，都是可变的。</p><p>开发过程中，由于需求做的不够精细（这太正常了，客户或老板都不知道他要什么），接二连三的变动和更改，紧张万分，不知道哪一会儿会又变动。</p><p>累死累活做完了，开始测试了，啊，XXX这里点击没反应，邮件怎么没发送成功，怎么发送成功了没收到，又报黄页，js错误……时刻有可能出bug。</p><p>终于上线了，客户出了个error，你帮忙看看吧（测试阶段都没有这问题哦）；日志记录了不少错误哦，你给定位下；客户投单没成功，肯定他妈的第三方接口问题；客户IE6下按钮点不了，下拉框出不来；oh shit ……</p><p>又开始新的项目了，新的一轮紧张挑战拉开帷幕……之前上线的项目或产品还会时不时给你来些心跳，下一秒未可知，明天未可知。</p><p>循环ing……</p><p>大伙可能要说担心或不安是多余的，那是你技术水平太垃圾吧，我之前的技术leader技术很好，很牛逼，平常他说的最多的是未雨绸缪，居安思危，人无远虑必有近忧这些句话。他时常会研究新东西，新技术，给我们安排好书去读让我们保持进步，说实话过程中有点反感但从中受益。</p><p>有时候我们自己需要被迫去变，因为现在大的背景变化非常大，PC向移动的迁移，时刻在变，我们也时刻因为这些变而被动变，或被这些变影响我们的生活，苹果开发初级10k左右起，直接秒了我们大部分搞了3年左右.net或java的人，听过好多身边做pc开发的都呐喊过说想变，但是真正主动承受痛苦去变成功的没多少人。</p><p>有的人可能会说了，赶紧努力吧，做管理，当领导，呵呵，我发现那些大部分位置越高的人头发越稀落，医学上说头发稀落和肾功能衰弱有关，常言道，恐伤肾，可想是担受了多少惊恐与变数，过几年你很有可能就成了他们。中层领导有来自高层的压力，高层来自boss的压力，boss来自生存的压力和股东投资者的压力等……有时候麻雀没有变成凤凰未尝不是一种解脱啊，我说这话你可以说我是个loser思维，我也诚然。我想告诉大家的是珍惜当下吧！我现在特别怀念刚参加工作那会儿，激情，敢说敢做，敢表现神经质……</p><p>所以说，我们累是因为我们所从事的事情变数很多，人最恐惧未来，因为未来不可知，上至诸侯王下至编户百姓无一幸免，我们就活在这样变化无常的区域里面，紧张嘻嘻，正是这样，久而久之变得抑郁，神经衰弱，麻木不仁，懒得动，懒得说话……恶性循环。</p><p>我们现在就是忙于应付这些变，所以搞的自己紧张忙碌，最终却没多大所获。这是我们大多数人的现状。</p><h1 id="新生"><a href="#新生" class="headerlink" title="新生"></a>新生</h1><p>  希望2019大伙都少些加班，把有限的业余时间拿来好好放松自己，勤跑步，多看书，充实自己，做到可持续发展，主动改变自己，无论您今年多大了都应该充满理想，因为中国历史上历来不缺少枯木逢春、老来发迹的例子。大器晚成的人他没有年少轻狂，没有少不更事；年轮的重叠使他们更加珍视机遇，岁月的磨砺让他们事事洞明、人情练达。我希望大伙都能达到自己的理想，并且在很嫩的时候。</p><p>  最后，关于加班我讲个小故事，希望能影响到一点点正在加班的同胞们，故事名字叫奴性是怎样练成的：第1天抽他100鞭子，他很愤怒但没敢说；第2天抽他80鞭子，他看到了生活的希望；第3天抽他50鞭子，他夸抽他的人进步了；第4天抽了他30鞭子，他跪下感动流涕；第5天抽他了20鞭子，他感恩戴德；第6天7天他已习惯了在感动中挨鞭子。并开始用鞭子抽那些同情他的人。</p><p>来源：施瓦小辛格<br><a href="http://www.cnblogs.com/wenyang-rio/p/4261987.html" target="_blank" rel="noopener">www.cnblogs.com/wenyang-rio/p/4261987.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 开发 </tag>
             
         </tags>
       
@@ -866,31 +891,6 @@
     
     
     <entry>
-      <title>Java转型大数据开发技能</title>
-      <link href="/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
-      <url>/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</url>
-      
-        <content type="html"><![CDATA[<p>很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。</p><p>什么意思呢？</p><pre><code>就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。</code></pre><p>如此多的技术，怎么学得过来呢？</p><pre><code>我觉得以你自己的岗位为主，其他为辅，关于自己工作相关的技术，花更多的时间和精力，研究得更深入，其他领域的可以了解和关注，等到需要用到或者感兴趣的时候，在深入学习即可。</code></pre><p>那作为 Java 开发，除了 Java 还可以学什么？</p><pre><code>大数据可能是一个不错的方向。    一、转型大数据需要哪些技能？    技术层面来说，如果你初步掌握Java编程，转型大数据都是非常轻松的具有天然的优势。    Java编程是大数据开发的基础，Java编程是必备技能；    大数据使用的Hadoop(在分布式服务器集群上存储海量数据并运行分布式分析应用的一种方法)需要Java基础， 所以有很多搞Java的都在往这hadoop大数据方向转。</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 大数据 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于</title>
       <link href="/2019/03/21/about/"/>
       <url>/2019/03/21/about/</url>
@@ -908,6 +908,31 @@
         <tags>
             
             <tag> 博客说明 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java转型大数据开发技能</title>
+      <link href="/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
+      <url>/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</url>
+      
+        <content type="html"><![CDATA[<p>很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。</p><p>什么意思呢？</p><pre><code>就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。</code></pre><p>如此多的技术，怎么学得过来呢？</p><pre><code>我觉得以你自己的岗位为主，其他为辅，关于自己工作相关的技术，花更多的时间和精力，研究得更深入，其他领域的可以了解和关注，等到需要用到或者感兴趣的时候，在深入学习即可。</code></pre><p>那作为 Java 开发，除了 Java 还可以学什么？</p><pre><code>大数据可能是一个不错的方向。    一、转型大数据需要哪些技能？    技术层面来说，如果你初步掌握Java编程，转型大数据都是非常轻松的具有天然的优势。    Java编程是大数据开发的基础，Java编程是必备技能；    大数据使用的Hadoop(在分布式服务器集群上存储海量数据并运行分布式分析应用的一种方法)需要Java基础， 所以有很多搞Java的都在往这hadoop大数据方向转。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 大数据 </tag>
             
         </tags>
       
