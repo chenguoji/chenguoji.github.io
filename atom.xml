@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-05-07T05:45:11.772Z</updated>
+  <updated>2019-05-08T02:50:58.331Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>程序员的眼界真的不要，也不能只局限于技术</title>
-    <link href="http://chenguoji.com/2019/05/08/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
-    <id>http://chenguoji.com/2019/05/08/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</id>
-    <published>2019-05-08T02:39:50.000Z</published>
-    <updated>2019-05-07T05:45:11.772Z</updated>
+    <title>Spring Boot + MyBatis + Maven论坛内容管理系统源码</title>
+    <link href="http://chenguoji.com/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/"/>
+    <id>http://chenguoji.com/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/</id>
+    <published>2019-05-08T03:39:50.000Z</published>
+    <updated>2019-05-08T02:50:58.331Z</updated>
     
     <summary type="html">
     
@@ -29,27 +29,25 @@
       
         
         
-          &lt;p&gt;前几天在读《极客时间》专栏的时候，看到这么一段话：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
-对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得业务
+          &lt;h1 id=&quot;毕设描述&quot;&gt;&lt;a href=&quot;#毕设描述&quot; class=&quot;headerlink&quot; title=&quot;毕设描述&quot;&gt;&lt;/a&gt;毕设描述&lt;/h1&gt;&lt;p&gt;xxxForum是一个基于Spring Boot + MyBatis +
         
       
     
     </summary>
     
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+      <category term="毕业设计" scheme="http://chenguoji.com/categories/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+      <category term="毕业设计" scheme="http://chenguoji.com/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>965 是一种生活态度，996 也是</title>
-    <link href="http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
-    <id>http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</id>
-    <published>2019-05-07T02:39:50.000Z</published>
-    <updated>2019-05-07T05:16:13.220Z</updated>
+    <title>数据库怎么分库分表，垂直？水平？</title>
+    <link href="http://chenguoji.com/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/"/>
+    <id>http://chenguoji.com/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/</id>
+    <published>2019-05-08T02:39:50.000Z</published>
+    <updated>2019-05-08T02:40:16.456Z</updated>
     
     <summary type="html">
     
@@ -57,16 +55,16 @@
       
         
         
-          &lt;p&gt;996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。&lt;br&gt;在今天的大多数看来，在一家公司里待满 5
+          &lt;h1 id=&quot;一、数据库瓶颈&quot;&gt;&lt;a href=&quot;#一、数据库瓶颈&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
@@ -114,6 +112,32 @@
 &lt;p&gt;一个国家，少数优秀人士和少数头部企业拼命干活就可以了，&lt;/p&gt;
 &lt;p&gt;一个是因为这个世界的经济竞争还是很残酷，中国要在不同行业赶超欧美，如果连精英人物和龙头企业都下午五点就下班，赶超不知道什么时候才能完成，甚至说永远不能完成。&lt;/p&gt;
 &lt;p&gt;你技
+        
+      
+    
+    </summary>
+    
+      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+    
+      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>965 是一种生活态度，996 也是</title>
+    <link href="http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
+    <id>http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</id>
+    <published>2019-05-07T02:39:50.000Z</published>
+    <updated>2019-05-07T05:16:13.220Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。&lt;br&gt;在今天的大多数看来，在一家公司里待满 5
         
       
     
@@ -202,6 +226,34 @@
     
     
       <category term="开发" scheme="http://chenguoji.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序员的眼界真的不要，也不能只局限于技术</title>
+    <link href="http://chenguoji.com/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
+    <id>http://chenguoji.com/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</id>
+    <published>2019-05-05T02:39:50.000Z</published>
+    <updated>2019-05-08T02:39:22.838Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前几天在读《极客时间》专栏的时候，看到这么一段话：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
+对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得业务
+        
+      
+    
+    </summary>
+    
+      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+    
+      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
     
   </entry>
   
@@ -493,58 +545,6 @@
     
     
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>软件工程师生存指南：面试准备、工作经验和实用工具</title>
-    <link href="http://chenguoji.com/2019/04/23/ruan-jian-gong-cheng-shi-sheng-cun-zhi-nan-mian-shi-zhun-bei-gong-zuo-jing-yan-he-shi-yong-gong-ju/"/>
-    <id>http://chenguoji.com/2019/04/23/ruan-jian-gong-cheng-shi-sheng-cun-zhi-nan-mian-shi-zhun-bei-gong-zuo-jing-yan-he-shi-yong-gong-ju/</id>
-    <published>2019-04-23T05:41:34.000Z</published>
-    <updated>2019-04-23T06:03:15.618Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;编者按：软件工程师是令人羡慕的职业。但是如何才能拿到这份工作？又如何才能做好这份工作呢？拥有相关经验的 Valeri Alexiev
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tomcat相关面试题</title>
-    <link href="http://chenguoji.com/2019/04/22/tomcat-xiang-guan-mian-shi-ti/"/>
-    <id>http://chenguoji.com/2019/04/22/tomcat-xiang-guan-mian-shi-ti/</id>
-    <published>2019-04-22T05:41:34.000Z</published>
-    <updated>2019-04-22T08:34:44.922Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Tomcat相关的面试题出场的几率并不高，正式因为如此，很多人忽略了对Tomcat相关技能的掌握，这次整理了Tomcat相关的系统架构，&lt;br&gt;介绍了Server、Service、Connector、Container之间的关系，各个模块的功能，可以说把这几个掌握住了，To
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="Tomcat" scheme="http://chenguoji.com/tags/Tomcat/"/>
     
   </entry>
   

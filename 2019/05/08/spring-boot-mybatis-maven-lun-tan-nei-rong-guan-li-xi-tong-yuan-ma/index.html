@@ -4,8 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringMVC方法四种类型返回值总结，你用过几种？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识">
+    <meta name="keywords" content="Spring Boot + MyBatis + Maven论坛内容管理系统源码, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="毕设描述xxxForum是一个基于Spring Boot + MyBatis + Maven开发的一个论坛内容管理系统，主要实现了的功能有：
+前台页面展示数据、广告展示
+内容模块：发帖、评论、帖子分类、分页、回帖统计、访问统计、表单验证
+用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>SpringMVC方法四种类型返回值总结，你用过几种？ | 陈国际博客</title>
+    <title>Spring Boot + MyBatis + Maven论坛内容管理系统源码 | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -215,13 +218,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/b2d678074028cac3803fb24756838310.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/c43ffb16405ae370807d3cebc1dd6d38.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        SpringMVC方法四种类型返回值总结，你用过几种？
+                        Spring Boot + MyBatis + Maven论坛内容管理系统源码
                     </div>
                 </div>
             </div>
@@ -332,8 +335,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/" target="_blank">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/毕业设计/" target="_blank">
+                                <span class="chip bg-color">毕业设计</span>
                             </a>
                         
                     </div>
@@ -344,8 +347,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                技术
+                            <a href="/categories/毕业设计/" class="post-category" target="_blank">
+                                毕业设计
                             </a>
                         
                     </div>
@@ -356,21 +359,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-05-07
+                    2019-05-08
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.4k
+                        332
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        1 分
                     </div>
                     
                 
@@ -386,149 +389,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p>
-<h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p>
-<pre><code>@RequestMapping(&quot;/test1&quot;)
-public ModelAndView getAllTest1()
-{
-    ModelAndView mv = new ModelAndView();
-    List&lt;Book&gt; books = new ArrayList&lt;&gt;();
-    Book b1 = new Book();
-    b1.setId(1);
-    b1.setName(&quot;三国演义&quot;);
-    b1.setAuthor(&quot;罗贯中&quot;);
-    books.add(b1);
-    Book b2 = new Book();
-    b2.setId(2);
-    b2.setName(&quot;红楼梦&quot;);
-    b2.setAuthor(&quot;曹雪芹&quot;);
-    books.add(b2);
-    // 指定数据模型
-    mv.addObject(&quot;bs&quot;, books);
-    mv.setViewName(&quot;book&quot;);
-    // 指定视图名
-    return mv;
+                <h1 id="毕设描述"><a href="#毕设描述" class="headerlink" title="毕设描述"></a>毕设描述</h1><p>xxxForum是一个基于Spring Boot + MyBatis + Maven开发的一个论坛内容管理系统，主要实现了的功能有：</p>
+<pre><code>前台页面展示数据、广告展示
+内容模块：发帖、评论、帖子分类、分页、回帖统计、访问统计、表单验证
+用户模块：权限、资料、头像、邮箱验证
+管理：后台管理、统计图表、帖子/分类管理
+</code></pre><p>#开发环境（运行环境）</p>
+<p>windows 7 , jdk 1.8</p>
+<p>#项目采用技术</p>
+<h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><p>Spring Boot 1.5.5<br>Spring Security 4<br>Mybatis(mybatis-spring-boot-starter 1.3.1)<br>Maven 3.X</p>
+<h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><p>Thymeleaf<br>Bootstrap<br>jQuery<br>Chart.js<br>bootstrap-select<br>daterangepicker</p>
+<h1 id="数据库文件"><a href="#数据库文件" class="headerlink" title="数据库文件"></a>数据库文件</h1><p>在项目文件里面</p>
+<h1 id="项目截图"><a href="#项目截图" class="headerlink" title="项目截图"></a>项目截图</h1><p><img src="http://www.devcheng.net/images/shouye1.png"><br><img src="http://www.devcheng.net/images/tiezidetail2.png"><br><img src="http://www.devcheng.net/images/login3.png"><br><img src="http://www.devcheng.net/images/zhuce4.png"><br><img src="http://www.devcheng.net/images/table5.png"><br><img src="http://www.devcheng.net/images/user6.png"><br><img src="http://www.devcheng.net/images/fenlei9.png"><br><img src="http://www.devcheng.net/images/run1.png"></p>
+<h1 id="登录地址"><a href="#登录地址" class="headerlink" title="登录地址"></a>登录地址</h1><p><a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a></p>
+<p>登录用户名和密码</p>
+<p>admin / admin</p>
+<h1 id="是否免费"><a href="#是否免费" class="headerlink" title="是否免费"></a>是否免费</h1><p>收费<br>写码不易，付费后给代码并且提供对应的技术服务支持。</p>
+<h1 id="联系我们"><a href="#联系我们" class="headerlink" title="联系我们"></a>联系我们</h1><p>QQ 搜索我们的群号：814637551</p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>1.头像如何配置？<br>在电脑选一个盘，新建一个文件夹 例如：在C盘新建一个avatar文件夹，里面存放你的头像图片。<br>找到 application.properties 配置文件</p>
+<pre><code># ==============================
+# avator location
+# ==============================
+resource.staticResourceLocation=C:/avatar/
+</code></pre><p>写好配置，找到 StaticResourceConfig 类</p>
+<pre><code>@Override
+public void addResourceHandlers(ResourceHandlerRegistry registry) {
+   //这里也要和之前的对应起来
+   registry.addResourceHandler(&quot;/avatar/**&quot;).addResourceLocations(&quot;file:C:/avatar/&quot;);
 }
-</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p>
-<h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p>
-<h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p>
-<pre><code>@RequestMapping(&quot;/test2&quot;)
-@ResponseBody
-public void test2() {
-    // 你的代码
-}
-</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p>
-<pre><code>@RequestMapping(&quot;/test3&quot;)
-@ResponseBody
-public void test3(HttpServletResponse resp) {
-    resp.setStatus(302);
-    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);
-}
-</code></pre><p>也可以像下面这样直接调用重定向的方法：</p>
-<pre><code>@RequestMapping(&quot;/test3&quot;)
-@ResponseBody
-public void test3(HttpServletResponse resp) {
-    resp.sendRedirect(&quot;/html/index&quot;);
-}
-</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p>
-<h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p>
-<pre><code>@GetMapping(&quot;/test4&quot;)
-public void test4(HttpServletRequest req, HttpServletResponse resp)
-{
-    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);
-}
-</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p>
-<pre><code>@RequestMapping(&quot;/test5&quot;)
-@ResponseBody
-public void test5(HttpServletResponse resp) throws IOException
-{
-    resp.setContentType(&quot;application/json;charset=utf-8&quot;);
-    PrintWriter out = resp.getWriter();
-    List&lt;Book&gt; books = new ArrayList&lt;&gt;();
-    Book b1 = new Book();
-    b1.setId(1);
-    b1.setName(&quot;三国演义&quot;);
-    b1.setAuthor(&quot;罗贯中&quot;);
-    books.add(b1);
-    Book b2 = new Book();
-    b2.setId(2);
-    b2.setName(&quot;红楼梦&quot;);
-    b2.setAuthor(&quot;曹雪芹&quot;);
-    books.add(b2);
-    String s = new Gson().toJson(books);
-    out.write(s);
-    out.flush();
-    out.close();
-}
-</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p>
-<h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p>
-<h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p>
-<pre><code>@RequestMapping(&quot;/hello&quot;)
-public String aaa(Model model)
-{
-    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);
-    return &quot;hello&quot;;
-}
-</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p>
-<h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p>
-<pre><code>@RequestMapping(&quot;/test6&quot;)
-public String test6()
-{
-    return &quot;redirect:/html/index&quot;;
-}
-</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p>
-<pre><code>@RequestMapping(&quot;/test7&quot;)
-public String test7()
-{
-    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;
-}
-</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p>
-<pre><code>@RestController
-public class HelloController {
-    @GetMapping(&quot;/hello&quot;)
-    public String hello() {
-        return &quot;hello provider!&quot;;
-    }
-}
-</code></pre><p>也可以像下面这样：</p>
-<pre><code>@Controller
-public class HelloController
-{
-    @GetMapping(&quot;/hello&quot;)
-    @ResponseBody
-    public String hello()
-    {
-        return &quot;hello provider!&quot;;
-    }
-}
-</code></pre><p>这是返回值为 String 的几种情况。</p>
-<h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p>
-<pre><code>@GetMapping(&quot;/user&quot;)
-@ResponseBody
-public User getUser() {
-    User user = new User();
-    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();
-    favorites.add(&quot;足球&quot;);
-    favorites.add(&quot;篮球&quot;);
-    user.setFavorites(favorites);
-    user.setUsername(&quot;chenguoji&quot;);
-    user.setPassword(&quot;123&quot;);
-    return user;
-}
-
-@GetMapping(&quot;/users&quot;)
-@ResponseBody
-public List&lt;User&gt; getALlUser() {
-    List&lt;User&gt; users = new ArrayList&lt;&gt;();
-    for (int i = 0; i &lt; 100; i++) {
-        User e = new User();
-        e.setUsername(&quot;username:&quot; + i);
-        e.setPassword(&quot;pwd:&quot; + i);
-        users.add(e);
-    }
-    return users;
-}
-</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>
+</code></pre><p>数据库里面和这对应就可以了！    </p>
 
             </div>
             <hr>
@@ -676,7 +565,7 @@ public List&lt;User&gt; getALlUser() {
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/" class="b-link-green">SpringMVC方法四种类型返回值总结，你用过几种？</a>
+                    <a href="/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/" class="b-link-green">Spring Boot + MyBatis + Maven论坛内容管理系统源码</a>
                 </p>
             </div>
         </div>
@@ -958,7 +847,57 @@ public List&lt;User&gt; getALlUser() {
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/c43ffb16405ae370807d3cebc1dd6d38.jpg" class="responsive-img" alt="Spring Boot + MyBatis + Maven论坛内容管理系统源码">
+                        
+                        <span class="card-title">Spring Boot + MyBatis + Maven论坛内容管理系统源码</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">毕设描述xxxForum是一个基于Spring Boot + MyBatis + Maven开发的一个论坛内容管理系统，主要实现了的功能有：
+前台页面展示数据、广告展示
+内容模块：发帖、评论、帖子分类、分页、回帖统计、访问统计、表单验证
+用</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/毕业设计/" class="post-category" target="_blank">
+                                    毕业设计
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/毕业设计/" target="_blank">
+                        <span class="chip bg-color">毕业设计</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/">
                     <div class="card-image">
@@ -973,9 +912,9 @@ public List&lt;User&gt; getALlUser() {
                     <div class="summary block-with-text">一、数据库瓶颈不管是IO瓶颈，还是CPU瓶颈，最终都会导致数据库的活跃连接数增加，进而逼近甚至达到数据库可承载活跃连接数的阈值。在业务Service来看就是，可用数据库连接少甚至无连接可用。接下来就可以想象了吧（并发量、吞吐量、崩溃）。
 1</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -993,54 +932,6 @@ public List&lt;User&gt; getALlUser() {
                     
                     <a href="/tags/数据库/" target="_blank">
                         <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/05/07/ning-nan-shan-shuo-xia-996/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/e0d898ad40c404d8804b66326ebc9a6e.jpg" class="responsive-img" alt="宁南山：说下996">
-                        
-                        <span class="card-title">宁南山：说下996</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">作者：宁南山
-一个国家，少数优秀人士和少数头部企业拼命干活就可以了，
-一个是因为这个世界的经济竞争还是很残酷，中国要在不同行业赶超欧美，如果连精英人物和龙头企业都下午五点就下班，赶超不知道什么时候才能完成，甚至说永远不能完成。
-你技术不如人</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/程序猿/" class="post-category" target="_blank">
-                                    程序猿
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/程序猿/" target="_blank">
-                        <span class="chip bg-color">程序猿</span>
                     </a>
                     
                 </div>

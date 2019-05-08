@@ -4,8 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringMVC方法四种类型返回值总结，你用过几种？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识">
+    <meta name="keywords" content="程序员的眼界真的不要，也不能只局限于技术, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="前几天在读《极客时间》专栏的时候，看到这么一段话：
+对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
+对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>SpringMVC方法四种类型返回值总结，你用过几种？ | 陈国际博客</title>
+    <title>程序员的眼界真的不要，也不能只局限于技术 | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -215,13 +217,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/b2d678074028cac3803fb24756838310.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/1950528240dfcd2580de4f4062b6ee88.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        SpringMVC方法四种类型返回值总结，你用过几种？
+                        程序员的眼界真的不要，也不能只局限于技术
                     </div>
                 </div>
             </div>
@@ -332,8 +334,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/" target="_blank">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/程序猿/" target="_blank">
+                                <span class="chip bg-color">程序猿</span>
                             </a>
                         
                     </div>
@@ -344,8 +346,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                技术
+                            <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                程序猿
                             </a>
                         
                     </div>
@@ -356,7 +358,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-05-07
+                    2019-05-05
                 </div>
 
                 
@@ -370,7 +372,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        4 分
                     </div>
                     
                 
@@ -386,149 +388,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p>
-<h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p>
-<pre><code>@RequestMapping(&quot;/test1&quot;)
-public ModelAndView getAllTest1()
-{
-    ModelAndView mv = new ModelAndView();
-    List&lt;Book&gt; books = new ArrayList&lt;&gt;();
-    Book b1 = new Book();
-    b1.setId(1);
-    b1.setName(&quot;三国演义&quot;);
-    b1.setAuthor(&quot;罗贯中&quot;);
-    books.add(b1);
-    Book b2 = new Book();
-    b2.setId(2);
-    b2.setName(&quot;红楼梦&quot;);
-    b2.setAuthor(&quot;曹雪芹&quot;);
-    books.add(b2);
-    // 指定数据模型
-    mv.addObject(&quot;bs&quot;, books);
-    mv.setViewName(&quot;book&quot;);
-    // 指定视图名
-    return mv;
-}
-</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p>
-<h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p>
-<h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p>
-<pre><code>@RequestMapping(&quot;/test2&quot;)
-@ResponseBody
-public void test2() {
-    // 你的代码
-}
-</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p>
-<pre><code>@RequestMapping(&quot;/test3&quot;)
-@ResponseBody
-public void test3(HttpServletResponse resp) {
-    resp.setStatus(302);
-    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);
-}
-</code></pre><p>也可以像下面这样直接调用重定向的方法：</p>
-<pre><code>@RequestMapping(&quot;/test3&quot;)
-@ResponseBody
-public void test3(HttpServletResponse resp) {
-    resp.sendRedirect(&quot;/html/index&quot;);
-}
-</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p>
-<h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p>
-<pre><code>@GetMapping(&quot;/test4&quot;)
-public void test4(HttpServletRequest req, HttpServletResponse resp)
-{
-    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);
-}
-</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p>
-<pre><code>@RequestMapping(&quot;/test5&quot;)
-@ResponseBody
-public void test5(HttpServletResponse resp) throws IOException
-{
-    resp.setContentType(&quot;application/json;charset=utf-8&quot;);
-    PrintWriter out = resp.getWriter();
-    List&lt;Book&gt; books = new ArrayList&lt;&gt;();
-    Book b1 = new Book();
-    b1.setId(1);
-    b1.setName(&quot;三国演义&quot;);
-    b1.setAuthor(&quot;罗贯中&quot;);
-    books.add(b1);
-    Book b2 = new Book();
-    b2.setId(2);
-    b2.setName(&quot;红楼梦&quot;);
-    b2.setAuthor(&quot;曹雪芹&quot;);
-    books.add(b2);
-    String s = new Gson().toJson(books);
-    out.write(s);
-    out.flush();
-    out.close();
-}
-</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p>
-<h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p>
-<h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p>
-<pre><code>@RequestMapping(&quot;/hello&quot;)
-public String aaa(Model model)
-{
-    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);
-    return &quot;hello&quot;;
-}
-</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p>
-<h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p>
-<pre><code>@RequestMapping(&quot;/test6&quot;)
-public String test6()
-{
-    return &quot;redirect:/html/index&quot;;
-}
-</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p>
-<pre><code>@RequestMapping(&quot;/test7&quot;)
-public String test7()
-{
-    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;
-}
-</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p>
-<pre><code>@RestController
-public class HelloController {
-    @GetMapping(&quot;/hello&quot;)
-    public String hello() {
-        return &quot;hello provider!&quot;;
-    }
-}
-</code></pre><p>也可以像下面这样：</p>
-<pre><code>@Controller
-public class HelloController
-{
-    @GetMapping(&quot;/hello&quot;)
-    @ResponseBody
-    public String hello()
-    {
-        return &quot;hello provider!&quot;;
-    }
-}
-</code></pre><p>这是返回值为 String 的几种情况。</p>
-<h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p>
-<pre><code>@GetMapping(&quot;/user&quot;)
-@ResponseBody
-public User getUser() {
-    User user = new User();
-    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();
-    favorites.add(&quot;足球&quot;);
-    favorites.add(&quot;篮球&quot;);
-    user.setFavorites(favorites);
-    user.setUsername(&quot;chenguoji&quot;);
-    user.setPassword(&quot;123&quot;);
-    return user;
-}
-
-@GetMapping(&quot;/users&quot;)
-@ResponseBody
-public List&lt;User&gt; getALlUser() {
-    List&lt;User&gt; users = new ArrayList&lt;&gt;();
-    for (int i = 0; i &lt; 100; i++) {
-        User e = new User();
-        e.setUsername(&quot;username:&quot; + i);
-        e.setPassword(&quot;pwd:&quot; + i);
-        users.add(e);
-    }
-    return users;
-}
-</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>
+                <p>前几天在读《极客时间》专栏的时候，看到这么一段话：</p>
+<pre><code>对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
+对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得业务和管理的技术人员，才能把技术能力最大化地发挥出来。
+</code></pre><p>作为一个创业者，正在经历着”创业”这个冰与火的淬炼与锻炼，深知作为一个技术人员来讲，什么才是最重要的，所以看到上面那段话，感同身受，感觉说的非常对，而且真的是非常重要：懂得业务和管理的技术人员，才能把技术能力最大化地发挥出来。</p>
+<p>关注我的读者可能都知道，其实我都一直在跟大家强调一个问题：程序员的眼界真的不要，也不能只局限于技术。</p>
+<p>程序员既然是技术出身，不只局限于技术，那又该如何提升自己在企业中的价值，该关注除了技术之外的哪些方面呢？</p>
+<h1 id="一、懂产品和业务"><a href="#一、懂产品和业务" class="headerlink" title="一、懂产品和业务"></a>一、懂产品和业务</h1><p>就像上面那段话说的，技术是工具，它只有服务于具体的业务才能产生价值。只有懂产品和业务才能把客户服务好，才能把产品做到最好。</p>
+<p>很多人可能会说：这不应该是产品经理的活么？我们工程师为什么要关注呢？</p>
+<p>这是误区，而且是巨大的误区。眼界局限于自己的活，你的前途和前景，发展空间就是局限的，微小的。跳出来看看这个世界，你可能会发现，身边的技术管理者(技术 leader)，越往上走，是不是对产品和业务的逻辑要求越高？</p>
+<p>如果你只会技术，每次在团队之间沟通，都用技术语言，那么团队之间非技术人员就会很那听懂，而你如果能够把复杂的业务逻辑非常简单的描述清楚，那么你就会使团队之间沟通的更有效率。<br>可能在不知不觉间，就在推动着团队前进，等你对产品和业务逻辑也来越熟悉的时候，你会发现，团队之间的沟通正在以我为核心，我在团队中正变得越来越重要。</p>
+<p>从而，你可能会更上升一步，成为团队负责人，如果团队负责的好，决策权就来了，再上升一步，就是管理层！</p>
+<p>你想想，如果你只关注你的一亩三分地好不好？你再努力，再牛逼，地就那么大，你的发展空间就受限，你种地技术再牛，产量也不会太高。</p>
+<p>而且，我告诉你，每个行业，每个产品可能都有着自己独特的业务逻辑，如果你深谙或者熟悉某一个行业的业务逻辑，你可能就会成为这个行业的专家，从而说话和做事就会越来越有分量！如果你经常做 ERP 系统，你就知道了。</p>
+<h1 id="二、懂管理和创新"><a href="#二、懂管理和创新" class="headerlink" title="二、懂管理和创新"></a>二、懂管理和创新</h1><p>技术人要想懂管理，可能需要一个缓慢的过程，比如我：在创业，深知管理真的是一门很大的学问，每个人都有着自己不同的心理。你可能会想：我应该如何提高员工的效率？如何凝聚团队的战斗力？如何能够让大家都非常的努力？如何保证团队的稳定性，不会有人员流失？如何……等等。</p>
+<p>但是，这些问题对于一个技术人员刚转管理可能会很难，我们可以从技术领导力方面入手，先从自己最擅长的地方切入，慢慢学会管理。强迫，军事化管理，绝对服从等是很难都根上解决管理问题，而技术领导力就会给我们一个方向，就是靠自己的能力来征服他们。你解决不了的问题，我帮你解决了？他能不服你？</p>
+<p>所以，管理就是这样，管理靠的是正确的引导！</p>
+<p>技术人要懂创新，具有批判性思维。很多人都感觉程序员是逻辑严密，但是一根筋，在业务逻辑的处理上是一条路走到黑。其实，我们更应该跳出来，要敏锐的去发现问题，去寻求业务逻辑不好的地方，去改进这些问题，更要大胆的拥抱新技术，新工具，以及新流程，去带动整个团队进行产品升级，技术升级，提升企业的 ROI 。</p>
+<p>所以，我们程序员应该经常跳出来，看看外面的世界，看看身边其他的牛人，都在干什么？不要只想着技术，即使你的目标是技术专家，技术专家也是需要懂产品，懂业务的，如果你是架构师？如果你不懂业务逻辑，不深谙一个行业的操作流程和业务流程，你能设计出一个非常好的架构来么，更别提一个好的产品来了！</p>
+<p>来源:mp.weixin.qq.com/s/qg8AzGQQbTU86PlkJihsow</p>
 
             </div>
             <hr>
@@ -676,7 +554,7 @@ public List&lt;User&gt; getALlUser() {
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/" class="b-link-green">SpringMVC方法四种类型返回值总结，你用过几种？</a>
+                    <a href="/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/" class="b-link-green">程序员的眼界真的不要，也不能只局限于技术</a>
                 </p>
             </div>
         </div>
@@ -960,28 +838,28 @@ public List&lt;User&gt; getALlUser() {
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/">
+                <a href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/4f25e2da40796f88806737b240a51f64.jpg" class="responsive-img" alt="数据库怎么分库分表，垂直？水平？">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/ef23d9c5405250e5803dabd2fa3090e0.jpg" class="responsive-img" alt="我们搞开发的为什么会感觉到累">
                         
-                        <span class="card-title">数据库怎么分库分表，垂直？水平？</span>
+                        <span class="card-title">我们搞开发的为什么会感觉到累</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">一、数据库瓶颈不管是IO瓶颈，还是CPU瓶颈，最终都会导致数据库的活跃连接数增加，进而逼近甚至达到数据库可承载活跃连接数的阈值。在业务Service来看就是，可用数据库连接少甚至无连接可用。接下来就可以想象了吧（并发量、吞吐量、崩溃）。
-1</div>
+                    <div class="summary block-with-text">引题昨天下班坐公车，听到一个和我年纪相仿的哥们儿打电话，隐约听到电话那边好像是他女朋友问他现在饿不饿，他说“我已经饿的不饿啦”。
+饿的不饿了，听起来很幽默，对我很有触动，我在思考，我此时站在公车中部，手扶着杆有点酸，你问我手有多酸，借用打电</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-08
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-05
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/数据库/" class="post-category" target="_blank">
-                                    数据库
+                            <a href="/categories/开发/" class="post-category" target="_blank">
+                                    开发
                                 </a>
                             
                             
@@ -991,8 +869,8 @@ public List&lt;User&gt; getALlUser() {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/数据库/" target="_blank">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/开发/" target="_blank">
+                        <span class="chip bg-color">开发</span>
                     </a>
                     
                 </div>
@@ -1006,23 +884,23 @@ public List&lt;User&gt; getALlUser() {
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/07/ning-nan-shan-shuo-xia-996/">
+                <a href="/2019/05/04/cheng-xu-yuan-ni-gai-wei-zi-ji-jia-xin-yong-qian-sheng-qian/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/e0d898ad40c404d8804b66326ebc9a6e.jpg" class="responsive-img" alt="宁南山：说下996">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/4c92e58a40b59e5580b1111a2f8debbb.jpg" class="responsive-img" alt="程序猿，你该为自己加薪--用钱生钱">
                         
-                        <span class="card-title">宁南山：说下996</span>
+                        <span class="card-title">程序猿，你该为自己加薪--用钱生钱</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">作者：宁南山
-一个国家，少数优秀人士和少数头部企业拼命干活就可以了，
-一个是因为这个世界的经济竞争还是很残酷，中国要在不同行业赶超欧美，如果连精英人物和龙头企业都下午五点就下班，赶超不知道什么时候才能完成，甚至说永远不能完成。
-你技术不如人</div>
+                    <div class="summary block-with-text">“如果你没找到一个当你睡觉时还能挣钱的方法，你将工作到死。” ——巴菲特
+前言唯金钱与技术不可辜负。
+作为智商比较高的程序员，这么难的程序都能学会，投资理财就更不用说啦。
+金钱是有规律的，只要掌握了一定的规律，虽说不能一夜暴富，但是把掌握的</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-07
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-04
                             </span>
                         <span class="publish-author">
                             

@@ -4,10 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="程序员的眼界真的不要，也不能只局限于技术, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="前几天在读《极客时间》专栏的时候，看到这么一段话：
-对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
-对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得">
+    <meta name="keywords" content="数据库怎么分库分表，垂直？水平？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="一、数据库瓶颈不管是IO瓶颈，还是CPU瓶颈，最终都会导致数据库的活跃连接数增加，进而逼近甚至达到数据库可承载活跃连接数的阈值。在业务Service来看就是，可用数据库连接少甚至无连接可用。接下来就可以想象了吧（并发量、吞吐量、崩溃）。
+1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>程序员的眼界真的不要，也不能只局限于技术 | 陈国际博客</title>
+    <title>数据库怎么分库分表，垂直？水平？ | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -130,7 +129,7 @@
         <div class="logo-name">陈国际博客</div>
         <div class="logo-desc">
             
-            努力做有价值的技术文章
+            为中华软件之崛起而编程 ,努力做有价值的技术文章
             
         </div>
     </div>
@@ -217,13 +216,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/1950528240dfcd2580de4f4062b6ee88.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/4f25e2da40796f88806737b240a51f64.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        程序员的眼界真的不要，也不能只局限于技术
+                        数据库怎么分库分表，垂直？水平？
                     </div>
                 </div>
             </div>
@@ -334,8 +333,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/程序猿/" target="_blank">
-                                <span class="chip bg-color">程序猿</span>
+                            <a href="/tags/数据库/" target="_blank">
+                                <span class="chip bg-color">数据库</span>
                             </a>
                         
                     </div>
@@ -346,8 +345,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/程序猿/" class="post-category" target="_blank">
-                                程序猿
+                            <a href="/categories/数据库/" class="post-category" target="_blank">
+                                数据库
                             </a>
                         
                     </div>
@@ -365,14 +364,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.4k
+                        1.8k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        6 分
                     </div>
                     
                 
@@ -388,25 +387,72 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>前几天在读《极客时间》专栏的时候，看到这么一段话：</p>
-<pre><code>对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
-对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得业务和管理的技术人员，才能把技术能力最大化地发挥出来。
-</code></pre><p>作为一个创业者，正在经历着”创业”这个冰与火的淬炼与锻炼，深知作为一个技术人员来讲，什么才是最重要的，所以看到上面那段话，感同身受，感觉说的非常对，而且真的是非常重要：懂得业务和管理的技术人员，才能把技术能力最大化地发挥出来。</p>
-<p>关注我的读者可能都知道，其实我都一直在跟大家强调一个问题：程序员的眼界真的不要，也不能只局限于技术。</p>
-<p>程序员既然是技术出身，不只局限于技术，那又该如何提升自己在企业中的价值，该关注除了技术之外的哪些方面呢？</p>
-<h1 id="一、懂产品和业务"><a href="#一、懂产品和业务" class="headerlink" title="一、懂产品和业务"></a>一、懂产品和业务</h1><p>就像上面那段话说的，技术是工具，它只有服务于具体的业务才能产生价值。只有懂产品和业务才能把客户服务好，才能把产品做到最好。</p>
-<p>很多人可能会说：这不应该是产品经理的活么？我们工程师为什么要关注呢？</p>
-<p>这是误区，而且是巨大的误区。眼界局限于自己的活，你的前途和前景，发展空间就是局限的，微小的。跳出来看看这个世界，你可能会发现，身边的技术管理者(技术 leader)，越往上走，是不是对产品和业务的逻辑要求越高？</p>
-<p>如果你只会技术，每次在团队之间沟通，都用技术语言，那么团队之间非技术人员就会很那听懂，而你如果能够把复杂的业务逻辑非常简单的描述清楚，那么你就会使团队之间沟通的更有效率。<br>可能在不知不觉间，就在推动着团队前进，等你对产品和业务逻辑也来越熟悉的时候，你会发现，团队之间的沟通正在以我为核心，我在团队中正变得越来越重要。</p>
-<p>从而，你可能会更上升一步，成为团队负责人，如果团队负责的好，决策权就来了，再上升一步，就是管理层！</p>
-<p>你想想，如果你只关注你的一亩三分地好不好？你再努力，再牛逼，地就那么大，你的发展空间就受限，你种地技术再牛，产量也不会太高。</p>
-<p>而且，我告诉你，每个行业，每个产品可能都有着自己独特的业务逻辑，如果你深谙或者熟悉某一个行业的业务逻辑，你可能就会成为这个行业的专家，从而说话和做事就会越来越有分量！如果你经常做 ERP 系统，你就知道了。</p>
-<h1 id="二、懂管理和创新"><a href="#二、懂管理和创新" class="headerlink" title="二、懂管理和创新"></a>二、懂管理和创新</h1><p>技术人要想懂管理，可能需要一个缓慢的过程，比如我：在创业，深知管理真的是一门很大的学问，每个人都有着自己不同的心理。你可能会想：我应该如何提高员工的效率？如何凝聚团队的战斗力？如何能够让大家都非常的努力？如何保证团队的稳定性，不会有人员流失？如何……等等。</p>
-<p>但是，这些问题对于一个技术人员刚转管理可能会很难，我们可以从技术领导力方面入手，先从自己最擅长的地方切入，慢慢学会管理。强迫，军事化管理，绝对服从等是很难都根上解决管理问题，而技术领导力就会给我们一个方向，就是靠自己的能力来征服他们。你解决不了的问题，我帮你解决了？他能不服你？</p>
-<p>所以，管理就是这样，管理靠的是正确的引导！</p>
-<p>技术人要懂创新，具有批判性思维。很多人都感觉程序员是逻辑严密，但是一根筋，在业务逻辑的处理上是一条路走到黑。其实，我们更应该跳出来，要敏锐的去发现问题，去寻求业务逻辑不好的地方，去改进这些问题，更要大胆的拥抱新技术，新工具，以及新流程，去带动整个团队进行产品升级，技术升级，提升企业的 ROI 。</p>
-<p>所以，我们程序员应该经常跳出来，看看外面的世界，看看身边其他的牛人，都在干什么？不要只想着技术，即使你的目标是技术专家，技术专家也是需要懂产品，懂业务的，如果你是架构师？如果你不懂业务逻辑，不深谙一个行业的操作流程和业务流程，你能设计出一个非常好的架构来么，更别提一个好的产品来了！</p>
-<p>来源:mp.weixin.qq.com/s/qg8AzGQQbTU86PlkJihsow</p>
+                <h1 id="一、数据库瓶颈"><a href="#一、数据库瓶颈" class="headerlink" title="一、数据库瓶颈"></a>一、数据库瓶颈</h1><p>不管是IO瓶颈，还是CPU瓶颈，最终都会导致数据库的活跃连接数增加，进而逼近甚至达到数据库可承载活跃连接数的阈值。<br>在业务Service来看就是，可用数据库连接少甚至无连接可用。接下来就可以想象了吧（并发量、吞吐量、崩溃）。</p>
+<h2 id="1、IO瓶颈"><a href="#1、IO瓶颈" class="headerlink" title="1、IO瓶颈"></a>1、IO瓶颈</h2><p>第一种：磁盘读IO瓶颈，热点数据太多，数据库缓存放不下，每次查询时会产生大量的IO，降低查询速度 -&gt; 分库和垂直分表。</p>
+<p>第二种：网络IO瓶颈，请求的数据太多，网络带宽不够 -&gt; 分库。</p>
+<h2 id="2、CPU瓶颈"><a href="#2、CPU瓶颈" class="headerlink" title="2、CPU瓶颈"></a>2、CPU瓶颈</h2><p>第一种：SQL问题，如SQL中包含join，group by，order by，非索引字段条件查询等，增加CPU运算的操作 -&gt; SQL优化，建立合适的索引，在业务Service层进行业务计算。</p>
+<p>第二种：单表数据量太大，查询时扫描的行太多，SQL效率低，增加CPU运算的操作 -&gt; 水平分表。</p>
+<h1 id="二、分库分表"><a href="#二、分库分表" class="headerlink" title="二、分库分表"></a>二、分库分表</h1><h2 id="1、水平分库"><a href="#1、水平分库" class="headerlink" title="1、水平分库"></a>1、水平分库</h2><p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180806205041600-432363041.png"></p>
+<p>1、概念：以字段为依据，按照一定策略（hash、range等），将一个库中的数据拆分到多个库中。</p>
+<p>2、结果：</p>
+<pre><code>每个库的结构都一样；
+每个库的数据都不一样，没有交集；
+所有库的并集是全量数据；
+</code></pre><p>3、场景：系统绝对并发量上来了，分表难以根本上解决问题，并且还没有明显的业务归属来垂直分库。</p>
+<p>4、分析：库多了，io和cpu的压力自然可以成倍缓解。</p>
+<h2 id="2、水平分表"><a href="#2、水平分表" class="headerlink" title="2、水平分表"></a>2、水平分表</h2><p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180806210016545-644285275.png"></p>
+<p>1、概念：以字段为依据，按照一定策略（hash、range等），将一个表中的数据拆分到多个表中。</p>
+<p>2、结果：</p>
+<pre><code>每个表的结构都一样；
+每个表的数据都不一样，没有交集；
+所有表的并集是全量数据；
+</code></pre><p>3、场景：系统绝对并发量并没有上来，只是单表的数据量太多，影响了SQL效率，加重了CPU负担，以至于成为瓶颈。</p>
+<p>4、分析：表的数据量少了，单次SQL执行效率高，自然减轻了CPU的负担。</p>
+<h2 id="3、垂直分库"><a href="#3、垂直分库" class="headerlink" title="3、垂直分库"></a>3、垂直分库</h2><p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180806211319921-1425169745.png"></p>
+<p>1、概念：以表为依据，按照业务归属不同，将不同的表拆分到不同的库中。</p>
+<p>2、结果：</p>
+<pre><code>每个库的结构都不一样；
+每个库的数据也不一样，没有交集；
+所有库的并集是全量数据；
+</code></pre><p>3、场景：系统绝对并发量上来了，并且可以抽象出单独的业务模块。</p>
+<p>4、分析：到这一步，基本上就可以服务化了。例如，随着业务的发展一些公用的配置表、字典表等越来越多，这时可以将这些表拆到单独的库中，甚至可以服务化。<br>再有，随着业务的发展孵化出了一套业务模式，这时可以将相关的表拆到单独的库中，甚至可以服务化。</p>
+<h2 id="4、垂直分表"><a href="#4、垂直分表" class="headerlink" title="4、垂直分表"></a>4、垂直分表</h2><p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180806212658885-2067482042.png"></p>
+<p>1、概念：以字段为依据，按照字段的活跃性，将表中字段拆到不同的表（主表和扩展表）中。</p>
+<p>2、结果：</p>
+<pre><code>2.1、每个表的结构都不一样；
+2.2、每个表的数据也不一样，一般来说，每个表的字段至少有一列交集，一般是主键，用于关联数据；
+2.3、所有表的并集是全量数据；
+</code></pre><p>3、场景：系统绝对并发量并没有上来，表的记录并不多，但是字段多，并且热点数据和非热点数据在一起，单行数据所需的存储空间较大。以至于数据库缓存的数据行减少，查询时会去读磁盘数据产生大量的随机读IO，产生IO瓶颈。</p>
+<p>4、分析：可以用列表页和详情页来帮助理解。垂直分表的拆分原则是将热点数据（可能会冗余经常一起查询的数据）放在一起作为主表，非热点数据放在一起作为扩展表。<br>这样更多的热点数据就能被缓存下来，进而减少了随机读IO。拆了之后，要想获得全部数据就需要关联两个表来取数据。</p>
+<p>但记住，千万别用join，因为join不仅会增加CPU负担并且会讲两个表耦合在一起（必须在一个数据库实例上）。关联数据，应该在业务Service层做文章，分别获取主表和扩展表数据然后用关联字段关联得到全部数据。</p>
+<h1 id="三、分库分表工具"><a href="#三、分库分表工具" class="headerlink" title="三、分库分表工具"></a>三、分库分表工具</h1><p>1、sharding-sphere：jar，前身是sharding-jdbc；<br>2、TDDL：jar，Taobao Distribute Data Layer；<br>3、Mycat：中间件。</p>
+<p>注：工具的利弊，请自行调研，官网和社区优先。</p>
+<h1 id="四、分库分表步骤"><a href="#四、分库分表步骤" class="headerlink" title="四、分库分表步骤"></a>四、分库分表步骤</h1><p>根据容量（当前容量和增长量）评估分库或分表个数 -&gt; 选key（均匀）-&gt; 分表规则（hash或range等）-&gt; 执行（一般双写）-&gt; 扩容问题（尽量减少数据的移动）。</p>
+<h1 id="五、分库分表问题"><a href="#五、分库分表问题" class="headerlink" title="五、分库分表问题"></a>五、分库分表问题</h1><h2 id="1、非partition-key的查询问题（水平分库分表，拆分策略为常用的hash法）"><a href="#1、非partition-key的查询问题（水平分库分表，拆分策略为常用的hash法）" class="headerlink" title="1、非partition key的查询问题（水平分库分表，拆分策略为常用的hash法）"></a>1、非partition key的查询问题（水平分库分表，拆分策略为常用的hash法）</h2><p>1、端上除了partition key只有一个非partition key作为条件查询</p>
+<p>映射法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807105926589-1001810279.png"></p>
+<p>基因法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807131414339-111952151.png"></p>
+<p>注：写入时，基因法生成userid，如图。关于xbit基因，例如要分8张表，23=8，故x取3，即3bit基因。根据userid查询时可直接取模路由到对应的分库或分表。<br>根据username查询时，先通过usernamecode生成函数生成username_code再对其取模路由到对应的分库或分表。id生成常用snowflake算法。</p>
+<p>2、端上除了partition key不止一个非partition key作为条件查询</p>
+<p>映射法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807110030707-42616490.png"></p>
+<p>冗余法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807171456867-464776606.png"></p>
+<p>注：按照orderid或buyerid查询时路由到dbobuyer库中，按照sellerid查询时路由到dbo_seller库中。感觉有点本末倒置！有其他好的办法吗？改变技术栈呢？</p>
+<p>3、后台除了partition key还有各种非partition key组合条件查询</p>
+<p>NoSQL法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807164252157-849366697.png"></p>
+<p>冗余法<br><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807164356760-1225281969.png"> </p>
+<h2 id="2、非partition-key跨库跨表分页查询问题（水平分库分表，拆分策略为常用的hash法）"><a href="#2、非partition-key跨库跨表分页查询问题（水平分库分表，拆分策略为常用的hash法）" class="headerlink" title="2、非partition key跨库跨表分页查询问题（水平分库分表，拆分策略为常用的hash法）"></a>2、非partition key跨库跨表分页查询问题（水平分库分表，拆分策略为常用的hash法）</h2><p>注：用NoSQL法解决（ES等）。</p>
+<h2 id="3、扩容问题（水平分库分表，拆分策略为常用的hash法）"><a href="#3、扩容问题（水平分库分表，拆分策略为常用的hash法）" class="headerlink" title="3、扩容问题（水平分库分表，拆分策略为常用的hash法）"></a>3、扩容问题（水平分库分表，拆分策略为常用的hash法）</h2><p>1、水平扩容库（升级从库法）</p>
+<p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807222601104-674464032.png"></p>
+<p>注：扩容是成倍的。</p>
+<p>2、水平扩容表（双写迁移法）</p>
+<p><img src="https://images2018.cnblogs.com/blog/955136/201808/955136-20180807230203075-707265239.png"></p>
+<p>第一步：（同步双写）应用配置双写，部署；</p>
+<p>第二步：（同步双写）将老库中的老数据复制到新库中；</p>
+<p>第三步：（同步双写）以老库为准校对新库中的老数据；第四步：（同步双写）应用去掉双写，部署；</p>
+<p>注：双写是通用方案。</p>
+<h1 id="六、分库分表总结"><a href="#六、分库分表总结" class="headerlink" title="六、分库分表总结"></a>六、分库分表总结</h1><p>1、分库分表，首先得知道瓶颈在哪里，然后才能合理地拆分（分库还是分表？水平还是垂直？分几个？）。且不可为了分库分表而拆分。</p>
+<p>2、选key很重要，既要考虑到拆分均匀，也要考虑到非partition key的查询。</p>
+<p>3、只要能满足需求，拆分规则越简单越好。</p>
+<p>作者：尜尜人物<br><a href="https://www.cnblogs.com/littlecharacter/" target="_blank" rel="noopener">https://www.cnblogs.com/littlecharacter/</a></p>
 
             </div>
             <hr>
@@ -554,7 +600,7 @@
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/05/08/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/" class="b-link-green">程序员的眼界真的不要，也不能只局限于技术</a>
+                    <a href="/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/" class="b-link-green">数据库怎么分库分表，垂直？水平？</a>
                 </p>
             </div>
         </div>
@@ -836,44 +882,43 @@
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/08/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/">
+                <a href="/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/1950528240dfcd2580de4f4062b6ee88.jpg" class="responsive-img" alt="程序员的眼界真的不要，也不能只局限于技术">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/c43ffb16405ae370807d3cebc1dd6d38.jpg" class="responsive-img" alt="Spring Boot + MyBatis + Maven论坛内容管理系统源码">
                         
-                        <span class="card-title">程序员的眼界真的不要，也不能只局限于技术</span>
+                        <span class="card-title">Spring Boot + MyBatis + Maven论坛内容管理系统源码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">前几天在读《极客时间》专栏的时候，看到这么一段话：
-对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
-对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得</div>
+                    <div class="summary block-with-text">毕设描述xxxForum是一个基于Spring Boot + MyBatis + Maven开发的一个论坛内容管理系统，主要实现了的功能有：
+前台页面展示数据、广告展示
+内容模块：发帖、评论、帖子分类、分页、回帖统计、访问统计、表单验证
+用</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-08
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/程序猿/" class="post-category" target="_blank">
-                                    程序猿
+                            <a href="/categories/毕业设计/" class="post-category" target="_blank">
+                                    毕业设计
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/程序猿/" target="_blank">
-                        <span class="chip bg-color">程序猿</span>
+                    <a href="/tags/毕业设计/" target="_blank">
+                        <span class="chip bg-color">毕业设计</span>
                     </a>
                     
                 </div>
@@ -887,17 +932,17 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/">
+                <a href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg" class="responsive-img" alt="965 是一种生活态度，996 也是">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/b2d678074028cac3803fb24756838310.jpg" class="responsive-img" alt="SpringMVC方法四种类型返回值总结，你用过几种？">
                         
-                        <span class="card-title">965 是一种生活态度，996 也是</span>
+                        <span class="card-title">SpringMVC方法四种类型返回值总结，你用过几种？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。在今天的大多数看来，在一家公司里待满 5 年，</div>
+                    <div class="summary block-with-text">SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-07
@@ -906,8 +951,8 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/程序猿/" class="post-category" target="_blank">
-                                    程序猿
+                            <a href="/categories/技术/" class="post-category" target="_blank">
+                                    技术
                                 </a>
                             
                             
@@ -917,8 +962,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/程序猿/" target="_blank">
-                        <span class="chip bg-color">程序猿</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
