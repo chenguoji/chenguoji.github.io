@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-05-08T07:09:20.148Z</updated>
+  <updated>2019-05-14T01:19:04.580Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！</title>
+    <link href="http://chenguoji.com/2019/05/12/java-zhong-de-spi-ji-zhi-shi-shi-me-gui-gao-ji-java-bi-xu-zhang-wo/"/>
+    <id>http://chenguoji.com/2019/05/12/java-zhong-de-spi-ji-zhi-shi-shi-me-gui-gao-ji-java-bi-xu-zhang-wo/</id>
+    <published>2019-05-12T02:39:50.000Z</published>
+    <updated>2019-05-14T01:19:04.580Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SPI的全名为：Service Provider Interface，大多数开发人员可能不熟悉，因为这个是针对厂商或者插件的。在java.util.ServiceLoader的文档里有比较详细的介绍。 &lt;/p&gt;
+&lt;p&gt;简单的总结下 Java  SPI
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>作为字节跳动的面试官，有些话我不得不说！</title>
+    <link href="http://chenguoji.com/2019/05/11/zuo-wei-zi-jie-tiao-dong-de-mian-shi-guan-you-xie-hua-wo-bu-de-bu-shuo/"/>
+    <id>http://chenguoji.com/2019/05/11/zuo-wei-zi-jie-tiao-dong-de-mian-shi-guan-you-xie-hua-wo-bu-de-bu-shuo/</id>
+    <published>2019-05-11T02:39:50.000Z</published>
+    <updated>2019-05-13T05:31:17.778Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;大家好，我是字节跳动的一名研发面试官。&lt;/p&gt;
+&lt;p&gt;2019春招过半，面试也进行了两场，在整个面试过程中，我不断被同学问到各式花样问题：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;“什么才是研发面试考察的核心？”
+“考前究竟要不要刷题？”
+“如果跨专业面试要怎么办？”
+“如何更好地描
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>以我的亲身经历，告诉大家写简历和面试的技巧！</title>
@@ -96,32 +154,6 @@
   </entry>
   
   <entry>
-    <title>965 是一种生活态度，996 也是</title>
-    <link href="http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
-    <id>http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</id>
-    <published>2019-05-07T02:39:50.000Z</published>
-    <updated>2019-05-07T05:16:13.220Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。&lt;br&gt;在今天的大多数看来，在一家公司里待满 5
-        
-      
-    
-    </summary>
-    
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-    
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>宁南山：说下996</title>
     <link href="http://chenguoji.com/2019/05/07/ning-nan-shan-shuo-xia-996/"/>
     <id>http://chenguoji.com/2019/05/07/ning-nan-shan-shuo-xia-996/</id>
@@ -138,6 +170,32 @@
 &lt;p&gt;一个国家，少数优秀人士和少数头部企业拼命干活就可以了，&lt;/p&gt;
 &lt;p&gt;一个是因为这个世界的经济竞争还是很残酷，中国要在不同行业赶超欧美，如果连精英人物和龙头企业都下午五点就下班，赶超不知道什么时候才能完成，甚至说永远不能完成。&lt;/p&gt;
 &lt;p&gt;你技
+        
+      
+    
+    </summary>
+    
+      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+    
+      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>965 是一种生活态度，996 也是</title>
+    <link href="http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
+    <id>http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</id>
+    <published>2019-05-07T02:39:50.000Z</published>
+    <updated>2019-05-07T05:16:13.220Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。&lt;br&gt;在今天的大多数看来，在一家公司里待满 5
         
       
     
@@ -231,6 +289,32 @@
   </entry>
   
   <entry>
+    <title>我们搞开发的为什么会感觉到累</title>
+    <link href="http://chenguoji.com/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
+    <id>http://chenguoji.com/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</id>
+    <published>2019-05-05T02:39:50.000Z</published>
+    <updated>2019-05-06T08:09:31.127Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;引题&quot;&gt;&lt;a href=&quot;#引题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发" scheme="http://chenguoji.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="开发" scheme="http://chenguoji.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>程序员的眼界真的不要，也不能只局限于技术</title>
     <link href="http://chenguoji.com/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
     <id>http://chenguoji.com/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</id>
@@ -255,32 +339,6 @@
     
     
       <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我们搞开发的为什么会感觉到累</title>
-    <link href="http://chenguoji.com/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
-    <id>http://chenguoji.com/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</id>
-    <published>2019-05-05T02:39:50.000Z</published>
-    <updated>2019-05-06T08:09:31.127Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;引题&quot;&gt;&lt;a href=&quot;#引题&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="开发" scheme="http://chenguoji.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="开发" scheme="http://chenguoji.com/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -492,58 +550,6 @@
     
     
       <category term="Linux" scheme="http://chenguoji.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL 查询优化</title>
-    <link href="http://chenguoji.com/2019/04/29/mysql-cha-xun-you-hua/"/>
-    <id>http://chenguoji.com/2019/04/29/mysql-cha-xun-you-hua/</id>
-    <published>2019-04-29T02:39:50.000Z</published>
-    <updated>2019-05-06T02:12:15.756Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、什么影响了数据库查询速度&quot;&gt;&lt;a href=&quot;#一、什么影响了数据库查询速度&quot; class=&quot;headerlink&quot; title=&quot;一、什么影响了数据库查询速度&quot;&gt;&lt;/a&gt;一、什么影响了数据库查询速度&lt;/h1&gt;&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【漫画】996对程序员的伤害，一看你就懂</title>
-    <link href="http://chenguoji.com/2019/04/26/man-hua-996-dui-cheng-xu-yuan-de-shang-hai-yi-kan-ni-jiu-dong/"/>
-    <id>http://chenguoji.com/2019/04/26/man-hua-996-dui-cheng-xu-yuan-de-shang-hai-yi-kan-ni-jiu-dong/</id>
-    <published>2019-04-26T05:41:34.000Z</published>
-    <updated>2019-04-26T05:23:05.460Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;我在一家互联网大厂上班，我很骄傲，有一天，上司递给我一张协议&lt;br&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
   </entry>
   

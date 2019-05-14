@@ -4,11 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="程序猿，你该为自己加薪--用钱生钱, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="“如果你没找到一个当你睡觉时还能挣钱的方法，你将工作到死。” ——巴菲特
-前言唯金钱与技术不可辜负。
-作为智商比较高的程序员，这么难的程序都能学会，投资理财就更不用说啦。
-金钱是有规律的，只要掌握了一定的规律，虽说不能一夜暴富，但是把掌握的">
+    <meta name="keywords" content="Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="SPI的全名为：Service Provider Interface，大多数开发人员可能不熟悉，因为这个是针对厂商或者插件的。在java.util.ServiceLoader的文档里有比较详细的介绍。 
+简单的总结下 Java  SPI 机">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>程序猿，你该为自己加薪--用钱生钱 | 陈国际博客</title>
+    <title>Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！ | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -224,7 +222,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        程序猿，你该为自己加薪--用钱生钱
+                        Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！
                     </div>
                 </div>
             </div>
@@ -335,8 +333,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/程序猿/" target="_blank">
-                                <span class="chip bg-color">程序猿</span>
+                            <a href="/tags/java/" target="_blank">
+                                <span class="chip bg-color">java</span>
                             </a>
                         
                     </div>
@@ -347,8 +345,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/程序猿/" class="post-category" target="_blank">
-                                程序猿
+                            <a href="/categories/技术/" class="post-category" target="_blank">
+                                技术
                             </a>
                         
                     </div>
@@ -359,21 +357,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-05-04
+                    2019-05-12
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.8k
+                        928
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        6 分
+                        3 分
                     </div>
                     
                 
@@ -389,44 +387,48 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code>“如果你没找到一个当你睡觉时还能挣钱的方法，你将工作到死。” ——巴菲特
-</code></pre><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><pre><code>唯金钱与技术不可辜负。
-</code></pre><p>作为智商比较高的程序员，这么难的程序都能学会，投资理财就更不用说啦。</p>
-<p>金钱是有规律的，只要掌握了一定的规律，虽说不能一夜暴富，但是把掌握的规律用于生活中，至少是可以让挣钱变得轻松一些。</p>
-<p>不知道他们有没有想过：生活中，单靠增加工时获得的收入永远无法让你摆脱贫穷。用青春来换钱的交易也绝对不可取。</p>
-<p>绝大多数的人，都是非常勤奋的，不然也不能坚持每天定时去上班，但又是懒惰的，从来没有想过学习掌握金钱的规律。</p>
-<h1 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h1><p>最近笔者在看作者博多·令费尔写的一篇小作《小狗钱钱》，这本《小狗钱钱》是根据作者根据他写的《财务自由之路》，把其中的方法与策略编成这么一个小故事的。<br>《小狗钱钱》讲的是一个 11 岁的小女孩捡到一条会说人话的狗（名为 钱钱），然后钱钱教会了这个小女孩与钱打交道的方法，怎样理解钱与一步步轻松地挣钱，<br>最后小姑娘不仅自己掌提了钱的使用方法，而且还帮助自己的父母走出了财务危机的故事。    </p>
-<p>看完这篇小作，做点笔记与写自己下看完后的一些感悟。</p>
-<p>里面讲到一个故事：</p>
-<pre><code>“从前有一个农家小伙儿，他每天的愿望就是从鹅笼里拣一个鹅蛋当早饭。有一天，他竟然在鹅笼里发现了一只金蛋。一开始他当然不敢相信自己的眼睛。
-他想，也许是有人在捉弄他。为了谨慎起见，他把金蛋拿去让金匠辨别，可是金匠向他保证说，这只蛋完完全全是金子铸成的。于是，这个农家小伙儿就卖了这只金蛋，举行了一个盛大的庆祝会。”
-“第二天清晨，他起了一个大早，赶到鹅笼里一看，那里果真又放着一个金蛋，这样的情况延续了好几天。可是这个农家小伙儿是一个贪婪的人，他抱怨自己的鹅，
-因为鹅没法向他解释是怎么下出这个蛋的，否则他也许自己就可以制造金蛋了。他还气乎乎地想，这只懒惰的鹅每天至少应该下两只金蛋。他觉得现在这样的速度太慢了。
-他的怒火越来越大，最后，他终于怒不可遏地把鹅揪出笼子劈成了两半。自那以后，他再也得不到金蛋了。”
-
-假如我没有了我的“鹅”，我就总是得为了赚钱而工作，但是一旦我有了属于自己的“鹅”，我的钱就会自动为我工作了。
-
-金钱有一些秘密和规律，要想了解这些秘密和规律，前提条件是，你自己必须真的有这个愿望。
-</code></pre><p>必须真的有这个愿望的意义在于，如果足够的动力，没有足够的决心去做某些事情，终究很难成事。</p>
-<pre><code>如果你只是带着试试看的心态，那么你最后只会以失败而告终，你会一事无成。尝试纯粹是一种借口，你还没有做，就已经给自己想好退路了。不能试验。你只有两个选择: 做，或者不做。
-你是否能挣到钱，最关键的因素并不在于你是不是有一个好点子。你有多聪明也不是主要原因，决定因素是你的自信程度。 一个人把精力集中在自己所能做的，知道的和拥有的东西上的那一天起，他的成功就已经拉开了序幕。
-
-你最好想清楚，你喜欢做什么，然后再考虑你怎么用它来挣钱。
-
-你要每天不间断地去做对称的未来意义重大的事情。你为此花费的时间不会超过 10 分钟，但是就是这 10 分钟会让一切变得不同。
-
-当你定下了大目标的时候，就意味着你必须付付出比别人多得多的努力。
-</code></pre><h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><p>72 定理: 用 72 除以你们投资的年收益率的百分比， 得出的数字就是这笔钱翻一倍所要的年数。</p>
-<p>72 小时规定: 当你决定做一件事情的时候，你必须在 72 小时之内去做这件事情，否则你很可能 就永远不会再做了。</p>
-<p>72 公式 也可以用来帮助我们计算通货膨胀。它可以告诉我们，在一定通货膨胀率下，我们的钱在多长时间后会贬值一半。我上网查了一下，我国目前的通货膨胀率大概是 3% ，用 72 除以 3% ，得到 24，就是说 24 年以后，你的钱只值现在的一半。”</p>
-<h1 id="买基金为自己加薪"><a href="#买基金为自己加薪" class="headerlink" title="买基金为自己加薪"></a>买基金为自己加薪</h1><p>学习一门技能时，尽量选择积累性很强的技能，随着时间的推移，这个技能越来越厉害，那这个技能就很值得去学习。毫无疑问，投资理财，这个技能积累性就很强，最重要的是，这个技能适用于任何人、任何行业，因为投资理财 的本质，是用钱来帮你赚钱，这是最高级别的赚钱方式，除非你不想赚钱，否则每个想赚钱的人，都该重视投资理财。越是有钱人，越是懂得投资理财。</p>
-<p>银行一年期定存利率大概是 1.5% 左右，而这利率是跑不赢通货膨胀的。一般的年轻人都是把钱放到一些收益稍高一点的理财产品里面，比如：余额宝、微信理财通里。但这也只是比银行还是要好一点而已。</p>
-<p>定投十年挣十倍。我建议年轻人应该把部分钱（除去这部分钱，不会对你的生活产生任何影响的，比如你每月工资的 5% - 10% ）用来买基金比较好，通过 买基金为自己加薪，每月定投。</p>
-<p>当然买基金也是有风险的，建议是了解基金之后再买。往后的时间里面，笔者会读更多关于挣钱的书箱，对买基金的策略有了更深的了解后，会再分享。</p>
-<h1 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h1><p>在笔者看来，故事里面的小姑娘，在后期可以轻松获取金钱的本质：改变了自己。</p>
-<p>这和《大学》里面说的：“修身、齐家、治国、平天下” 的道理是一样的， 一切从改变自身做起。</p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>如果想获取更多的财富，就从读如何实现财富自由类的书籍开始吧，从书中获取金钱的规律，从而使自己获取财富变得更轻松一些。</p>
-<p>来源:<a href="https://segmentfault.com/a/1190000018808895" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018808895</a></p>
+                <p>SPI的全名为：Service Provider Interface，大多数开发人员可能不熟悉，因为这个是针对厂商或者插件的。在java.util.ServiceLoader的文档里有比较详细的介绍。 </p>
+<p>简单的总结下 Java  SPI 机制的思想。我们系统里抽象的各个模块，往往有很多不同的实现方案，比如日志模块的方案，xml解析模块、jdbc模块的方案等。面向的对象的设计里，我们一般推荐模块之间基于接口编程，模块之间不对实现类进行硬编码。</p>
+<p>一旦代码里涉及具体的实现类，就违反了可拔插的原则，如果需要替换一种实现，就需要修改代码。为了实现在模块装配的时候能不在程序里动态指明，这就需要一种服务发现机制。</p>
+<p>Java  SPI 就是提供这样的一个机制：为某个接口寻找服务实现的机制。有点类似IOC的思想，就是将装配的控制权移到程序之外，在模块化设计中这个机制尤其重要。</p>
+<p>Java  SPI 的具体约定为:当服务的提供者，提供了服务接口的一种实现之后，在jar包的META-INF/services/目录里同时创建一个以服务接口命名的文件。该文件里就是实现该服务接口的具体实现类。</p>
+<p>而当外部程序装配这个模块的时候，就能通过该jar包META-INF/services/里的配置文件找到具体的实现类名，并装载实例化，完成模块的注入。 </p>
+<p>基于这样一个约定就能很好的找到服务接口的实现类，而不需要再代码里制定。jdk提供服务实现查找的一个工具类：java.util.ServiceLoader。</p>
+<h1 id="1-common-logging"><a href="#1-common-logging" class="headerlink" title="1.common-logging"></a>1.common-logging</h1><p>apache最早提供的日志的门面接口。只有接口，没有实现。具体方案由各提供商实现， 发现日志提供商是通过扫描 META-INF/services/org.apache.commons.logging.LogFactory配置文件，通过读取该文件的内容找到日志提工商实现类。</p>
+<p>只要我们的日志实现里包含了这个文件，并在文件里制定 LogFactory工厂接口的实现类即可。</p>
+<h1 id="2-jdbc"><a href="#2-jdbc" class="headerlink" title="2.jdbc"></a>2.jdbc</h1><p> jdbc4.0以前， 开发人员还需要基于Class.forName(“xxx”)的方式来装载驱动，jdbc4也基于spi的机制来发现驱动提供商了，可以通过META-INF/services/java.sql.Driver文件里指定实现类的方式来暴露驱动提供者。</p>
+<p>一个内容管理系统有一个搜索模块。是基于接口编程的。搜索的实现可能是基于文件系统的搜索，也可能是基于数据库的搜索</p>
+<p>接口定义如下：</p>
+<pre><code>package my.xyz.spi; 
+import java.util.List; 
+public interface Search { 
+  public List serch(String keyword); 
+}
+</code></pre><p>A公司采用文件系统搜索的方式实现了 Search接口，B公司采用了数据库系统的方式实现了Search接口。</p>
+<p>A公司实现的类：com.A.spi.impl.FileSearch<br>B公司实现的类：com.B.spi.impl.DatabaseSearch  </p>
+<p>那么A公司发布 实现jar包时，则要在jar包中META-INF/services/my.xyz.spi.Search文件中写下如下内容：</p>
+<p>com.A.spi.impl.FileSearch</p>
+<p>那么B公司发布 实现jar包时，则要在jar包中META-INF/services/my.xyz.spi.Search文件中写下如下内容：</p>
+<p>com.B.spi.impl.DatabaseSearch</p>
+<p>下面是 SPI 测试代码：</p>
+<pre><code>package com.xyz.factory; 
+import java.util.Iterator; 
+import java.util.ServiceLoader; 
+import my.xyz.spi.Search; 
+public class SearchFactory { 
+  private SearchFactory() { 
+  } 
+  public static Search newSearch() { 
+    Search search = null; 
+    ServiceLoader&lt;Search&gt; serviceLoader = ServiceLoader.load(Search.class); 
+    Iterator&lt;Search&gt; searchs = serviceLoader.iterator(); 
+    if (searchs.hasNext()) { 
+      search = searchs.next(); 
+    } 
+    return search; 
+  } 
+}    
+</code></pre><p>作者：sigangjun<br>blog.csdn.net/sigangjun/article/details/79071850</p>
 
             </div>
             <hr>
@@ -574,7 +576,7 @@
                     </span>
                     <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/05/04/cheng-xu-yuan-ni-gai-wei-zi-ji-jia-xin-yong-qian-sheng-qian/" class="b-link-green">程序猿，你该为自己加薪--用钱生钱</a>
+                    <a href="/2019/05/12/java-zhong-de-spi-ji-zhi-shi-shi-me-gui-gao-ji-java-bi-xu-zhang-wo/" class="b-link-green">Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！</a>
                 </p>
             </div>
         </div>
@@ -856,69 +858,24 @@
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/">
+                <a href="/2019/05/12/java-zhong-de-spi-ji-zhi-shi-shi-me-gui-gao-ji-java-bi-xu-zhang-wo/">
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/1950528240dfcd2580de4f4062b6ee88.jpg" class="responsive-img" alt="程序员的眼界真的不要，也不能只局限于技术">
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/4c92e58a40b59e5580b1111a2f8debbb.jpg" class="responsive-img" alt="Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！">
                         
-                        <span class="card-title">程序员的眼界真的不要，也不能只局限于技术</span>
+                        <span class="card-title">Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">前几天在读《极客时间》专栏的时候，看到这么一段话：
-对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
-对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得</div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-05
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/程序猿/" class="post-category" target="_blank">
-                                    程序猿
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/程序猿/" target="_blank">
-                        <span class="chip bg-color">程序猿</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/05/04/javascript-bi-bao-zhi-nan/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/957f331740fdadbd807ad2c832fcb0e5.jpg" class="responsive-img" alt="JavaScript 闭包指南">
-                        
-                        <span class="card-title">JavaScript 闭包指南</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">闭包是函数创建时作用域内所有变量的集合。要使用闭包，需要在另一个函数中创建一个函数，这种函数被称为嵌套函数。内部函数可以访问外部函数作用域中的变量（依靠闭包可以访问外部函数作用域），即使在返回外部函数之后也是如此。每次创建嵌套函数时都会创建</div>
+                    <div class="summary block-with-text">SPI的全名为：Service Provider Interface，大多数开发人员可能不熟悉，因为这个是针对厂商或者插件的。在java.util.ServiceLoader的文档里有比较详细的介绍。 
+简单的总结下 Java  SPI 机</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-04
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-12
                             </span>
                         <span class="publish-author">
                             
@@ -932,11 +889,62 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/" target="_blank">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/11/zuo-wei-zi-jie-tiao-dong-de-mian-shi-guan-you-xie-hua-wo-bu-de-bu-shuo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/f8a1ed5040523fe7803294cd9045c304.jpg" class="responsive-img" alt="作为字节跳动的面试官，有些话我不得不说！">
+                        
+                        <span class="card-title">作为字节跳动的面试官，有些话我不得不说！</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">大家好，我是字节跳动的一名研发面试官。
+2019春招过半，面试也进行了两场，在整个面试过程中，我不断被同学问到各式花样问题：
+“什么才是研发面试考察的核心？”
+“考前究竟要不要刷题？”
+“如果跨专业面试要怎么办？”
+“如何更好地描述项目经历</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/面试/" class="post-category" target="_blank">
+                                    面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/面试/" target="_blank">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                 </div>
