@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-05-14T01:19:04.580Z</updated>
+  <updated>2019-05-21T07:30:39.282Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,149 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>那天，他无意间瞟了眼程序员的桌面……</title>
+    <link href="http://chenguoji.com/2019/05/17/na-tian-ta-wu-yi-jian-piao-liao-yan-cheng-xu-yuan-de-zhuo-mian/"/>
+    <id>http://chenguoji.com/2019/05/17/na-tian-ta-wu-yi-jian-piao-liao-yan-cheng-xu-yuan-de-zhuo-mian/</id>
+    <published>2019-05-17T02:39:50.000Z</published>
+    <updated>2019-05-21T07:30:39.282Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;“爱因斯坦说“要是乱糟糟的桌面意味着杂乱无章的脑袋，那空白桌面意味着什么呢？”&lt;/p&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;p&gt;似乎很多在某些领域拥有天赋的人都不喜欢干净整洁的桌面，包括乔布斯和扎克伯格也是，甚至有的人一看到整洁的桌面就会感到一阵惶恐，想马上弄乱。&lt;/p&gt;
+&lt;p&gt;2&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>拯救 Out Of Memory，8个案例带你飞！</title>
+    <link href="http://chenguoji.com/2019/05/16/zheng-jiu-out-of-memory-8-ge-an-li-dai-ni-fei/"/>
+    <id>http://chenguoji.com/2019/05/16/zheng-jiu-out-of-memory-8-ge-an-li-dai-ni-fei/</id>
+    <published>2019-05-16T02:39:50.000Z</published>
+    <updated>2019-05-21T07:09:17.671Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;Java 堆空间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;发生频率：5颗星&lt;/p&gt;
+&lt;p&gt;造成原因&lt;br&gt;无法在 Java 堆中分配对象&lt;br&gt;吞吐量增加&lt;br&gt;应用程序无意中保存了对象引用，对象无法被 GC 回收&lt;br&gt;应用程序过度使用
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>35个可以飞快提高千倍效率的Java语言代码小技巧，你值得拥有！</title>
+    <link href="http://chenguoji.com/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/"/>
+    <id>http://chenguoji.com/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/</id>
+    <published>2019-05-15T02:39:50.000Z</published>
+    <updated>2019-05-21T08:39:41.778Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;代码优化
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7年Java后端被淘汰，一路北漂辛酸史</title>
+    <link href="http://chenguoji.com/2019/05/14/7-nian-java-hou-duan-bei-tao-tai-yi-lu-bei-piao-xin-suan-shi/"/>
+    <id>http://chenguoji.com/2019/05/14/7-nian-java-hou-duan-bei-tao-tai-yi-lu-bei-piao-xin-suan-shi/</id>
+    <published>2019-05-14T02:39:50.000Z</published>
+    <updated>2019-05-21T07:05:35.696Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天分享一位同行的经历：&lt;/p&gt;
+&lt;p&gt;本人Java开发6年半不到7年的样子。&lt;/p&gt;
+&lt;p&gt;英语专业，临毕业跟着隔壁专业去培训了四个月 Java 。&lt;/p&gt;
+&lt;p&gt;跟他们一起来了北京找工作，一找就是 5 个多月，面试 100
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sql server复制表数据到另一个表</title>
+    <link href="http://chenguoji.com/2019/05/13/sql-server-fu-zhi-biao-shu-ju-dao-ling-yi-ge-biao/"/>
+    <id>http://chenguoji.com/2019/05/13/sql-server-fu-zhi-biao-shu-ju-dao-ling-yi-ge-biao/</id>
+    <published>2019-05-13T07:39:50.000Z</published>
+    <updated>2019-05-21T07:03:00.290Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SQL Server中，如果目标表存在：&lt;/p&gt;
+&lt;p&gt;insert into 目标表 select * from 原表;&lt;/p&gt;
+&lt;p&gt;SQL Server中,如果目标表不存在：&lt;/p&gt;
+&lt;p&gt;select * into 目标表 from
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！</title>
@@ -76,10 +219,10 @@
   
   <entry>
     <title>以我的亲身经历，告诉大家写简历和面试的技巧！</title>
-    <link href="http://chenguoji.com/2019/05/08/yi-wo-de-qin-shen-jing-li-gao-su-da-jia-xie-jian-li-he-mian-shi-de-ji-qiao/"/>
-    <id>http://chenguoji.com/2019/05/08/yi-wo-de-qin-shen-jing-li-gao-su-da-jia-xie-jian-li-he-mian-shi-de-ji-qiao/</id>
-    <published>2019-05-08T07:39:50.000Z</published>
-    <updated>2019-05-08T07:09:20.148Z</updated>
+    <link href="http://chenguoji.com/2019/05/10/yi-wo-de-qin-shen-jing-li-gao-su-da-jia-xie-jian-li-he-mian-shi-de-ji-qiao/"/>
+    <id>http://chenguoji.com/2019/05/10/yi-wo-de-qin-shen-jing-li-gao-su-da-jia-xie-jian-li-he-mian-shi-de-ji-qiao/</id>
+    <published>2019-05-10T07:39:50.000Z</published>
+    <updated>2019-05-14T03:06:26.847Z</updated>
     
     <summary type="html">
     
@@ -98,6 +241,32 @@
     
     
       <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库怎么分库分表，垂直？水平？</title>
+    <link href="http://chenguoji.com/2019/05/09/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/"/>
+    <id>http://chenguoji.com/2019/05/09/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/</id>
+    <published>2019-05-09T02:39:50.000Z</published>
+    <updated>2019-05-14T03:06:17.782Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、数据库瓶颈&quot;&gt;&lt;a href=&quot;#一、数据库瓶颈&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
@@ -124,61 +293,6 @@
     
     
       <category term="毕业设计" scheme="http://chenguoji.com/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库怎么分库分表，垂直？水平？</title>
-    <link href="http://chenguoji.com/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/"/>
-    <id>http://chenguoji.com/2019/05/08/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/</id>
-    <published>2019-05-08T02:39:50.000Z</published>
-    <updated>2019-05-08T03:06:28.661Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、数据库瓶颈&quot;&gt;&lt;a href=&quot;#一、数据库瓶颈&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>宁南山：说下996</title>
-    <link href="http://chenguoji.com/2019/05/07/ning-nan-shan-shuo-xia-996/"/>
-    <id>http://chenguoji.com/2019/05/07/ning-nan-shan-shuo-xia-996/</id>
-    <published>2019-05-07T02:39:50.000Z</published>
-    <updated>2019-05-07T08:03:18.670Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;作者：宁南山&lt;/p&gt;
-&lt;p&gt;一个国家，少数优秀人士和少数头部企业拼命干活就可以了，&lt;/p&gt;
-&lt;p&gt;一个是因为这个世界的经济竞争还是很残酷，中国要在不同行业赶超欧美，如果连精英人物和龙头企业都下午五点就下班，赶超不知道什么时候才能完成，甚至说永远不能完成。&lt;/p&gt;
-&lt;p&gt;你技
-        
-      
-    
-    </summary>
-    
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-    
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
     
   </entry>
   
@@ -232,6 +346,35 @@
     
     
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>宁南山：说下996</title>
+    <link href="http://chenguoji.com/2019/05/07/ning-nan-shan-shuo-xia-996/"/>
+    <id>http://chenguoji.com/2019/05/07/ning-nan-shan-shuo-xia-996/</id>
+    <published>2019-05-07T02:39:50.000Z</published>
+    <updated>2019-05-07T08:03:18.670Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;作者：宁南山&lt;/p&gt;
+&lt;p&gt;一个国家，少数优秀人士和少数头部企业拼命干活就可以了，&lt;/p&gt;
+&lt;p&gt;一个是因为这个世界的经济竞争还是很残酷，中国要在不同行业赶超欧美，如果连精英人物和龙头企业都下午五点就下班，赶超不知道什么时候才能完成，甚至说永远不能完成。&lt;/p&gt;
+&lt;p&gt;你技
+        
+      
+    
+    </summary>
+    
+      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+    
+      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
     
   </entry>
   
@@ -419,137 +562,6 @@
     
     
       <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>北冥乘海生：996其实没什么卵用</title>
-    <link href="http://chenguoji.com/2019/05/02/bei-ming-cheng-hai-sheng-996-qi-shi-mei-shi-me-luan-yong/"/>
-    <id>http://chenguoji.com/2019/05/02/bei-ming-cheng-hai-sheng-996-qi-shi-mei-shi-me-luan-yong/</id>
-    <published>2019-05-02T03:39:50.000Z</published>
-    <updated>2019-05-07T05:45:09.115Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-    
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>金三银四铜五铁六</title>
-    <link href="http://chenguoji.com/2019/05/02/jin-san-yin-si-tong-wu-tie-liu/"/>
-    <id>http://chenguoji.com/2019/05/02/jin-san-yin-si-tong-wu-tie-liu/</id>
-    <published>2019-05-02T02:39:50.000Z</published>
-    <updated>2019-05-07T07:59:52.255Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;鲁班简称LB&lt;/p&gt;
-&lt;p&gt;　　据说，金三银四，截止今天为止面试黄金时间已经过去十之八九，而LB恰逢是这批面试大军其中的一名小兵，很不幸今年恰逢遇上了互联网寒冬（即各大公司都在裁员，对外提供岗位相对较少的，这意味着很多猿即将面临着更多的竞争对手和相对较少的岗位困境），LB求
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>产品经理如何让程序员放下手中的刀？</title>
-    <link href="http://chenguoji.com/2019/05/02/chan-pin-jing-li-ru-he-rang-cheng-xu-yuan-fang-xia-shou-zhong-de-dao/"/>
-    <id>http://chenguoji.com/2019/05/02/chan-pin-jing-li-ru-he-rang-cheng-xu-yuan-fang-xia-shou-zhong-de-dao/</id>
-    <published>2019-05-02T02:39:50.000Z</published>
-    <updated>2019-05-07T08:06:14.491Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;摘要：
-        
-      
-    
-    </summary>
-    
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-    
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2018秋招面经</title>
-    <link href="http://chenguoji.com/2019/05/01/2018-qiu-zhao-mian-jing/"/>
-    <id>http://chenguoji.com/2019/05/01/2018-qiu-zhao-mian-jing/</id>
-    <published>2019-05-01T02:39:50.000Z</published>
-    <updated>2019-05-06T02:18:39.943Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;秋招已经结束很久了，终于有时间给自己的秋招进行一个简单的总结。自己在找工作的每一天上午做的第一件事就是打开牛客，看看上面的最新动态（了解一些招聘信息、别人发的面经），&lt;br&gt;从中受益良多，有幸拿到了华为、贝壳、百度、阿里巴巴……等公司的offer，所以现在把自己的经历简单的
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="Java" scheme="http://chenguoji.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试中常问的Linux命令</title>
-    <link href="http://chenguoji.com/2019/04/30/mian-shi-zhong-chang-wen-de-linux-ming-ling/"/>
-    <id>http://chenguoji.com/2019/04/30/mian-shi-zhong-chang-wen-de-linux-ming-ling/</id>
-    <published>2019-04-30T02:39:50.000Z</published>
-    <updated>2019-05-06T02:13:26.411Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Linux常用命令&quot;&gt;&lt;a href=&quot;#Linux常用命令&quot; class=&quot;headerlink&quot; title=&quot;Linux常用命令&quot;&gt;&lt;/a&gt;Linux常用命令&lt;/h2&gt;&lt;h3 id=&quot;一、文件和目录&quot;&gt;&lt;a href=&quot;#一、文件和目录&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="Linux" scheme="http://chenguoji.com/tags/Linux/"/>
     
   </entry>
   

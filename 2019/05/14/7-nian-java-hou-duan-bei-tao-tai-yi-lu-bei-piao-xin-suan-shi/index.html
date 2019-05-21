@@ -1,0 +1,1161 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="7年Java后端被淘汰，一路北漂辛酸史, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="今天分享一位同行的经历：
+本人Java开发6年半不到7年的样子。
+英语专业，临毕业跟着隔壁专业去培训了四个月 Java 。
+跟他们一起来了北京找工作，一找就是 5 个多月，面试 100 多家公司。最终还是隔壁专业的同学介绍到他们公司才就业了">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>7年Java后端被淘汰，一路北漂辛酸史 | 陈国际博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">陈国际博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories/毕业设计/" class="waves-effect waves-light">
+            
+            <i class="fa fa-align-justify"></i>
+            
+            <span>毕设</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">陈国际博客</div>
+        <div class="logo-desc">
+            
+            为中华软件之崛起而编程 ,努力做有价值的技术文章
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories/毕业设计/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-align-justify"></i>
+                
+                毕设
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/9d33b60a40ef8fd080ac8cabe8fa27fa.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        7年Java后端被淘汰，一路北漂辛酸史
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/" target="_blank">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                java
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-05-14
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        3.9k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        13 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>今天分享一位同行的经历：</p>
+<p>本人Java开发6年半不到7年的样子。</p>
+<p>英语专业，临毕业跟着隔壁专业去培训了四个月 Java 。</p>
+<p>跟他们一起来了北京找工作，一找就是 5 个多月，面试 100 多家公司。最终还是隔壁专业的同学介绍到他们公司才就业了。</p>
+<p>入职后同学就是我的领导，技术相对一般，我们做 Java 游戏后端的，时间很快，一眨眼，我就跟着混了四年，每天就看些博客，书籍，业务上也会做功能，但自觉做的比较蠢。没什么太大进步。</p>
+<p>四年时间很快乐，跟着老板，同学，从一点不会，到能独立完成工作，能自主做一点小小设计。但技术上说真的，差得太远。</p>
+<p>随着心越来越慌，工资水平属实也太低 6K 多，于是四年这个节点，我跳槽了，工资翻倍。这是一份非常苦的工作，曾经2个多月没放假，也曾经连续四天四夜没回家，工作到凌晨 3 点是司空见惯。</p>
+<p>然而我只是个小兵，加班加了 10 个月，游戏上线两个月，人员就全部裁掉了。由于 Java 一直感觉没有入门，框架方面 掌握的也比较少，这个 MMO 的项目本是练手大好时机，连忙带懒就也这么过来了。</p>
+<p>随后不知道算走运还是算倒霉，找到了上市公司的工作，20K「我梦想中的工资是 25K，如果达到就打算不再跳槽了，为什么是25K？因为游戏Java后端基本上 30K 算是一个封顶，哈，当时比较幼稚，以为就这么干着，早早晚晚也能混到最后，就算技术不行，吃透两套框架，在游戏圈就能立住脚」。</p>
+<p>说是走运，因为工作相对简单，我 1 个后端对 6 个前端，听起来挺唬人，但其实还是做业务，但因为只有我一个人接手这个项目，所以我也算是主程，当时我觉得我的人生的每一步真是走的太好了，缺什么来什么，想要架构，想要自己来就有机会了，这一年多感觉特别顺利，也觉得自己终于像是入了门，不再害怕工作上的需求了。</p>
+<p>但说是倒霉呢 ，其实也就是因为这一切其实都是假象，我根本还是几年前的那个自己，只是因为业务熟练了，以为自己行了。</p>
+<p>这公司也是裁员，我在这里做了一年半不到，临走给了 N+1，美美的拿着钱，找自己梦想中的 25K 去了。并且决定不做游戏了，因为游戏公司有名的就那几家，没啥大发展，还是互联网好，差不到 40K 封顶，我以上所说的封顶都是指很普通的人啊，大佬就别跟我计较了。</p>
+<p>就在裁员的第二天，我面试了京东一个物流创新部，好像是这个名字，那天我记得特别清楚，经过了一下午面试（面试的难度真是超级低，我在那里侃侃而谈，最难的问题也只是线程池那几个参数）。</p>
+<p>然后，过了。我真的感觉自己要一飞冲天，当时在想，在这里不能做太久，公司的文化太诡异，一切围绕着强东转，公司的人说话好像都在躲着什么东西，加班也是每天固定，然后大小周。因为正赶上过年，面试的人说年后人事会联系我走流程，就能入职。</p>
+<p>这一去就天差地别了，我在家等了一个半月，中间经过无数询问面试者，人事等，后来，流程跑着跑着就没了。当时觉得京东真是让人开眼，还特么带这么玩的。</p>
+<p>这时候，我还是不知道愁~然而，马上就要觉醒了。我又去面试，还是25K，有时候你认真的要价真的比猥琐要好很多，我当时就是愣要，大部分人还真信。记得收到的OFFER有必要商城，赢时胜等等，后来去了一家做语音的公司负责做云平台。哈哈，这份工作只做了三天半。从入职第一天就夜夜失眠，为毛？因为看不懂代码，压力很大。</p>
+<p>以前做游戏觉得大家都是吊丝，每天在一起呼呼哈哈，确实也快乐，有什么需求甚至直接在座位上喊着沟通这样。但是这家公司就比较正规了，我以为互联网公司都是这个样子的，同事之间一天一句话都不说，主程也只给我简单说了说流程，就自己看代码吧。</p>
+<p>我虽然技术渣，但有时候对自己要求还是挺高的，总想快速的上手代码，这代码这手上一天，两天，三天，连个皮毛都没看出来，就慌的不行，当时就开始知道自己代码水平有点渣了，但以为自己是不适应，这次找工作其实也挺波折，醒悟是一个缓慢的过程。</p>
+<p>所以还是想着回游戏行业，毕竟自己历经三家公司，都没碰到什么难度，虽然寻路啊，地图啊，战斗啊这些自己都完全整不了，但是还是能完成普通工作的，此时的我还以为自己能搭框架呢，啊哈哈。</p>
+<p>于是我就辞了，公司真的不错，14薪，要走还好顿要留我。当时以为自己是不适应走的。现在回头想想，其实怕暴露真实代码水平，不好意思才走的「身体不骗人，我的脑子居然会骗自己」。</p>
+<p>于是，我开始面游戏了，还是 2 ，但面着面着觉得不对劲，为何大部分面试我都答不上来个啥，三问两问就瘪了。两周时间，居然 10 家只收到 1 个 OFFER，并且是小公司做主程。我开始慌了，很慌，这 10 天里我慢慢认清自己的真实水平了，不敢细想，细想连面向对象都不怎么会，那些继承啊接口啊，从来也没写得好看过，都是照着别人已有的模块，拿来粘贴，还做得挺快。</p>
+<p>多线程一想就蒙蔽，数据库就会点简单操作，Linux 也是一样就会个CP MV CAT top啥的，最常用的是 ps -aux|grep。原来，原来我什么都不会啊。但是上天还是眷顾我的，居然这十几家我最看好的那家公司，第 11 个面试。过了，哈哈，当然这时薪资下来了一点，但是我管不了那么多，从上家裁员到现在，已经整整过了 2 个月零一周了，这些天过得真不怎么样，每天都特别焦虑。也瘦了七八斤。</p>
+<p>就这样吧，入职好好干吧，我收到OFFER时，暗暗想着，我要为公司肝脑涂地，它在我危难之时，向我伸出了关爱之手，感谢公司。</p>
+<p>于是更大的噩梦开始了~~入职到现在 2 个月了，我几乎毛也没做。每天都想逃避都想跑，心脏压得我天天疼，好堵啊，现在也还是如此。这 2 个月我彻底认清了自我，和入职半年的新生小手差不多的水平，一直用这水平干了这六年工作。。</p>
+<p>真汗颜，以前用的 SVN,到了新公司学 git，这 git 是真难啊，怎么都学不会，网上那堆教程跟屎一样，看着好像是会了，用着都特么不对，差得远呢，到现在还只会create  a branch，写， pull develop ，切回来把develop 合过来，然后再把branch合回到develop，再push，基本上是在用svn的方法在用git，而且  git我感觉很奇怪，好像没几个真的会用，不管是网上还是我的同事。</p>
+<p>光说痛苦了，说说自己为什么痛苦吧，我知道每个人都有自己的心酸事。我只是想说说我的。</p>
+<p>哎，主要说说新公司的事吧，这么多天了，我死去活来，难受的要命。比如我从刚入行就不大懂开发的根本问题是什么，也许书本上的解释我也看得懂，但是真要理解这件事，应该不是只停留在字面理解，如果你有懂那一天，你应该立刻就知道，它会直接在头脑中告诉你—啊我入门了。</p>
+<p>鉴于此，我一直都保存着前几家的源码，我想着，开发既然自己不能理解好，也没有举一返三的能力，也不会自主写出什么东西。那就收集多多的代码，涉及到的哪一部分不懂，可能就能在其中找到例子，灵感。这样就可以在框架层面也不至于什么都没有积累。</p>
+<p>这次的工作，服务端也分了好几个进程，之前我都是用redis搞数据沟通，比如你要生成唯一ID，每个子服务里都有redis，incr就好。新的框架也是这个主程用了好多年的了，不想加入新的东西，但是又要求我按他的思路去做，又说代码版权等问题，之前所有的源码都不能给我看，我想其实也是合理的，毕竟我是 P6，高级开发哎。按理说，招我进来可以从 0 开始搭建架构的。我的能力也就是 curd 了，甚至可能 curd 还做不太好，也就说不上怎么能硬气的跟他说明。</p>
+<p>比如上面 id 的问题，那我可能就要每个服启动时，去 mysql 查一批id存放在每个子服务上面，设一个警戒值，不够了再取。但是这样吧，对我来说就很难，这就要考虑到警戒值不够用了怎么办，各服务启动时要把id拿到才能对外服务，还有 id 如果实在没有了，可能要进行同步阻塞去查询，但是同步怎么写？不会写同步~~  </p>
+<p>另外再举例子，如果是加好友功能，这种单用mysql，而且还弄出一个 dbserver 的服务，什么都要写个异步的协议过去，那加好友原来是：</p>
+<p>addFriend  {<br>各种条件判断，不合条件返回个tips<br>执行加好友<br>}</p>
+<p>现在可能变成这样了：<br>addFriend  {<br>    异步去查数据库了<br>}</p>
+<p>gameserver -&gt; dbserver ，当dbserver-&gt;gameserver返回时，又是另一个协议，handler什么的又得另写，执行判断，再返回，等等。 当然写得好的人，这些问题都不存在，而我只会直肠子写Java，就会个 List.add    if else  for循环。</p>
+<p>这基本上是我的全部本领了。就在这框架里有很多难处。还有个问题是怎么写gate与game的玩家session对应，想了N久才想出个办法，包装了个protobuf二层协议，，哦问题多了去了。应该都是开发者该在工作中解决的基本问题，而我一步一个坎。</p>
+<p>再者公司的氛围也是头疼的紧，一整天也没人说话，除了要甩锅的时候，根本没人会沟通。交待任务啥的，给我压力也特别大，比如主程今天说，docker了解一样。然后明天让我搭 dokcer 自动化部署流程了。今天说git flow了解一下，明天就要严格执行 git 工作流了。</p>
+<p>还是那句话，可能这是一个 P6 真正要掌握的本领，就是有个关键词，然后就能自己看外文文档，然后就能搭建出一个看上去很像样的工程化产品。好吧，这样来看我离真实的 P6 的实力，至少得差 5 个档次。</p>
+<p>自己特别的低迷，心脏堵的难受，每天早上一醒来就感觉自己活不起了。有天晚上梦中，看见一堆代码，却怎么看都不懂，又醒不了，难过，懊丧了一整夜，连睡觉的时间都不放过我，自己的痛苦多了就经常跟朋友家人说，到后来反倒让我认清了，什么狗鸡巴朋友，哪有朋友，没人会care你一丁点，各自有自己的烦心事不说吧，没有共同经历的也难为互相理解。</p>
+<p>总之，在朋友对我的反应上，基本就是你想多了;你不干得挺好的吗;程序员一个拿那么多钱你还瞎苦恼个什么;不光你，谁没困难;其中特别好的一个也差不多最多宽慰两句，你行，你可以挺过去之类的。之后就再无信息。</p>
+<p>当时也是苦恼了好一阵，认识你们有个什么用，你说我最想听什么，我联系你们的目的是什么，哈哈，算了算了，都是故事，你们并没有那么好。但回头吧，仔细想想不禁就明了了这件事。</p>
+<p>30多岁了，这是关乎你自己生存的问题，这个问题不是靠什么运气和神迹才能改善的，它积累在你多年生活的每一天里，你的理解是什么，你对工作的态度如何，你怎么利用你的时间的。</p>
+<p>这一切的一切都是你自己该解决该思考的问题，别人帮不上任何忙。然而这些年我都是养生过来的，一直都没学会如何去思考，这应该是与有所成就的人最大的区别了。</p>
+<p>有人说做职业规划，而我脑中也只有这四个字的浅层意思。也许有的人对这个就比较上心，有着深刻理解也说不定。</p>
+<p>也就是说别人怎么决定你的人生，别人怎么决定你的想法，都得自己去选择，自己去承担，指望着别人给你的，只能是「放松心情了解一下努力了解一下」这样看似没用实际也没用的东西。</p>
+<p>今天先写到这吧，写得乱糟糟。</p>
+<p>无论怎么写也写不出你真的在痛苦时那种无助与万念俱焚，你很难再去回想，你是怎么失眠一个月的，你很难想你在公司楼下对着镜子，颤抖着害怕着不敢回办公桌时的心情。</p>
+<p>然而这一切都没意义，生活不会因为你痛苦就突然变好了，别人不会因为你痛苦就能放过你了，这些对任何人都没意义。</p>
+<p>我还将继续下去，这家干不了了，还要找下家，还要每天学习「虽然效果不怎么样」。然后等待着，这些迟早该发生的事。</p>
+<p>你再想想，今天虽然这么痛苦，是不是可能是你接下来生活的最好的一天了。毕竟你就坐在那里十几个小时，就有人几百上千的送给你。然后我干不下去这行了去做什么，销售？开个麻辣烫店？去工地真正的搬砖？ </p>
+<p>hi，哈哈哈哈哈，外人看叫矫情，自己看属实是活不起。</p>
+<p>话说你有怎样的经历，欢迎留言分享~</p>
+<p>作者：春天花会开foryou<br>oschina.net/question/3465562_2281392</p>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2019/05/14/7-nian-java-hou-duan-bei-tao-tai-yi-lu-bei-piao-xin-suan-shi/" class="b-link-green">7年Java后端被淘汰，一路北漂辛酸史</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'sLQDMQ9rXtxonsupRe4YLCBD-gzGzoHsz',
+        appKey: 'eiVU90k574vUVACVPNeizAv9',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '说点什么吧'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/f8a1ed5040523fe7803294cd9045c304.jpg" class="responsive-img" alt="35个可以飞快提高千倍效率的Java语言代码小技巧，你值得拥有！">
+                        
+                        <span class="card-title">35个可以飞快提高千倍效率的Java语言代码小技巧，你值得拥有！</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">前言代码优化 ，一个很重要的课题。可能有些人觉得没用，一些细小的地方有什么好修改的，改与不改对于代码的运行效率有什么影响呢？这个问题我是这么考虑的，就像大海里面的鲸鱼一样，它吃一条小虾米有用吗？没用，但是，吃的小虾米一多之后，鲸鱼就被喂饱了</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                    java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/13/sql-server-fu-zhi-biao-shu-ju-dao-ling-yi-ge-biao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/d9f6770240f9b021804da775c8502be5.jpg" class="responsive-img" alt="sql server复制表数据到另一个表">
+                        
+                        <span class="card-title">sql server复制表数据到另一个表</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">SQL Server中，如果目标表存在：
+insert into 目标表 select * from 原表;
+SQL Server中,如果目标表不存在：
+select * into 目标表 from 原表;
+Oracle中，如果目标表存在：</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/数据库/" class="post-category" target="_blank">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/数据库/" target="_blank">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1,h2, h3, h4,h5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4,h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://github.com/chenguoji" target="_blank"> chenguoji </a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
+			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
+			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:chenguo_ji@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=971919782" class="tooltipped" data-tooltip="QQ联系我: 971919782" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
