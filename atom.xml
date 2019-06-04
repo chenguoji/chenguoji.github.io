@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-05-21T07:30:39.282Z</updated>
+  <updated>2019-06-03T08:38:09.699Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -17,11 +17,143 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>困扰我多年的Java泛型&lt;? extends T&gt; 和 &lt;? super T&gt;，终于搞清楚了！</title>
+    <link href="http://chenguoji.com/2019/05/20/kun-rao-wo-duo-nian-de-java-fan-xing-extends-t-he-super-t-zhong-yu-gao-qing-chu-liao/"/>
+    <id>http://chenguoji.com/2019/05/20/kun-rao-wo-duo-nian-de-java-fan-xing-extends-t-he-super-t-zhong-yu-gao-qing-chu-liao/</id>
+    <published>2019-05-20T02:39:50.000Z</published>
+    <updated>2019-06-03T08:38:09.699Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、为什么要用通配符和边界？&quot;&gt;&lt;a href=&quot;#一、为什么要用通配符和边界？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL Server 日期时间如何处理</title>
+    <link href="http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/"/>
+    <id>http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/</id>
+    <published>2019-05-19T02:39:50.000Z</published>
+    <updated>2019-05-21T08:59:36.775Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在SQL Server中，一般获取当前时间用 GetDate() 函数 &lt;/p&gt;
+&lt;p&gt;GetDate()获得的日期由两部分组成，分别是今天的日期和当时的时间： Select GetDate()
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 诞生日，Java 24 岁了！</title>
+    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
+    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
+    <published>2019-05-19T02:39:50.000Z</published>
+    <updated>2019-05-30T03:22:41.956Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html中横线使用</title>
+    <link href="http://chenguoji.com/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
+    <id>http://chenguoji.com/2019/05/18/html-zhong-heng-xian-shi-yong/</id>
+    <published>2019-05-18T02:39:50.000Z</published>
+    <updated>2019-05-21T08:45:49.844Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;第一种：
+&amp;lt;hr style=&amp;quot; height:2px;border:none;border-top:2px dotted #185598;&amp;quot; /&amp;gt;  
+        
+      
+    
+    </summary>
+    
+      <category term="html" scheme="http://chenguoji.com/categories/html/"/>
+    
+    
+      <category term="html" scheme="http://chenguoji.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这 17 个 JVM 参数，高级 Java 必须掌握！</title>
+    <link href="http://chenguoji.com/2019/05/18/zhe-17-ge-jvm-can-shu-gao-ji-java-bi-xu-zhang-wo/"/>
+    <id>http://chenguoji.com/2019/05/18/zhe-17-ge-jvm-can-shu-gao-ji-java-bi-xu-zhang-wo/</id>
+    <published>2019-05-18T02:39:50.000Z</published>
+    <updated>2019-05-30T03:19:49.990Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>那天，他无意间瞟了眼程序员的桌面……</title>
     <link href="http://chenguoji.com/2019/05/17/na-tian-ta-wu-yi-jian-piao-liao-yan-cheng-xu-yuan-de-zhuo-mian/"/>
     <id>http://chenguoji.com/2019/05/17/na-tian-ta-wu-yi-jian-piao-liao-yan-cheng-xu-yuan-de-zhuo-mian/</id>
     <published>2019-05-17T02:39:50.000Z</published>
-    <updated>2019-05-21T07:30:39.282Z</updated>
+    <updated>2019-05-22T09:02:07.855Z</updated>
     
     <summary type="html">
     
@@ -30,9 +162,7 @@
         
         
           &lt;p&gt;“爱因斯坦说“要是乱糟糟的桌面意味着杂乱无章的脑袋，那空白桌面意味着什么呢？”&lt;/p&gt;
-&lt;p&gt;1&lt;/p&gt;
-&lt;p&gt;似乎很多在某些领域拥有天赋的人都不喜欢干净整洁的桌面，包括乔布斯和扎克伯格也是，甚至有的人一看到整洁的桌面就会感到一阵惶恐，想马上弄乱。&lt;/p&gt;
-&lt;p&gt;2&lt;/p&gt;
+&lt;img
         
       
     
@@ -50,7 +180,7 @@
     <link href="http://chenguoji.com/2019/05/16/zheng-jiu-out-of-memory-8-ge-an-li-dai-ni-fei/"/>
     <id>http://chenguoji.com/2019/05/16/zheng-jiu-out-of-memory-8-ge-an-li-dai-ni-fei/</id>
     <published>2019-05-16T02:39:50.000Z</published>
-    <updated>2019-05-21T07:09:17.671Z</updated>
+    <updated>2019-06-03T01:50:40.718Z</updated>
     
     <summary type="html">
     
@@ -58,11 +188,8 @@
       
         
         
-          &lt;ol&gt;
-&lt;li&gt;Java 堆空间&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;发生频率：5颗星&lt;/p&gt;
-&lt;p&gt;造成原因&lt;br&gt;无法在 Java 堆中分配对象&lt;br&gt;吞吐量增加&lt;br&gt;应用程序无意中保存了对象引用，对象无法被 GC 回收&lt;br&gt;应用程序过度使用
+          &lt;h2 id=&quot;1-Java-堆空间&quot;&gt;&lt;a href=&quot;#1-Java-堆空间&quot; class=&quot;headerlink&quot; title=&quot;1. Java 堆空间&quot;&gt;&lt;/a&gt;1. Java 堆空间&lt;/h2&gt;&lt;p&gt;发生频率：5颗星&lt;/p&gt;
+&lt;p&gt;造成原因&lt;br&gt;无法在 Java
         
       
     
@@ -428,140 +555,6 @@
     
     
       <category term="趣图" scheme="http://chenguoji.com/tags/%E8%B6%A3%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我们搞开发的为什么会感觉到累</title>
-    <link href="http://chenguoji.com/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
-    <id>http://chenguoji.com/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</id>
-    <published>2019-05-05T02:39:50.000Z</published>
-    <updated>2019-05-06T08:09:31.127Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;引题&quot;&gt;&lt;a href=&quot;#引题&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="开发" scheme="http://chenguoji.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="开发" scheme="http://chenguoji.com/tags/%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序员的眼界真的不要，也不能只局限于技术</title>
-    <link href="http://chenguoji.com/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
-    <id>http://chenguoji.com/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</id>
-    <published>2019-05-05T02:39:50.000Z</published>
-    <updated>2019-05-08T02:39:22.838Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;前几天在读《极客时间》专栏的时候，看到这么一段话：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。
-对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得业务
-        
-      
-    
-    </summary>
-    
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-    
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序猿，你该为自己加薪--用钱生钱</title>
-    <link href="http://chenguoji.com/2019/05/04/cheng-xu-yuan-ni-gai-wei-zi-ji-jia-xin-yong-qian-sheng-qian/"/>
-    <id>http://chenguoji.com/2019/05/04/cheng-xu-yuan-ni-gai-wei-zi-ji-jia-xin-yong-qian-sheng-qian/</id>
-    <published>2019-05-04T03:39:50.000Z</published>
-    <updated>2019-05-07T05:52:31.642Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;“如果你没找到一个当你睡觉时还能挣钱的方法，你将工作到死。” ——巴菲特
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-    
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript 闭包指南</title>
-    <link href="http://chenguoji.com/2019/05/04/javascript-bi-bao-zhi-nan/"/>
-    <id>http://chenguoji.com/2019/05/04/javascript-bi-bao-zhi-nan/</id>
-    <published>2019-05-04T02:39:50.000Z</published>
-    <updated>2019-05-06T07:04:15.699Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;闭包是函数创建时作用域内所有变量的集合。要使用闭包，需要在另一个函数中创建一个函数，这种函数被称为嵌套函数。内部函数可以访问外部函数作用域中的变量（依靠闭包可以访问外部函数作用域），即使在返回外部函数之后也是如此。每次创建嵌套函数时都会创建闭包。&lt;/p&gt;
-&lt;p&gt;在继续了解闭
-        
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="http://chenguoji.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>真正理解Mysql的四种隔离级别</title>
-    <link href="http://chenguoji.com/2019/05/03/zhen-zheng-li-jie-mysql-de-si-chong-ge-chi-ji-bie/"/>
-    <id>http://chenguoji.com/2019/05/03/zhen-zheng-li-jie-mysql-de-si-chong-ge-chi-ji-bie/</id>
-    <published>2019-05-03T02:39:50.000Z</published>
-    <updated>2019-05-06T06:53:59.709Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;什么是事务&quot;&gt;&lt;a href=&quot;#什么是事务&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   

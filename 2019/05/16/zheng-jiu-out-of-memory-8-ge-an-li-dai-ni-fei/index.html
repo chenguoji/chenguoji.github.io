@@ -5,10 +5,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="拯救 Out Of Memory，8个案例带你飞！, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="
-Java 堆空间
-
-发生频率：5颗星
+    <meta name="description" content="1. Java 堆空间发生频率：5颗星
 造成原因无法在 Java 堆中分配对象吞吐量增加应用程序无意中保存了对象引用，对象无法被 GC 回收应用程序过度使用 finalizer。finalizer 对象不能被 GC 立刻回收。finaliz">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -367,14 +364,14 @@ Java 堆空间
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        812
+                        820
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        3 分
                     </div>
                     
                 
@@ -390,55 +387,31 @@ Java 堆空间
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li>Java 堆空间</li>
-</ol>
-<p>发生频率：5颗星</p>
+                <h2 id="1-Java-堆空间"><a href="#1-Java-堆空间" class="headerlink" title="1. Java 堆空间"></a>1. Java 堆空间</h2><p>发生频率：5颗星</p>
 <p>造成原因<br>无法在 Java 堆中分配对象<br>吞吐量增加<br>应用程序无意中保存了对象引用，对象无法被 GC 回收<br>应用程序过度使用 finalizer。finalizer 对象不能被 GC 立刻回收。finalizer 由结束队列服务的守护线程调用，有时 finalizer 线程的处理能力无法跟上结束队列的增长</p>
 <p>解决方案<br>单位对应：GB -&gt; G, g；MB -&gt; M, m；KB -&gt; K, k<br>使用 -Xmx 增加堆大小<br>修复应用程序中的内存泄漏</p>
-<ol start="2">
-<li>GC 开销超过限制</li>
-</ol>
-<p>发生频率：5颗星</p>
+<h2 id="2-GC-开销超过限制"><a href="#2-GC-开销超过限制" class="headerlink" title="2. GC 开销超过限制"></a>2. GC 开销超过限制</h2><p>发生频率：5颗星</p>
 <p>造成原因<br>Java 进程98%的时间在进行垃圾回收，恢复了不到2%的堆空间，最后连续5个（编译时常量）垃圾回收一直如此。</p>
 <p>解决方案</p>
 <p>使用 -Xmx 增加堆大小<br>使用 -XX:-UseGCOverheadLimit 取消 GC 开销限制<br>修复应用程序中的内存泄漏</p>
-<ol start="3">
-<li>请求的数组大小超过虚拟机限制</li>
-</ol>
-<p>发生频率：2颗星</p>
+<h2 id="3-请求的数组大小超过虚拟机限制"><a href="#3-请求的数组大小超过虚拟机限制" class="headerlink" title="3. 请求的数组大小超过虚拟机限制"></a>3. 请求的数组大小超过虚拟机限制</h2><p>发生频率：2颗星</p>
 <p>造成原因<br>应用程序试图分配一个超过堆大小的数组</p>
 <p>解决方案<br>使用 -Xmx 增加堆大小<br>修复应用程序中分配巨大数组的 bug</p>
-<ol start="4">
-<li>Perm gen 空间</li>
-</ol>
-<p>发生频率：3颗星</p>
+<h2 id="4-Perm-gen-空间"><a href="#4-Perm-gen-空间" class="headerlink" title="4. Perm gen 空间"></a>4. Perm gen 空间</h2><p>发生频率：3颗星</p>
 <p>造成原因<br>Perm gen 空间包含：<br>类的名字、字段、方法<br>与类相关的对象数组和类型数组<br>JIT 编译器优化</p>
 <p>当 Perm gen 空间用尽时，将抛出异常。</p>
 <p>解决方案<br>使用 -XX: MaxPermSize 增加 Permgen 大小<br>不重启应用部署应用程序可能会导致此问题。重启 JVM 解决</p>
-<ol start="5">
-<li>Metaspace</li>
-</ol>
-<p>发生频率：3颗星</p>
+<h2 id="5-Metaspace"><a href="#5-Metaspace" class="headerlink" title="5. Metaspace"></a>5. Metaspace</h2><p>发生频率：3颗星</p>
 <p>造成原因<br>从 Java 8 开始 Perm gen 改成了 Metaspace，在本机内存中分配 class 元数据（称为 metaspace）。如果 metaspace 耗尽，则抛出异常</p>
 <p>解决方案<br>通过命令行设置 -XX: MaxMetaSpaceSize 增加 metaspace 大小<br>取消 -XX: maxmetsspacedize<br>减小 Java 堆大小,为 MetaSpace 提供更多的可用空间<br>为服务器分配更多的内存<br>可能是应用程序 bug，修复 bug</p>
-<ol start="6">
-<li>无法新建本机线程</li>
-</ol>
-<p>发生频率：5颗星</p>
+<h2 id="6-无法新建本机线程"><a href="#6-无法新建本机线程" class="headerlink" title="6. 无法新建本机线程"></a>6. 无法新建本机线程</h2><p>发生频率：5颗星</p>
 <p>造成原因<br>内存不足，无法创建新线程。由于线程在本机内存中创建，报告这个错误表明本机内存空间不足</p>
 <p>解决方案<br>为机器分配更多的内存<br>减少 Java 堆空间<br>修复应用程序中的线程泄漏。<br>增加操作系统级别的限制<br>ulimit -a<br>用户进程数增大 (-u) 1800<br>使用 -Xss 减小线程堆栈大小</p>
-<ol start="7">
-<li>杀死进程或子进程</li>
-</ol>
-<p>发生频率：1颗星</p>
+<h2 id="7-杀死进程或子进程"><a href="#7-杀死进程或子进程" class="headerlink" title="7. 杀死进程或子进程"></a>7. 杀死进程或子进程</h2><p>发生频率：1颗星</p>
 <p>造成原因<br>内核任务：内存不足结束器，在可用内存极低的情况下会杀死进程</p>
 <p>解决方案<br>将进程迁移到不同的机器上<br>给机器增加更多内存</p>
 <p>与其他 OOM 错误不同，这是由操作系统而非 JVM 触发的。</p>
-<ol start="8">
-<li>发生 stack_trace_with_native_method</li>
-</ol>
-<p>发生频率：1颗星</p>
+<h2 id="8-发生-stack-trace-with-native-method"><a href="#8-发生-stack-trace-with-native-method" class="headerlink" title="8. 发生 stack_trace_with_native_method"></a>8. 发生 stack_trace_with_native_method</h2><p>发生频率：1颗星</p>
 <p>造成原因<br>本机方法（native method）分配失败<br>打印的堆栈跟踪信息，最顶层的帧是本机方法</p>
 <p>解决方案<br>使用操作系统本地工具进行诊断</p>
 <p>来自：唐尤华<br><a href="https://bloggceasy.files.wordpress.com/2015/05/outofmemoryerror2.pdf" target="_blank" rel="noopener">https://bloggceasy.files.wordpress.com/2015/05/outofmemoryerror2.pdf</a></p>
@@ -884,11 +857,11 @@ Java 堆空间
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">“爱因斯坦说“要是乱糟糟的桌面意味着杂乱无章的脑袋，那空白桌面意味着什么呢？”
-1
+
 似乎很多在某些领域拥有天赋的人都不喜欢干净整洁的桌面，包括乔布斯和扎克伯格也是，甚至有的人一看到整洁的桌面就会感到一阵惶恐，想马上弄乱。
-2
-3
-慢慢的，杂</div>
+
+
+慢慢的，杂乱无章</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-17
