@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-06-03T08:38:09.699Z</updated>
+  <updated>2019-06-04T09:32:27.159Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -17,11 +17,91 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>为什么培训班出来的程序员总遭人嫌弃？</title>
+    <link href="http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
+    <id>http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</id>
+    <published>2019-05-22T02:39:50.000Z</published>
+    <updated>2019-06-04T09:32:27.159Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。&lt;br&gt;于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Eclipse 最常用的 10 组快捷键，个个牛逼！</title>
+    <link href="http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/"/>
+    <id>http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</id>
+    <published>2019-05-22T02:39:50.000Z</published>
+    <updated>2019-06-04T09:28:29.290Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。&lt;/p&gt;
+&lt;h3 id=&quot;1、打开资源&quot;&gt;&lt;a href=&quot;#1、打开资源&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL 到底是怎么解决幻读的？</title>
+    <link href="http://chenguoji.com/2019/05/21/mysql-dao-di-shi-zen-me-jie-jue-huan-du-de/"/>
+    <id>http://chenguoji.com/2019/05/21/mysql-dao-di-shi-zen-me-jie-jue-huan-du-de/</id>
+    <published>2019-05-21T02:39:50.000Z</published>
+    <updated>2019-06-04T06:12:45.721Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、什么是幻读&quot;&gt;&lt;a href=&quot;#一、什么是幻读&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>困扰我多年的Java泛型&lt;? extends T&gt; 和 &lt;? super T&gt;，终于搞清楚了！</title>
     <link href="http://chenguoji.com/2019/05/20/kun-rao-wo-duo-nian-de-java-fan-xing-extends-t-he-super-t-zhong-yu-gao-qing-chu-liao/"/>
     <id>http://chenguoji.com/2019/05/20/kun-rao-wo-duo-nian-de-java-fan-xing-extends-t-he-super-t-zhong-yu-gao-qing-chu-liao/</id>
     <published>2019-05-20T02:39:50.000Z</published>
-    <updated>2019-06-03T08:38:09.699Z</updated>
+    <updated>2019-06-03T10:06:12.944Z</updated>
     
     <summary type="html">
     
@@ -30,6 +110,32 @@
         
         
           &lt;h1 id=&quot;一、为什么要用通配符和边界？&quot;&gt;&lt;a href=&quot;#一、为什么要用通配符和边界？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 诞生日，Java 24 岁了！</title>
+    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
+    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
+    <published>2019-05-19T02:39:50.000Z</published>
+    <updated>2019-05-30T03:22:41.956Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
         
       
     
@@ -66,32 +172,6 @@
     
     
       <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 诞生日，Java 24 岁了！</title>
-    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
-    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
-    <published>2019-05-19T02:39:50.000Z</published>
-    <updated>2019-05-30T03:22:41.956Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
   </entry>
   
@@ -424,32 +504,6 @@
   </entry>
   
   <entry>
-    <title>965 是一种生活态度，996 也是</title>
-    <link href="http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
-    <id>http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</id>
-    <published>2019-05-07T02:39:50.000Z</published>
-    <updated>2019-05-07T05:16:13.220Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。&lt;br&gt;在今天的大多数看来，在一家公司里待满 5
-        
-      
-    
-    </summary>
-    
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-    
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
     <link href="http://chenguoji.com/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
     <id>http://chenguoji.com/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</id>
@@ -477,11 +531,11 @@
   </entry>
   
   <entry>
-    <title>宁南山：说下996</title>
-    <link href="http://chenguoji.com/2019/05/07/ning-nan-shan-shuo-xia-996/"/>
-    <id>http://chenguoji.com/2019/05/07/ning-nan-shan-shuo-xia-996/</id>
+    <title>965 是一种生活态度，996 也是</title>
+    <link href="http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
+    <id>http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</id>
     <published>2019-05-07T02:39:50.000Z</published>
-    <updated>2019-05-07T08:03:18.670Z</updated>
+    <updated>2019-05-07T05:16:13.220Z</updated>
     
     <summary type="html">
     
@@ -489,10 +543,7 @@
       
         
         
-          &lt;p&gt;作者：宁南山&lt;/p&gt;
-&lt;p&gt;一个国家，少数优秀人士和少数头部企业拼命干活就可以了，&lt;/p&gt;
-&lt;p&gt;一个是因为这个世界的经济竞争还是很残酷，中国要在不同行业赶超欧美，如果连精英人物和龙头企业都下午五点就下班，赶超不知道什么时候才能完成，甚至说永远不能完成。&lt;/p&gt;
-&lt;p&gt;你技
+          &lt;p&gt;996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。&lt;br&gt;在今天的大多数看来，在一家公司里待满 5
         
       
     
@@ -502,59 +553,6 @@
     
     
       <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>花了 2 亿多，等了近 2 年，结果连个可用的网站都没有</title>
-    <link href="http://chenguoji.com/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/"/>
-    <id>http://chenguoji.com/2019/05/06/hua-liao-2-yi-duo-deng-liao-jin-2-nian-jie-guo-lian-ge-ke-yong-de-wang-zhan-du-mei-you/</id>
-    <published>2019-05-06T08:39:50.000Z</published>
-    <updated>2019-05-06T09:30:25.526Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;有个国外匿名吐槽网站，名字叫 Clients From Hell，意思就是来自地狱的客户。程序员和设计师们纷纷晒出自己经历过的奇葩客户。我们以前翻过上面的一些案例，比如：&lt;/p&gt;
-&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="网站" scheme="http://chenguoji.com/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    
-      <category term="网站" scheme="http://chenguoji.com/tags/%E7%BD%91%E7%AB%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>趣图：外包的真相</title>
-    <link href="http://chenguoji.com/2019/05/06/qu-tu-wai-bao-de-zhen-xiang/"/>
-    <id>http://chenguoji.com/2019/05/06/qu-tu-wai-bao-de-zhen-xiang/</id>
-    <published>2019-05-06T02:39:50.000Z</published>
-    <updated>2019-05-06T08:42:03.079Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="趣图" scheme="http://chenguoji.com/categories/%E8%B6%A3%E5%9B%BE/"/>
-    
-    
-      <category term="趣图" scheme="http://chenguoji.com/tags/%E8%B6%A3%E5%9B%BE/"/>
     
   </entry>
   
