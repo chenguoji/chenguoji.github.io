@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-06-04T09:32:27.159Z</updated>
+  <updated>2019-06-10T01:55:52.323Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>为什么培训班出来的程序员总遭人嫌弃？</title>
-    <link href="http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
-    <id>http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</id>
-    <published>2019-05-22T02:39:50.000Z</published>
-    <updated>2019-06-04T09:32:27.159Z</updated>
+    <title>坑爹的 Java 可变参数，把我整得够惨。。</title>
+    <link href="http://chenguoji.com/2019/06/10/keng-die-de-java-ke-bian-can-shu-ba-wo-zheng-de-gou-can/"/>
+    <id>http://chenguoji.com/2019/06/10/keng-die-de-java-ke-bian-can-shu-ba-wo-zheng-de-gou-can/</id>
+    <published>2019-06-10T02:39:50.000Z</published>
+    <updated>2019-06-10T01:55:52.323Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,90 @@
       
         
         
-          &lt;p&gt;由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。&lt;br&gt;于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。&lt;/p&gt;
-&lt;h3
+          &lt;p&gt;最近在写一个功能点，用了 Java 中的可变参数，真是把我搞得够惨。。&lt;/p&gt;
+&lt;h2 id=&quot;什么是可变参数？&quot;&gt;&lt;a href=&quot;#什么是可变参数？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>想成为顶尖 Java 程序员？先过了下面这些问题！</title>
+    <link href="http://chenguoji.com/2019/06/09/xiang-cheng-wei-ding-jian-java-cheng-xu-yuan-xian-guo-liao-xia-mian-zhe-xie-wen-ti/"/>
+    <id>http://chenguoji.com/2019/06/09/xiang-cheng-wei-ding-jian-java-cheng-xu-yuan-xian-guo-liao-xia-mian-zhe-xie-wen-ti/</id>
+    <published>2019-06-09T02:39:50.000Z</published>
+    <updated>2019-06-10T02:05:21.691Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、数据结构与算法基础&quot;&gt;&lt;a href=&quot;#一、数据结构与算法基础&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>12 岁开始学编程，17 岁总结了 7 个重要教训！</title>
+    <link href="http://chenguoji.com/2019/06/08/12-sui-kai-shi-xue-bian-cheng-17-sui-zong-jie-liao-7-ge-chong-yao-jiao-xun/"/>
+    <id>http://chenguoji.com/2019/06/08/12-sui-kai-shi-xue-bian-cheng-17-sui-zong-jie-liao-7-ge-chong-yao-jiao-xun/</id>
+    <published>2019-06-08T02:39:50.000Z</published>
+    <updated>2019-06-10T02:08:32.118Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;以下为译文：&lt;/p&gt;
+&lt;p&gt;大家好，我名叫Alec，今年17岁，我从12岁起就开始学习 Web
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>七大排序算法精讲，图文+代码，超全！</title>
+    <link href="http://chenguoji.com/2019/06/01/qi-da-pai-xu-suan-fa-jing-jiang-tu-wen-dai-ma-chao-quan/"/>
+    <id>http://chenguoji.com/2019/06/01/qi-da-pai-xu-suan-fa-jing-jiang-tu-wen-dai-ma-chao-quan/</id>
+    <published>2019-06-01T02:39:50.000Z</published>
+    <updated>2019-06-05T05:29:44.214Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;排序的相关概念&lt;/p&gt;
+&lt;h2 id=&quot;排序的分类&quot;&gt;&lt;a href=&quot;#排序的分类&quot; class=&quot;headerlink&quot; title=&quot;排序的分类&quot;&gt;&lt;/a&gt;排序的分类&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;根据在排序过程中带排序的记录是否全部被放置在内存中，排序分为：
+
+ 
         
       
     
@@ -58,6 +140,33 @@
         
           &lt;p&gt;今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。&lt;/p&gt;
 &lt;h3 id=&quot;1、打开资源&quot;&gt;&lt;a href=&quot;#1、打开资源&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么培训班出来的程序员总遭人嫌弃？</title>
+    <link href="http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
+    <id>http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</id>
+    <published>2019-05-22T02:39:50.000Z</published>
+    <updated>2019-06-04T09:32:27.159Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。&lt;br&gt;于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。&lt;/p&gt;
+&lt;h3
         
       
     
@@ -123,32 +232,6 @@
   </entry>
   
   <entry>
-    <title>Java 诞生日，Java 24 岁了！</title>
-    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
-    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
-    <published>2019-05-19T02:39:50.000Z</published>
-    <updated>2019-05-30T03:22:41.956Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SQL Server 日期时间如何处理</title>
     <link href="http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/"/>
     <id>http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/</id>
@@ -176,11 +259,11 @@
   </entry>
   
   <entry>
-    <title>html中横线使用</title>
-    <link href="http://chenguoji.com/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
-    <id>http://chenguoji.com/2019/05/18/html-zhong-heng-xian-shi-yong/</id>
-    <published>2019-05-18T02:39:50.000Z</published>
-    <updated>2019-05-21T08:45:49.844Z</updated>
+    <title>Java 诞生日，Java 24 岁了！</title>
+    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
+    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
+    <published>2019-05-19T02:39:50.000Z</published>
+    <updated>2019-05-30T03:22:41.956Z</updated>
     
     <summary type="html">
     
@@ -188,17 +271,16 @@
       
         
         
-          &lt;pre&gt;&lt;code&gt;第一种：
-&amp;lt;hr style=&amp;quot; height:2px;border:none;border-top:2px dotted #185598;&amp;quot; /&amp;gt;  
+          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
         
       
     
     </summary>
     
-      <category term="html" scheme="http://chenguoji.com/categories/html/"/>
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
     
     
-      <category term="html" scheme="http://chenguoji.com/tags/html/"/>
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
   </entry>
   
@@ -225,6 +307,33 @@
     
     
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html中横线使用</title>
+    <link href="http://chenguoji.com/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
+    <id>http://chenguoji.com/2019/05/18/html-zhong-heng-xian-shi-yong/</id>
+    <published>2019-05-18T02:39:50.000Z</published>
+    <updated>2019-05-21T08:45:49.844Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;第一种：
+&amp;lt;hr style=&amp;quot; height:2px;border:none;border-top:2px dotted #185598;&amp;quot; /&amp;gt;  
+        
+      
+    
+    </summary>
+    
+      <category term="html" scheme="http://chenguoji.com/categories/html/"/>
+    
+    
+      <category term="html" scheme="http://chenguoji.com/tags/html/"/>
     
   </entry>
   
@@ -448,111 +557,6 @@
     
     
       <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库怎么分库分表，垂直？水平？</title>
-    <link href="http://chenguoji.com/2019/05/09/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/"/>
-    <id>http://chenguoji.com/2019/05/09/shu-ju-ku-zen-me-fen-ku-fen-biao-chui-zhi-shui-ping/</id>
-    <published>2019-05-09T02:39:50.000Z</published>
-    <updated>2019-05-14T03:06:17.782Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、数据库瓶颈&quot;&gt;&lt;a href=&quot;#一、数据库瓶颈&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot + MyBatis + Maven论坛内容管理系统源码</title>
-    <link href="http://chenguoji.com/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/"/>
-    <id>http://chenguoji.com/2019/05/08/spring-boot-mybatis-maven-lun-tan-nei-rong-guan-li-xi-tong-yuan-ma/</id>
-    <published>2019-05-08T03:39:50.000Z</published>
-    <updated>2019-05-08T02:50:58.331Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;毕设描述&quot;&gt;&lt;a href=&quot;#毕设描述&quot; class=&quot;headerlink&quot; title=&quot;毕设描述&quot;&gt;&lt;/a&gt;毕设描述&lt;/h1&gt;&lt;p&gt;xxxForum是一个基于Spring Boot + MyBatis +
-        
-      
-    
-    </summary>
-    
-      <category term="毕业设计" scheme="http://chenguoji.com/categories/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="毕业设计" scheme="http://chenguoji.com/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
-    <link href="http://chenguoji.com/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
-    <id>http://chenguoji.com/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</id>
-    <published>2019-05-07T02:39:50.000Z</published>
-    <updated>2019-05-07T02:29:54.698Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？&lt;br&gt;今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？&lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>965 是一种生活态度，996 也是</title>
-    <link href="http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
-    <id>http://chenguoji.com/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</id>
-    <published>2019-05-07T02:39:50.000Z</published>
-    <updated>2019-05-07T05:16:13.220Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。&lt;br&gt;在今天的大多数看来，在一家公司里待满 5
-        
-      
-    
-    </summary>
-    
-      <category term="程序猿" scheme="http://chenguoji.com/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
-    
-    
-      <category term="程序猿" scheme="http://chenguoji.com/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
     
   </entry>
   

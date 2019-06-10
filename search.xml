@@ -4,11 +4,86 @@
   
     
     <entry>
-      <title>为什么培训班出来的程序员总遭人嫌弃？</title>
-      <link href="/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
-      <url>/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</url>
+      <title>坑爹的 Java 可变参数，把我整得够惨。。</title>
+      <link href="/2019/06/10/keng-die-de-java-ke-bian-can-shu-ba-wo-zheng-de-gou-can/"/>
+      <url>/2019/06/10/keng-die-de-java-ke-bian-can-shu-ba-wo-zheng-de-gou-can/</url>
       
-        <content type="html"><![CDATA[<p>由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。<br>于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。</p><h3 id="“0基础入学，三个月包就业”"><a href="#“0基础入学，三个月包就业”" class="headerlink" title="“0基础入学，三个月包就业”"></a>“0基础入学，三个月包就业”</h3><h3 id="“毕业月入不过万，不收学费”"><a href="#“毕业月入不过万，不收学费”" class="headerlink" title="“毕业月入不过万，不收学费”"></a>“毕业月入不过万，不收学费”</h3><h3 id="“从前是你找工作，接下来是工作找你”"><a href="#“从前是你找工作，接下来是工作找你”" class="headerlink" title="“从前是你找工作，接下来是工作找你”"></a>“从前是你找工作，接下来是工作找你”</h3><h3 id="真是人有多大胆，口号就有多不要脸。"><a href="#真是人有多大胆，口号就有多不要脸。" class="headerlink" title="真是人有多大胆，口号就有多不要脸。"></a>真是人有多大胆，口号就有多不要脸。</h3><p>对于迫切想改变自己境遇的人来说，这些口号无疑是很具诱惑力的。在培训机构的宣传下，好像软件开发行业是一个门槛低，收入高，只要几个月的培训就可以月入过万，实现人生理想的好职业。</p><p>可现实是越来越多的企业不想招，甚至明言不招培训班出来的学生。而不少培训班也会教学生隐瞒自己的培训经历，会教学生面试的技巧，包装简历，虚报学历和工作经历，把学生包装成一个具有两年项目开发经验的软件工程师，而且开价往往都不低，动不动就8k以上…</p><h3 id="为什么会被嫌弃"><a href="#为什么会被嫌弃" class="headerlink" title="为什么会被嫌弃"></a>为什么会被嫌弃</h3><p>培训班出身的学生被嫌弃的原因主要有以下几个：</p><p>计算机基础知识极其薄弱，基本上只是会简单的业务逻辑，懂得基本的增删改查，自学能力弱，在短期培训过程中，接收的是填鸭式的教育，即使讲师的教学水平极高，学生极努力，也不可能在短时间内将这些知识消化，大多数只是一知半解，知道有这么个概念罢了，面试时也许可以做到应答自如，可实操能力极弱。而且习惯的是视频式的、类似于手把手教学的模式。对于新知识的自学能力是很差的，看文档的能力很弱。</p><p>开价高，心浮气躁。大多数参加培训的都不是学计算机专业的。有些甚至以前连电脑都没怎么用过，连打字都很慢。这些人之所以去培训，是因为在原行业混得不好，又听说it行业工资高，才转行过去。</p><p>有这种心态的人，做哪个行业都很难有成就，但别说在it行业，要做好软件开发，专注、执着、认真是必备的素质。为钱而来的还是请退场吧。你们把因果关系颠倒了。不是it行业高薪，而是因为专注于这个行业，才高薪。那些靠混的，凭借着互联网热潮上位的，是有可能混到一份不错的offer，可不会长久。</p><h3 id="你弱你还有理了"><a href="#你弱你还有理了" class="headerlink" title="你弱你还有理了"></a>你弱你还有理了</h3><p>有些人因为培训班的身份被拒还很委屈，认为企业对他们有歧视。在此，引用时下热门的句式：“你弱，你还有理了”。</p><p>你弱，你还有理了。</p><p>不否认，有些人虽然是培训班出身，但很优秀，可这个占比太小了。对于企业用人部门来说，他们不值得去为此而冒险，优秀的企业在招人时是很慎重的，招一个人的成本也是相当高，企业招一个人肯定会综合衡量利弊。尤其是软件开发行业，优秀与平庸的人相差太多了，效率上可能相差十倍以上。</p><p>一个优秀的程序员写出诗一样的代码，一个平庸的写出的是屎一样的代码。不仅不可用，还会对整个项目起到污染，连累他人擦屁股。</p><p>换位思考，当你处于企业用人单位的角色，你也不会选择冒险去招培训班出身人的，宁愿多花时间，提高offer去招更有可能是靠谱的人。</p><p>毕竟，好的程序员是写代码，差的程序员是写bug…</p><h3 id="别以为自己真有两年经验"><a href="#别以为自己真有两年经验" class="headerlink" title="别以为自己真有两年经验"></a>别以为自己真有两年经验</h3><p>千万别相信讲师给你灌输的鬼话：“这几个月就已经让你们有两年的项目经验了”。</p><p>复制代码，跟实际经验完全不同！</p><p>那几个月，你学到的只是知识，只是最基础的知识，你并没有得到半点经验！经验是不可能靠他人传授的，因为自己经历过才算得上是经验！没有经历过项目deadline，没有被莫名其妙的bug弄得焦头烂额，没有真正的团队合作经历，就够那几个月复制讲师的代码，就说自己有两年的开发经验了。</p><h3 id="打铁还需自身硬"><a href="#打铁还需自身硬" class="headerlink" title="打铁还需自身硬"></a>打铁还需自身硬</h3><p>那么是不是培训班出身的人就没有机会了？</p><p>当然不是，出身不好，起点差都不代表着前面的路就被堵死了。前面说了那么多嫌弃的话，主要是要让你认识到自己为什么会被嫌弃，而不是以受害者的心态自怨自艾（“受害者心态无济于事”）。</p><p>以下是对于真正想从事软件开发行业的人提供的建议：</p><p>认清自己的能力，不骄狂自大：因为你真的很弱。不妄自菲薄：因为每个人都是从弱小中成长的。认清自己的能力，是成长的第一步。</p><p>尽快摆脱填鸭式教育带来的被动学习方式。诚然，几个月的学习对于新人来说，是极其高效的，能以最快的速度踏入编程的门槛。但绝不能再依赖培训班的学习方式，要知道，你是毕业了，但对于软件开发，你的路还是刚开始，往后的学习是以看文档、看书、搜索资料为主。现在开始就要改变自己的学习习惯，认真地看书，你会发现，那些原本你以为自己懂了的知识，在看书后，才知道自己原先的认知是多么浅薄。</p><p>证明自己的能力。程序员证明自己能力最简单的方式就是代码。“Talk is cheap, Show me the code”. 从现在开始，你就要养成输出知识的习惯，可以是写技术博客，也可以是构建个人网站，把这些作品展示出来，现在免费的展示平台那么多，你一定要长久地积累，这些就是你最好的简历。</p><p>忘记自己是从培训班出来的，把自己当成一个自学者。优秀的程序员都是野生的，培训班出来的是只是宠物，面试时不用提你培训的经历，虽然这并不丢人，但可能会带来偏见。只要你能展示你的作品，表现你的自学能力，而你自身的能力又过关，其实不管你是什么出身，都无关紧要。（我自己就是文科出身，毕业前连半句代码都看不懂）</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>嫌弃的不是你的出身，而是你的综合素养。</p><p>总之，出身差，就靠实力，实力差，就靠态度。你之所以会被嫌弃，不是因为你来自培训班，而是因为你没有摆脱培训班，没有构建自己的知识体系。当然，这些积累是需要长时间的，所以慢慢来，只要你不是奔着钱来的，你总能找到工作，也总能得到成长。</p><p>作者：塞亚猫<br><a href="http://www.jianshu.com/p/a3f650d93216" target="_blank" rel="noopener">http://www.jianshu.com/p/a3f650d93216</a></p>]]></content>
+        <content type="html"><![CDATA[<p>最近在写一个功能点，用了 Java 中的可变参数，真是把我搞得够惨。。</p><h2 id="什么是可变参数？"><a href="#什么是可变参数？" class="headerlink" title="什么是可变参数？"></a>什么是可变参数？</h2><p>就是方法参数用 Object… args 三个点形式，一个参数可以接收多个参数。</p><p>实际的代码就不帖了，来看这个示例吧：</p><h2 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h2><pre><code>public static void main(String[] args) {    test(&quot;name=%s&amp;memo=%s&quot;, &quot;陈国际博客&quot;, &quot;666&quot;);}private static void test(String text, Object... params) {    String result = String.format(text, params);    System.out.println(result);}</code></pre><p>大家猜结果是什么？结果如我们想象：</p><pre><code>name=陈国际博客&amp;memo=666</code></pre><h2 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h2><pre><code>public static void main(String[] args) {    test(&quot;name=%s&amp;memo=%s&quot;, &quot;陈国际博客&quot;);}private static void test(String text, Object... params) {    String result = String.format(text, params, &quot;666&quot;);    System.out.println(result);}</code></pre><p>我把 “666” 移到了子方法里面，放到了 format 最后，再来看下结果是什么。</p><pre><code>name=[Ljava.lang.Object;@4cb2c100&amp;memo=666</code></pre><p>这并非是我想要的结果，把可变参数 params 数组对象地址作为值输出出来了，把我搞得够惨，最后我干掉了可变参数。。</p><p>JDK里面很多有用到可变参数的，可实际开发中，并不建议使用可变参考，它带来的困扰和潜在的问题会远大于便利性，比如在方法重构、重写等也会带来很多问题。</p><p>关于可变参数，也是有开发规范的，不能随便写。我找到了阿里巴巴的《Java开发手册》中关于可变参数的规约。</p><pre><code>相同参数类型，相同业务含义，才可以使用 Java 的可变参数，避免使用 Object 。说明：可变参数必须放置在参数列表的最后。 （ 提倡同学们尽量不用可变参数编程 ）正例： public ListlistUsers(String type, Long… ids) {…}</code></pre><p>阿里巴巴也是不建议大家合作可变参数的，可知它带来的坑会有多坑。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>想成为顶尖 Java 程序员？先过了下面这些问题！</title>
+      <link href="/2019/06/09/xiang-cheng-wei-ding-jian-java-cheng-xu-yuan-xian-guo-liao-xia-mian-zhe-xie-wen-ti/"/>
+      <url>/2019/06/09/xiang-cheng-wei-ding-jian-java-cheng-xu-yuan-xian-guo-liao-xia-mian-zhe-xie-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、数据结构与算法基础"><a href="#一、数据结构与算法基础" class="headerlink" title="一、数据结构与算法基础"></a>一、数据结构与算法基础</h1><pre><code>1、说一下几种常见的排序算法和分别的复杂度。2、用Java写一个冒泡排序算法3、描述一下链式存储结构。4、如何遍历一棵二叉树？5、倒排一个LinkedList。6、用Java写一个递归遍历目录下面的所有文件。</code></pre><h1 id="二、Java基础"><a href="#二、Java基础" class="headerlink" title="二、Java基础"></a>二、Java基础</h1><pre><code>接口与抽象类的区别？Java中的异常有哪几类？分别怎么使用？常用的集合类有哪些？比如List如何排序？ArrayList和LinkedList内部的实现大致是怎样的？他们之间的区别和优缺点？内存溢出是怎么回事？请举一个例子？==和equals的区别？hashCode方法的作用？NIO是什么？适用于何种场景？HashMap实现原理，如何保证HashMap的线程安全？JVM内存结构，为什么需要GC？NIO模型，select/epoll的区别，多路复用的原理Java中一个字符占多少个字节，扩展再问int, long, double占多少字节创建一个类的实例都有哪些办法？final/finally/finalize的区别？Session/Cookie的区别？String/StringBuffer/StringBuilder的区别，扩展再问他们的实现？Servlet的生命周期？如何用Java分配一段连续的1G的内存空间？需要注意些什么？Java有自己的内存回收机制，但为什么还存在内存泄露的问题呢？什么是java序列化，如何实现java序列化?(写一个实例)？String s = new String(&quot;abc&quot;);创建了几个 String Object?</code></pre><h1 id="三、JVM"><a href="#三、JVM" class="headerlink" title="三、JVM"></a>三、JVM</h1><pre><code>JVM堆的基本结构。JVM的垃圾算法有哪几种？CMS垃圾回收的基本流程？JVM有哪些常用启动参数可以调整，描述几个？如何查看JVM的内存使用情况？Java程序是否会内存溢出，内存泄露情况发生？举几个例子。你常用的JVM配置和调优参数都有哪些？分别什么作用？JVM的内存结构？常用的GC策略，什么时候会触发YGC，什么时候触发FGC？</code></pre><p>四、多线程/并发</p><pre><code>如何创建线程？如何保证线程安全？如何实现一个线程安全的数据结构如何避免死锁Volatile关键字的作用？HashMap在多线程环境下使用需要注意什么？为什么？Java程序中启动一个线程是用run()还是start()？什么是守护线程？有什么用？什么是死锁？如何避免线程和进程的差别是什么？Java里面的Threadlocal是怎样实现的？ConcurrentHashMap的实现原理是？sleep和wait区别notify和notifyAll区别volatile关键字的作ThreadLocal的作用与实现两个线程如何串行执行上下文切换是什么含义可以运行时kill掉一个线程吗？什么是条件锁、读写锁、自旋锁、可重入锁？线程池ThreadPoolExecutor的实现原理？</code></pre><h1 id="五、Linux使用与问题分析排查"><a href="#五、Linux使用与问题分析排查" class="headerlink" title="五、Linux使用与问题分析排查"></a>五、Linux使用与问题分析排查</h1><pre><code>使用两种命令创建一个文件？硬链接和软链接的区别？Linux常用命令有哪些？怎么看一个Java线程的资源耗用？Load过高的可能性有哪些？/etc/hosts文件什么做用？如何快速的将一个文本中所有“abc”替换为“xyz”？如何在log文件中搜索找出error的日志？发现磁盘空间不够，如何快速找出占用空间最大的文件？Java服务端问题排查（OOM，CPU高，Load高，类冲突）Java常用问题排查工具及用法（top, iostat, vmstat, sar, tcpdump, jvisualvm, jmap, jconsole）Thread dump文件如何分析（Runnable，锁，代码栈，操作系统线程ID关联）如何查看Java应用的线程信息？</code></pre><h1 id="六、框架使用"><a href="#六、框架使用" class="headerlink" title="六、框架使用"></a>六、框架使用</h1><pre><code>描述一下Hibernate的三个状态？Spring中Bean的生命周期。SpringMVC或Struts处理请求的流程。Spring AOP解决了什么问题？怎么实现的？Spring事务的传播属性是怎么回事？它会影响什么？Spring中BeanFactory和FactoryBean有什么区别？Spring框架中IOC的原理是什么？spring的依赖注入有哪几种方式struts工作流程用Spring如何实现一个切面？Spring 如何实现数据库事务？Hibernate对一二级缓存的使用，Lazy-Load的理解；mybatis如何实现批量提交？</code></pre><h1 id="七、数据库相关"><a href="#七、数据库相关" class="headerlink" title="七、数据库相关"></a>七、数据库相关</h1><pre><code>MySQL InnoDB、Mysaim的特点？乐观锁和悲观锁的区别？数据库隔离级别是什么？有什么作用？MySQL主备同步的基本原理。select * from table t where size &gt; 10 group by size order by size的sql语句执行顺序？如何优化数据库性能（索引、分库分表、批量操作、分页算法、升级硬盘SSD、业务优化、主从部署）SQL什么情况下不会使用索引（不包含，不等于，函数）一般在什么字段上建索引（过滤数据最多的字段）如何从一张表中查出name字段不包含“XYZ”的所有行？MySQL，B+索引实现，行锁实现，SQL优化Redis，RDB和AOF，如何做高可用、集群如何解决高并发减库存问题mysql存储引擎中索引的实现机制；数据库事务的几种粒度；行锁，表锁；乐观锁，悲观锁</code></pre><h1 id="八、网络协议和网络编程"><a href="#八、网络协议和网络编程" class="headerlink" title="八、网络协议和网络编程"></a>八、网络协议和网络编程</h1><pre><code>TCP建立连接的过程。TCP断开连接的过程。浏览器发生302跳转背后的逻辑？HTTP协议的交互流程。HTTP和HTTPS的差异，SSL的交互流程？Rest和Http什么关系？ 大家都说Rest很轻量，你对Rest风格如何理解？TCP的滑动窗口协议有什么用？讲讲原理。HTTP协议都有哪些方法？交换机和路由器的区别？Socket交互的基本流程？http协议（报文结构，断点续传，多线程下载，什么是长连接）tcp协议（建连过程，慢启动，滑动窗口，七层模型）webservice协议（wsdl/soap格式，与rest协议的区别）NIO的好处，Netty线程模型，什么是零拷贝</code></pre><h1 id="九、Redis等缓存系统-中间件-NoSQL-一致性Hash等"><a href="#九、Redis等缓存系统-中间件-NoSQL-一致性Hash等" class="headerlink" title="九、Redis等缓存系统/中间件/NoSQL/一致性Hash等"></a>九、Redis等缓存系统/中间件/NoSQL/一致性Hash等</h1><pre><code>列举一个常用的Redis客户端的并发模型。HBase如何实现模糊查询？列举一个常用的消息中间件，如果消息要保序如何实现？如何实现一个Hashtable？你的设计如何考虑Hash冲突？如何优化？分布式缓存，一致性hashLRU算法，slab分配，如何减少内存碎片如何解决缓存单机热点问题什么是布隆过滤器，其实现原理是？ False positive指的是？memcache与redis的区别zookeeper有什么功能，选举算法如何进行map/reduce过程，如何用map/reduce实现两个数据源的联合统计</code></pre><h1 id="十、设计模式与重构"><a href="#十、设计模式与重构" class="headerlink" title="十、设计模式与重构"></a>十、设计模式与重构</h1><pre><code>1、你能举例几个常见的设计模式2、你在设计一个工厂的包的时候会遵循哪些原则？3、你能列举一个使用了Visitor/Decorator模式的开源项目/库吗？4、你在编码时最常用的设计模式有哪些？在什么场景下用？5、如何实现一个单例？6、代理模式（动态代理）7、单例模式（懒汉模式，并发初始化如何解决，volatile与lock的使用）8、JDK源码里面都有些什么让你印象深刻的设计模式使用，举例看看？</code></pre><p>本套试题没有答案，仅提供给大家参考。</p><p>作者：rowkey<br><a href="https://zhuanlan.zhihu.com/p/31552882" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/31552882</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>12 岁开始学编程，17 岁总结了 7 个重要教训！</title>
+      <link href="/2019/06/08/12-sui-kai-shi-xue-bian-cheng-17-sui-zong-jie-liao-7-ge-chong-yao-jiao-xun/"/>
+      <url>/2019/06/08/12-sui-kai-shi-xue-bian-cheng-17-sui-zong-jie-liao-7-ge-chong-yao-jiao-xun/</url>
+      
+        <content type="html"><![CDATA[<p>以下为译文：</p><p>大家好，我名叫Alec，今年17岁，我从12岁起就开始学习 Web 编程开发了。我远非优秀的开发人员，但我学到了一些普通开发人员应该知晓的经验教训。</p><p>以下是我学到的一些经验教训，我认为每个开发人员，特别是新手，都应该了解这些经验教训。</p><h2 id="1、没有人无所不知"><a href="#1、没有人无所不知" class="headerlink" title="1、没有人无所不知"></a>1、没有人无所不知</h2><p>没有开发人员知道一切，所以你也不需要知道一切。</p><p>作为一名开发人员，你需要用心学习知识，例如在PHP 5.6版本中操作数组的方法，除此之外还有很多重要的技能需要掌握。是否知道这些小知识点无关紧要，即便忘了也可以上网搜索。</p><p>作为开发人员，很多技能远胜于学习这些微不足道的知识，例如：</p><pre><code>提高解决问题的能力提高团队合作和沟通技巧增加对编程概念和语言的了解创建优秀的项目来展示你的工作专注于编写整洁高效的代码</code></pre><p>成为开发人员的一个好处是你不需要知道一切。你只需要知道解决问题的方法。</p><h2 id="2、Bug有助于学习"><a href="#2、Bug有助于学习" class="headerlink" title="2、Bug有助于学习"></a>2、Bug有助于学习</h2><p>相信你们都听过《五只小猴子》的童谣，下面是bug版的童谣：</p><p>99个Bug在代码里闹，</p><p>99个Bug在代码里闹，</p><p>打个补丁，把1个改掉。</p><p>127个bug在代码里闹……</p><p>如果你在编程的过程中没有遇到任何Bug，那么就意味着你什么都没学到。</p><p>没有遇到Bug并不意味着你是一位伟大的开发人员，你太聪明了，压根不会犯错。这只能说明类似的东西你开发过很多次，你已经知道如何避免这些Bug。</p><p>遇到Bug说明你成长了。开发中存在无穷无尽的Bug，因此你必须学会处理这些Bug，越快越好。</p><h2 id="3、没有必要接受正规的教育"><a href="#3、没有必要接受正规的教育" class="headerlink" title="3、没有必要接受正规的教育"></a>3、没有必要接受正规的教育</h2><p>17岁的我非常纠结这个问题。我应该上大学攻读计算机科学学位吗？</p><p>这对我来说是一个棘手的问题。但是，大多数读这篇文章的人可能不是17岁，可能你们大多数人已经工作了。</p><p>如果你大学毕业，那么绝对没必要再回去攻读计算机科学学位。你也不需要参加编程培训班。</p><p>GitHub中一些有趣的项目可以为你代言。如果你能够证明自己拥有编程的能力，那么你的背景并不重要。</p><p>这只是一个如何通过最佳方式学习的问题。</p><p>我没得选，只能在周末学习编程，因为我不能在高中期间请6个星期的假去参加培训班。</p><p>如果你想回到大学攻读计算机科学学位，或参加为期8周的培训班，那尽管去吧。但这没有必要。</p><h2 id="4、上网搜索也是一门技术"><a href="#4、上网搜索也是一门技术" class="headerlink" title="4、上网搜索也是一门技术"></a>4、上网搜索也是一门技术</h2><p>如果你想成为一名出色的开发人员，那么就需要加强上网搜索的能力。能够找到你所需要的解决方案和代码至关重要。</p><p>你需要频繁地上网搜索，尤其是在学习一种全新的技术的时候。</p><p>有时，你需要将一些不明的东西添加到代码中。有时，你需要找到一个不太理解的问题的解决方案。但好消息是，网上都有答案。</p><h2 id="5、勤思考"><a href="#5、勤思考" class="headerlink" title="5、勤思考"></a>5、勤思考</h2><p>在编写代码的时候，你需要思考：“如何才能用最好的方式编写这段代码？”</p><p>这方面我做的并不好，所以经常写出水平很次的解决方案。通常，一旦脑海中涌现某个解决方案，我就会立即动手写出来。大多数时候，问题的第一个解决方案并不是最好的。</p><p>写代码无需花费太多时间。任何人都可以快速地编写代码，但结果往往很草率。你需要花时间想出一个优秀、稳定的解决方案。</p><p>测试驱动可能很无聊，但是它能够极大地推动你勤思考，因为你必须考虑清楚期望的功能以及实现方式。如果你提前做计划，就无法动手写代码了。</p><p>当然，凡事都有例外。我并不是说你应该安静地坐下来仔细考虑每一行代码。</p><p>然而，勤思考能够为你省却重构和改bug的时间。</p><h2 id="6、当心网上的教程"><a href="#6、当心网上的教程" class="headerlink" title="6、当心网上的教程"></a>6、当心网上的教程</h2><p>刚开始学习编程时，可以从网上找一些教程，但我认为你应该利用的资源远不止这些教程。</p><p>当你按照教程学习编程时，实际上可能什么都学不到。虽然你可能学到了一些知识，但你并没有真正明白自己编写的代码以及这样做的原因。</p><p>此外，这些教程还可能会漏掉一些重要的代码。初学者更喜欢直接从教程中复制和粘贴代码，而不会认真思考问题。</p><p>一种更好的学习编程的方式是构建自己的项目。找到一小段代码，然后自己编写代码、解决bug、阅读文章和帖子。</p><p>最有效的学习方法是东拼西凑出一个能够运行的程序。</p><h2 id="7、制表符比空格好"><a href="#7、制表符比空格好" class="headerlink" title="7、制表符比空格好"></a>7、制表符比空格好</h2><p>读这篇文章的时候，你肯定在想：“很明显，这个小孩肯定喜欢使用空格。”非也，每个人都应该在编程的时候，使用制表符。</p><p>我明白，每台计算机上的制表符可能不尽相同。但是，你只需要轻轻敲下制表符就好，而无需哐当哐当地敲打空格键。努力成为喜欢制表符的人吧！</p><p>感谢你阅读本文中介绍的简单而重要的经验教训。如果你有不同的看法，请在下方留言。</p><p>原文：<a href="https://www.freecodecamp.org/news/7-important-lessons-about-programming-that-ive-learned-at-17-516ae619686/" target="_blank" rel="noopener">https://www.freecodecamp.org/news/7-important-lessons-about-programming-that-ive-learned-at-17-516ae619686/</a><br>作者：Alec Jones，译：弯月，责编：屠敏<br>译文：CSDN（ID：CSDNnews）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>七大排序算法精讲，图文+代码，超全！</title>
+      <link href="/2019/06/01/qi-da-pai-xu-suan-fa-jing-jiang-tu-wen-dai-ma-chao-quan/"/>
+      <url>/2019/06/01/qi-da-pai-xu-suan-fa-jing-jiang-tu-wen-dai-ma-chao-quan/</url>
+      
+        <content type="html"><![CDATA[<p>排序的相关概念</p><h2 id="排序的分类"><a href="#排序的分类" class="headerlink" title="排序的分类"></a>排序的分类</h2><pre><code>根据在排序过程中带排序的记录是否全部被放置在内存中，排序分为：    内排序    外排序</code></pre><h3 id="1-内排序"><a href="#1-内排序" class="headerlink" title="1.内排序"></a>1.内排序</h3><p>内排序是在排序整个过程中，带排序的所有记录全部放置在内存中。</p><p>影响内排序的主要因素</p><pre><code>时间性能。(主要受比较和移动两种操作的影响）辅助空间。算法的复杂性。内排序的分类</code></pre><p>根据排序过程中借助的主要操作，内排序分为：</p><pre><code>插入排序交换排序选择排序归并排序</code></pre><h3 id="2-外排序"><a href="#2-外排序" class="headerlink" title="2.外排序"></a>2.外排序</h3><p>外排序是由于排序的记录个数太多，不能同时放置在内存中，整个排序过程需要在内外存之间多次交换数据才能进行。</p><p>按照算法的复杂度分类</p><p>简单算法：</p><pre><code>冒泡排序、简单选择排序、直接插入排序。</code></pre><p>复杂排序：</p><pre><code>希尔排序、堆排序、归并排序、快速排序。</code></pre><h2 id="一、冒泡排序算法"><a href="#一、冒泡排序算法" class="headerlink" title="一、冒泡排序算法"></a>一、冒泡排序算法</h2><p>因为在冒泡排序中要用到顺序表结构和数组两元素的交换，先把这些写成函数</p><pre><code>#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#define MAXSIZE 100#define TRUE 1#define FALSE 0typedef struct {    int r[MAXSIZE + 1];    int length;}SqList;void swap(SqList *L, int i, int j){    int temp = L-&gt;r[i];    L-&gt;r[i] = L-&gt;r[j];    L-&gt;r[j] = temp;}</code></pre><h3 id="1-1-冒泡排序的初级版实现"><a href="#1-1-冒泡排序的初级版实现" class="headerlink" title="1.1 冒泡排序的初级版实现"></a>1.1 冒泡排序的初级版实现</h3><p>冒泡排序（Bubble Sort）是一种交换排序，它的基本思想是：两两比较相邻记录的关键字，如果反序则交换，直到没有反序的记录为止。</p><pre><code>void BubblSort0(SqList *L){    int i,j;    for (i = 1; i &lt; L-&gt;length; i++)        for (j = i+1; j &lt;= L-&gt;length; j++)            if (L-&gt;r[i] &gt; L-&gt;r[j])                swap(L, i, j);}</code></pre><p>对于这段代码，是最简单的冒泡，其实就是最简单的交换排序而已。它的思路就是让每一个关键字，都和它后面的每一个关键字比较，如果大则交换，这样第一位置的关键字在第一次循环后一定变成最小值。</p><p>假设我们待排序的关键字序列是{9，1，5，8，3，7，4，6，2}</p><p>当i = 1时，9与1交换后，在第一位置的1与后面的关键字比较都小，因此它就只最小值。</p><p>当i = 2时，第二位置先后由9换成5，换成3，换成2，完成了第二小的数字交换。</p><p>后面数字依次比较和交换，得到最终结果。</p><img src="/2019/06/01/qi-da-pai-xu-suan-fa-jing-jiang-tu-wen-dai-ma-chao-quan/1.jpg"><h3 id="1-2-冒泡排序的实现"><a href="#1-2-冒泡排序的实现" class="headerlink" title="1.2 冒泡排序的实现"></a>1.2 冒泡排序的实现</h3><p>对于上面的算法，代码虽然简单易懂，但是效率非常低。可以改进成接下来的代码</p><pre><code>void BubbleSort(SqList *L){    int i,j;    for (i = 1; i &lt; L-&gt;length; i++)        for (j = L-&gt;length - 1; j &gt;= i; j--)            if (L-&gt;r[j] &gt; L-&gt;r[j+1])                swap(L, j, j+1);}</code></pre><p>代码解释</p><p>假设我们待排序的关键字序列是{9，1，5，8，3，7，4，6，2}</p><pre><code>当i = 1时，变量j由8反向循环到1，逐个比较，将较小值交换到前面，直到最后找到最小值放置在了第1的位置。当i = 1、 j = 8时，6 &gt; 2 ，因此交换了它们的位置，j = 7时，4 &gt; 2， 所以交换......直到j = 2时，因为 1 &lt; 2， 所以不交换。j = 1 时，9 &gt; 1，交换，最终得到最小值1放置第一的位置。在不断循环的过程中，除了将关键字1放到第一的位置，还将关键字2从第九位置提到了第三的位置，显然比前面的算法有进步。当i = 2时，变量j由8反向循环到2，逐个比较，在将关键字2交换到第二位置的同时，也将关键字4和3有所提升。</code></pre><h3 id="1-3-冒泡排序的优化"><a href="#1-3-冒泡排序的优化" class="headerlink" title="1.3 冒泡排序的优化"></a>1.3 冒泡排序的优化</h3><p>在排序的过程中，增加一个标记变量flag来记录位置是否发生了变化</p><p>如果没有发生交换，说明数组已经有序了。</p><pre><code>void BubbleSort1(SqList *L){    int i,j;    int flag = TRUE;    for (i = 1; i &lt; L-&gt;length &amp;&amp; flag; i++) {        flag = FALSE;        for (j = L-&gt;length - 1; j &gt;= i; j--) {            if (L-&gt;r[j] &gt; L-&gt;r[j+1]) {                swap(L, j, j+1);                flag = TRUE;            }        }    }}</code></pre><p>测试</p><pre><code>#define N 9int main(int argc, const char * argv[]) {    int i;    int d[N] = {9,1,5,8,3,7,4,6,2};    SqList l0;    for (i = 0; i &lt; N; i++)        l0.r[i+1] = d[i];    l0.length = N;    printf(&quot;排序前：\n&quot;);    for (i = 0; i &lt; l0.length; i++) {        printf(&quot;%d &quot;, l0.r[i+1]);    }    printf(&quot;\n&quot;);    printf(&quot;1.0 初级冒泡排序结果:\n&quot;);    BubblSort0(&amp;l0);    for (i = 0; i &lt; l0.length; i++) {        printf(&quot;%d &quot;, l0.r[i+1]);    }    printf(&quot;\n&quot;);    printf(&quot;1.1 冒泡排序结果:\n&quot;);    BubbleSort(&amp;l0);    for (i = 0; i &lt; l0.length; i++) {        printf(&quot;%d &quot;, l0.r[i+1]);    }    printf(&quot;\n&quot;);    printf(&quot;1.2 优化后冒泡排序结果:\n&quot;);    BubbleSort1(&amp;l0);    for (i = 0; i &lt; l0.length; i++) {        printf(&quot;%d &quot;, l0.r[i+1]);    }    printf(&quot;\n&quot;);    return 0;}</code></pre><p>测试结果</p><img src="/2019/06/01/qi-da-pai-xu-suan-fa-jing-jiang-tu-wen-dai-ma-chao-quan/2.jpg"><h2 id="二、简单选择排序"><a href="#二、简单选择排序" class="headerlink" title="二、简单选择排序"></a>二、简单选择排序</h2><p>简单选择排序法(Simple Selection Sort)是通过n-i次关键字间的比较，从n-i+1个记录中选出关键字最小的记录，并和第i(1&lt;=i&lt;=n)个记录交换。</p><p>简单选择排序法的工作原理是：每一次从无序组的数据元素中选出最小（或最大）的一个元素，存放在无序组的起始位置，无序组元素减少，有序组元素增加，直到全部待排序的数据元素排完。</p><pre><code>void SelectSort(SqList *L){    int i, j, min;    for (i = 1; i &lt; L-&gt;length; i++) {        min = i;        for (j = i + 1; j &lt;= L-&gt;length; j++) {            if (L-&gt;r[min] &gt; L-&gt;r[j])                min = j;        }        if (i != min)              swap(L, i, min);    }}</code></pre><p>代码说明</p><pre><code>简单选择排序相对简单，交换移动数据的次数相当少，节约时间。简单选择排序的时间复杂度为O(n^2)。</code></pre><h2 id="三、直接插入排序"><a href="#三、直接插入排序" class="headerlink" title="三、直接插入排序"></a>三、直接插入排序</h2><p>直接插入排序(Straight Insertion Sort)的基本操作是将一个记录插入到已经排好序的有序表中，从而得到一个新的、记录增1的有序表。</p><p>直接插入排序的核心思想：将一个记录插入到一个已经排序好的表中，以得到一个记录增加1的有序表。并且它把当前元素大的记录都往后移动，用以腾出“自己”该插入的位置。当n-1趟插入完成后该记录就是有序序列。</p><pre><code>void InsertSort(SqList *L){    int i, j;    for (i = 2; i &lt; L-&gt;length; i++) {        if (L-&gt;r[i] &lt; L-&gt;r[i-1]) {            L-&gt;r[0] = L-&gt;r[i];            for (j = i-1; L-&gt;r[j] &gt; L-&gt;r[0]; j++)                L-&gt;r[j+1] = L-&gt;r[i];            L-&gt;r[j+1] = L-&gt;r[0];        }    }}</code></pre><p>代码说明</p><pre><code>直接插入排序的时间复杂度为O(n^2)。直接插入排序比冒泡和简单选择排序的性能要好一些。</code></pre><h2 id="四、希尔排序"><a href="#四、希尔排序" class="headerlink" title="四、希尔排序"></a>四、希尔排序</h2><p>希尔排序是对直接插入排序的改进：</p><pre><code>将原本有大量记录数的记录进行分组。分割成若干个子序列；对子序列分别进行直接插入排序；当整个序列都基本有序时（注意是基本有序），再对全体记录进行一次直接插入排序。所谓的基本有序，就是小的关键字基本在前，大的基本在后面，不大不小的基本在中间，如{9,1,5,8,3,7,5,6,2}，变成{2,1,3,6,4,7,8,9}这样就是基本有序，但是像{1,5,9,7,8,2,4,6}这样9在第三位，2在倒数第三位就不是基本有序。对于分割子序列，采取跳跃分割的策略：将相距某个“增量”的记录组成一个子序列，这样才能保证在子序列内分别进行直接插入排序后得到的结果是基本有序而不是局部有序。增量的选取非常关键，但是现在还是一个数学难题(迄今没有找到一种最好的增量序列),大量研究表明，增量序列为dlta[k] = 2^(t-k+1) - 1时，可以获得不错的效果。</code></pre><p>希尔排序的核心思想：希尔排序是把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止</p><pre><code>void ShellSort(SqList *L){    int i,j;    int increment = L-&gt;length;    do {        increment = increment /3 +1;        for (i = increment + 1; i &lt; L-&gt;length; i++) {            if (L-&gt;r[i] &lt; L-&gt;r[i-increment]) {                L-&gt;r[0] = L-&gt;r[i];                for (j = i - increment; i &gt;0 &amp;&amp; L-&gt;r[0] &lt; L-&gt;r[j]; j -= increment)                    L-&gt;r[j+increment] = L-&gt;r[j];                L-&gt;r[j+increment] = L-&gt;r[0];            }        }    } while (increment &gt; 1);}</code></pre><p>代码说明</p><pre><code>希尔排序的时间复杂度为O(n^(3/2))，要好于直接插入排序的O(n^2);增量的最后一个增量之必须等于1才行。由于记录是跳跃式的移动，所以希尔排序不是一种稳定的排序算法。</code></pre><h2 id="五、堆排序"><a href="#五、堆排序" class="headerlink" title="五、堆排序"></a>五、堆排序</h2><p>堆的概念</p><p>堆是具有如下性质的完全二叉树：</p><pre><code>每个结点的值都大于或等于其其左右孩子结点的值，为大顶堆。或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。因此根节点一定是堆中所有结点最大（小）者。如图左边为大顶堆，右边为小顶堆：{% asset_img 3.jpg  %}</code></pre><p>左边为大顶堆，右边为小顶堆</p><h3 id="堆排序算法"><a href="#堆排序算法" class="headerlink" title="堆排序算法"></a>堆排序算法</h3><p>堆排序（Heap Sort）是利用堆（假设是大顶堆）进行排序。<br>堆排序的核心思想：</p><pre><code>将待排序的序列构造成一个大顶堆。此时，整个序列的最大值就是堆顶的根节点。将根节点移走(其实就是将它与堆数组的末尾元素交换，此时末尾元素就是最大值)，然后将剩余的n-1个序列重新构造成一个堆，这样就会得到n个元素的次小值。重复上诉操作，便能得到一个有序序列。{% asset_img 4.jpg  %}</code></pre><p>堆排序算法核心</p><pre><code>如何由一个无序序列构建成一个堆如何在输出堆顶元素后，调整剩余元素成一个新的堆</code></pre><p>堆排序算法代码实现</p><pre><code>void HeadAdjust(SqList *L, int s, int m){    int temp, j;    temp = L-&gt;r[s];    for (j = 2 *s; j &lt;= m; j *= 2) {        if (j &lt; m &amp;&amp; L-&gt;r[j] &lt; L-&gt;r[j+1])            j++;        if (temp &gt;= L-&gt;r[j])            break;        L-&gt;r[s] = L-&gt;r[j];        s = j;    }    L-&gt;r[s] = temp;}void HeapSort(SqList *L){    int i;    for (i = L-&gt;length / 2; i&gt;0; i--)        HeadAdjust(L, i, L-&gt;length);    for (i = L-&gt;length; i &gt; 1; i--) {        swap(L, 1, i);        HeadAdjust(L, 1, i-1);    }}</code></pre><p>堆排序算法代码说明</p><pre><code>堆排序方法HeapSort中有两个for循环：第一个for循环完成将现在的待排序序列构建成一个大顶堆；第二个for循环完成逐渐将每个最大值的根节点与末尾元素交换，并且再调整其成为大顶堆。第一个for循环中的i = L-&gt;length / 2,i从[9/2]=4开始，4-&gt;3-&gt;2-&gt;1的变化量。（这里赋值的原因是这些都是有孩子的结点）构建好有孩子的结点之后，就可以从上到下、从左到右，将每个将每个非终端结点（非叶子结点）当做根节点,将其和子树调整成大顶堆。函数HeadAdjust的作用是将数组构建成一个大顶堆，在构建的时候利用了二叉树的性质。构建堆的时间复杂度为O(n)，重建堆的时间复杂度为O(nlogn)，所以总体来说堆排序的时间复杂度为O(nlogn)，性能上远好于冒泡、简单选择、直接插入的时间复杂度。在空间复杂度上，由于记录的交换和比较是跳跃式进行的，所以堆排序是一种不稳定的排序方法。</code></pre><h2 id="六、归并排序"><a href="#六、归并排序" class="headerlink" title="六、归并排序"></a>六、归并排序</h2><p>归并排序(Merging Sort)是利用归并的思想实现的。2路归并排序的核心思想如下：</p><pre><code>假设初始序列有n个记录，则可以看成是n个有序的子序列，每个子序列的长度为1，然后两两归并，得到n/2个长度为2或者1的有序子序列再两两归并...如此重复，直至得到一个长度为n的有序序列为止。</code></pre><h3 id="6-1归并排序的实现思路（递归实现）"><a href="#6-1归并排序的实现思路（递归实现）" class="headerlink" title="6.1归并排序的实现思路（递归实现）"></a>6.1归并排序的实现思路（递归实现）</h3><pre><code>将序列平均分成两部分分别对这两部分用递归来归并将这两部分归并到一起归并排序的代码实现（递归实现）</code></pre><p>#pragma - 6.归并排序(递归实现)</p><pre><code>void Merge(int SR[], int TR[], int i, int m, int n){    int j, k, l;    for (j = m+1, k = i; i &lt;= m &amp;&amp; j &lt;= n; k++) {        if (SR[i] &lt; SR[j])            TR[k] = SR[i++];        else            TR[k] = SR[j++];    }    if (i &lt;= m) {        for (l=0; l &lt;= m-i; l++)            TR[k+l] = SR[i+l];    }    if (j &lt;= n) {        for (l=0; l &lt;= n-j; l++)            TR[k+l] = SR[j+l];    }}void MSort(int SR[], int TR1[], int s, int t){    int m;    int TR2[MAXSIZE+1];    if (s == t) {        TR1[s] = SR[s];    }else{        m = (s+t)/2;        MSort(SR, TR2, s, m);        MSort(SR, TR2, m+1, t);        Merge(TR2, TR1, s, m, t);    }}void MergeSort(SqList *L){    MSort(L-&gt;r, L-&gt;r, 1, L-&gt;length);}</code></pre><p>归并排序的总结（递归实现）</p><pre><code>归并排序总的时间复杂度为O(nlogn)，并且这是归并排序算法中最好、最坏、平均的时间性能。归并排序的空间复杂度为O(n+logn)归并排序是一种比较占内存，但是效率高且稳定的算法。</code></pre><h3 id="6-2归并排序的实现（迭代非递归实现）"><a href="#6-2归并排序的实现（迭代非递归实现）" class="headerlink" title="6.2归并排序的实现（迭代非递归实现）"></a>6.2归并排序的实现（迭代非递归实现）</h3><p>用迭代实现的话，可以从最小的序列开始归并直到完成。</p><pre><code>#pragma - 7.归并排序（迭代实现）void MergePass(int SR[], int TR[], int s, int n){    int i = 1;    int j;    while (i &lt;= n-2*s+1) {        Merge(SR, TR, i, i+s-1, i+2*s-1);        i = i+2*s;    }    if (i &lt; n-s+1)        Merge(SR, TR, i, i+s-1, n);    else        for (j = i; j &lt;= n; j++)            TR[j] = SR[j];}void MergeSort2(SqList *L){    int * TR = (int *)malloc(sizeof(L-&gt;length*sizeof(int)));    int k = 1;    while (k &lt; L-&gt;length) {        MergePass(L-&gt;r, TR, k, L-&gt;length);        k = 2*k;        MergePass(TR, L-&gt;r, k, L-&gt;length);        k = 2*k;    }}</code></pre><p>归并的迭代实现总结</p><pre><code>非递归的迭代方法，避免了递归时深度为log2n的栈空间，空间只是用到申请归并临时用的TR数组，因此空间复杂度为O(n).并且相对于递归，在时间性能上也有一定的提升，所以使用归并时，尽量使用非递归实现。</code></pre><h2 id="七、快速排序"><a href="#七、快速排序" class="headerlink" title="七、快速排序"></a>七、快速排序</h2><p>快速排序(Quick Sort)的基本思想是：</p><pre><code>通过一趟排序将待排序记录分割成独立的两部分其中一部分记录的关键字均比另一部分记录的关键字小；则可分别对这两部分记录继续进行排序，以达到整个序列有序的目的。</code></pre><p>快速排序的实现思路</p><pre><code>选取一个关键字，放到一个位置，使得它的左边的值都比它小，右边的值都比它大，这个关键字叫做枢轴（pivot)然后分别对左边和右边进行排序。</code></pre><p>快速排序的代码实现</p><pre><code>#pragma - 8.快速排序int Partition(SqList * L, int low, int high){    int pivotkey;    pivotkey = L-&gt;r[low];    while (low &lt; high) {        while (low &lt; high &amp;&amp; L-&gt;r[high] &gt;= pivotkey)            high --;        swap(L, low, high);        while (low &lt; high &amp;&amp; L-&gt;r[low] &lt;= pivotkey)            high++;        swap(L, low, high);    }    return low;}void QSort(SqList *L, int low, int high){    int pivot;    if (low &lt; high) {        pivot = Partition(L, low, high);        QSort(L, low, pivot-1);        QSort(L, pivot+1, high);    }}void QuickSort(SqList *L){    QSort(L, 1, L-&gt;length);}</code></pre><p>快速排序的代码说明</p><pre><code>Partition函数就是将选取的pivotkey不断交换，将比它小的换到它的左边，比它大的交换到它的右边，它也在交换中不断更改自己的位置，直到完全满足这个要求为止。快速排序的时间性能取决于快速递归的深度，快排的时间复杂度为O(nlogn)。快速排序的空间复杂度主要是递归造成的栈空间的使用，平均情况下空间复杂度为O(nlogn)。由于关键字的比较和交换是跳跃进行的，因此，快排是一种不稳定的排序算法</code></pre><p>快速排序的优化</p><pre><code>1、优化选取枢轴在上面的代码中，选取枢轴的方式为：2、pivotkey = L-&gt;r[low]，即用序列的第一个元素作为枢轴，这是理想情况下 L-&gt;r[low]是中间数。3、但是对于其他情况，这种固定选取第一个关键子作为首个枢轴的方法就不是很合理。于是可以用下面的方法优化：4、    三数取中(median-of-three)法：    取三个关键子进行排序，将中间数作为枢轴，一般取左端、右端和中间三个数，也可以随机选取。    九数取中(median-of-nine)法：    先从数组中分三次取样，每次取三个数，三个样品各取中数，然后从这三个数当中再取出一个中数作为枢轴</code></pre><p>三数取中(median-of-three)法代码：</p><pre><code>int pivotkey;int m = low + (high - low)/2;if (L-&gt;r[low] &gt; L-&gt;r[high])    swap(L, low, high);if (L-&gt;r[m] &gt; L-&gt;r[high])    swap(L, high, m);if (L-&gt;r[m] &gt; L-&gt;r[low])    swap(L, m, low);pivotkey = L-&gt;r[low];2、优化不必要的交换3、优化小数组时的排序方案4、优化递归操作</code></pre><p>快速排序优化后的代码</p><pre><code>int Partition1(SqList * L, int low, int high){    int pivotkey;    int m = low + (high - low)/2;    if (L-&gt;r[low] &gt; L-&gt;r[high])        swap(L, low, high);    if (L-&gt;r[m] &gt; L-&gt;r[high])        swap(L, high, m);    if (L-&gt;r[m] &gt; L-&gt;r[low])        swap(L, m, low);    pivotkey = L-&gt;r[low];    L-&gt;r[0] = pivotkey;    while (low &lt; high) {        while (low &lt; high &amp;&amp; L-&gt;r[high] &gt;= pivotkey)            high--;        L-&gt;r[low] = L-&gt;r[high];        while (low &lt; high &amp;&amp; L-&gt;r[low] &lt;= pivotkey)            low++;        L-&gt;r[high] = L-&gt;r[low];    }    L-&gt;r[low] = L-&gt;r[0];    return low;}void QSort1(SqList *L, int low, int high){    int pivot;    if ((high -low) &gt; MAX_LINEGIH_INSERT_SORT) {        while (low &lt; high) {            pivot = Partition1(L, low, high);            QSort1(L, low, pivot-1);            low = pivot+1;        }    }else        InsertSort(L);}void QuickSort1(SqList *L){    QSort1(L, 1, L-&gt;length);}</code></pre><h4 id="希尔排序相当于直接插入排序的升级，同属于插入排序类"><a href="#希尔排序相当于直接插入排序的升级，同属于插入排序类" class="headerlink" title="希尔排序相当于直接插入排序的升级，同属于插入排序类"></a>希尔排序相当于直接插入排序的升级，同属于插入排序类</h4><h4 id="堆排序相当于简单选择排序的升级，同属于选择排序类"><a href="#堆排序相当于简单选择排序的升级，同属于选择排序类" class="headerlink" title="堆排序相当于简单选择排序的升级，同属于选择排序类"></a>堆排序相当于简单选择排序的升级，同属于选择排序类</h4><h4 id="快速排序相当于冒泡排序的升级，同属于交换排序类"><a href="#快速排序相当于冒泡排序的升级，同属于交换排序类" class="headerlink" title="快速排序相当于冒泡排序的升级，同属于交换排序类"></a>快速排序相当于冒泡排序的升级，同属于交换排序类</h4><p>原文：<a href="https://www.jianshu.com/p/876931436177" target="_blank" rel="noopener">https://www.jianshu.com/p/876931436177</a></p><p>作者：STzen</p>]]></content>
       
       
       <categories>
@@ -34,6 +109,31 @@
       <url>/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</url>
       
         <content type="html"><![CDATA[<p>今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。</p><h3 id="1、打开资源"><a href="#1、打开资源" class="headerlink" title="1、打开资源"></a>1、打开资源</h3><pre><code>CTRL + SHIFT + R：打开所有类型文件，不包括 JAR 包；  CTRL + SHIFT + T：打开 Java 类型文件，包括 JAR 包；</code></pre><h3 id="2、查找资源"><a href="#2、查找资源" class="headerlink" title="2、查找资源"></a>2、查找资源</h3><pre><code>CTRL + F：查找当前编辑器内容； CTRL + H：查找所有文件内容；  CTRL + SHIFT + G：快速查找所有引用的地方；</code></pre><h3 id="3、代码整理"><a href="#3、代码整理" class="headerlink" title="3、代码整理"></a>3、代码整理</h3><pre><code>CTRL + SHIFT + F：格式化代码； CTRL + SHIFT + O：去除没有用到的引用；  CTRL + SHIFT + M：导入需要的类引用；</code></pre><h3 id="4、重命名"><a href="#4、重命名" class="headerlink" title="4、重命名"></a>4、重命名</h3><pre><code>ALT + SHIFT + R：重命名； CTRL + SHIFT + X：转换大写； CTRL + SHIFT + Y：转换小写；</code></pre><h3 id="5、切换编辑器"><a href="#5、切换编辑器" class="headerlink" title="5、切换编辑器"></a>5、切换编辑器</h3><pre><code>CTRL + E：显示所有打开的编辑器列表；  CTRL + SHIFT + E：显示更详细的所有打开的编辑器列表； ALT + 左右方向键：回到上一次/下一次编辑所在的代码；</code></pre><h3 id="6、快速处理行"><a href="#6、快速处理行" class="headerlink" title="6、快速处理行"></a>6、快速处理行</h3><pre><code>CTRL + D：删除当前行；  CTRL + ALT + 上下方向键：向上/下复制当前行； ALT + 上下方向键：向上/下替换行；</code></pre><h3 id="7、类继承关系"><a href="#7、类继承关系" class="headerlink" title="7、类继承关系"></a>7、类继承关系</h3><pre><code>CTRL + T：显示当前类继承关系列表；  F4：打开当前类继承关系对话框；  CTRL + SHIFT + H：打开指定的类继承关系对话框；</code></pre><h3 id="8、快速修复"><a href="#8、快速修复" class="headerlink" title="8、快速修复"></a>8、快速修复</h3><pre><code>CTRL + 1：快速修复问题；</code></pre><h3 id="9、重构"><a href="#9、重构" class="headerlink" title="9、重构"></a>9、重构</h3><pre><code>ALT + SHIFT + L：提取出局部变量；  ALT + SHIFT + M：提取出方法； ALT + SHIFT + C：修改当前方法构造；</code></pre><h3 id="10-添加注释"><a href="#10-添加注释" class="headerlink" title="10.添加注释"></a>10.添加注释</h3><pre><code>CTRL + /：用行注释注释当前行或者选择的行； CTRL + SHIFT + C：和上面一样； CTRL + SHIFT + /：用块注释注释选择的行；</code></pre><p>大概是这些了，服不服？<br>还有一个 CTRL + SHIFT + L 万能快捷键，不知道有什么按什么快捷键，可以按一组这个快捷键查看，要修改快捷键，就连续按两个这个组合键。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>为什么培训班出来的程序员总遭人嫌弃？</title>
+      <link href="/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
+      <url>/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</url>
+      
+        <content type="html"><![CDATA[<p>由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。<br>于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。</p><h3 id="“0基础入学，三个月包就业”"><a href="#“0基础入学，三个月包就业”" class="headerlink" title="“0基础入学，三个月包就业”"></a>“0基础入学，三个月包就业”</h3><h3 id="“毕业月入不过万，不收学费”"><a href="#“毕业月入不过万，不收学费”" class="headerlink" title="“毕业月入不过万，不收学费”"></a>“毕业月入不过万，不收学费”</h3><h3 id="“从前是你找工作，接下来是工作找你”"><a href="#“从前是你找工作，接下来是工作找你”" class="headerlink" title="“从前是你找工作，接下来是工作找你”"></a>“从前是你找工作，接下来是工作找你”</h3><h3 id="真是人有多大胆，口号就有多不要脸。"><a href="#真是人有多大胆，口号就有多不要脸。" class="headerlink" title="真是人有多大胆，口号就有多不要脸。"></a>真是人有多大胆，口号就有多不要脸。</h3><p>对于迫切想改变自己境遇的人来说，这些口号无疑是很具诱惑力的。在培训机构的宣传下，好像软件开发行业是一个门槛低，收入高，只要几个月的培训就可以月入过万，实现人生理想的好职业。</p><p>可现实是越来越多的企业不想招，甚至明言不招培训班出来的学生。而不少培训班也会教学生隐瞒自己的培训经历，会教学生面试的技巧，包装简历，虚报学历和工作经历，把学生包装成一个具有两年项目开发经验的软件工程师，而且开价往往都不低，动不动就8k以上…</p><h3 id="为什么会被嫌弃"><a href="#为什么会被嫌弃" class="headerlink" title="为什么会被嫌弃"></a>为什么会被嫌弃</h3><p>培训班出身的学生被嫌弃的原因主要有以下几个：</p><p>计算机基础知识极其薄弱，基本上只是会简单的业务逻辑，懂得基本的增删改查，自学能力弱，在短期培训过程中，接收的是填鸭式的教育，即使讲师的教学水平极高，学生极努力，也不可能在短时间内将这些知识消化，大多数只是一知半解，知道有这么个概念罢了，面试时也许可以做到应答自如，可实操能力极弱。而且习惯的是视频式的、类似于手把手教学的模式。对于新知识的自学能力是很差的，看文档的能力很弱。</p><p>开价高，心浮气躁。大多数参加培训的都不是学计算机专业的。有些甚至以前连电脑都没怎么用过，连打字都很慢。这些人之所以去培训，是因为在原行业混得不好，又听说it行业工资高，才转行过去。</p><p>有这种心态的人，做哪个行业都很难有成就，但别说在it行业，要做好软件开发，专注、执着、认真是必备的素质。为钱而来的还是请退场吧。你们把因果关系颠倒了。不是it行业高薪，而是因为专注于这个行业，才高薪。那些靠混的，凭借着互联网热潮上位的，是有可能混到一份不错的offer，可不会长久。</p><h3 id="你弱你还有理了"><a href="#你弱你还有理了" class="headerlink" title="你弱你还有理了"></a>你弱你还有理了</h3><p>有些人因为培训班的身份被拒还很委屈，认为企业对他们有歧视。在此，引用时下热门的句式：“你弱，你还有理了”。</p><p>你弱，你还有理了。</p><p>不否认，有些人虽然是培训班出身，但很优秀，可这个占比太小了。对于企业用人部门来说，他们不值得去为此而冒险，优秀的企业在招人时是很慎重的，招一个人的成本也是相当高，企业招一个人肯定会综合衡量利弊。尤其是软件开发行业，优秀与平庸的人相差太多了，效率上可能相差十倍以上。</p><p>一个优秀的程序员写出诗一样的代码，一个平庸的写出的是屎一样的代码。不仅不可用，还会对整个项目起到污染，连累他人擦屁股。</p><p>换位思考，当你处于企业用人单位的角色，你也不会选择冒险去招培训班出身人的，宁愿多花时间，提高offer去招更有可能是靠谱的人。</p><p>毕竟，好的程序员是写代码，差的程序员是写bug…</p><h3 id="别以为自己真有两年经验"><a href="#别以为自己真有两年经验" class="headerlink" title="别以为自己真有两年经验"></a>别以为自己真有两年经验</h3><p>千万别相信讲师给你灌输的鬼话：“这几个月就已经让你们有两年的项目经验了”。</p><p>复制代码，跟实际经验完全不同！</p><p>那几个月，你学到的只是知识，只是最基础的知识，你并没有得到半点经验！经验是不可能靠他人传授的，因为自己经历过才算得上是经验！没有经历过项目deadline，没有被莫名其妙的bug弄得焦头烂额，没有真正的团队合作经历，就够那几个月复制讲师的代码，就说自己有两年的开发经验了。</p><h3 id="打铁还需自身硬"><a href="#打铁还需自身硬" class="headerlink" title="打铁还需自身硬"></a>打铁还需自身硬</h3><p>那么是不是培训班出身的人就没有机会了？</p><p>当然不是，出身不好，起点差都不代表着前面的路就被堵死了。前面说了那么多嫌弃的话，主要是要让你认识到自己为什么会被嫌弃，而不是以受害者的心态自怨自艾（“受害者心态无济于事”）。</p><p>以下是对于真正想从事软件开发行业的人提供的建议：</p><p>认清自己的能力，不骄狂自大：因为你真的很弱。不妄自菲薄：因为每个人都是从弱小中成长的。认清自己的能力，是成长的第一步。</p><p>尽快摆脱填鸭式教育带来的被动学习方式。诚然，几个月的学习对于新人来说，是极其高效的，能以最快的速度踏入编程的门槛。但绝不能再依赖培训班的学习方式，要知道，你是毕业了，但对于软件开发，你的路还是刚开始，往后的学习是以看文档、看书、搜索资料为主。现在开始就要改变自己的学习习惯，认真地看书，你会发现，那些原本你以为自己懂了的知识，在看书后，才知道自己原先的认知是多么浅薄。</p><p>证明自己的能力。程序员证明自己能力最简单的方式就是代码。“Talk is cheap, Show me the code”. 从现在开始，你就要养成输出知识的习惯，可以是写技术博客，也可以是构建个人网站，把这些作品展示出来，现在免费的展示平台那么多，你一定要长久地积累，这些就是你最好的简历。</p><p>忘记自己是从培训班出来的，把自己当成一个自学者。优秀的程序员都是野生的，培训班出来的是只是宠物，面试时不用提你培训的经历，虽然这并不丢人，但可能会带来偏见。只要你能展示你的作品，表现你的自学能力，而你自身的能力又过关，其实不管你是什么出身，都无关紧要。（我自己就是文科出身，毕业前连半句代码都看不懂）</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>嫌弃的不是你的出身，而是你的综合素养。</p><p>总之，出身差，就靠实力，实力差，就靠态度。你之所以会被嫌弃，不是因为你来自培训班，而是因为你没有摆脱培训班，没有构建自己的知识体系。当然，这些积累是需要长时间的，所以慢慢来，只要你不是奔着钱来的，你总能找到工作，也总能得到成长。</p><p>作者：塞亚猫<br><a href="http://www.jianshu.com/p/a3f650d93216" target="_blank" rel="noopener">http://www.jianshu.com/p/a3f650d93216</a></p>]]></content>
       
       
       <categories>
@@ -104,31 +204,6 @@
     
     
     <entry>
-      <title>Java 诞生日，Java 24 岁了！</title>
-      <link href="/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
-      <url>/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</url>
-      
-        <content type="html"><![CDATA[<p>今天是 Java 诞生日，Java 今年 24 岁了，比栈长还年轻。。还有得搞，别慌！作为一名Java语言的学习者，对Java的起源和发展有个大概的了解应是必要的。</p><p>1991年，Sun公司成立Green项目。Oak语言诞生。</p><p>1992年11月，Sun公司为Green项目成立FirstPerson公司。</p><p>1992年12月3日，被命名为Star7的面向一种类PDA的这台设备进行了展示，这种设备有鲜艳的图形界面和被称为“Duke”的智能代理来帮助用户。</p><p>1993年，FirstPerson公司重定位Oak。转向到网络应用领域（背景：WWW开始席卷全球）。</p><h4 id="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"><a href="#1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器" class="headerlink" title="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"></a>1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器</h4><p>WebRunner，后更名为Hotjava。Oak编写的Applet让网页由静态转成动态。</p><h4 id="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"><a href="#1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。" class="headerlink" title="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"></a>1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。</h4><p>1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。</p><p>1996年1月，Sun公司发布了Java的第一个开发工具包（JDK 1.0），这是Java发展历程中的重要里程碑，标志着Java成为一种独立的开发工具。</p><p>1996年9月，约8.3万个网页应用了Java技术来制作。</p><p>1996年10月，Sun公司发布了Java平台的第一个即时（JIT）编译器。</p><p>1997年2月，JDK1.1发布，在随后的3周时间里，达到了22万次的下载量。</p><p>1997年4月，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录。</p><p>1997年9月，JavaDeveloperConnection社区成员超过十万。</p><p>1998年2月，JDK1.1被下载超过2,000,000次。</p><p>1998年12月8日，JAVA2企业平台J2EE发布。</p><p>1999年4月27日，HotSpot虚拟机发布。HotSpot虚拟机发布时是作为JDK 1.2的附加程序提供的，后来它成为了JDK 1.3及之后所有版本的Sun JDK的默认虚拟机。</p><p>1999年6月，SUN公司发布Java的三个版本：标准版（JavaSE,以前是J2SE）、企业版（JavaEE以前是J2EE）和微型版（JavaME，以前是J2ME）。</p><p>2000年5月，JDK1.3，JDK1.4相继发布。</p><p>2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机。</p><p>2001年9月24日，J2EE1.3发布。</p><p>2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升。</p><h4 id="2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。"><a href="#2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。" class="headerlink" title="2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。"></a>2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。</h4><p>2005年6月，JavaOne大会召开，SUN公司公开JavaSE6。此时，Java的各种版本已经更名，以取消其中的数字”2″：J2EE更名为JavaEE，J2SE更名为JavaSE，J2ME更名为JavaME。</p><p>2006年11月13日，Java技术的发明者Sun公司宣布，将Java技术作为免费软件对外发布。Sun公司正式发布的有关Java平台标准版的第一批源代码，以及Java迷你版的可执行源代码。</p><p>2006年12月，SUN公司发布JRE6.0。</p><p>2007年3月起，全世界所有的开发人员均可对Java源代码进行修改 。</p><p>2009年4月，甲骨文74亿美元收购Sun。取得java的版权。</p><p>2011年7月28日，甲骨文发布java7.0的正式版。</p><p>2014年，甲骨文（O）公司发布了Java8正式版。</p><p>2017年，甲骨文发布Java9。</p><p>2018年3月，甲骨文发布Java10。</p><p>2018年9月，甲骨文发布Java11。</p><p>2019年3月，甲骨文发布Java12。</p><p>参考：<a href="http://www.sohu.com/a/194505161_775404" target="_blank" rel="noopener">www.sohu.com/a/194505161_775404</a></p><p>最后祝我大Java生日快乐！！！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>SQL Server 日期时间如何处理</title>
       <link href="/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/"/>
       <url>/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/</url>
@@ -154,23 +229,23 @@
     
     
     <entry>
-      <title>html中横线使用</title>
-      <link href="/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
-      <url>/2019/05/18/html-zhong-heng-xian-shi-yong/</url>
+      <title>Java 诞生日，Java 24 岁了！</title>
+      <link href="/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
+      <url>/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</url>
       
-        <content type="html"><![CDATA[<pre><code>第一种：&lt;hr style=&quot; height:2px;border:none;border-top:2px dotted #185598;&quot; /&gt;   园点虚线height:2px;是hr的高度border:none;是没有边框border-top:2px dotted #185598;是设置横线的样式dotted  虚线  #185598  颜色第二种：&lt;hr style=&quot;height:1px;border:none;border-top:1px dashed #0066CC;&quot; /&gt;    块虚线第三种：&lt;hr style=&quot;height:1px;border:none;border-top:1px solid #555555;&quot; /&gt;  实线，一条直线第四种：&lt;hr style=&quot;height:3px;border:none;border-top:3px double red;&quot; /&gt; 两条紧密实线，第五种：&lt;hr style=&quot;height:5px;border:none;border-top:5px ridge green;&quot; /&gt; 两种颜色第六种：&lt;hr style=&quot;height:10px;border:none;border-top:10px groove skyblue;&quot; /&gt;  两种颜色border-top:10px groove skyblue;    groove  上颜色        skyblue   下颜色.style-one {/*内嵌水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 0;    border-top: 1px solid rgba(0, 0, 0, 0.1);    border-bottom: 1px solid rgba(255, 255, 255, 0.3);}.style-two {/*透明渐变水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));}.style-three{/*渐变*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background: #333;    background-image: linear-gradient(to right, #ccc, #333, #ccc);}</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>今天是 Java 诞生日，Java 今年 24 岁了，比栈长还年轻。。还有得搞，别慌！作为一名Java语言的学习者，对Java的起源和发展有个大概的了解应是必要的。</p><p>1991年，Sun公司成立Green项目。Oak语言诞生。</p><p>1992年11月，Sun公司为Green项目成立FirstPerson公司。</p><p>1992年12月3日，被命名为Star7的面向一种类PDA的这台设备进行了展示，这种设备有鲜艳的图形界面和被称为“Duke”的智能代理来帮助用户。</p><p>1993年，FirstPerson公司重定位Oak。转向到网络应用领域（背景：WWW开始席卷全球）。</p><h4 id="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"><a href="#1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器" class="headerlink" title="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"></a>1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器</h4><p>WebRunner，后更名为Hotjava。Oak编写的Applet让网页由静态转成动态。</p><h4 id="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"><a href="#1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。" class="headerlink" title="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"></a>1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。</h4><p>1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。</p><p>1996年1月，Sun公司发布了Java的第一个开发工具包（JDK 1.0），这是Java发展历程中的重要里程碑，标志着Java成为一种独立的开发工具。</p><p>1996年9月，约8.3万个网页应用了Java技术来制作。</p><p>1996年10月，Sun公司发布了Java平台的第一个即时（JIT）编译器。</p><p>1997年2月，JDK1.1发布，在随后的3周时间里，达到了22万次的下载量。</p><p>1997年4月，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录。</p><p>1997年9月，JavaDeveloperConnection社区成员超过十万。</p><p>1998年2月，JDK1.1被下载超过2,000,000次。</p><p>1998年12月8日，JAVA2企业平台J2EE发布。</p><p>1999年4月27日，HotSpot虚拟机发布。HotSpot虚拟机发布时是作为JDK 1.2的附加程序提供的，后来它成为了JDK 1.3及之后所有版本的Sun JDK的默认虚拟机。</p><p>1999年6月，SUN公司发布Java的三个版本：标准版（JavaSE,以前是J2SE）、企业版（JavaEE以前是J2EE）和微型版（JavaME，以前是J2ME）。</p><p>2000年5月，JDK1.3，JDK1.4相继发布。</p><p>2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机。</p><p>2001年9月24日，J2EE1.3发布。</p><p>2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升。</p><h4 id="2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。"><a href="#2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。" class="headerlink" title="2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。"></a>2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。</h4><p>2005年6月，JavaOne大会召开，SUN公司公开JavaSE6。此时，Java的各种版本已经更名，以取消其中的数字”2″：J2EE更名为JavaEE，J2SE更名为JavaSE，J2ME更名为JavaME。</p><p>2006年11月13日，Java技术的发明者Sun公司宣布，将Java技术作为免费软件对外发布。Sun公司正式发布的有关Java平台标准版的第一批源代码，以及Java迷你版的可执行源代码。</p><p>2006年12月，SUN公司发布JRE6.0。</p><p>2007年3月起，全世界所有的开发人员均可对Java源代码进行修改 。</p><p>2009年4月，甲骨文74亿美元收购Sun。取得java的版权。</p><p>2011年7月28日，甲骨文发布java7.0的正式版。</p><p>2014年，甲骨文（O）公司发布了Java8正式版。</p><p>2017年，甲骨文发布Java9。</p><p>2018年3月，甲骨文发布Java10。</p><p>2018年9月，甲骨文发布Java11。</p><p>2019年3月，甲骨文发布Java12。</p><p>参考：<a href="http://www.sohu.com/a/194505161_775404" target="_blank" rel="noopener">www.sohu.com/a/194505161_775404</a></p><p>最后祝我大Java生日快乐！！！</p>]]></content>
       
       
       <categories>
           
-          <category> html </category>
+          <category> java </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> html </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -196,6 +271,31 @@
         <tags>
             
             <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html中横线使用</title>
+      <link href="/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
+      <url>/2019/05/18/html-zhong-heng-xian-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<pre><code>第一种：&lt;hr style=&quot; height:2px;border:none;border-top:2px dotted #185598;&quot; /&gt;   园点虚线height:2px;是hr的高度border:none;是没有边框border-top:2px dotted #185598;是设置横线的样式dotted  虚线  #185598  颜色第二种：&lt;hr style=&quot;height:1px;border:none;border-top:1px dashed #0066CC;&quot; /&gt;    块虚线第三种：&lt;hr style=&quot;height:1px;border:none;border-top:1px solid #555555;&quot; /&gt;  实线，一条直线第四种：&lt;hr style=&quot;height:3px;border:none;border-top:3px double red;&quot; /&gt; 两条紧密实线，第五种：&lt;hr style=&quot;height:5px;border:none;border-top:5px ridge green;&quot; /&gt; 两种颜色第六种：&lt;hr style=&quot;height:10px;border:none;border-top:10px groove skyblue;&quot; /&gt;  两种颜色border-top:10px groove skyblue;    groove  上颜色        skyblue   下颜色.style-one {/*内嵌水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 0;    border-top: 1px solid rgba(0, 0, 0, 0.1);    border-bottom: 1px solid rgba(255, 255, 255, 0.3);}.style-two {/*透明渐变水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));}.style-three{/*渐变*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background: #333;    background-image: linear-gradient(to right, #ccc, #333, #ccc);}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
             
         </tags>
       
@@ -454,31 +554,6 @@
     
     
     <entry>
-      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
-      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
-      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
-      
-        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>965 是一种生活态度，996 也是</title>
       <link href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
       <url>/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</url>
@@ -521,6 +596,31 @@
         <tags>
             
             <tag> 程序猿 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
+      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
+      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
+      
+        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -579,31 +679,6 @@
     
     
     <entry>
-      <title>我们搞开发的为什么会感觉到累</title>
-      <link href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
-      <url>/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</url>
-      
-        <content type="html"><![CDATA[<h1 id="引题"><a href="#引题" class="headerlink" title="引题"></a>引题</h1><p>昨天下班坐公车，听到一个和我年纪相仿的哥们儿打电话，隐约听到电话那边好像是他女朋友问他现在饿不饿，他说“我已经饿的不饿啦”。</p><p>饿的不饿了，听起来很幽默，对我很有触动，我在思考，我此时站在公车中部，手扶着杆有点酸，你问我手有多酸，借用打电话的那个哥们的话，随着日复一日这样的酸痛感受的反复刺激，已经酸的不酸了，你问我饿不饿，我也说不上来，飘飘渺渺，因为做编程这行几年下来，我自己的感受是，虽到了吃饭时间，但是感觉似饿非饿，吃饭感觉只是个形式。</p><p>以上都是是大多数在一线城市奋斗的人们所经历的可以忽略不计的一些事，我这里想聊聊为什么我们做IT的大多数都很累？</p><p>什么叫累，古代私塾先生教书的时候解释说，累字拆分意义是田系在头上，白话文讲就是“头上有田方知累也”。这是上古时代“累”的含义，当然现在还有大多数人为了我们国家的发展在辛勤劳累的种田，他们很辛苦。</p><h2 id="我们的累"><a href="#我们的累" class="headerlink" title="我们的累"></a>我们的累</h2><pre><code>回到标题，我觉得我门做编程的大多数人都很累，为什么累呢？</code></pre><p>到一个新公司上班，公司预先说要做一个项目或产品，你不知道到底有多复杂或简单，心里些许担心或不安，因为这些东西有可能在你预想的基础上会变的。</p><p>准备启动项目或产品，开始做需求，由于老板把时间压得紧，需求可能有些粗糙，开发时间也被压很短，因为这样，担心和紧张感铺面而来，需求会不会变，会不会遇到技术障碍，都是可变的。</p><p>开发过程中，由于需求做的不够精细（这太正常了，客户或老板都不知道他要什么），接二连三的变动和更改，紧张万分，不知道哪一会儿会又变动。</p><p>累死累活做完了，开始测试了，啊，XXX这里点击没反应，邮件怎么没发送成功，怎么发送成功了没收到，又报黄页，js错误……时刻有可能出bug。</p><p>终于上线了，客户出了个error，你帮忙看看吧（测试阶段都没有这问题哦）；日志记录了不少错误哦，你给定位下；客户投单没成功，肯定他妈的第三方接口问题；客户IE6下按钮点不了，下拉框出不来；oh shit ……</p><p>又开始新的项目了，新的一轮紧张挑战拉开帷幕……之前上线的项目或产品还会时不时给你来些心跳，下一秒未可知，明天未可知。</p><p>循环ing……</p><p>大伙可能要说担心或不安是多余的，那是你技术水平太垃圾吧，我之前的技术leader技术很好，很牛逼，平常他说的最多的是未雨绸缪，居安思危，人无远虑必有近忧这些句话。他时常会研究新东西，新技术，给我们安排好书去读让我们保持进步，说实话过程中有点反感但从中受益。</p><p>有时候我们自己需要被迫去变，因为现在大的背景变化非常大，PC向移动的迁移，时刻在变，我们也时刻因为这些变而被动变，或被这些变影响我们的生活，苹果开发初级10k左右起，直接秒了我们大部分搞了3年左右.net或java的人，听过好多身边做pc开发的都呐喊过说想变，但是真正主动承受痛苦去变成功的没多少人。</p><p>有的人可能会说了，赶紧努力吧，做管理，当领导，呵呵，我发现那些大部分位置越高的人头发越稀落，医学上说头发稀落和肾功能衰弱有关，常言道，恐伤肾，可想是担受了多少惊恐与变数，过几年你很有可能就成了他们。中层领导有来自高层的压力，高层来自boss的压力，boss来自生存的压力和股东投资者的压力等……有时候麻雀没有变成凤凰未尝不是一种解脱啊，我说这话你可以说我是个loser思维，我也诚然。我想告诉大家的是珍惜当下吧！我现在特别怀念刚参加工作那会儿，激情，敢说敢做，敢表现神经质……</p><p>所以说，我们累是因为我们所从事的事情变数很多，人最恐惧未来，因为未来不可知，上至诸侯王下至编户百姓无一幸免，我们就活在这样变化无常的区域里面，紧张嘻嘻，正是这样，久而久之变得抑郁，神经衰弱，麻木不仁，懒得动，懒得说话……恶性循环。</p><p>我们现在就是忙于应付这些变，所以搞的自己紧张忙碌，最终却没多大所获。这是我们大多数人的现状。</p><h1 id="新生"><a href="#新生" class="headerlink" title="新生"></a>新生</h1><p>  希望2019大伙都少些加班，把有限的业余时间拿来好好放松自己，勤跑步，多看书，充实自己，做到可持续发展，主动改变自己，无论您今年多大了都应该充满理想，因为中国历史上历来不缺少枯木逢春、老来发迹的例子。大器晚成的人他没有年少轻狂，没有少不更事；年轮的重叠使他们更加珍视机遇，岁月的磨砺让他们事事洞明、人情练达。我希望大伙都能达到自己的理想，并且在很嫩的时候。</p><p>  最后，关于加班我讲个小故事，希望能影响到一点点正在加班的同胞们，故事名字叫奴性是怎样练成的：第1天抽他100鞭子，他很愤怒但没敢说；第2天抽他80鞭子，他看到了生活的希望；第3天抽他50鞭子，他夸抽他的人进步了；第4天抽了他30鞭子，他跪下感动流涕；第5天抽他了20鞭子，他感恩戴德；第6天7天他已习惯了在感动中挨鞭子。并开始用鞭子抽那些同情他的人。</p><p>来源：施瓦小辛格<br><a href="http://www.cnblogs.com/wenyang-rio/p/4261987.html" target="_blank" rel="noopener">www.cnblogs.com/wenyang-rio/p/4261987.html</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 开发 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>程序员的眼界真的不要，也不能只局限于技术</title>
       <link href="/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
       <url>/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</url>
@@ -621,6 +696,31 @@
         <tags>
             
             <tag> 程序猿 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我们搞开发的为什么会感觉到累</title>
+      <link href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
+      <url>/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</url>
+      
+        <content type="html"><![CDATA[<h1 id="引题"><a href="#引题" class="headerlink" title="引题"></a>引题</h1><p>昨天下班坐公车，听到一个和我年纪相仿的哥们儿打电话，隐约听到电话那边好像是他女朋友问他现在饿不饿，他说“我已经饿的不饿啦”。</p><p>饿的不饿了，听起来很幽默，对我很有触动，我在思考，我此时站在公车中部，手扶着杆有点酸，你问我手有多酸，借用打电话的那个哥们的话，随着日复一日这样的酸痛感受的反复刺激，已经酸的不酸了，你问我饿不饿，我也说不上来，飘飘渺渺，因为做编程这行几年下来，我自己的感受是，虽到了吃饭时间，但是感觉似饿非饿，吃饭感觉只是个形式。</p><p>以上都是是大多数在一线城市奋斗的人们所经历的可以忽略不计的一些事，我这里想聊聊为什么我们做IT的大多数都很累？</p><p>什么叫累，古代私塾先生教书的时候解释说，累字拆分意义是田系在头上，白话文讲就是“头上有田方知累也”。这是上古时代“累”的含义，当然现在还有大多数人为了我们国家的发展在辛勤劳累的种田，他们很辛苦。</p><h2 id="我们的累"><a href="#我们的累" class="headerlink" title="我们的累"></a>我们的累</h2><pre><code>回到标题，我觉得我门做编程的大多数人都很累，为什么累呢？</code></pre><p>到一个新公司上班，公司预先说要做一个项目或产品，你不知道到底有多复杂或简单，心里些许担心或不安，因为这些东西有可能在你预想的基础上会变的。</p><p>准备启动项目或产品，开始做需求，由于老板把时间压得紧，需求可能有些粗糙，开发时间也被压很短，因为这样，担心和紧张感铺面而来，需求会不会变，会不会遇到技术障碍，都是可变的。</p><p>开发过程中，由于需求做的不够精细（这太正常了，客户或老板都不知道他要什么），接二连三的变动和更改，紧张万分，不知道哪一会儿会又变动。</p><p>累死累活做完了，开始测试了，啊，XXX这里点击没反应，邮件怎么没发送成功，怎么发送成功了没收到，又报黄页，js错误……时刻有可能出bug。</p><p>终于上线了，客户出了个error，你帮忙看看吧（测试阶段都没有这问题哦）；日志记录了不少错误哦，你给定位下；客户投单没成功，肯定他妈的第三方接口问题；客户IE6下按钮点不了，下拉框出不来；oh shit ……</p><p>又开始新的项目了，新的一轮紧张挑战拉开帷幕……之前上线的项目或产品还会时不时给你来些心跳，下一秒未可知，明天未可知。</p><p>循环ing……</p><p>大伙可能要说担心或不安是多余的，那是你技术水平太垃圾吧，我之前的技术leader技术很好，很牛逼，平常他说的最多的是未雨绸缪，居安思危，人无远虑必有近忧这些句话。他时常会研究新东西，新技术，给我们安排好书去读让我们保持进步，说实话过程中有点反感但从中受益。</p><p>有时候我们自己需要被迫去变，因为现在大的背景变化非常大，PC向移动的迁移，时刻在变，我们也时刻因为这些变而被动变，或被这些变影响我们的生活，苹果开发初级10k左右起，直接秒了我们大部分搞了3年左右.net或java的人，听过好多身边做pc开发的都呐喊过说想变，但是真正主动承受痛苦去变成功的没多少人。</p><p>有的人可能会说了，赶紧努力吧，做管理，当领导，呵呵，我发现那些大部分位置越高的人头发越稀落，医学上说头发稀落和肾功能衰弱有关，常言道，恐伤肾，可想是担受了多少惊恐与变数，过几年你很有可能就成了他们。中层领导有来自高层的压力，高层来自boss的压力，boss来自生存的压力和股东投资者的压力等……有时候麻雀没有变成凤凰未尝不是一种解脱啊，我说这话你可以说我是个loser思维，我也诚然。我想告诉大家的是珍惜当下吧！我现在特别怀念刚参加工作那会儿，激情，敢说敢做，敢表现神经质……</p><p>所以说，我们累是因为我们所从事的事情变数很多，人最恐惧未来，因为未来不可知，上至诸侯王下至编户百姓无一幸免，我们就活在这样变化无常的区域里面，紧张嘻嘻，正是这样，久而久之变得抑郁，神经衰弱，麻木不仁，懒得动，懒得说话……恶性循环。</p><p>我们现在就是忙于应付这些变，所以搞的自己紧张忙碌，最终却没多大所获。这是我们大多数人的现状。</p><h1 id="新生"><a href="#新生" class="headerlink" title="新生"></a>新生</h1><p>  希望2019大伙都少些加班，把有限的业余时间拿来好好放松自己，勤跑步，多看书，充实自己，做到可持续发展，主动改变自己，无论您今年多大了都应该充满理想，因为中国历史上历来不缺少枯木逢春、老来发迹的例子。大器晚成的人他没有年少轻狂，没有少不更事；年轮的重叠使他们更加珍视机遇，岁月的磨砺让他们事事洞明、人情练达。我希望大伙都能达到自己的理想，并且在很嫩的时候。</p><p>  最后，关于加班我讲个小故事，希望能影响到一点点正在加班的同胞们，故事名字叫奴性是怎样练成的：第1天抽他100鞭子，他很愤怒但没敢说；第2天抽他80鞭子，他看到了生活的希望；第3天抽他50鞭子，他夸抽他的人进步了；第4天抽了他30鞭子，他跪下感动流涕；第5天抽他了20鞭子，他感恩戴德；第6天7天他已习惯了在感动中挨鞭子。并开始用鞭子抽那些同情他的人。</p><p>来源：施瓦小辛格<br><a href="http://www.cnblogs.com/wenyang-rio/p/4261987.html" target="_blank" rel="noopener">www.cnblogs.com/wenyang-rio/p/4261987.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 开发 </tag>
             
         </tags>
       
