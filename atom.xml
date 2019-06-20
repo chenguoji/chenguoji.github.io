@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-06-10T01:55:52.323Z</updated>
+  <updated>2019-06-20T07:01:19.234Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>8种常见SQL错误用法，你中招了吗？</title>
+    <link href="http://chenguoji.com/2019/06/18/8-chong-chang-jian-sql-cuo-wu-yong-fa-ni-zhong-zhao-liao-ma/"/>
+    <id>http://chenguoji.com/2019/06/18/8-chong-chang-jian-sql-cuo-wu-yong-fa-ni-zhong-zhao-liao-ma/</id>
+    <published>2019-06-18T02:39:50.000Z</published>
+    <updated>2019-06-20T07:01:19.234Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1、LIMIT-语句&quot;&gt;&lt;a href=&quot;#1、LIMIT-语句&quot; class=&quot;headerlink&quot; title=&quot;1、LIMIT 语句&quot;&gt;&lt;/a&gt;1、LIMIT
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript上传图片限制图片大小及格式</title>
+    <link href="http://chenguoji.com/2019/06/16/javascript-shang-chuan-tu-pian-xian-zhi-tu-pian-da-xiao-ji-ge-shi/"/>
+    <id>http://chenguoji.com/2019/06/16/javascript-shang-chuan-tu-pian-xian-zhi-tu-pian-da-xiao-ji-ge-shi/</id>
+    <published>2019-06-16T02:39:50.000Z</published>
+    <updated>2019-06-20T06:33:31.473Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;br&gt;&lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.8.0&quot;&gt;&lt;br&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQLServer 日期函数大全</title>
+    <link href="http://chenguoji.com/2019/06/15/sqlserver-ri-qi-han-shu-da-quan/"/>
+    <id>http://chenguoji.com/2019/06/15/sqlserver-ri-qi-han-shu-da-quan/</id>
+    <published>2019-06-15T07:39:50.000Z</published>
+    <updated>2019-06-20T06:08:58.935Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、统计语句&quot;&gt;&lt;a href=&quot;#一、统计语句&quot; class=&quot;headerlink&quot; title=&quot;一、统计语句&quot;&gt;&lt;/a&gt;一、统计语句&lt;/h2&gt;&lt;h3 id=&quot;1、–统计当前【-gt-当天00点以后的数据】&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>坑爹的 Java 可变参数，把我整得够惨。。</title>
@@ -126,33 +204,6 @@
   </entry>
   
   <entry>
-    <title>Eclipse 最常用的 10 组快捷键，个个牛逼！</title>
-    <link href="http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/"/>
-    <id>http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</id>
-    <published>2019-05-22T02:39:50.000Z</published>
-    <updated>2019-06-04T09:28:29.290Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。&lt;/p&gt;
-&lt;h3 id=&quot;1、打开资源&quot;&gt;&lt;a href=&quot;#1、打开资源&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>为什么培训班出来的程序员总遭人嫌弃？</title>
     <link href="http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
     <id>http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</id>
@@ -167,6 +218,33 @@
         
           &lt;p&gt;由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。&lt;br&gt;于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。&lt;/p&gt;
 &lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Eclipse 最常用的 10 组快捷键，个个牛逼！</title>
+    <link href="http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/"/>
+    <id>http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</id>
+    <published>2019-05-22T02:39:50.000Z</published>
+    <updated>2019-06-04T09:28:29.290Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。&lt;/p&gt;
+&lt;h3 id=&quot;1、打开资源&quot;&gt;&lt;a href=&quot;#1、打开资源&quot; class=&quot;headerlink&quot;
         
       
     
@@ -232,6 +310,32 @@
   </entry>
   
   <entry>
+    <title>Java 诞生日，Java 24 岁了！</title>
+    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
+    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
+    <published>2019-05-19T02:39:50.000Z</published>
+    <updated>2019-05-30T03:22:41.956Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SQL Server 日期时间如何处理</title>
     <link href="http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/"/>
     <id>http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/</id>
@@ -255,32 +359,6 @@
     
     
       <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 诞生日，Java 24 岁了！</title>
-    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
-    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
-    <published>2019-05-19T02:39:50.000Z</published>
-    <updated>2019-05-30T03:22:41.956Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
   </entry>
   
@@ -396,7 +474,7 @@
     <link href="http://chenguoji.com/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/"/>
     <id>http://chenguoji.com/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/</id>
     <published>2019-05-15T02:39:50.000Z</published>
-    <updated>2019-05-21T08:39:41.778Z</updated>
+    <updated>2019-06-20T06:11:13.099Z</updated>
     
     <summary type="html">
     
@@ -472,91 +550,6 @@
     
     
       <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 中的 SPI 机制是什么鬼？高级 Java 必须掌握！</title>
-    <link href="http://chenguoji.com/2019/05/12/java-zhong-de-spi-ji-zhi-shi-shi-me-gui-gao-ji-java-bi-xu-zhang-wo/"/>
-    <id>http://chenguoji.com/2019/05/12/java-zhong-de-spi-ji-zhi-shi-shi-me-gui-gao-ji-java-bi-xu-zhang-wo/</id>
-    <published>2019-05-12T02:39:50.000Z</published>
-    <updated>2019-05-14T01:19:04.580Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;SPI的全名为：Service Provider Interface，大多数开发人员可能不熟悉，因为这个是针对厂商或者插件的。在java.util.ServiceLoader的文档里有比较详细的介绍。 &lt;/p&gt;
-&lt;p&gt;简单的总结下 Java  SPI
-        
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://chenguoji.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>作为字节跳动的面试官，有些话我不得不说！</title>
-    <link href="http://chenguoji.com/2019/05/11/zuo-wei-zi-jie-tiao-dong-de-mian-shi-guan-you-xie-hua-wo-bu-de-bu-shuo/"/>
-    <id>http://chenguoji.com/2019/05/11/zuo-wei-zi-jie-tiao-dong-de-mian-shi-guan-you-xie-hua-wo-bu-de-bu-shuo/</id>
-    <published>2019-05-11T02:39:50.000Z</published>
-    <updated>2019-05-13T05:31:17.778Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;大家好，我是字节跳动的一名研发面试官。&lt;/p&gt;
-&lt;p&gt;2019春招过半，面试也进行了两场，在整个面试过程中，我不断被同学问到各式花样问题：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;“什么才是研发面试考察的核心？”
-“考前究竟要不要刷题？”
-“如果跨专业面试要怎么办？”
-“如何更好地描
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>以我的亲身经历，告诉大家写简历和面试的技巧！</title>
-    <link href="http://chenguoji.com/2019/05/10/yi-wo-de-qin-shen-jing-li-gao-su-da-jia-xie-jian-li-he-mian-shi-de-ji-qiao/"/>
-    <id>http://chenguoji.com/2019/05/10/yi-wo-de-qin-shen-jing-li-gao-su-da-jia-xie-jian-li-he-mian-shi-de-ji-qiao/</id>
-    <published>2019-05-10T07:39:50.000Z</published>
-    <updated>2019-05-14T03:06:26.847Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;之前我也写过不少介绍面试相关的博文，有些文章的点击量还不低，这些面试相关的经验大多都是从我面试别人的过程中提炼出来了。&lt;/p&gt;
-&lt;p&gt;在18年底到19年3月，陆续面试了几家公司，有成有不成的，最终进了一家比较满意的知名外企。在本文里，我将介绍我这段时间里更新简历和面试的相关
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   

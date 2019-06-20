@@ -216,7 +216,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/8c49182140953b97801519267be9bb3b.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -553,16 +553,44 @@ Serializable（可串行化）
 
 <script src="/libs/share/js/social-share.min.js"></script>
 
-            <div class="reprint">
-                <p>
-                    <span class="reprint-tip">
-                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
-                    </span>
-                    <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
-                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/05/03/zhen-zheng-li-jie-mysql-de-si-chong-ge-chi-ji-bie/" class="b-link-green">真正理解Mysql的四种隔离级别</a>
-                </p>
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载请注明</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="cc_by_url">
+                    <img alt style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png">
+                </a>
             </div>
+            <br>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+                    《真正理解Mysql的四种隔离级别》
+                </span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/03/zhen-zheng-li-jie-mysql-de-si-chong-ge-chi-ji-bie/" property="cc:attributionName" rel="cc:attributionURL">
+                chen guoji
+            </a> under
+            <a rel="license" href="cc_by_url">
+                cc_by_name
+            </a>licensed
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>pleaseFollowReprintPolicy</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">checkPolicy</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
         </div>
     </div>
 
@@ -840,7 +868,7 @@ Serializable（可串行化）
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
@@ -848,13 +876,17 @@ Serializable（可串行化）
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/957f331740fdadbd807ad2c832fcb0e5.jpg" class="responsive-img" alt="JavaScript 闭包指南">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="JavaScript 闭包指南">
                         
                         <span class="card-title">JavaScript 闭包指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">闭包是函数创建时作用域内所有变量的集合。要使用闭包，需要在另一个函数中创建一个函数，这种函数被称为嵌套函数。内部函数可以访问外部函数作用域中的变量（依靠闭包可以访问外部函数作用域），即使在返回外部函数之后也是如此。每次创建嵌套函数时都会创建</div>
+                    <div class="summary block-with-text">
+                        
+                            闭包是函数创建时作用域内所有变量的集合。要使用闭包，需要在另一个函数中创建一个函数，这种函数被称为嵌套函数。内部函数可以访问外部函数作用域中的变量（依靠闭包可以访问外部函数作用域），即使在返回外部函数之后也是如此。每次创建嵌套函数时都会创建
+                        
+                    </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-04
@@ -884,7 +916,7 @@ Serializable（可串行化）
         </div>
         
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
@@ -893,14 +925,18 @@ Serializable（可串行化）
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/d9f6770240f9b021804da775c8502be5.jpg" class="responsive-img" alt="北冥乘海生：996其实没什么卵用">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="北冥乘海生：996其实没什么卵用">
                         
                         <span class="card-title">北冥乘海生：996其实没什么卵用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">996一词，是某巨头的一个中层提出来的，最初只是个忽悠老板的口号，哪知道如今应者云集，简直成了创业精神的代名词。007一词，则是我提出来的(《江湖丛谈》与互联网三不要)，虽说是直钩钓鱼，居然也有人信以为真，还打算试试。
-注意，不要把这些词恶</div>
+                    <div class="summary block-with-text">
+                        
+                            996一词，是某巨头的一个中层提出来的，最初只是个忽悠老板的口号，哪知道如今应者云集，简直成了创业精神的代名词。007一词，则是我提出来的(《江湖丛谈》与互联网三不要)，虽说是直钩钓鱼，居然也有人信以为真，还打算试试。
+注意，不要把这些词恶
+                        
+                    </div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-02
@@ -932,6 +968,7 @@ Serializable（可串行化）
     </div>
 </article>
 </div>
+
 
 
     </div>
@@ -1040,6 +1077,9 @@ Serializable（可串行化）
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
 			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
 			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">101.2k</span>
             
 
             

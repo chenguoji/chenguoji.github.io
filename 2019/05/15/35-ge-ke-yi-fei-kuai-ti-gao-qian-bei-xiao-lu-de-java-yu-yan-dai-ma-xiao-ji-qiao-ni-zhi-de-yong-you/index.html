@@ -215,7 +215,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/f8a1ed5040523fe7803294cd9045c304.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -538,8 +538,15 @@ System.out.println(&quot;i + \&quot;\&quot;：&quot; + (System.currentTimeMillis
 }
 </code></pre><p>如果你只是想遍历一下这个Map的key值，那用”Set keySet = hm.keySet();”会比较合适一些</p>
 <h2 id="35、对资源的close-建议分开操作"><a href="#35、对资源的close-建议分开操作" class="headerlink" title="35、对资源的close()建议分开操作"></a>35、对资源的close()建议分开操作</h2><p>意思是，比如我有这么一段代码：</p>
-<p>try{<br>XXX.close();<br>YYY.close();<br>}catch (Exception e)<br>{…}<br>建议修改为：</p>
-<p>try{ XXX.close(); }catch (Exception e) { … }try{ YYY.close(); }catch (Exception e) { … }<br>虽然有些麻烦，却能避免资源泄露。我想，如果没有修改过的代码，万一XXX.close()抛异常了，那么就进入了cath块中了，YYY.close()不会执行，YYY这块资源就不会回收了，一直占用着，这样的代码一多，是可能引起资源句柄泄露的。而改为上面的写法之后，就保证了无论如何XXX和YYY都会被close掉。</p>
+<pre><code>try{
+XXX.close();
+YYY.close();
+}catch (Exception e)
+{...}
+建议修改为：
+
+try{ XXX.close(); }catch (Exception e) { ... }try{ YYY.close(); }catch (Exception e) { ... }
+</code></pre><p>虽然有些麻烦，却能避免资源泄露。我想，如果没有修改过的代码，万一XXX.close()抛异常了，那么就进入了cath块中了，YYY.close()不会执行，YYY这块资源就不会回收了，一直占用着，这样的代码一多，是可能引起资源句柄泄露的。而改为上面的写法之后，就保证了无论如何XXX和YYY都会被close掉。</p>
 <p>来源:<a href="http://atjf.top/3WLPmG" target="_blank" rel="noopener">http://atjf.top/3WLPmG</a>  </p>
 
             </div>
@@ -681,16 +688,44 @@ System.out.println(&quot;i + \&quot;\&quot;：&quot; + (System.currentTimeMillis
 
 <script src="/libs/share/js/social-share.min.js"></script>
 
-            <div class="reprint">
-                <p>
-                    <span class="reprint-tip">
-                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
-                    </span>
-                    <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
-                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/" class="b-link-green">35个可以飞快提高千倍效率的Java语言代码小技巧，你值得拥有！</a>
-                </p>
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载请注明</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="cc_by_url">
+                    <img alt style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png">
+                </a>
             </div>
+            <br>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+                    《35个可以飞快提高千倍效率的Java语言代码小技巧，你值得拥有！》
+                </span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/" property="cc:attributionName" rel="cc:attributionURL">
+                chen guoji
+            </a> under
+            <a rel="license" href="cc_by_url">
+                cc_by_name
+            </a>licensed
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>pleaseFollowReprintPolicy</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">checkPolicy</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
         </div>
     </div>
 
@@ -968,7 +1003,7 @@ System.out.println(&quot;i + \&quot;\&quot;：&quot; + (System.currentTimeMillis
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
@@ -976,14 +1011,18 @@ System.out.println(&quot;i + \&quot;\&quot;：&quot; + (System.currentTimeMillis
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/f8a1ed5040523fe7803294cd9045c304.jpg" class="responsive-img" alt="拯救 Out Of Memory，8个案例带你飞！">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="拯救 Out Of Memory，8个案例带你飞！">
                         
                         <span class="card-title">拯救 Out Of Memory，8个案例带你飞！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">1. Java 堆空间发生频率：5颗星
-造成原因无法在 Java 堆中分配对象吞吐量增加应用程序无意中保存了对象引用，对象无法被 GC 回收应用程序过度使用 finalizer。finalizer 对象不能被 GC 立刻回收。finaliz</div>
+                    <div class="summary block-with-text">
+                        
+                            1. Java 堆空间发生频率：5颗星
+造成原因无法在 Java 堆中分配对象吞吐量增加应用程序无意中保存了对象引用，对象无法被 GC 回收应用程序过度使用 finalizer。finalizer 对象不能被 GC 立刻回收。finaliz
+                        
+                    </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-16
@@ -1013,7 +1052,7 @@ System.out.println(&quot;i + \&quot;\&quot;：&quot; + (System.currentTimeMillis
         </div>
         
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
@@ -1022,16 +1061,20 @@ System.out.println(&quot;i + \&quot;\&quot;：&quot; + (System.currentTimeMillis
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/9d33b60a40ef8fd080ac8cabe8fa27fa.jpg" class="responsive-img" alt="7年Java后端被淘汰，一路北漂辛酸史">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="7年Java后端被淘汰，一路北漂辛酸史">
                         
                         <span class="card-title">7年Java后端被淘汰，一路北漂辛酸史</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">今天分享一位同行的经历：
+                    <div class="summary block-with-text">
+                        
+                            今天分享一位同行的经历：
 本人Java开发6年半不到7年的样子。
 英语专业，临毕业跟着隔壁专业去培训了四个月 Java 。
-跟他们一起来了北京找工作，一找就是 5 个多月，面试 100 多家公司。最终还是隔壁专业的同学介绍到他们公司才就业了</div>
+跟他们一起来了北京找工作，一找就是 5 个多月，面试 100 多家公司。最终还是隔壁专业的同学介绍到他们公司才就业了
+                        
+                    </div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-14
@@ -1063,6 +1106,7 @@ System.out.println(&quot;i + \&quot;\&quot;：&quot; + (System.currentTimeMillis
     </div>
 </article>
 </div>
+
 
 
     </div>
@@ -1171,6 +1215,9 @@ System.out.println(&quot;i + \&quot;\&quot;：&quot; + (System.currentTimeMillis
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
 			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
 			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">101.2k</span>
             
 
             

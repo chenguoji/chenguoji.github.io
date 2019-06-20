@@ -231,14 +231,16 @@
     </div>
 </div>
 <script>
-// 每天切换 banner 图.  Switch banner image every day.   ' + new Date().getDay() + '
+// 每天切换 banner 图.  Switch banner image every day.
 $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
 </script>
+
     </div>
 </div>
 <style>
     .friends-container {
         margin-top: -100px;
+        margin-bottom: 30px;
     }
 
     .frind-ship img {
@@ -413,13 +415,13 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
 
 <main class="content">
     <div class="container friends-container">
-        <article>
+        <article id="friends-link">
             
             
             <div class="row tags-posts friend-all">
                 
                 
-                <div class=" col s12 m6 l4" data-aos="zoom-in-up">
+                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
                     <div class="card frind-card1">
                         <div class="frind-ship">
                             <div class="title">
@@ -439,7 +441,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
                 </div>
                 
                 
-                <div class=" col s12 m6 l4" data-aos="zoom-in-up">
+                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
                     <div class="card frind-card2">
                         <div class="frind-ship">
                             <div class="title">
@@ -459,7 +461,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
                 </div>
                 
                 
-                <div class=" col s12 m6 l4" data-aos="zoom-in-up">
+                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
                     <div class="card frind-card3">
                         <div class="frind-ship">
                             <div class="title">
@@ -479,7 +481,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
                 </div>
                 
                 
-                <div class=" col s12 m6 l4" data-aos="zoom-in-up">
+                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
                     <div class="card frind-card4">
                         <div class="frind-ship">
                             <div class="title">
@@ -499,7 +501,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
                 </div>
                 
                 
-                <div class=" col s12 m6 l4" data-aos="zoom-in-up">
+                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
                     <div class="card frind-card5">
                         <div class="frind-ship">
                             <div class="title">
@@ -523,6 +525,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
         </article>
     </div>
 </main>
+
+<script>
+$(function () {
+    $('#friends-link').masonry({
+        itemSelector: '.friend-div'
+    });
+});
+</script>
 <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -531,6 +541,9 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
 			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
 			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">101.2k</span>
             
 
             

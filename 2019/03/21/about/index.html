@@ -219,7 +219,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/0b166d7f400191cc80cf3c2d91a52c4f.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -536,16 +536,44 @@
 
 <script src="/libs/share/js/social-share.min.js"></script>
 
-            <div class="reprint">
-                <p>
-                    <span class="reprint-tip">
-                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
-                    </span>
-                    <a href="http://chenguoji.com" class="b-link-green">陈国际博客</a>
-                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/03/21/about/" class="b-link-green">关于</a>
-                </p>
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载请注明</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="cc_by_url">
+                    <img alt style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png">
+                </a>
             </div>
+            <br>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+                    《关于》
+                </span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/03/21/about/" property="cc:attributionName" rel="cc:attributionURL">
+                chen guoji
+            </a> under
+            <a rel="license" href="cc_by_url">
+                cc_by_name
+            </a>licensed
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>pleaseFollowReprintPolicy</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">checkPolicy</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
         </div>
     </div>
 
@@ -823,7 +851,7 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
@@ -831,17 +859,21 @@
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/957f331740fdadbd807ad2c832fcb0e5.jpg" class="responsive-img" alt="Java转型大数据开发技能">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Java转型大数据开发技能">
                         
                         <span class="card-title">Java转型大数据开发技能</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。
+                    <div class="summary block-with-text">
+                        
+                            很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。
 什么意思呢？
 就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。
 如此多的技术，怎么学得过来呢？
-我觉得以你</div>
+我觉得以你
+                        
+                    </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
@@ -871,7 +903,7 @@
         </div>
         
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
@@ -880,15 +912,19 @@
                     <div class="card-image">
                         
                         
-                        <img src="http://bmob-cdn-24323.b0.upaiyun.com/2019/04/09/8c49182140953b97801519267be9bb3b.jpg" class="responsive-img" alt="Java面试中最高频的那20%知识点！">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Java面试中最高频的那20%知识点！">
                         
                         <span class="card-title">Java面试中最高频的那20%知识点！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">Java目前已经不仅仅是一门开发语言，而是一整套生态体系。
+                    <div class="summary block-with-text">
+                        
+                            Java目前已经不仅仅是一门开发语言，而是一整套生态体系。
 作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。
-但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握2</div>
+但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握2
+                        
+                    </div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-21
@@ -924,6 +960,7 @@
     </div>
 </article>
 </div>
+
 
 
     </div>
@@ -1032,6 +1069,9 @@
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
 			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
 			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">101.2k</span>
             
 
             
