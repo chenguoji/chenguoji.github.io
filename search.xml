@@ -4,6 +4,131 @@
   
     
     <entry>
+      <title>Java开发最常犯的10个错误，打死都不要犯！</title>
+      <link href="/2019/07/08/java-kai-fa-zui-chang-fan-de-10-ge-cuo-wu-da-si-du-bu-yao-fan/"/>
+      <url>/2019/07/08/java-kai-fa-zui-chang-fan-de-10-ge-cuo-wu-da-si-du-bu-yao-fan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="阅读目录"><a href="#阅读目录" class="headerlink" title="阅读目录"></a>阅读目录</h1><pre><code>1.Array转ArrayList2.判断一个数组是否包含某个值3.在循环内部删除List中的一个元素4.HashTable与HashMap5.使用集合原始类型（raw type）6.访问级别7.ArrayList和LinkedList8.可变与不可变9.父类和子类的构造方法10.“”还是构造方法11.未来工作</code></pre><p>这个列表总结了10个Java开发人员最常犯的错误。</p><h1 id="1、Array转ArrayList"><a href="#1、Array转ArrayList" class="headerlink" title="1、Array转ArrayList"></a>1、Array转ArrayList</h1><p>当需要把Array转成ArrayList的时候，开发人员经常这样做：</p><pre><code>List&lt;String&gt; list = Arrays.asList(arr);</code></pre><p>Arrays.asList()会返回一个ArrayList，但是要特别注意，这个ArrayList是Arrays类的静态内部类，并不是java.util.ArrayList类。</p><p>java.util.Arrays.ArrayList类实现了set()， get()，contains()方法，但是并没有实现增加元素的方法（事实上是可以调用add方法，但是没有具体实现，仅仅抛出UnsupportedOperationException异常），因此它的大小也是固定不变的。为了创建一个真正的java.util.ArrayList，你应该这样做：</p><pre><code>ArrayList&lt;String&gt; arrayList = new ArrayList&lt;String&gt;(Arrays.asList(arr));</code></pre><p>ArrayList的构造方法可以接收一个Collection类型，而java.util.Arrays.ArrayList已经实现了该接口。</p><h1 id="2、判断一个数组是否包含某个值"><a href="#2、判断一个数组是否包含某个值" class="headerlink" title="2、判断一个数组是否包含某个值"></a>2、判断一个数组是否包含某个值</h1><p>开发人员经常这样做：</p><pre><code>Set&lt;String&gt; set = new  HashSet&lt;String&gt;(Arrays.asList(arr));return set.contains(targetValue);</code></pre><p>以上代码可以正常工作，但是没有必要将其转换成set集合，将一个List转成Set需要额外的时间，其实我们可以简单的使用如下方法即可：</p><pre><code>Arrays.asList(arr).contains(targetValue);</code></pre><p>或者</p><pre><code>for(String s: arr){    if(s.equals(targetValue))        return    true;}return    false;</code></pre><p>第一种方法可读性更强。</p><h1 id="3、在循环内部删除List中的一个元素"><a href="#3、在循环内部删除List中的一个元素" class="headerlink" title="3、在循环内部删除List中的一个元素"></a>3、在循环内部删除List中的一个元素</h1><p>考虑如下代码，在迭代期间删除元素：</p><pre><code>ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;(Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;,&quot;d&quot;));for (int i = 0; i &lt; list.size(); i++) {    list.remove(i);}System.out.println(list);</code></pre><p>结果打印：[b, d]</p><p>在上面这个方法中有一系列的问题，当一个元素被删除的时候，list大小减小，然后原先索引指向了其它元素。所以如果你想在循环里通过索引来删除多个元素，将不会正确工作。</p><p>你也许知道使用迭代器是在循环里删除元素的正确方式，或许你也知道foreach循环跟迭代器很类似，但事实情况却不是这样，如下代码：</p><pre><code>ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;(Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;,&quot;d&quot;));for (String s : list) {        if (s.equals(&quot;a&quot;))       list.remove(s);}</code></pre><p>将抛出ConcurrentModificationException异常。</p><p>然而接下来的代码却是OK的：</p><pre><code>ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;(Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;,&quot;d&quot;));Iterator&lt;String&gt; iter = list.iterator();while (iter.hasNext()) {        String s = iter.next();        if (s.equals(&quot;a&quot;)) {        iter.remove();    }}</code></pre><p>next()方法需要在remove()方法之前被调用，在foreach循环里，编译器会在删除元素操作化调用next方法，这导致了ConcurrentModificationException异常。更多详细信息，可以查看ArrayList.iterator()的源码。</p><h1 id="4、HashTable与HashMap"><a href="#4、HashTable与HashMap" class="headerlink" title="4、HashTable与HashMap"></a>4、HashTable与HashMap</h1><p>从算法的角度来讲，HashTable是一种数据结构名称。但是在Java中，这种数据结构叫做HashMap。</p><p>HashTable与HashMap的一个主要的区别是HashTable是同步的，所以，通常来说，你会使用HashMap，而不是Hashtable。推荐：HashMap 和 Hashtable 的 6 个区别！</p><h1 id="5、使用集合原始类型（raw-type）"><a href="#5、使用集合原始类型（raw-type）" class="headerlink" title="5、使用集合原始类型（raw type）"></a>5、使用集合原始类型（raw type）</h1><p>在Java中，原始类型（raw type）和无界通配符类型很容易让人混淆。举个Set的例子，Set是原始类型，而Set是无界通配符类型。</p><p>请看如下代码，add方法使用了一个原始类型的List作为入参：</p><pre><code>public    static void add(List list, Object o){    list.add(o);}public static void main(String[] args){    List&lt;String&gt; list = new ArrayList&lt;String&gt;();    add(list, 10);        String s = list.get(0);}</code></pre><p>运行以上代码将会抛出异常：</p><p>Exception in thread “main” java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String at …</p><p>使用原始类型集合非常危险，因为它跳过了泛型类型检查，是不安全的。另外，Set, Set, 和Set这三个有很大的不同。</p><h1 id="6、访问级别"><a href="#6、访问级别" class="headerlink" title="6、访问级别"></a>6、访问级别</h1><p>开发人员经常使用public修饰类字段，虽然这很容易让别人直接通过引用获取该字段的值，但这是一个不好的设计。根据经验，应该尽可能的降低成员属性的访问级别。</p><h1 id="7、ArrayList和LinkedList"><a href="#7、ArrayList和LinkedList" class="headerlink" title="7、ArrayList和LinkedList"></a>7、ArrayList和LinkedList</h1><p>为什么开发人员经常使用ArrayList和LinkedList，却不知道他们之间的区别，因为它们看起来很像。然而它们之间有着巨大的性能差异。简单的说，如果有大量的增加删除操作并且没有很多的随机访问元素的操作，应该首选LinkedList。</p><h1 id="8、可变与不可变"><a href="#8、可变与不可变" class="headerlink" title="8、可变与不可变"></a>8、可变与不可变</h1><p>不可变对象有很多优点，如简单、安全等。但是对于每个不同的值都需要一个单独的对象，太多的对象会引起大量垃圾回收，因此在选择可变与不可变的时候，需要有一个平衡。</p><p>通常，可变对象用于避免产生大量的中间对象，一个经典的例子是大量字符串的拼接。如果你使用一个不可变对象，将会马上产生大量符合垃圾回收标准的对象，这浪费了CPU大量的时间和精力。使用可变对象是正确的解决方案（StringBuilder）；</p><pre><code>String result=&quot;&quot;;for(String s: arr){    result = result + s;}</code></pre><p>另外，在有些其它情况下也是需要使用可变对象。例如往一个方法传入一个可变对象，然后收集多种结果，而不需要写太多的语法。另一个例子是排序和过滤：当然，你可以写一个方法来接收原始的集合，并且返回一个排好序的集合，但是那样对于大的集合就太浪费了。</p><h1 id="9、父类和子类的构造方法"><a href="#9、父类和子类的构造方法" class="headerlink" title="9、父类和子类的构造方法"></a>9、父类和子类的构造方法</h1><pre><code>class Super{    String s;    public Super(String s){        this.s = s;    }}public class Sub extends Super{    int x = 200;    public Sub(String s){    }    public Sub(){        System.out.println(&quot;Sub&quot;);    }    public static void main(String[] args){        Sub s = new Sub();    }}</code></pre><p>之所以出现这个编译错误，是因为父类的默认构造方法未定义。在Java中，如果一个类没有定义构造方法，编译器会默认插入一个无参数的构造方法；但是如果一个构造方法在父类中已定义，在这种情况，编译器是不会自动插入一个默认的无参构造方法，这正是以上demo的情况；</p><p>对于子类来说，不管是无参构造方法还是有参构造方法，都会默认调用父类的无参构造方法；当编译器尝试在子类中往这两个构造方法插入super()方法时，因为父类没有一个默认的无参构造方法，所以编译器报错；</p><p>要修复这个错误，很简单：</p><h2 id="1、在父类手动定义一个无参构造方法："><a href="#1、在父类手动定义一个无参构造方法：" class="headerlink" title="1、在父类手动定义一个无参构造方法："></a>1、在父类手动定义一个无参构造方法：</h2><pre><code>public Super(){    System.out.println(&quot;Super&quot;);}</code></pre><h2 id="2、移除父类中自定义的构造方法"><a href="#2、移除父类中自定义的构造方法" class="headerlink" title="2、移除父类中自定义的构造方法"></a>2、移除父类中自定义的构造方法</h2><h2 id="3、在子类中自己写上父类构造方法的调用；如super-value-；"><a href="#3、在子类中自己写上父类构造方法的调用；如super-value-；" class="headerlink" title="3、在子类中自己写上父类构造方法的调用；如super(value)；"></a>3、在子类中自己写上父类构造方法的调用；如super(value)；</h2><h1 id="10、“”还是构造方法"><a href="#10、“”还是构造方法" class="headerlink" title="10、“”还是构造方法"></a>10、“”还是构造方法</h1><p>有两种创建字符串的方式：</p><pre><code>//1. use double quotesString x = &quot;abc&quot;;//2. use constructorString y = new String(&quot;abc&quot;);它们之间有什么区别呢？以下代码提供了一个快速回答：String a = &quot;abcd&quot;;String b = &quot;abcd&quot;;System.out.println(a == b); // TrueSystem.out.println(a.equals(b)); // TrueString c = new String(&quot;abcd&quot;);String d = new String(&quot;abcd&quot;);System.out.println(c == d); // FalseSystem.out.println(c.equals(d)); // True</code></pre><p>更多关于它们内存分配的信息，请参考Create Java String Using ” ” or Constructor??</p><p>未来工作</p><p>这个列表是我基于大量的github上的开源项目，Stack overflow上的问题，还有一些流行的google搜索的分析。没有明显示的评估证明它们是前10，但它们绝对是很常见的。</p><p>如果您不同意任一部分，请留下您的评论。如果您能提出其它一些常见的错误，我将会非常感激。</p><p>原文：<a href="http://www.programcreek.com/2014/05/top-10-mistakes-java-developers-make/" target="_blank" rel="noopener">http://www.programcreek.com/2014/05/top-10-mistakes-java-developers-make/</a><br>译文：cnblogs.com/chenpi/p/5508949.html</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>创业公司技术总监，去上市公司面试，结果凉了！</title>
+      <link href="/2019/07/05/chuang-ye-gong-si-ji-zhu-zong-jian-qu-shang-shi-gong-si-mian-shi-jie-guo-liang-liao/"/>
+      <url>/2019/07/05/chuang-ye-gong-si-ji-zhu-zong-jian-qu-shang-shi-gong-si-mian-shi-jie-guo-liang-liao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、先来个自我介绍"><a href="#1、先来个自我介绍" class="headerlink" title="1、先来个自我介绍"></a>1、先来个自我介绍</h1><p>首先，大概介绍下自己，后端开发8年，头两年用.NET，之后用Python至今，大概六年。</p><p>大概工作到第三年的时候，就开始兼着任管理职位。工作地点是在一个三、四线的沿海城市，本地IT业不发达，公司规模普遍偏小，对技术要求不高，但需要较为全面的人才。</p><p>而我长时间在这样的氛围下工作，慢慢也成长为一位偏“全栈”的WEB开发人员，从前端angular，到后端Python，到服务器部署，统统可以一人搞定。</p><h1 id="2、人到中年的焦虑"><a href="#2、人到中年的焦虑" class="headerlink" title="2、人到中年的焦虑"></a>2、人到中年的焦虑</h1><p>现在在这家公司差不多2年，担任技术合伙人，工资12K，在当地应该几乎达到顶点了，同时拥有一定的股权。但是公司近来越来越不景气，时不时出现了拖欠工资的行为。因而引发了我的焦虑。</p><p>心里想着，万一公司解散了，在本地很难找到相当水平的岗位。再者，就算换了一家别的公司，结局是否跟之前的一样，不断出现公司经营情况慢慢变差，随后再次出现解散的情况呢？</p><p>我心里没底，现在的我，三十出头，还处在事业的高峰期。如果在我四十岁、甚至五十岁，不断遇到这样类似的情况，那么我该何去何从呢？</p><h1 id="3、萌生回到厦门的念头"><a href="#3、萌生回到厦门的念头" class="headerlink" title="3、萌生回到厦门的念头"></a>3、萌生回到厦门的念头</h1><p>于是乎，在招聘网站上填了我的资料，寻找机会。</p><p>这次我的择业选择比较明确，到大公司去，最好是上市公司。为什么呢？一是之前都在小公司，想到真正的大公司去体验大公司的工作；二是大公司的上升空间比较大，相对来说也比较稳定。</p><p>自从填了资料，时不时有企业联系，规模小的，一般直接拒绝了。规模大的，也有一部分看不上我的。</p><p>一直到昨天，有个厦门的上市游戏公司邀请我过去聊聊。我向HR说明了，我没有游戏服务端的开发经验。但是她说没关系，你有多年的Python经验。</p><h1 id="4、面试过程：笔试"><a href="#4、面试过程：笔试" class="headerlink" title="4、面试过程：笔试"></a>4、面试过程：笔试</h1><p>昨天，2018年7月25日早上，我按约定来到了这家公司。先是填一些个人资料，然后笔试。</p><p>笔试的题目就是做过什么最有难度的项目，你是怎么设计架构的，你遇到了什么难题，你是怎么处理这些难题的。</p><p>于是，我把在这家公司的项目结构解析了下。</p><p>1.微服务架构、将系统拆分成5大微服务，包括用户、积分、会员卡、商户、订单。<br>2.微服务内部采用RESTAPI进行通信。<br>3.数据库采用各自独立，但是统一在一个数据库服务器上，并且进行读写分离。<br>4.服务器采用分布式+负载均衡<br>5.采用单点登录<br>6.前端是angular<br>实际上我在笔试中写得更详细一点，但是大概就这么回事。</p><h1 id="5、面试过程：HR面"><a href="#5、面试过程：HR面" class="headerlink" title="5、面试过程：HR面"></a>5、面试过程：HR面</h1><p>HR问了为什么来厦门，我坦言就业遇到瓶颈，寻求突破。估计HR看了我的简历，我有多年的管理岗位的经验。于是问了我不少管理上的问题。</p><p>例如：如果有人在上班时间炒股票，被你发现你会怎么办？</p><p>根据以往的经验，如果频率不高，我就当做没看见。为什么这样呢？因为小公司很难留住人，在不响应项目进度的前停下，这点小毛病，我不想管，当然也怕管了，人走了，会更公司带来更多的麻烦。</p><p>这点HR觉得我答得不好，他说公司有规定，看到就得当面指出，再犯可能开除。</p><p>我细想了下，嗯，有道理。</p><p>例如：如果有个员工一份月刚涨薪，六月份他又来提涨薪，你怎么处理？</p><p>我巴拉巴拉说了一堆，自己感觉也没答好。</p><p>这点HR说：应该去关注为什么他会想要涨薪。</p><p>我一听，也觉得确实应该这样。</p><p>最后呢，HR说虽然有管理经验，但是一般般。</p><p>这个事情呢，后来仔细的想，一是确实管理能力不足，二是当公司规模不同时，你如果按照你原有的经验去答，那可能不行。你得站在他的环境下去回答，大公司讲究制度，规模大了，没有制度管不了那么多的人。</p><h1 id="6、面试过程：技术面"><a href="#6、面试过程：技术面" class="headerlink" title="6、面试过程：技术面"></a>6、面试过程：技术面</h1><p>跟HR聊了很久，大概有2个小时，实际上涉及的问题比我在这里写的要多很多。我给他开的薪水是，最低18K，他问我是否确定要这么多，他觉得我的水平要不到那么多，我坚持，他就去找技术那边的人了。</p><p>几分钟后回来，说抱歉，看了我的笔试，觉得他们公司一般的小伙伴都具备的能力，我的技术没有突出点。</p><h1 id="7、总结"><a href="#7、总结" class="headerlink" title="7、总结"></a>7、总结</h1><p>从我6年前，回到所在城市的那次面试外，这个是我第一次去面试。感觉收获很多，一是处在管理岗位，确实应该有很多管理上的能力，得加强学习，不能两眼只盯着技术栈；二是隔一段时间去面试下，避免坐井观天，活在自己的世界里。</p><p>作者： 森林木<br><a href="https://www.cnblogs.com/senlinmu/" target="_blank" rel="noopener">https://www.cnblogs.com/senlinmu/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>系统运行缓慢，CPU 100%，Full GC次数过多，这一招帮你全搞定！</title>
+      <link href="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/"/>
+      <url>/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/</url>
+      
+        <content type="html"><![CDATA[<p>处理过线上问题的同学基本上都会遇到系统突然运行缓慢，CPU 100%，以及Full GC次数过多的问题。当然，这些问题的最终导致的直观现象就是系统运行缓慢，并且有大量的报警。本文主要针对系统运行缓慢这一问题，提供该问题的排查思路，从而定位出问题的代码点，进而提供解决该问题的思路。</p><p>对于线上系统突然产生的运行缓慢问题，如果该问题导致线上系统不可用，那么首先需要做的就是，导出jstack和内存信息，然后重启系统，尽快保证系统的可用性。这种情况可能的原因主要有两种：</p><pre><code>1.代码中某个位置读取数据量较大，导致系统内存耗尽，从而导致Full GC次数过多，系统缓慢；2.代码中有比较耗CPU的操作，导致CPU过高，系统运行缓慢；</code></pre><p>相对来说，这是出现频率最高的两种线上问题，而且它们会直接导致系统不可用。另外有几种情况也会导致某个功能运行缓慢，但是不至于导致系统不可用：</p><pre><code>1.代码某个位置有阻塞性的操作，导致该功能调用整体比较耗时，但出现是比较随机的；2.某个线程由于某种原因而进入WAITING状态，此时该功能整体不可用，但是无法复现；3.由于锁使用不当，导致多个线程进入死锁状态，从而导致系统整体比较缓慢。</code></pre><p>对于这三种情况，通过查看CPU和系统内存情况是无法查看出具体问题的，因为它们相对来说都是具有一定阻塞性操作，CPU和系统内存使用情况都不高，但是功能却很慢。下面我们就通过查看系统日志来一步一步甄别上述几种问题。</p><h1 id="1-Full-GC次数过多"><a href="#1-Full-GC次数过多" class="headerlink" title="1. Full GC次数过多"></a>1. Full GC次数过多</h1><p>相对来说，这种情况是最容易出现的，尤其是新功能上线时。对于Full GC较多的情况，其主要有如下两个特征：</p><pre><code>1.线上多个线程的CPU都超过了100%，通过jstack命令可以看到这些线程主要是垃圾回收线程2.通过jstat命令监控GC情况，可以看到Full GC次数非常多，并且次数在不断增加。</code></pre><p>首先我们可以使用 top命令查看系统CPU的占用情况，如下是系统CPU较高的一个示例：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/1.png"><p>可以看到，有一个Java程序此时CPU占用量达到了98.8%，此时我们可以复制该进程id 9，并且使用如下命令查看呢该进程的各个线程运行情况：</p><p>top -Hp 9</p><p>该进程下的各个线程运行情况如下：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/2.png"><p>可以看到，在进程为 9的Java程序中各个线程的CPU占用情况，接下来我们可以通过jstack命令查看线程id为 10的线程为什么耗费CPU最高。需要注意的是，在jsatck命令展示的结果中，线程id都转换成了十六进制形式。可以用如下命令查看转换结果，也可以找一个科学计算器进行转换：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/3.png"><p>这里打印结果说明该线程在jstack中的展现形式为 0xa，通过jstack命令我们可以看到如下信息：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/4.png"><p>这里的VM Thread一行的最后显示 nid=0xa，这里nid的意思就是操作系统线程id的意思。而VM Thread指的就是垃圾回收的线程。这里我们基本上可以确定，当前系统缓慢的原因主要是垃圾回收过于频繁，导致GC停顿时间较长。我们通过如下命令可以查看GC的情况：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/5.png"><p>可以看到，这里FGC指的是Full GC数量，这里高达6793，而且还在不断增长。从而进一步证实了是由于内存溢出导致的系统缓慢。那么这里确认了内存溢出，但是如何查看你是哪些对象导致的内存溢出呢，这个可以dump出内存日志，然后通过eclipse的mat工具进行查看，如下是其展示的一个对象树结构：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/6.jpg"><p>经过mat工具分析之后，我们基本上就能确定内存中主要是哪个对象比较消耗内存，然后找到该对象的创建位置，进行处理即可。这里的主要是PrintStream最多，但是我们也可以看到，其内存消耗量只有12.2%。也就是说，其还不足以导致大量的Full GC，此时我们需要考虑另外一种情况，就是代码或者第三方依赖的包中有显示的 System.gc()调用。这种情况我们查看dump内存得到的文件即可判断，因为其会打印GC原因：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/7.png"><p>比如这里第一次GC是由于 System.gc()的显示调用导致的，而第二次GC则是JVM主动发起的。总结来说，对于Full GC次数过多，主要有以下两种原因：</p><pre><code>1.代码中一次获取了大量的对象，导致内存溢出，此时可以通过eclipse的mat工具查看内存中有哪些对象比较多；2.内存占用不高，但是Full GC次数还是比较多，此时可能是显示的 System.gc()调用导致GC次数过多，这可以通过添加 -XX:+DisableExplicitGC来禁用JVM对显示GC的响应。</code></pre><h1 id="2-CPU过高"><a href="#2-CPU过高" class="headerlink" title="2. CPU过高"></a>2. CPU过高</h1><p>在前面第一点中，我们讲到，CPU过高可能是系统频繁的进行Full GC，导致系统缓慢。而我们平常也肯能遇到比较耗时的计算，导致CPU过高的情况，此时查看方式其实与上面的非常类似。首先我们通过 top命令查看当前CPU消耗过高的进程是哪个，从而得到进程id；然后通过 top-Hp<pid>来查看该进程中有哪些线程CPU过高，一般超过80%就是比较高的，80%左右是合理情况。这样我们就能得到CPU消耗比较高的线程id。接着通过该 线程id的十六进制表示在 jstack日志中查看当前线程具体的堆栈信息。</pid></p><p>在这里我们就可以区分导致CPU过高的原因具体是Full GC次数过多还是代码中有比较耗时的计算了。如果是Full GC次数过多，那么通过 jstack得到的线程信息会是类似于VM Thread之类的线程，而如果是代码中有比较耗时的计算，那么我们得到的就是一个线程的具体堆栈信息。如下是一个代码中有比较耗时的计算，导致CPU过高的线程信息：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/8.jpg"><p>这里可以看到，在请求UserController的时候，由于该Controller进行了一个比较耗时的调用，导致该线程的CPU一直处于100%。我们可以根据堆栈信息，直接定位到UserController的34行，查看代码中具体是什么原因导致计算量如此之高。</p><h1 id="3-不定期出现的接口耗时现象"><a href="#3-不定期出现的接口耗时现象" class="headerlink" title="3. 不定期出现的接口耗时现象"></a>3. 不定期出现的接口耗时现象</h1><p>对于这种情况，比较典型的例子就是，我们某个接口访问经常需要2~3s才能返回。这是比较麻烦的一种情况，因为一般来说，其消耗的CPU不多，而且占用的内存也不高，也就是说，我们通过上述两种方式进行排查是无法解决这种问题的。而且由于这样的接口耗时比较大的问题是不定时出现的，这就导致了我们在通过 jstack命令即使得到了线程访问的堆栈信息，我们也没法判断具体哪个线程是正在执行比较耗时操作的线程。</p><p>对于不定时出现的接口耗时比较严重的问题，我们的定位思路基本如下：首先找到该接口，通过压测工具不断加大访问力度，如果说该接口中有某个位置是比较耗时的，由于我们的访问的频率非常高，那么大多数的线程最终都将阻塞于该阻塞点，这样通过多个线程具有相同的堆栈日志，我们基本上就可以定位到该接口中比较耗时的代码的位置。如下是一个代码中有比较耗时的阻塞操作通过压测工具得到的线程堆栈日志：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/9.png"><p>从上面的日志可以看你出，这里有多个线程都阻塞在了UserController的第18行，说明这是一个阻塞点，也就是导致该接口比较缓慢的原因。</p><h1 id="4-某个线程进入WAITING状态"><a href="#4-某个线程进入WAITING状态" class="headerlink" title="4. 某个线程进入WAITING状态"></a>4. 某个线程进入WAITING状态</h1><p>对于这种情况，这是比较罕见的一种情况，但是也是有可能出现的，而且由于其具有一定的“不可复现性”，因而我们在排查的时候是非常难以发现的。笔者曾经就遇到过类似的这种情况，具体的场景是，在使用CountDownLatch时，由于需要每一个并行的任务都执行完成之后才会唤醒主线程往下执行。而当时我们是通过CountDownLatch控制多个线程连接并导出用户的gmail邮箱数据，这其中有一个线程连接上了用户邮箱，但是连接被服务器挂起了，导致该线程一直在等待服务器的响应。最终导致我们的主线程和其余几个线程都处于WAITING状态。</p><p>对于这样的问题，查看过jstack日志的读者应该都知道，正常情况下，线上大多数线程都是处于 TIMED_WAITING状态，而我们这里出问题的线程所处的状态与其是一模一样的，这就非常容易混淆我们的判断。解决这个问题的思路主要如下：</p><pre><code>1.通过grep在jstack日志中找出所有的处于 TIMED_WAITING状态的线程，将其导出到某个文件中，如a1.log2.等待一段时间之后，比如10s，再次对jstack日志进行grep，将其导出到另一个文件，如a2.log3.重复步骤2，待导出3~4个文件之后，我们对导出的文件进行对比，找出其中在这几个文件中一直都存在的用户线程，这个线程基本上就可以确认是包含了处于等待状态有问题的线程。因为正常的请求线程是不会在20~30s之后还是处于等待状态的。4.经过排查得到这些线程之后，我们可以继续对其堆栈信息进行排查，如果该线程本身就应该处于等待状态，比如用户创建的线程池中处于空闲状态的线程，那么这种线程的堆栈信息中是不会包含用户自定义的类的。这些都可以排除掉，而剩下的线程基本上就可以确认是我们要找的有问题的线程。通过其堆栈信息，我们就可以得出具体是在哪个位置的代码导致该线程处于等待状态了。</code></pre><p>这里需要说明的是，我们在判断是否为用户线程时，可以通过线程最前面的线程名来判断，因为一般的框架的线程命名都是非常规范的，我们通过线程名就可以直接判断得出该线程是某些框架中的线程，这种线程基本上可以排除掉。而剩余的，比如上面的 Thread-0，以及我们可以辨别的自定义线程名，这些都是我们需要排查的对象。</p><p>经过上面的方式进行排查之后，我们基本上就可以得出这里的 Thread-0就是我们要找的线程，通过查看其堆栈信息，我们就可以得到具体是在哪个位置导致其处于等待状态了。如下示例中则是在SyncTask的第8行导致该线程进入等待了。</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/10.png"><h1 id="5-死锁"><a href="#5-死锁" class="headerlink" title="5. 死锁"></a>5. 死锁</h1><p>对于死锁，这种情况基本上很容易发现，因为 jstack可以帮助我们检查死锁，并且在日志中打印具体的死锁线程信息。如下是一个产生死锁的一个 jstack日志示例：</p><img src="/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/11.jpg"><p>可以看到，在jstack日志的底部，其直接帮我们分析了日志中存在哪些死锁，以及每个死锁的线程堆栈信息。这里我们有两个用户线程分别在等待对方释放锁，而被阻塞的位置都是在ConnectTask的第5行，此时我们就可以直接定位到该位置，并且进行代码分析，从而找到产生死锁的原因。</p><h1 id="6-小结"><a href="#6-小结" class="headerlink" title="6. 小结"></a>6. 小结</h1><p>本文主要讲解了线上可能出现的五种导致系统缓慢的情况，详细分析了每种情况产生时的现象，已经根据现象我们可以通过哪些方式定位得到是这种原因导致的系统缓慢。简要的说，我们进行线上日志分析时，主要可以分为如下步骤：</p><pre><code>1.通过 top命令查看CPU情况，如果CPU比较高，则通过 top-Hp&lt;pid&gt;命令查看当前进程的各个线程运行情况，找出CPU过高的线程之后，将其线程id转换为十六进制的表现形式，然后在jstack日志中查看该线程主要在进行的工作。这里又分为两种情况    1.1 如果是正常的用户线程，则通过该线程的堆栈信息查看其具体是在哪处用户代码处运行比较消耗CPU；    1.2 如果该线程是 VMThread，则通过 jstat-gcutil&lt;pid&gt;&lt;period&gt;&lt;times&gt;命令监控当前系统的GC状况，然后通过 jmapdump:format=b,file=&lt;filepath&gt;&lt;pid&gt;导出系统当前的内存数据。导出之后将内存情况放到eclipse的mat工具中进行分析即可得出内存中主要是什么对象比较消耗内存，进而可以处理相关代码；2.如果通过 top命令看到CPU并不高，并且系统内存占用率也比较低。此时就可以考虑是否是由于另外三种情况导致的问题。具体的可以根据具体情况分析：    2.1如果是接口调用比较耗时，并且是不定时出现，则可以通过压测的方式加大阻塞点出现的频率，从而通过 jstack查看堆 栈信息，找到阻塞点；    2.2如果是某个功能突然出现停滞的状况，这种情况也无法复现，此时可以通过多次导出 jstack日志的方式对比哪些用户线程是一直都处于等待状态，这些线程就是可能存在问题的线程；    2.3如果通过 jstack可以查看到死锁状态，则可以检查产生死锁的两个线程的具体阻塞点，从而处理相应的问题。</code></pre><p>本文主要是提出了五种常见的导致线上功能缓慢的问题，以及排查思路。当然，线上的问题出现的形式是多种多样的，也不一定局限于这几种情况，如果我们能够仔细分析这些问题出现的场景，就可以根据具体情况具体分析，从而解决相应的问题。        </p><p>来源：<a href="http://t.cn/EI9JdBu" target="_blank" rel="noopener">http://t.cn/EI9JdBu</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>这么牛逼的正则表达式，可惜你不会写！</title>
+      <link href="/2019/06/28/zhe-me-niu-bi-de-zheng-ze-biao-da-shi-ke-xi-ni-bu-hui-xie/"/>
+      <url>/2019/06/28/zhe-me-niu-bi-de-zheng-ze-biao-da-shi-ke-xi-ni-bu-hui-xie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、校验数字的表达式"><a href="#一、校验数字的表达式" class="headerlink" title="一、校验数字的表达式"></a>一、校验数字的表达式</h1><p>数字：<br>    ^[0-9]*$</p><p>n位的数字：<br>    ^\d{n}$</p><p>至少n位的数字：<br>    ^\d{n,}$</p><p>m-n位的数字：<br>    ^\d{m,n}$</p><p>零和非零开头的数字：<br>    ^(0|[1-9][0-9]*)$</p><p>非零开头的最多带两位小数的数字：<br>    ^([1-9][0-9]*)+(.[0-9]{1,2})?$</p><p>带1-2位小数的正数或负数：<br>    ^(-)?\d+(.\d{1,2})$</p><p>正数、负数、和小数：<br>    ^(-|+)?\d+(.\d+)?$</p><p>有两位小数的正实数：<br>    ^[0-9]+(.[0-9]{2})?$</p><p>有1~3位小数的正实数：<br>    ^[0-9]+(.[0-9]{1,3})?$</p><p>非零的正整数：<br>    ^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^+?[1-9][0-9]*$</p><p>非零的负整数：<br>    ^-[1-9][]0-9”*$ 或 ^-[1-9]\d*$</p><p>非负整数：<br>    ^\d+$ 或 ^[1-9]\d*|0$</p><p>非正整数：<br>    ^-[1-9]\d*|0$ 或 ^((-\d+)|(0+))$</p><p>非负浮点数：<br>    ^\d+(.\d+)?$ 或 ^[1-9]\d*.\d*|0.\d*[1-9]\d*|0?.0+|0$</p><p>非正浮点数：<br>    ^((-\d+(.\d+)?)|(0+(.0+)?))$ 或 ^(-([1-9]\d*.\d*|0.\d*[1-9]\d*))|0?.0+|0$</p><p>正浮点数：<br>    ^[1-9]\d*.\d*|0.\d*[1-9]\d*$ 或 ^(([0-9]+.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*.[0-9]+)|([0-9]*[1-9][0-9]*))$</p><p>负浮点数：<br>    ^-([1-9]\d*.\d*|0.\d*[1-9]\d*)$ 或 ^(-(([0-9]+.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*.[0-9]+)|([0-9]*[1-9][0-9]*)))$</p><p>浮点数：<br>    ^(-?\d+)(.\d+)?$ 或 ^-?([1-9]\d*.\d*|0.\d*[1-9]\d*|0?.0+|0)$</p><h1 id="二、校验字符的表达式"><a href="#二、校验字符的表达式" class="headerlink" title="二、校验字符的表达式"></a>二、校验字符的表达式</h1><p>汉字：<br>    ^[\u4e00-\u9fa5]{0,}$</p><p>英文和数字：<br>    ^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]{4,40}$</p><p>长度为3-20的所有字符：<br>    ^.{3,20}$</p><p>由26个英文字母组成的字符串：<br>    ^[A-Za-z]+$</p><p>由26个大写英文字母组成的字符串：<br>    ^[A-Z]+$</p><p>由26个小写英文字母组成的字符串：<br>    ^[a-z]+$</p><p>由数字和26个英文字母组成的字符串：<br>    ^[A-Za-z0-9]+$</p><p>由数字、26个英文字母或者下划线组成的字符串：<br>    ^\w+$ 或 ^\w{3,20}$</p><p>中文、英文、数字包括下划线：<br>    ^[\u4E00-\u9FA5A-Za-z0-9_]+$</p><p>中文、英文、数字但不包括下划线等符号：<br>    ^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$</p><p>禁止输入含有~的字符：<br>    [^~\x22]+</p><h1 id="三、特殊需求表达式"><a href="#三、特殊需求表达式" class="headerlink" title="三、特殊需求表达式"></a>三、特殊需求表达式</h1><p>Email地址：<br>    ^\w+([-+.]\w+)*@\w+([-.]\w+)*.\w+([-.]\w+)*$</p><p>域名：<br>    [a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?</p><p>InternetURL：<br>    [a-zA-z]+://[^\s]* 或 ^http://([\w-]+.)+[\w-]+(/[\w-./?%&amp;=]*)?$</p><p>手机号码：<br>    ^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$</p><p>国内电话号码(0511-4405222、021-87888822)：<br>    \d{3}-\d{8}|\d{4}-\d{7}</p><p>电话号码正则表达式（支持手机号码，3-4位区号，7-8位直播号码，1－4位分机号）:<br>    ((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)</p><p>身份证号(15位、18位数字)，最后一位是校验位，可能为数字或字符X：<br>    (^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)</p><p>帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：<br>    ^[a-zA-Z][a-zA-Z0-9_]{4,15}$</p><p>密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)：<br>    ^[a-zA-Z]\w{5,17}$</p><p>强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在 8-10 之间)：<br>    ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,10}$</p><p>强密码(必须包含大小写字母和数字的组合，可以使用特殊字符，长度在8-10之间)：<br>    ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$</p><p>日期格式：<br>    ^\d{4}-\d{1,2}-\d{1,2}</p><p>一年的12个月(01～09和1～12)：<br>    ^(0?[1-9]|1[0-2])$</p><p>一个月的31天(01～09和1～31)：<br>    ^((0?[1-9])|((1|2)[0-9])|30|31)$</p><p>xml文件：<br>    ^([a-zA-Z]+-?)+[a-zA-Z0-9]+\.[x|X][m|M][l|L]$</p><p>中文字符的正则表达式：<br>    [\u4e00-\u9fa5]</p><p>空白行的正则表达式：<br>    \n\s*\r (可以用来删除空白行)</p><p>HTML标记的正则表达式：<br>    &lt;(\S*?)[^&gt;]*&gt;.*?|&lt;.*? /&gt; ( 首尾空白字符的正则表达式：^\s*|\s*$或(^\s*)|(\s*$) (可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式)</p><p>腾讯QQ号：<br>    [1-9][0-9]{4,} (腾讯QQ号从10000开始)</p><p>中国邮政编码：<br>    [1-9]\d{5}(?!\d) (中国邮政编码为6位数字)</p><p>IP地址：<br>    ((?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d))</p><p>来源：编程无界（ID：qianshic）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自动创建Spring Boot 工程，太爽了！</title>
+      <link href="/2019/06/24/zi-dong-chuang-jian-spring-boot-gong-cheng-tai-shuang-liao/"/>
+      <url>/2019/06/24/zi-dong-chuang-jian-spring-boot-gong-cheng-tai-shuang-liao/</url>
+      
+        <content type="html"><![CDATA[<p>Spring Boot 大家都知道是啥吧？</p><p>顺便再往下看，今天博主给你带来年轻人的第一个 Spring Boot 工程，撸码史无前例的轻松，那就一个字：爽！</p><h1 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h1><p>打开这个网站，快速生成一个 Spring Boot 项目。</p><p><a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a></p><p>废话不说，看下图，几秒搞定！</p><h1 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h1><p>解压生成的 demo 项目，导入到 IDE 中。</p><img src="/2019/06/24/zi-dong-chuang-jian-spring-boot-gong-cheng-tai-shuang-liao/2.jpg"><p>来看下 pom.xml 文件内容：</p><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;    &lt;parent&gt;        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;        &lt;version&gt;2.1.5.RELEASE&lt;/version&gt;        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;    &lt;/parent&gt;    &lt;groupId&gt;cn.javastack&lt;/groupId&gt;    &lt;artifactId&gt;demo&lt;/artifactId&gt;    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;    &lt;name&gt;demo&lt;/name&gt;    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;    &lt;properties&gt;        &lt;java.version&gt;1.8&lt;/java.version&gt;    &lt;/properties&gt;    &lt;dependencies&gt;        &lt;dependency&gt;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;        &lt;/dependency&gt;        &lt;dependency&gt;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;            &lt;scope&gt;test&lt;/scope&gt;        &lt;/dependency&gt;    &lt;/dependencies&gt;    &lt;build&gt;        &lt;plugins&gt;            &lt;plugin&gt;                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;            &lt;/plugin&gt;        &lt;/plugins&gt;    &lt;/build&gt;&lt;/project&gt;</code></pre><p>以及 DemoApplication 入口类内容：</p><pre><code>@SpringBootApplicationpublic class DemoApplication {    public static void main(String[] args) {        SpringApplication.run(DemoApplication.class, args);    }}</code></pre><p>这里不作过多介绍。</p><h1 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h1><p>添加年轻人的第一个 Spring Boot 请求：/hello.</p><p>修改 DemoApplication 添加一个请求方法，修改后的代码内容如下：</p><pre><code>@RestController@SpringBootApplicationpublic class DemoApplication {    public static void main(String[] args) {        SpringApplication.run(DemoApplication.class, args);    }    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello&quot;;    }}</code></pre><h1 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h1><p>运行 Spring Boot 应用，在 IDE 中运行 DemoApplication main 方法即可。</p><img src="/2019/06/24/zi-dong-chuang-jian-spring-boot-gong-cheng-tai-shuang-liao/3.jpg"><p>如图所示，程序已经启动，牛逼啊，2秒多就启动起来了，爽。。。它能跑起来，是因为内置了 Tomcat 容器，当然你也可以替换或者自定义配置，</p><h1 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h1><p>访问 /hello 请求，在浏览器中访问以下链接：</p><p><a href="http://localhost:8080/hello" target="_blank" rel="noopener">http://localhost:8080/hello</a></p><p>如下图所示，页面输出了hello.</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>我就在官网生成一个 demo 项目，然后导入到 IDE 中，写几行代码后输出：hello，开启了年轻人的第一个 Spring Boot 项目。</p><p>全程下来，我就只用几分钟，然后只加了 5 行代码，没有其他乱七八糟的 XML 配置，这叫一个爽。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【美团】Java岗154道面试题</title>
       <link href="/2019/06/21/mei-tuan-java-gang-154-dao-mian-shi-ti/"/>
       <url>/2019/06/21/mei-tuan-java-gang-154-dao-mian-shi-ti/</url>
@@ -329,31 +454,6 @@
     
     
     <entry>
-      <title>Java 诞生日，Java 24 岁了！</title>
-      <link href="/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
-      <url>/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</url>
-      
-        <content type="html"><![CDATA[<p>今天是 Java 诞生日，Java 今年 24 岁了，比栈长还年轻。。还有得搞，别慌！作为一名Java语言的学习者，对Java的起源和发展有个大概的了解应是必要的。</p><p>1991年，Sun公司成立Green项目。Oak语言诞生。</p><p>1992年11月，Sun公司为Green项目成立FirstPerson公司。</p><p>1992年12月3日，被命名为Star7的面向一种类PDA的这台设备进行了展示，这种设备有鲜艳的图形界面和被称为“Duke”的智能代理来帮助用户。</p><p>1993年，FirstPerson公司重定位Oak。转向到网络应用领域（背景：WWW开始席卷全球）。</p><h4 id="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"><a href="#1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器" class="headerlink" title="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"></a>1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器</h4><p>WebRunner，后更名为Hotjava。Oak编写的Applet让网页由静态转成动态。</p><h4 id="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"><a href="#1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。" class="headerlink" title="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"></a>1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。</h4><p>1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。</p><p>1996年1月，Sun公司发布了Java的第一个开发工具包（JDK 1.0），这是Java发展历程中的重要里程碑，标志着Java成为一种独立的开发工具。</p><p>1996年9月，约8.3万个网页应用了Java技术来制作。</p><p>1996年10月，Sun公司发布了Java平台的第一个即时（JIT）编译器。</p><p>1997年2月，JDK1.1发布，在随后的3周时间里，达到了22万次的下载量。</p><p>1997年4月，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录。</p><p>1997年9月，JavaDeveloperConnection社区成员超过十万。</p><p>1998年2月，JDK1.1被下载超过2,000,000次。</p><p>1998年12月8日，JAVA2企业平台J2EE发布。</p><p>1999年4月27日，HotSpot虚拟机发布。HotSpot虚拟机发布时是作为JDK 1.2的附加程序提供的，后来它成为了JDK 1.3及之后所有版本的Sun JDK的默认虚拟机。</p><p>1999年6月，SUN公司发布Java的三个版本：标准版（JavaSE,以前是J2SE）、企业版（JavaEE以前是J2EE）和微型版（JavaME，以前是J2ME）。</p><p>2000年5月，JDK1.3，JDK1.4相继发布。</p><p>2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机。</p><p>2001年9月24日，J2EE1.3发布。</p><p>2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升。</p><h4 id="2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。"><a href="#2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。" class="headerlink" title="2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。"></a>2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。</h4><p>2005年6月，JavaOne大会召开，SUN公司公开JavaSE6。此时，Java的各种版本已经更名，以取消其中的数字”2″：J2EE更名为JavaEE，J2SE更名为JavaSE，J2ME更名为JavaME。</p><p>2006年11月13日，Java技术的发明者Sun公司宣布，将Java技术作为免费软件对外发布。Sun公司正式发布的有关Java平台标准版的第一批源代码，以及Java迷你版的可执行源代码。</p><p>2006年12月，SUN公司发布JRE6.0。</p><p>2007年3月起，全世界所有的开发人员均可对Java源代码进行修改 。</p><p>2009年4月，甲骨文74亿美元收购Sun。取得java的版权。</p><p>2011年7月28日，甲骨文发布java7.0的正式版。</p><p>2014年，甲骨文（O）公司发布了Java8正式版。</p><p>2017年，甲骨文发布Java9。</p><p>2018年3月，甲骨文发布Java10。</p><p>2018年9月，甲骨文发布Java11。</p><p>2019年3月，甲骨文发布Java12。</p><p>参考：<a href="http://www.sohu.com/a/194505161_775404" target="_blank" rel="noopener">www.sohu.com/a/194505161_775404</a></p><p>最后祝我大Java生日快乐！！！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>SQL Server 日期时间如何处理</title>
       <link href="/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/"/>
       <url>/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/</url>
@@ -379,23 +479,23 @@
     
     
     <entry>
-      <title>html中横线使用</title>
-      <link href="/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
-      <url>/2019/05/18/html-zhong-heng-xian-shi-yong/</url>
+      <title>Java 诞生日，Java 24 岁了！</title>
+      <link href="/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
+      <url>/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</url>
       
-        <content type="html"><![CDATA[<pre><code>第一种：&lt;hr style=&quot; height:2px;border:none;border-top:2px dotted #185598;&quot; /&gt;   园点虚线height:2px;是hr的高度border:none;是没有边框border-top:2px dotted #185598;是设置横线的样式dotted  虚线  #185598  颜色第二种：&lt;hr style=&quot;height:1px;border:none;border-top:1px dashed #0066CC;&quot; /&gt;    块虚线第三种：&lt;hr style=&quot;height:1px;border:none;border-top:1px solid #555555;&quot; /&gt;  实线，一条直线第四种：&lt;hr style=&quot;height:3px;border:none;border-top:3px double red;&quot; /&gt; 两条紧密实线，第五种：&lt;hr style=&quot;height:5px;border:none;border-top:5px ridge green;&quot; /&gt; 两种颜色第六种：&lt;hr style=&quot;height:10px;border:none;border-top:10px groove skyblue;&quot; /&gt;  两种颜色border-top:10px groove skyblue;    groove  上颜色        skyblue   下颜色.style-one {/*内嵌水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 0;    border-top: 1px solid rgba(0, 0, 0, 0.1);    border-bottom: 1px solid rgba(255, 255, 255, 0.3);}.style-two {/*透明渐变水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));}.style-three{/*渐变*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background: #333;    background-image: linear-gradient(to right, #ccc, #333, #ccc);}</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>今天是 Java 诞生日，Java 今年 24 岁了，比栈长还年轻。。还有得搞，别慌！作为一名Java语言的学习者，对Java的起源和发展有个大概的了解应是必要的。</p><p>1991年，Sun公司成立Green项目。Oak语言诞生。</p><p>1992年11月，Sun公司为Green项目成立FirstPerson公司。</p><p>1992年12月3日，被命名为Star7的面向一种类PDA的这台设备进行了展示，这种设备有鲜艳的图形界面和被称为“Duke”的智能代理来帮助用户。</p><p>1993年，FirstPerson公司重定位Oak。转向到网络应用领域（背景：WWW开始席卷全球）。</p><h4 id="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"><a href="#1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器" class="headerlink" title="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"></a>1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器</h4><p>WebRunner，后更名为Hotjava。Oak编写的Applet让网页由静态转成动态。</p><h4 id="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"><a href="#1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。" class="headerlink" title="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"></a>1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。</h4><p>1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。</p><p>1996年1月，Sun公司发布了Java的第一个开发工具包（JDK 1.0），这是Java发展历程中的重要里程碑，标志着Java成为一种独立的开发工具。</p><p>1996年9月，约8.3万个网页应用了Java技术来制作。</p><p>1996年10月，Sun公司发布了Java平台的第一个即时（JIT）编译器。</p><p>1997年2月，JDK1.1发布，在随后的3周时间里，达到了22万次的下载量。</p><p>1997年4月，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录。</p><p>1997年9月，JavaDeveloperConnection社区成员超过十万。</p><p>1998年2月，JDK1.1被下载超过2,000,000次。</p><p>1998年12月8日，JAVA2企业平台J2EE发布。</p><p>1999年4月27日，HotSpot虚拟机发布。HotSpot虚拟机发布时是作为JDK 1.2的附加程序提供的，后来它成为了JDK 1.3及之后所有版本的Sun JDK的默认虚拟机。</p><p>1999年6月，SUN公司发布Java的三个版本：标准版（JavaSE,以前是J2SE）、企业版（JavaEE以前是J2EE）和微型版（JavaME，以前是J2ME）。</p><p>2000年5月，JDK1.3，JDK1.4相继发布。</p><p>2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机。</p><p>2001年9月24日，J2EE1.3发布。</p><p>2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升。</p><h4 id="2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。"><a href="#2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。" class="headerlink" title="2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。"></a>2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。</h4><p>2005年6月，JavaOne大会召开，SUN公司公开JavaSE6。此时，Java的各种版本已经更名，以取消其中的数字”2″：J2EE更名为JavaEE，J2SE更名为JavaSE，J2ME更名为JavaME。</p><p>2006年11月13日，Java技术的发明者Sun公司宣布，将Java技术作为免费软件对外发布。Sun公司正式发布的有关Java平台标准版的第一批源代码，以及Java迷你版的可执行源代码。</p><p>2006年12月，SUN公司发布JRE6.0。</p><p>2007年3月起，全世界所有的开发人员均可对Java源代码进行修改 。</p><p>2009年4月，甲骨文74亿美元收购Sun。取得java的版权。</p><p>2011年7月28日，甲骨文发布java7.0的正式版。</p><p>2014年，甲骨文（O）公司发布了Java8正式版。</p><p>2017年，甲骨文发布Java9。</p><p>2018年3月，甲骨文发布Java10。</p><p>2018年9月，甲骨文发布Java11。</p><p>2019年3月，甲骨文发布Java12。</p><p>参考：<a href="http://www.sohu.com/a/194505161_775404" target="_blank" rel="noopener">www.sohu.com/a/194505161_775404</a></p><p>最后祝我大Java生日快乐！！！</p>]]></content>
       
       
       <categories>
           
-          <category> html </category>
+          <category> java </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> html </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -421,6 +521,31 @@
         <tags>
             
             <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html中横线使用</title>
+      <link href="/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
+      <url>/2019/05/18/html-zhong-heng-xian-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<pre><code>第一种：&lt;hr style=&quot; height:2px;border:none;border-top:2px dotted #185598;&quot; /&gt;   园点虚线height:2px;是hr的高度border:none;是没有边框border-top:2px dotted #185598;是设置横线的样式dotted  虚线  #185598  颜色第二种：&lt;hr style=&quot;height:1px;border:none;border-top:1px dashed #0066CC;&quot; /&gt;    块虚线第三种：&lt;hr style=&quot;height:1px;border:none;border-top:1px solid #555555;&quot; /&gt;  实线，一条直线第四种：&lt;hr style=&quot;height:3px;border:none;border-top:3px double red;&quot; /&gt; 两条紧密实线，第五种：&lt;hr style=&quot;height:5px;border:none;border-top:5px ridge green;&quot; /&gt; 两种颜色第六种：&lt;hr style=&quot;height:10px;border:none;border-top:10px groove skyblue;&quot; /&gt;  两种颜色border-top:10px groove skyblue;    groove  上颜色        skyblue   下颜色.style-one {/*内嵌水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 0;    border-top: 1px solid rgba(0, 0, 0, 0.1);    border-bottom: 1px solid rgba(255, 255, 255, 0.3);}.style-two {/*透明渐变水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));}.style-three{/*渐变*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background: #333;    background-image: linear-gradient(to right, #ccc, #333, #ccc);}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
             
         </tags>
       
@@ -679,23 +804,23 @@
     
     
     <entry>
-      <title>965 是一种生活态度，996 也是</title>
-      <link href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
-      <url>/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</url>
+      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
+      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
+      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
       
-        <content type="html"><![CDATA[<p>996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。<br>在今天的大多数看来，在一家公司里待满 5 年，可能不是件有意思的事——生活总会有各种的无奈。</p><p>5 年的时间，不长也不短。朋友变成了同事，网友变成了同事，同事变成了前同事，前同事变成了同事（笑~）。人呢，都是有自己的想法：</p><p>1.965 的工作太『安逸』——赚不了多少钱。</p><p>2.996 的生活太『辛苦』——没时间去花钱。</p><p>矛盾之下，有人选择将 965 的生活，变成了 996；有些则是选择将 996 的生活，变成了 965。</p><p>生活总是这么有趣。有光的一画，自然而然地，也就有阴影的一面；被某些人喜欢着，也必然意味着被某些人讨厌着；有很多的粉丝， 也同时意味着有很多的黑粉。</p><p>没有对与错，只有自己的选择与利益。</p><h1 id="965"><a href="#965" class="headerlink" title="965"></a>965</h1><p>作为一个农村里出来的穷孩子，我在今年里存款才突破 100,000——2018 年存下的，相当于现在大部分程序员一年的存款。以前的钱呢，都在帮家里还钱。你要是说呢，钱对于我也很重要，但是还有很多事情也很重要——生活、爱情、自我。所以，选择 965，对于我来说是一种平衡。</p><p>编程是一种兴趣。编程说是我的兴趣吧，倒也不是，我只是喜欢创造，就好比是个手工艺人一样。</p><p>生活是一种平衡。人是有生活的，机器人才没有。</p><p>家庭是一个归属。你有男朋友/老婆/儿子/女儿，你需要花时间在他/她们身上。</p><p>从这等角度来看，我到底是那种喜欢马拉松式生活的人，缓慢而又持久（笑）。所以我喜欢制定一个长期的计划，然后慢慢去执行，每天总能收获一点点。从长期来看，养成了一个好的习惯，就能构建长久的职业生涯。哪怕是有一天出去创业了，好的习惯也会带来一定的助力。</p><p>说是 965，但是这并不意味着不加班，只是很多工作可以回家里完成。如果从这等角度上来看，我到底也是加班过的：</p><p>1、深入研究项目上的技术栈</p><p>2、调研项目要使用的新技术栈</p><p>只是呢，这算是加班吗？哈哈~，我回家也是研究技术。若是自己能力不足，这种加班倒是也</p><h1 id="996"><a href="#996" class="headerlink" title="996"></a>996</h1><p>所以呢，为了钱去选择 996 也是一种生活态度。赚够钱了呢，就可以过退休般的生活，每天花很多时间去写想写的代码。前期呢，累是累了点，但是总是值得的。</p><p>赚钱是一种需求。总有那么一些人，就喜欢赚钱，赚钱是一种快感，比如唐老鸭的叔叔——最有钱的虚拟人物。</p><p>证明自己是一种需求。有的人，选择 996 的大公司，出自于自我实现的需要。在大的平台上，去创造一系列的精彩，而自己便是优秀的那个人。</p><p>在不了解自己想要什么，迷茫的时候，选择 996 是一种更有效的方式。对于你而言，965 带给你反而是一种时间上的浪费。6 点多回到了家里，却也不知道做些什么。那还不如，在公司混混沌沌地把钱赚了。</p><p>也因此呢，还有一种情况是：</p><p>在公司加班是一种享受。令人津津乐道的是，对于如我一样来大城市 “务工” 的程序员来说，回到住的地方反而更无聊。在公司里，还有同事可以聊天 ，还有零食可以吃，还有帅哥和靓妹可以看，何乐而不为。加班时，有免费的晚饭吃，到了 9 点回家还可以打车报销。</p><p>我们在说 996 的时候，指的是强制性的加班，而不是这种自主性的加班。</p><h1 id="965-与-996-徘徊者"><a href="#965-与-996-徘徊者" class="headerlink" title="965 与 996 徘徊者"></a>965 与 996 徘徊者</h1><p>在 TWU 的时候，我的人生有过一次的转变。那时是在 2014 年 10 月，我第一次了解到除了男性、女性，还有其 x 的性别。然后，性别在我的眼里，就变成了五种选项。从现象上来看，他/她们可能是 996 的人，又或者是 965 的人，但是实际上可能是：</p><pre><code>965 的人996 的人995 但是认为自己是 996 的人996 但是认为自己是 995 的人即不是 995 也不是 996 的人</code></pre><p>可是呢，生活是一种选择。选择了 965，可能就没有 996 的工资；选择了 996，可能就没有 965 的工资。</p><p>让我们来做个简单的自述，把你的 996 的工作变成了 965，算算你的时薪，看看你还能在现在拿多少钱？以一个月四周来看：</p><pre><code>965 意味着，一天 8 小时，一周 40 小时，一个月 160 小时。996 意味着，一天 10 小时，一周 60 小时，一个月 240 小时。</code></pre><p>所以，如果把你的 965 的工作时间换成了 996，那么你的工资应该至少要涨 50%（不包含加班费）。把你的 996 的工作时间换成了 965，那么你的工资应该减少 1/3。</p><p>最后，问题也就来了，你现在的工资少 1/3，你干吗？——你可能马上骂娘了。</p><p>你，可能会立马变成那个吐槽为什么不 996 的人呢？所以，生活并不会有太多的选择。你既要 996，又想要保持现在的工资和绩效，有点难——站着，还把钱赚了，不是一件容易的事。</p><p>生活就是这么需要一些同理心，人呢，有时要站在别人的角度来考虑问题。</p><h1 id="那么，你呢？"><a href="#那么，你呢？" class="headerlink" title="那么，你呢？"></a>那么，你呢？</h1><p>当然了，这些道理，我们都是知道的。</p><p>你呢，若是你，你会选择 965，又或者是 996，为什么呢？</p><p>来源：mp.weixin.qq.com/s/x8d4yRY6o_HISn4fqwx-Ig</p>]]></content>
+        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
       
       
       <categories>
           
-          <category> 程序猿 </category>
+          <category> 技术 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 程序猿 </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -729,23 +854,23 @@
     
     
     <entry>
-      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
-      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
-      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
+      <title>965 是一种生活态度，996 也是</title>
+      <link href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
+      <url>/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</url>
       
-        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
+        <content type="html"><![CDATA[<p>996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。<br>在今天的大多数看来，在一家公司里待满 5 年，可能不是件有意思的事——生活总会有各种的无奈。</p><p>5 年的时间，不长也不短。朋友变成了同事，网友变成了同事，同事变成了前同事，前同事变成了同事（笑~）。人呢，都是有自己的想法：</p><p>1.965 的工作太『安逸』——赚不了多少钱。</p><p>2.996 的生活太『辛苦』——没时间去花钱。</p><p>矛盾之下，有人选择将 965 的生活，变成了 996；有些则是选择将 996 的生活，变成了 965。</p><p>生活总是这么有趣。有光的一画，自然而然地，也就有阴影的一面；被某些人喜欢着，也必然意味着被某些人讨厌着；有很多的粉丝， 也同时意味着有很多的黑粉。</p><p>没有对与错，只有自己的选择与利益。</p><h1 id="965"><a href="#965" class="headerlink" title="965"></a>965</h1><p>作为一个农村里出来的穷孩子，我在今年里存款才突破 100,000——2018 年存下的，相当于现在大部分程序员一年的存款。以前的钱呢，都在帮家里还钱。你要是说呢，钱对于我也很重要，但是还有很多事情也很重要——生活、爱情、自我。所以，选择 965，对于我来说是一种平衡。</p><p>编程是一种兴趣。编程说是我的兴趣吧，倒也不是，我只是喜欢创造，就好比是个手工艺人一样。</p><p>生活是一种平衡。人是有生活的，机器人才没有。</p><p>家庭是一个归属。你有男朋友/老婆/儿子/女儿，你需要花时间在他/她们身上。</p><p>从这等角度来看，我到底是那种喜欢马拉松式生活的人，缓慢而又持久（笑）。所以我喜欢制定一个长期的计划，然后慢慢去执行，每天总能收获一点点。从长期来看，养成了一个好的习惯，就能构建长久的职业生涯。哪怕是有一天出去创业了，好的习惯也会带来一定的助力。</p><p>说是 965，但是这并不意味着不加班，只是很多工作可以回家里完成。如果从这等角度上来看，我到底也是加班过的：</p><p>1、深入研究项目上的技术栈</p><p>2、调研项目要使用的新技术栈</p><p>只是呢，这算是加班吗？哈哈~，我回家也是研究技术。若是自己能力不足，这种加班倒是也</p><h1 id="996"><a href="#996" class="headerlink" title="996"></a>996</h1><p>所以呢，为了钱去选择 996 也是一种生活态度。赚够钱了呢，就可以过退休般的生活，每天花很多时间去写想写的代码。前期呢，累是累了点，但是总是值得的。</p><p>赚钱是一种需求。总有那么一些人，就喜欢赚钱，赚钱是一种快感，比如唐老鸭的叔叔——最有钱的虚拟人物。</p><p>证明自己是一种需求。有的人，选择 996 的大公司，出自于自我实现的需要。在大的平台上，去创造一系列的精彩，而自己便是优秀的那个人。</p><p>在不了解自己想要什么，迷茫的时候，选择 996 是一种更有效的方式。对于你而言，965 带给你反而是一种时间上的浪费。6 点多回到了家里，却也不知道做些什么。那还不如，在公司混混沌沌地把钱赚了。</p><p>也因此呢，还有一种情况是：</p><p>在公司加班是一种享受。令人津津乐道的是，对于如我一样来大城市 “务工” 的程序员来说，回到住的地方反而更无聊。在公司里，还有同事可以聊天 ，还有零食可以吃，还有帅哥和靓妹可以看，何乐而不为。加班时，有免费的晚饭吃，到了 9 点回家还可以打车报销。</p><p>我们在说 996 的时候，指的是强制性的加班，而不是这种自主性的加班。</p><h1 id="965-与-996-徘徊者"><a href="#965-与-996-徘徊者" class="headerlink" title="965 与 996 徘徊者"></a>965 与 996 徘徊者</h1><p>在 TWU 的时候，我的人生有过一次的转变。那时是在 2014 年 10 月，我第一次了解到除了男性、女性，还有其 x 的性别。然后，性别在我的眼里，就变成了五种选项。从现象上来看，他/她们可能是 996 的人，又或者是 965 的人，但是实际上可能是：</p><pre><code>965 的人996 的人995 但是认为自己是 996 的人996 但是认为自己是 995 的人即不是 995 也不是 996 的人</code></pre><p>可是呢，生活是一种选择。选择了 965，可能就没有 996 的工资；选择了 996，可能就没有 965 的工资。</p><p>让我们来做个简单的自述，把你的 996 的工作变成了 965，算算你的时薪，看看你还能在现在拿多少钱？以一个月四周来看：</p><pre><code>965 意味着，一天 8 小时，一周 40 小时，一个月 160 小时。996 意味着，一天 10 小时，一周 60 小时，一个月 240 小时。</code></pre><p>所以，如果把你的 965 的工作时间换成了 996，那么你的工资应该至少要涨 50%（不包含加班费）。把你的 996 的工作时间换成了 965，那么你的工资应该减少 1/3。</p><p>最后，问题也就来了，你现在的工资少 1/3，你干吗？——你可能马上骂娘了。</p><p>你，可能会立马变成那个吐槽为什么不 996 的人呢？所以，生活并不会有太多的选择。你既要 996，又想要保持现在的工资和绩效，有点难——站着，还把钱赚了，不是一件容易的事。</p><p>生活就是这么需要一些同理心，人呢，有时要站在别人的角度来考虑问题。</p><h1 id="那么，你呢？"><a href="#那么，你呢？" class="headerlink" title="那么，你呢？"></a>那么，你呢？</h1><p>当然了，这些道理，我们都是知道的。</p><p>你呢，若是你，你会选择 965，又或者是 996，为什么呢？</p><p>来源：mp.weixin.qq.com/s/x8d4yRY6o_HISn4fqwx-Ig</p>]]></content>
       
       
       <categories>
           
-          <category> 技术 </category>
+          <category> 程序猿 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
+            <tag> 程序猿 </tag>
             
         </tags>
       
@@ -1491,31 +1616,6 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/2019/03/21/about/"/>
-      <url>/2019/03/21/about/</url>
-      
-        <content type="html"><![CDATA[<h1 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h1><p>博主是一名Java码农。</p><p>虽然还未走上人生巅峰，但是一直保持着一个码农的自我修养。</p><p>用一句话概括博主：每天瞎逼忙，还没赚到钱。</p><p>但是博主有一颗分享技术的心，我会尽量用通俗易懂的方式，分享个人的知识。</p><p>博客的宗旨就是分享知识，分享技术，不一定高深，但一定是博主用心写作而成的。</p><p>所有人都是从0开始起步，在学习过程中，会遇到各种困难，这个时候如果可以借鉴别人的经验，会让我们省力不少，希望我的博客也能帮助到你。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 关于 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客说明 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java面试中最高频的那20%知识点！</title>
       <link href="/2019/03/21/java-mian-shi/"/>
       <url>/2019/03/21/java-mian-shi/</url>
@@ -1535,6 +1635,31 @@
             <tag> java </tag>
             
             <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/2019/03/21/about/"/>
+      <url>/2019/03/21/about/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h1><p>博主是一名Java码农。</p><p>虽然还未走上人生巅峰，但是一直保持着一个码农的自我修养。</p><p>用一句话概括博主：每天瞎逼忙，还没赚到钱。</p><p>但是博主有一颗分享技术的心，我会尽量用通俗易懂的方式，分享个人的知识。</p><p>博客的宗旨就是分享知识，分享技术，不一定高深，但一定是博主用心写作而成的。</p><p>所有人都是从0开始起步，在学习过程中，会遇到各种困难，这个时候如果可以借鉴别人的经验，会让我们省力不少，希望我的博客也能帮助到你。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 关于 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客说明 </tag>
             
         </tags>
       

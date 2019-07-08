@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-06-21T05:27:07.213Z</updated>
+  <updated>2019-07-08T05:58:41.305Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,139 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java开发最常犯的10个错误，打死都不要犯！</title>
+    <link href="http://chenguoji.com/2019/07/08/java-kai-fa-zui-chang-fan-de-10-ge-cuo-wu-da-si-du-bu-yao-fan/"/>
+    <id>http://chenguoji.com/2019/07/08/java-kai-fa-zui-chang-fan-de-10-ge-cuo-wu-da-si-du-bu-yao-fan/</id>
+    <published>2019-07-08T02:39:50.000Z</published>
+    <updated>2019-07-08T05:58:41.305Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;阅读目录&quot;&gt;&lt;a href=&quot;#阅读目录&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创业公司技术总监，去上市公司面试，结果凉了！</title>
+    <link href="http://chenguoji.com/2019/07/05/chuang-ye-gong-si-ji-zhu-zong-jian-qu-shang-shi-gong-si-mian-shi-jie-guo-liang-liao/"/>
+    <id>http://chenguoji.com/2019/07/05/chuang-ye-gong-si-ji-zhu-zong-jian-qu-shang-shi-gong-si-mian-shi-jie-guo-liang-liao/</id>
+    <published>2019-07-05T02:39:50.000Z</published>
+    <updated>2019-07-08T05:56:37.125Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1、先来个自我介绍&quot;&gt;&lt;a href=&quot;#1、先来个自我介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://chenguoji.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>系统运行缓慢，CPU 100%，Full GC次数过多，这一招帮你全搞定！</title>
+    <link href="http://chenguoji.com/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/"/>
+    <id>http://chenguoji.com/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/</id>
+    <published>2019-07-01T02:39:50.000Z</published>
+    <updated>2019-07-08T03:08:32.175Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;处理过线上问题的同学基本上都会遇到系统突然运行缓慢，CPU 100%，以及Full
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这么牛逼的正则表达式，可惜你不会写！</title>
+    <link href="http://chenguoji.com/2019/06/28/zhe-me-niu-bi-de-zheng-ze-biao-da-shi-ke-xi-ni-bu-hui-xie/"/>
+    <id>http://chenguoji.com/2019/06/28/zhe-me-niu-bi-de-zheng-ze-biao-da-shi-ke-xi-ni-bu-hui-xie/</id>
+    <published>2019-06-28T02:39:50.000Z</published>
+    <updated>2019-06-28T01:50:33.548Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、校验数字的表达式&quot;&gt;&lt;a href=&quot;#一、校验数字的表达式&quot; class=&quot;headerlink&quot; title=&quot;一、校验数字的表达式&quot;&gt;&lt;/a&gt;一、校验数字的表达式&lt;/h1&gt;&lt;p&gt;数字：&lt;br&gt;    ^[0-9]*$&lt;/p&gt;
+&lt;p&gt;n位的数字：&lt;br&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自动创建Spring Boot 工程，太爽了！</title>
+    <link href="http://chenguoji.com/2019/06/24/zi-dong-chuang-jian-spring-boot-gong-cheng-tai-shuang-liao/"/>
+    <id>http://chenguoji.com/2019/06/24/zi-dong-chuang-jian-spring-boot-gong-cheng-tai-shuang-liao/</id>
+    <published>2019-06-24T02:39:50.000Z</published>
+    <updated>2019-06-24T02:47:26.203Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Spring Boot 大家都知道是啥吧？&lt;/p&gt;
+&lt;p&gt;顺便再往下看，今天博主给你带来年轻人的第一个 Spring Boot 工程，撸码史无前例的轻松，那就一个字：爽！&lt;/p&gt;
+&lt;h1 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>【美团】Java岗154道面试题</title>
@@ -363,32 +496,6 @@
   </entry>
   
   <entry>
-    <title>Java 诞生日，Java 24 岁了！</title>
-    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
-    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
-    <published>2019-05-19T02:39:50.000Z</published>
-    <updated>2019-05-30T03:22:41.956Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SQL Server 日期时间如何处理</title>
     <link href="http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/"/>
     <id>http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/</id>
@@ -416,11 +523,11 @@
   </entry>
   
   <entry>
-    <title>html中横线使用</title>
-    <link href="http://chenguoji.com/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
-    <id>http://chenguoji.com/2019/05/18/html-zhong-heng-xian-shi-yong/</id>
-    <published>2019-05-18T02:39:50.000Z</published>
-    <updated>2019-05-21T08:45:49.844Z</updated>
+    <title>Java 诞生日，Java 24 岁了！</title>
+    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
+    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
+    <published>2019-05-19T02:39:50.000Z</published>
+    <updated>2019-05-30T03:22:41.956Z</updated>
     
     <summary type="html">
     
@@ -428,114 +535,7 @@
       
         
         
-          &lt;pre&gt;&lt;code&gt;第一种：
-&amp;lt;hr style=&amp;quot; height:2px;border:none;border-top:2px dotted #185598;&amp;quot; /&amp;gt;  
-        
-      
-    
-    </summary>
-    
-      <category term="html" scheme="http://chenguoji.com/categories/html/"/>
-    
-    
-      <category term="html" scheme="http://chenguoji.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这 17 个 JVM 参数，高级 Java 必须掌握！</title>
-    <link href="http://chenguoji.com/2019/05/18/zhe-17-ge-jvm-can-shu-gao-ji-java-bi-xu-zhang-wo/"/>
-    <id>http://chenguoji.com/2019/05/18/zhe-17-ge-jvm-can-shu-gao-ji-java-bi-xu-zhang-wo/</id>
-    <published>2019-05-18T02:39:50.000Z</published>
-    <updated>2019-05-30T03:19:49.990Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>那天，他无意间瞟了眼程序员的桌面……</title>
-    <link href="http://chenguoji.com/2019/05/17/na-tian-ta-wu-yi-jian-piao-liao-yan-cheng-xu-yuan-de-zhuo-mian/"/>
-    <id>http://chenguoji.com/2019/05/17/na-tian-ta-wu-yi-jian-piao-liao-yan-cheng-xu-yuan-de-zhuo-mian/</id>
-    <published>2019-05-17T02:39:50.000Z</published>
-    <updated>2019-05-22T09:02:07.855Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;“爱因斯坦说“要是乱糟糟的桌面意味着杂乱无章的脑袋，那空白桌面意味着什么呢？”&lt;/p&gt;
-&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>拯救 Out Of Memory，8个案例带你飞！</title>
-    <link href="http://chenguoji.com/2019/05/16/zheng-jiu-out-of-memory-8-ge-an-li-dai-ni-fei/"/>
-    <id>http://chenguoji.com/2019/05/16/zheng-jiu-out-of-memory-8-ge-an-li-dai-ni-fei/</id>
-    <published>2019-05-16T02:39:50.000Z</published>
-    <updated>2019-06-03T01:50:40.718Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-Java-堆空间&quot;&gt;&lt;a href=&quot;#1-Java-堆空间&quot; class=&quot;headerlink&quot; title=&quot;1. Java 堆空间&quot;&gt;&lt;/a&gt;1. Java 堆空间&lt;/h2&gt;&lt;p&gt;发生频率：5颗星&lt;/p&gt;
-&lt;p&gt;造成原因&lt;br&gt;无法在 Java
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>35个可以飞快提高千倍效率的Java语言代码小技巧，你值得拥有！</title>
-    <link href="http://chenguoji.com/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/"/>
-    <id>http://chenguoji.com/2019/05/15/35-ge-ke-yi-fei-kuai-ti-gao-qian-bei-xiao-lu-de-java-yu-yan-dai-ma-xiao-ji-qiao-ni-zhi-de-yong-you/</id>
-    <published>2019-05-15T02:39:50.000Z</published>
-    <updated>2019-06-20T06:11:13.099Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;代码优化
+          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
         
       
     
