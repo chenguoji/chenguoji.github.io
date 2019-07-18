@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-07-08T05:58:41.305Z</updated>
+  <updated>2019-07-18T05:46:40.111Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开发中一些常会用到的sql和java语句</title>
+    <link href="http://chenguoji.com/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
+    <id>http://chenguoji.com/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
+    <published>2019-07-18T02:39:50.000Z</published>
+    <updated>2019-07-18T05:46:40.111Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>Java开发最常犯的10个错误，打死都不要犯！</title>
@@ -492,33 +518,6 @@
     
     
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL Server 日期时间如何处理</title>
-    <link href="http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/"/>
-    <id>http://chenguoji.com/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/</id>
-    <published>2019-05-19T02:39:50.000Z</published>
-    <updated>2019-05-21T08:59:36.775Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在SQL Server中，一般获取当前时间用 GetDate() 函数 &lt;/p&gt;
-&lt;p&gt;GetDate()获得的日期由两部分组成，分别是今天的日期和当时的时间： Select GetDate()
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   

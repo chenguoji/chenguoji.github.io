@@ -4,10 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL 到底是怎么解决幻读的？, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="一、什么是幻读在一次事务里面，多次查询之后，结果集的个数不一致的情况叫做幻读。而多出来或者少的哪一行被叫做幻行。
-二、为什么要解决幻读在高并发数据库系统中，需要保证事务与事务之间的隔离性，还有事务本身的一致性。
-三、MySQL 是如何解决幻">
+    <meta name="keywords" content="开发中一些常会用到的sql和java语句, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="一、ORACLE1.Oracle锁表与解锁查看锁表进程SQL语句    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; 
+杀掉锁表进程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MySQL 到底是怎么解决幻读的？ | 陈国际博客</title>
+    <title>开发中一些常会用到的sql和java语句 | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -217,13 +216,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        MySQL 到底是怎么解决幻读的？
+                        开发中一些常会用到的sql和java语句
                     </div>
                 </div>
             </div>
@@ -358,21 +357,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-05-21
+                    2019-07-18
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        320
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        1 分
                     </div>
                     
                 
@@ -388,41 +387,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、什么是幻读"><a href="#一、什么是幻读" class="headerlink" title="一、什么是幻读"></a>一、什么是幻读</h1><p>在一次事务里面，多次查询之后，结果集的个数不一致的情况叫做幻读。而多出来或者少的哪一行被叫做幻行。</p>
-<h1 id="二、为什么要解决幻读"><a href="#二、为什么要解决幻读" class="headerlink" title="二、为什么要解决幻读"></a>二、为什么要解决幻读</h1><p>在高并发数据库系统中，需要保证事务与事务之间的隔离性，还有事务本身的一致性。</p>
-<h1 id="三、MySQL-是如何解决幻读的"><a href="#三、MySQL-是如何解决幻读的" class="headerlink" title="三、MySQL 是如何解决幻读的"></a>三、MySQL 是如何解决幻读的</h1><p>如果你看到了这篇文章，那么我会默认你了解了脏读 、不可重复读与可重复读。</p>
-<h2 id="1-多版本并发控制（MVCC）（快照读-一致性读）"><a href="#1-多版本并发控制（MVCC）（快照读-一致性读）" class="headerlink" title="1. 多版本并发控制（MVCC）（快照读/一致性读）"></a>1. 多版本并发控制（MVCC）（快照读/一致性读）</h2><p>多数数据库都实现了多版本并发控制，并且都是靠保存数据快照来实现的。以 InnoDB 为例，每一行中都冗余了两个字断。</p>
-<p>一个是行的创建版本，一个是行的删除（过期）版本。具体的版本号（trx_id）存在 information_schema.INNODB_TRX 表中。版本号（trx_id）随着每次事务的开启自增。</p>
-<p>事务每次取数据的时候都会取创建版本小于当前事务版本的数据，以及过期版本大于当前版本的数据。</p>
-<p>普通的 select 就是快照读。</p>
-<pre><code>select * from T where number = 1;
-</code></pre><p>原理：将历史数据存一份快照，所以其他事务增加与删除数据，对于当前事务来说是不可见的。</p>
-<h2 id="2-next-key-锁-（当前读）"><a href="#2-next-key-锁-（当前读）" class="headerlink" title="2. next-key 锁 （当前读）"></a>2. next-key 锁 （当前读）</h2><p>next-key 锁包含两部分：</p>
-<pre><code>记录锁（行锁）
-间隙锁
-</code></pre><p>记录锁是加在索引上的锁，间隙锁是加在索引之间的。（思考：如果列上没有索引会发生什么？）</p>
-<pre><code>select * from T where number = 1 for update;
-select * from T where number = 1 lock in share mode;
-insert
-update
-delete
-</code></pre><p>原理：将当前数据行与上一条数据和下一条数据之间的间隙锁定，保证此范围内读取的数据是一致的。</p>
-<h2 id="其他：MySQL-InnoDB-引擎-RR-隔离级别是否解决了幻读"><a href="#其他：MySQL-InnoDB-引擎-RR-隔离级别是否解决了幻读" class="headerlink" title="其他：MySQL InnoDB 引擎 RR 隔离级别是否解决了幻读"></a>其他：MySQL InnoDB 引擎 RR 隔离级别是否解决了幻读</h2><p>引用一个 github 上面的评论 地址：</p>
-<pre><code>Mysql官方给出的幻读解释是：只要在一个事务中，第二次select多出了row就算幻读。
-
-a事务先select，b事务insert确实会加一个gap锁，但是如果b事务commit，这个gap锁就会释放（释放后a事务可以随意dml操作），a事务再select出来的结果在MVCC下还和第一次select一样，接着a事务不加条件地update，这个update会作用在所有行上（包括b事务新加的），a事务再次select就会出现b事务中的新行，并且这个新行已经被update修改了，实测在RR级别下确实如此。
-
-如果这样理解的话，Mysql的RR级别确实防不住幻读
-</code></pre><p>有道友回复 地址：</p>
-<pre><code>在快照读读情况下，mysql通过mvcc来避免幻读。
-在当前读读情况下，mysql通过next-key来避免幻读。
-select * from t where a=1;属于快照读
-select * from t where a=1 lock in share mode;属于当前读
-不能把快照读和当前读得到的结果不一样这种情况认为是幻读，这是两种不同的使用。所以我认为mysql的rr级别是解决了幻读的。
-</code></pre><p>先说结论，MySQL 存储引擎 InnoDB 隔离级别 RR 解决了幻读问题。面试问烂的 MySQL 四种隔离级别，这篇文章建议大家看下。</p>
-<p>如引用一问题所说，T1 select 之后 update，会将 T2 中 insert 的数据一起更新，那么认为多出来一行，所以防不住幻读。看着说法无懈可击，但是其实是错误的，InnoDB 中设置了快照读和当前读两种模式，如果只有快照读，那么自然没有幻读问题，但是如果将语句提升到当前读，那么 T1 在 select 的时候需要用如下语法： select * from t for update (lock in share mode) 进入当前读，那么自然没有 T2 可以插入数据这一回事儿了。</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>next-key 固然很好的解决了幻读问题，但是还是遵循一般的定律，隔离级别越高，并发越低。</p>
-<p>作者：LastSun<br><a href="https://www.cnblogs.com/wdy1184/p/10655180.html" target="_blank" rel="noopener">https://www.cnblogs.com/wdy1184/p/10655180.html</a></p>
+                <h1 id="一、ORACLE"><a href="#一、ORACLE" class="headerlink" title="一、ORACLE"></a>一、ORACLE</h1><h2 id="1-Oracle锁表与解锁"><a href="#1-Oracle锁表与解锁" class="headerlink" title="1.Oracle锁表与解锁"></a>1.Oracle锁表与解锁</h2><p>查看锁表进程SQL语句<br>    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; </p>
+<p>杀掉锁表进程：<br>记录下SID和serial# ，分别替换掉下面的1155,39095，即可解除锁表</p>
+<pre><code>alter system kill session &apos;1155,39095&apos;; 
+</code></pre><p>对象锁与解锁</p>
+<p>这里以包为PKG_ZLGL_BASEDATA为例</p>
+<p>注意name为包或者存储过程等；</p>
+<pre><code>SELECT * FROM V$DB_OBJECT_CACHE WHERE name=&apos;PKG_ZLGL_BASEDATA&apos; AND LOCKS!=&apos;0&apos;;
+</code></pre><p>查看sid    注意object为包或者存储过程等；</p>
+<pre><code>SELECT SID from V$ACCESS WHERE object=&apos;PKG_ZLGL_BASEDATA&apos;;
+</code></pre><p>查看查看SID和SERIAL#  in后面的条件为上述查的sid</p>
+<pre><code>SELECT SID,SERIAL#,PADDR,STATUS FROM V$SESSION WHERE SID IN(&apos;283&apos;,&apos;343&apos;);
+</code></pre><p>杀进程 实例如下：  alter system kill session ‘sid,SERIAL’</p>
+<pre><code>alter system kill session &apos;283,50673&apos;
+</code></pre><p>/<em>查看被锁住的存储过程</em>/<br>SELECT <em> FROM V$DB_OBJECT_CACHE WHERE OWNER = ‘APPADMIN’ AND LOCKS != ‘0’;<br>SELECT </em> FROM DBA_DDL_LOCKS WHERE NAME = UPPER(‘TEMP_EXPORT’);<br>SELECT T.SID, T.SERIAL# FROM V$SESSION T WHERE T.SID = 24;</p>
+<p>/<em>查看被锁住的表</em>/<br>SELECT DO.OWNER, DO.OBJECT_NAME, LO.SESSION_ID, LO.LOCKED_MODE<br>  FROM V$LOCKED_OBJECT LO, DBA_OBJECTS DO<br> WHERE DO.OBJECT_ID = LO.OBJECT_ID;</p>
+<p>SELECT B.USERNAME, B.SID, B.SERIAL#, LOGON_TIME<br>  FROM V$LOCKED_OBJECT A, V$SESSION B<br> WHERE A.SESSION_ID = B.SID<br> ORDER BY B.LOGON_TIME;</p>
+<p>/<em>kill被锁的进程 ‘sid, serial#’ </em>/<br>ALTER SYSTEM KILL SESSION ‘24,30992’;</p>
+<p>/<em>lock相关表</em>/<br>SELECT <em> FROM V$LOCK;<br>SELECT </em> FROM V$SQLAREA;<br>SELECT <em> FROM V$SESSION;<br>SELECT </em> FROM V$PROCESS;<br>SELECT <em> FROM V$LOCKED_OBJECT;<br>SELECT </em> FROM ALL_OBJECTS;<br>SELECT * FROM V$SESSION_WAIT;    </p>
 
             </div>
             <hr>
@@ -578,9 +560,9 @@ select * from t where a=1 lock in share mode;属于当前读
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《MySQL 到底是怎么解决幻读的？》
+                    《开发中一些常会用到的sql和java语句》
                 </span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/21/mysql-dao-di-shi-zen-me-jie-jue-huan-du-de/" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/" property="cc:attributionName" rel="cc:attributionURL">
                 chen guoji
             </a> under
             <a rel="license" href="cc_by_url">
@@ -880,28 +862,29 @@ select * from t where a=1 lock in share mode;属于当前读
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/">
+                <a href="/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="为什么培训班出来的程序员总遭人嫌弃？">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="开发中一些常会用到的sql和java语句">
                         
-                        <span class="card-title">为什么培训班出来的程序员总遭人嫌弃？</span>
+                        <span class="card-title">开发中一些常会用到的sql和java语句</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。
-“0基础入学
+                            一、ORACLE1.Oracle锁表与解锁查看锁表进程SQL语句    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; 
+杀掉锁表进程
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -914,6 +897,7 @@ select * from t where a=1 lock in share mode;属于当前读
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -932,29 +916,30 @@ select * from t where a=1 lock in share mode;属于当前读
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/20/kun-rao-wo-duo-nian-de-java-fan-xing-extends-t-he-super-t-zhong-yu-gao-qing-chu-liao/">
+                <a href="/2019/07/08/java-kai-fa-zui-chang-fan-de-10-ge-cuo-wu-da-si-du-bu-yao-fan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="困扰我多年的Java泛型<? extends T> 和 <? super T>，终于搞清楚了！">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Java开发最常犯的10个错误，打死都不要犯！">
                         
-                        <span class="card-title">困扰我多年的Java泛型<? extends T> 和 <? super T>，终于搞清楚了！</span>
+                        <span class="card-title">Java开发最常犯的10个错误，打死都不要犯！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、为什么要用通配符和边界？使用泛型的过程中，经常出现一种很别扭的情况。
-比如我们有Fruit类，和它的派生类Apple
-class Fruit{}
-class Apple 
-然后有一个最简单的容器：Plate类
-盘子里可以放一个泛型的”东
+                            阅读目录1.Array转ArrayList
+2.判断一个数组是否包含某个值
+3.在循环内部删除List中的一个元素
+4.HashTable与HashMap
+5.使用集合原始类型（raw type）
+6.访问级别
+7.ArrayList和Li
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-08
                             </span>
                         <span class="publish-author">
                             
