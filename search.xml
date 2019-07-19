@@ -4,11 +4,61 @@
   
     
     <entry>
+      <title>Github上10个开源免费的后台控制面板你值得拥有！</title>
+      <link href="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/"/>
+      <url>/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/</url>
+      
+        <content type="html"><![CDATA[<p>Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 Top 10。</p><ol><li>AdminLTE</li></ol><p>Github Star 数 24969 ， Github 地址：</p><p><a href="https://github.com/almasaeed2010/AdminLTE" target="_blank" rel="noopener">https://github.com/almasaeed2010/AdminLTE</a></p><p>非常流行的基于 Bootstrap 3.x 的免费的后台 UI 框架。</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/1.jpg"><ol start="2"><li>vue-Element-Admin</li></ol><p>Github Star 数 19546， Github 地址：</p><p><a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank" rel="noopener">https://github.com/PanJiaChen/vue-element-admin</a></p><p>一个基于 vue2.0 和 Eelement 的控制面板 UI 框架。</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/2.jpg"><ol start="3"><li>tabler</li></ol><p>Github Star 数 15870， Github 地址：</p><p><a href="https://github.com/tabler/tabler" target="_blank" rel="noopener">https://github.com/tabler/tabler</a></p><p>构建在 BootStrap 4 之上的免费的 HTML 控制面板框架</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/3.jpg"><ol start="4"><li>Gentelella</li></ol><p>Github Star 数 15654， Github 地址：</p><p><a href="https://github.com/puikinsh/gentelella" target="_blank" rel="noopener">https://github.com/puikinsh/gentelella</a></p><p>一个基于 Bootstarp 的免费的后台控制面板。</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/4.jpg"><ol start="5"><li>ng2-admin</li></ol><p>Github Star 数 13181， Github 地址：</p><p><a href="https://github.com/akveo/ngx-admin" target="_blank" rel="noopener">https://github.com/akveo/ngx-admin</a></p><p>基于 Angular 2, Bootstrap 4 和 Webpack 的后台管理面板框架。</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/5.jpg"><ol start="6"><li>ant-design-pro</li></ol><p>Github Star 数 12707，Github 地址：</p><p><a href="https://github.com/ant-design/ant-design-pro" target="_blank" rel="noopener">https://github.com/ant-design/ant-design-pro</a></p><p>开箱即用的中台前端/设计解决方案</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/6.jpg"><ol start="7"><li>blur-admin</li></ol><p>Github Star 数 9241，Github 地址：</p><p><a href="https://github.com/akveo/blur-admin" target="_blank" rel="noopener">https://github.com/akveo/blur-admin</a></p><p>基于 Angular 和 Bootstrap 的后台管理面板框架。</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/7.jpg"><ol start="8"><li>vue-admin</li></ol><p>Github Star 数 8676，Github 地址：</p><p><a href="https://github.com/vue-bulma/vue-admin" target="_blank" rel="noopener">https://github.com/vue-bulma/vue-admin</a></p><p>基于 Vue 和 Bulma 的控制面板。</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/8.jpg"><ol start="9"><li>iview-admin</li></ol><p>Github Star 数 8668，Github 地址：</p><p><a href="https://github.com/iview/iview-admin" target="_blank" rel="noopener">https://github.com/iview/iview-admin</a></p><p>基于 iView 的 Vue 2.0 控制面板。</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/9.jpg"><ol start="10"><li>material-dashboard</li></ol><p>Github Star 数 7111，Github 地址：</p><p><a href="https://github.com/creativetimofficial/material-dashboard" target="_blank" rel="noopener">https://github.com/creativetimofficial/material-dashboard</a></p><p>基于 Bootstrap 4 和 Material 风格的控制面板。</p><img src="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/10.jpg"><p>来源：<a href="http://www.jianshu.com/p/3bc7404af887" target="_blank" rel="noopener">www.jianshu.com/p/3bc7404af887</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>开发中一些常会用到的sql和java语句</title>
       <link href="/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
       <url>/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</url>
       
         <content type="html"><![CDATA[<h1 id="一、ORACLE"><a href="#一、ORACLE" class="headerlink" title="一、ORACLE"></a>一、ORACLE</h1><h2 id="1-Oracle锁表与解锁"><a href="#1-Oracle锁表与解锁" class="headerlink" title="1.Oracle锁表与解锁"></a>1.Oracle锁表与解锁</h2><p>查看锁表进程SQL语句<br>    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; </p><p>杀掉锁表进程：<br>记录下SID和serial# ，分别替换掉下面的1155,39095，即可解除锁表</p><pre><code>alter system kill session &apos;1155,39095&apos;; </code></pre><p>对象锁与解锁</p><p>这里以包为PKG_ZLGL_BASEDATA为例</p><p>注意name为包或者存储过程等；</p><pre><code>SELECT * FROM V$DB_OBJECT_CACHE WHERE name=&apos;PKG_ZLGL_BASEDATA&apos; AND LOCKS!=&apos;0&apos;;</code></pre><p>查看sid    注意object为包或者存储过程等；</p><pre><code>SELECT SID from V$ACCESS WHERE object=&apos;PKG_ZLGL_BASEDATA&apos;;</code></pre><p>查看查看SID和SERIAL#  in后面的条件为上述查的sid</p><pre><code>SELECT SID,SERIAL#,PADDR,STATUS FROM V$SESSION WHERE SID IN(&apos;283&apos;,&apos;343&apos;);</code></pre><p>杀进程 实例如下：  alter system kill session ‘sid,SERIAL’</p><pre><code>alter system kill session &apos;283,50673&apos;</code></pre><p>/<em>查看被锁住的存储过程</em>/<br>SELECT <em> FROM V$DB_OBJECT_CACHE WHERE OWNER = ‘APPADMIN’ AND LOCKS != ‘0’;<br>SELECT </em> FROM DBA_DDL_LOCKS WHERE NAME = UPPER(‘TEMP_EXPORT’);<br>SELECT T.SID, T.SERIAL# FROM V$SESSION T WHERE T.SID = 24;</p><p>/<em>查看被锁住的表</em>/<br>SELECT DO.OWNER, DO.OBJECT_NAME, LO.SESSION_ID, LO.LOCKED_MODE<br>  FROM V$LOCKED_OBJECT LO, DBA_OBJECTS DO<br> WHERE DO.OBJECT_ID = LO.OBJECT_ID;</p><p>SELECT B.USERNAME, B.SID, B.SERIAL#, LOGON_TIME<br>  FROM V$LOCKED_OBJECT A, V$SESSION B<br> WHERE A.SESSION_ID = B.SID<br> ORDER BY B.LOGON_TIME;</p><p>/<em>kill被锁的进程 ‘sid, serial#’ </em>/<br>ALTER SYSTEM KILL SESSION ‘24,30992’;</p><p>/<em>lock相关表</em>/<br>SELECT <em> FROM V$LOCK;<br>SELECT </em> FROM V$SQLAREA;<br>SELECT <em> FROM V$SESSION;<br>SELECT </em> FROM V$PROCESS;<br>SELECT <em> FROM V$LOCKED_OBJECT;<br>SELECT </em> FROM ALL_OBJECTS;<br>SELECT * FROM V$SESSION_WAIT;    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java开发必知道的国外20大网站</title>
+      <link href="/2019/07/18/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
+      <url>/2019/07/18/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</url>
+      
+        <content type="html"><![CDATA[<p>1、谷歌  <a href="https://www.google.com/" target="_blank" rel="noopener">https://www.google.com/</a></p><p>2、<a href="https://stackoverflow.com" target="_blank" rel="noopener">https://stackoverflow.com</a><br>里面包含各种开发遇到的问题及答案，质量比较高。</p><p>3、<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>免费的开源代码托管网站，包括了许多开源的项目及示例项目等。</p><p>4、<a href="https://dzone.com/" target="_blank" rel="noopener">https://dzone.com/</a><br>提供技术新闻、编程教程、及各种工具、开发者的博客等。</p><p>5、<a href="http://www.programcreek.com/" target="_blank" rel="noopener">http://www.programcreek.com/</a><br>一个非常优秀的Java博客，包含很多精选文集。</p><p>6、<a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a><br>免费代码托管网站，可以用来做私服，和GitHub最大区别是GitLab可以有私有项目。</p><p>7、<a href="https://www.ibm.com/developerworks/learn/java/index.html" target="_blank" rel="noopener">https://www.ibm.com/developerworks/learn/java/index.html</a><br>IBM的JAVA开发者网站，很多干货。</p><p>8、<a href="http://www.javaworld.com/" target="_blank" rel="noopener">http://www.javaworld.com/</a><br>一个不错的综合性的java网站。</p><p>9、<a href="http://www.onjava.com/" target="_blank" rel="noopener">http://www.onjava.com/</a><br>某位国外大神的网站。</p><p>10、<a href="http://www.oracle.com/technetwork/java/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/index.html</a><br>oracle java的官方网站。</p><p>11、<a href="https://dzone.com/" target="_blank" rel="noopener">https://dzone.com/</a><br>DZone是一个提供编程，Web开发和DevOps新闻，教程和工具的网站。很多开发者在网站里分享其自己的博客文章。</p><p>12、<a href="https://leetcode.com/" target="_blank" rel="noopener">https://leetcode.com/</a><br>LeetCode Online Judge是一个提供JavaScript和Ruby编程的网站。目前，网站提供9种编程语言：C，C ++，Java，Python，C＃，JavaScript，Ruby，Bash，MySQL。</p><p>13、<a href="https://www.coursera.org/" target="_blank" rel="noopener">https://www.coursera.org/</a><br>Coursera是全球最好视频讲座网站，用户可以从著名的教授那里获得很多计算机科学课程。</p><p>14、<a href="http://www.javaworld.com/" target="_blank" rel="noopener">http://www.javaworld.com/</a><br>JavaWorld是一个拥有大量关于各种Java主题教程资源的网站。网站里的很多文章写得非常好，并配有插图。JavaWorld可以作为一个深度学习的网站来阅读。</p><p>15、<a href="https://en.wikipedia.org/" target="_blank" rel="noopener">https://en.wikipedia.org/</a><br>维基百科（Wikipedia）是开发人员查找和学习几乎任何编程概念最好的资源网站之一。作为一个有经验的Java开发人员，你可能只会一些概念，但了解不多。维基百科是一个免费了解最新信息的好地方，例如，什么是面向服务的编程。</p><p>16、Program Creek<br>Program Creek是世界上排名前100的Java博客之一。用户可以找到一些没有被任何其他网站所写的主题，每篇文章总是包含很好的图表或代码示例。Program Creek包含研究和行业人员撰写的文章，并始终向Java开发人员分享优质文章。</p>]]></content>
       
       
       <categories>
@@ -954,31 +1004,6 @@
     
     
     <entry>
-      <title>程序员的眼界真的不要，也不能只局限于技术</title>
-      <link href="/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
-      <url>/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</url>
-      
-        <content type="html"><![CDATA[<p>前几天在读《极客时间》专栏的时候，看到这么一段话：</p><pre><code>对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得业务和管理的技术人员，才能把技术能力最大化地发挥出来。</code></pre><p>作为一个创业者，正在经历着”创业”这个冰与火的淬炼与锻炼，深知作为一个技术人员来讲，什么才是最重要的，所以看到上面那段话，感同身受，感觉说的非常对，而且真的是非常重要：懂得业务和管理的技术人员，才能把技术能力最大化地发挥出来。</p><p>关注我的读者可能都知道，其实我都一直在跟大家强调一个问题：程序员的眼界真的不要，也不能只局限于技术。</p><p>程序员既然是技术出身，不只局限于技术，那又该如何提升自己在企业中的价值，该关注除了技术之外的哪些方面呢？</p><h1 id="一、懂产品和业务"><a href="#一、懂产品和业务" class="headerlink" title="一、懂产品和业务"></a>一、懂产品和业务</h1><p>就像上面那段话说的，技术是工具，它只有服务于具体的业务才能产生价值。只有懂产品和业务才能把客户服务好，才能把产品做到最好。</p><p>很多人可能会说：这不应该是产品经理的活么？我们工程师为什么要关注呢？</p><p>这是误区，而且是巨大的误区。眼界局限于自己的活，你的前途和前景，发展空间就是局限的，微小的。跳出来看看这个世界，你可能会发现，身边的技术管理者(技术 leader)，越往上走，是不是对产品和业务的逻辑要求越高？</p><p>如果你只会技术，每次在团队之间沟通，都用技术语言，那么团队之间非技术人员就会很那听懂，而你如果能够把复杂的业务逻辑非常简单的描述清楚，那么你就会使团队之间沟通的更有效率。<br>可能在不知不觉间，就在推动着团队前进，等你对产品和业务逻辑也来越熟悉的时候，你会发现，团队之间的沟通正在以我为核心，我在团队中正变得越来越重要。</p><p>从而，你可能会更上升一步，成为团队负责人，如果团队负责的好，决策权就来了，再上升一步，就是管理层！</p><p>你想想，如果你只关注你的一亩三分地好不好？你再努力，再牛逼，地就那么大，你的发展空间就受限，你种地技术再牛，产量也不会太高。</p><p>而且，我告诉你，每个行业，每个产品可能都有着自己独特的业务逻辑，如果你深谙或者熟悉某一个行业的业务逻辑，你可能就会成为这个行业的专家，从而说话和做事就会越来越有分量！如果你经常做 ERP 系统，你就知道了。</p><h1 id="二、懂管理和创新"><a href="#二、懂管理和创新" class="headerlink" title="二、懂管理和创新"></a>二、懂管理和创新</h1><p>技术人要想懂管理，可能需要一个缓慢的过程，比如我：在创业，深知管理真的是一门很大的学问，每个人都有着自己不同的心理。你可能会想：我应该如何提高员工的效率？如何凝聚团队的战斗力？如何能够让大家都非常的努力？如何保证团队的稳定性，不会有人员流失？如何……等等。</p><p>但是，这些问题对于一个技术人员刚转管理可能会很难，我们可以从技术领导力方面入手，先从自己最擅长的地方切入，慢慢学会管理。强迫，军事化管理，绝对服从等是很难都根上解决管理问题，而技术领导力就会给我们一个方向，就是靠自己的能力来征服他们。你解决不了的问题，我帮你解决了？他能不服你？</p><p>所以，管理就是这样，管理靠的是正确的引导！</p><p>技术人要懂创新，具有批判性思维。很多人都感觉程序员是逻辑严密，但是一根筋，在业务逻辑的处理上是一条路走到黑。其实，我们更应该跳出来，要敏锐的去发现问题，去寻求业务逻辑不好的地方，去改进这些问题，更要大胆的拥抱新技术，新工具，以及新流程，去带动整个团队进行产品升级，技术升级，提升企业的 ROI 。</p><p>所以，我们程序员应该经常跳出来，看看外面的世界，看看身边其他的牛人，都在干什么？不要只想着技术，即使你的目标是技术专家，技术专家也是需要懂产品，懂业务的，如果你是架构师？如果你不懂业务逻辑，不深谙一个行业的操作流程和业务流程，你能设计出一个非常好的架构来么，更别提一个好的产品来了！</p><p>来源:mp.weixin.qq.com/s/qg8AzGQQbTU86PlkJihsow</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 程序猿 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 程序猿 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>我们搞开发的为什么会感觉到累</title>
       <link href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
       <url>/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</url>
@@ -996,6 +1021,31 @@
         <tags>
             
             <tag> 开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>程序员的眼界真的不要，也不能只局限于技术</title>
+      <link href="/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
+      <url>/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</url>
+      
+        <content type="html"><![CDATA[<p>前几天在读《极客时间》专栏的时候，看到这么一段话：</p><pre><code>对客户来讲，真正有价值的是业务，技术是为业务服务的；对于团队生产力来说，管理起关键作用，否则技术实力发挥不出来。对于资深的业务和管理人员，也有很“技术”的部分，更有很“艺术”的部分。懂得业务和管理的技术人员，才能把技术能力最大化地发挥出来。</code></pre><p>作为一个创业者，正在经历着”创业”这个冰与火的淬炼与锻炼，深知作为一个技术人员来讲，什么才是最重要的，所以看到上面那段话，感同身受，感觉说的非常对，而且真的是非常重要：懂得业务和管理的技术人员，才能把技术能力最大化地发挥出来。</p><p>关注我的读者可能都知道，其实我都一直在跟大家强调一个问题：程序员的眼界真的不要，也不能只局限于技术。</p><p>程序员既然是技术出身，不只局限于技术，那又该如何提升自己在企业中的价值，该关注除了技术之外的哪些方面呢？</p><h1 id="一、懂产品和业务"><a href="#一、懂产品和业务" class="headerlink" title="一、懂产品和业务"></a>一、懂产品和业务</h1><p>就像上面那段话说的，技术是工具，它只有服务于具体的业务才能产生价值。只有懂产品和业务才能把客户服务好，才能把产品做到最好。</p><p>很多人可能会说：这不应该是产品经理的活么？我们工程师为什么要关注呢？</p><p>这是误区，而且是巨大的误区。眼界局限于自己的活，你的前途和前景，发展空间就是局限的，微小的。跳出来看看这个世界，你可能会发现，身边的技术管理者(技术 leader)，越往上走，是不是对产品和业务的逻辑要求越高？</p><p>如果你只会技术，每次在团队之间沟通，都用技术语言，那么团队之间非技术人员就会很那听懂，而你如果能够把复杂的业务逻辑非常简单的描述清楚，那么你就会使团队之间沟通的更有效率。<br>可能在不知不觉间，就在推动着团队前进，等你对产品和业务逻辑也来越熟悉的时候，你会发现，团队之间的沟通正在以我为核心，我在团队中正变得越来越重要。</p><p>从而，你可能会更上升一步，成为团队负责人，如果团队负责的好，决策权就来了，再上升一步，就是管理层！</p><p>你想想，如果你只关注你的一亩三分地好不好？你再努力，再牛逼，地就那么大，你的发展空间就受限，你种地技术再牛，产量也不会太高。</p><p>而且，我告诉你，每个行业，每个产品可能都有着自己独特的业务逻辑，如果你深谙或者熟悉某一个行业的业务逻辑，你可能就会成为这个行业的专家，从而说话和做事就会越来越有分量！如果你经常做 ERP 系统，你就知道了。</p><h1 id="二、懂管理和创新"><a href="#二、懂管理和创新" class="headerlink" title="二、懂管理和创新"></a>二、懂管理和创新</h1><p>技术人要想懂管理，可能需要一个缓慢的过程，比如我：在创业，深知管理真的是一门很大的学问，每个人都有着自己不同的心理。你可能会想：我应该如何提高员工的效率？如何凝聚团队的战斗力？如何能够让大家都非常的努力？如何保证团队的稳定性，不会有人员流失？如何……等等。</p><p>但是，这些问题对于一个技术人员刚转管理可能会很难，我们可以从技术领导力方面入手，先从自己最擅长的地方切入，慢慢学会管理。强迫，军事化管理，绝对服从等是很难都根上解决管理问题，而技术领导力就会给我们一个方向，就是靠自己的能力来征服他们。你解决不了的问题，我帮你解决了？他能不服你？</p><p>所以，管理就是这样，管理靠的是正确的引导！</p><p>技术人要懂创新，具有批判性思维。很多人都感觉程序员是逻辑严密，但是一根筋，在业务逻辑的处理上是一条路走到黑。其实，我们更应该跳出来，要敏锐的去发现问题，去寻求业务逻辑不好的地方，去改进这些问题，更要大胆的拥抱新技术，新工具，以及新流程，去带动整个团队进行产品升级，技术升级，提升企业的 ROI 。</p><p>所以，我们程序员应该经常跳出来，看看外面的世界，看看身边其他的牛人，都在干什么？不要只想着技术，即使你的目标是技术专家，技术专家也是需要懂产品，懂业务的，如果你是架构师？如果你不懂业务逻辑，不深谙一个行业的操作流程和业务流程，你能设计出一个非常好的架构来么，更别提一个好的产品来了！</p><p>来源:mp.weixin.qq.com/s/qg8AzGQQbTU86PlkJihsow</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序猿 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 程序猿 </tag>
             
         </tags>
       
@@ -1104,31 +1154,6 @@
     
     
     <entry>
-      <title>金三银四铜五铁六</title>
-      <link href="/2019/05/02/jin-san-yin-si-tong-wu-tie-liu/"/>
-      <url>/2019/05/02/jin-san-yin-si-tong-wu-tie-liu/</url>
-      
-        <content type="html"><![CDATA[<p>鲁班简称LB</p><p>　　据说，金三银四，截止今天为止面试黄金时间已经过去十之八九，而LB恰逢是这批面试大军其中的一名小兵，很不幸今年恰逢遇上了互联网寒冬（即各大公司都在裁员，对外提供岗位相对较少的，这意味着很多猿即将面临着更多的竞争对手和相对较少的岗位困境），LB求职过程种种被虐，尸体趟过召唤师峡谷每个角落，如今历历在目，终究，当初的一名无名小卒如今已是一名超级兵哈哈，但是从这个事情上却学到了不少的东西，LB不亏。</p><p>　　经验也总是用来交流用的，于是LB觉得有必要记录下来，也许对猿们会有一丝帮助。</p><p>　　首先，找工作得有一份体面的简历，这里就会衍生一个如何书写简历的问题，LB将从如下角度总结：</p><p>　　关于简历</p><p>　　　　如何书写简历</p><p>　　　　HR角度较为关注信息</p><p>　　　　1.个人信息（年龄，联系方式等）</p><p>　　　　2.求职意向（工作年限，工作地，岗位）</p><p>　　　　3.教育经历（专业，学校，毕业时间） </p><p>　　　　证书（如ACM，软证，外语水平）</p><p>　　　　面试官角度较为关注信息</p><p>　　　　1.专业技能</p><p>　　　　　　4-5项熟悉2-3项了解，建议层次分明，逻辑有序，建议别写精通，除非很NB，不然被问到不是很深的问题你答不出，面试官认为你不真实。</p><p>　　　　2.自我评价</p><p>　　　　　　是否有博客（文章数太少不写，减分），是否有GITHUB（提交数和STRA太少不写，减分），是否有积极学网课（如极客时间星球，虚假减分）。</p><p>　　　　3.项目难点</p><p>　　　　　　队列和缓存高可用，分布式应用衍生问题解决方案，JVM的排查技能，数据库层面优化和分库分表等，这些东西都需要你嵌入到你的项目中。</p><p>　　　　那么什么是‘’优秀‘’的简历（网图）</p><p>　　　　　　　　　  看图</p><p>　　　　　　　　　<img src="https://img2018.cnblogs.com/blog/1294463/201904/1294463-20190424152346247-1028176075.png"></p><p>　　　　哈哈哈，我大佬说，看到这种简历直接扔垃圾桶吧，原因很简单，你既然那么牛逼还特么需要自己投简历找工作么，早就被挖了，这种一看就是啥经验都没有培训生或者不懂行规的应届生简历写的东西，那么合格的简历刚刚上面已经说了，专业技能模块不能写太多，层次分明就可以，大概这样：</p><p>　　　　<img src="https://img2018.cnblogs.com/blog/1294463/201904/1294463-20190424155304983-1975933906.png">　　　　　</p><p>　　　　暂不评价技术如何，光从这个专业技能在简历的书写规则上是很符合层次分明的，而且一行代表一个领域，总体上来看就是一个标准的JAVA后台开发路线的技术栈，而且从内容上来看，也有一定的侧重点，这样给面试官的感觉就会比较友好，提问方便。与人方便自己方便。</p><p>　　　　如何投递简历</p><p>　　　　拉钩，公司官方网</p><p>　　　　这种看RP了，有时候投出去也大概率不会被看到，称之为海投，收到面试邀请不管怎么样，去了再说，毕竟是一种经历，总能学到东西的，但如果是你比较想去的公司，没有很大得取胜信心，建议别投先，毕竟如果被刷，那就得含泪在等一年了。</p><p>　　　　BOSS直聘，脉脉</p><p>　　　　搜索你想去的公司，然后加HR或者技术官后给他们发简历，本质和BOSS直聘差不多，他们看到你的简历，并且觉得OK，一般都非常愿意帮你内推的，因为内推录用了，是有推荐金的。</p><p>　　　　朋友内推，猎头内推</p><p>　　　　这种获得面试机会几率较高，因为是直推的。</p><p>　　　　　  </p><p>　　关于面试</p><p>　　　　面试需要准备3个部分的东西</p><p>　　　　　　算法智力题笔试</p><p>　　　　　　项目技术面试</p><p>　　　　　　HR跪舔与防坑宝典</p><p>　　　　</p><p>　　　   首先是算法编程题</p><p>　　　　这个没办法的，会就会不会的话，短时间之内也是做不出来的，有些公司硬性规定必须要你写出来，否则免谈，LB遇到个一个很奇葩的一次面试就是，笔试题出了编程题目，没想到一面后面完了，还让你去做一道编程题，二面也是，估计HR面也是。。无可厚非，因为他们认为动手能力才是最重要的，所以对于猿们唯一的办法就是提前刷题，如果不是面试对算法有较高要求的公司，一般的公司只要把LeetCode简单的题目刷了就能做出来大部分的题目，甚至会遇到一模一样的题目，连标点符号也一样哦。</p><p>　　　   然后就是智力题</p><p>　　　　其实也不是什么智力题，网上一搜程序员面试智力题一大推，看来看去也就是那几类问题，头脑比较聪明的猿基本不需要准备。</p><p>　　　　这里重点讲讲技术面　　　　</p><p>　　　　面试官：能写出一段能体现你水平的代码~</p><p>　　　　LB:好的~</p><p>　　　　几秒后~</p><p>1 while{<br>2 　　Scanner scan = new Scanner(System.in);<br>3 　　String question = scan.nextLine();<br>4 　　String answer =question.replace (‘你’, ‘我’). replace (‘吗’, ‘ ‘). replace (‘?’, ‘!’) )；<br>5 　　Sysem.out.println (answer );<br>6 }<br>　　　　面试官：呀，这难道就是…..</p><p>　　　　LB：没错，是失传已久的Artificial Intelligence</p><p>　　　　面试官：你究竟是什么人？</p><p>　　　　LB：阁下莫问出处，这个程序我示范给您看下</p><p>　　　　面试官：好的</p><p>　　　　LB：在吗？</p><p>　　　　电脑：在！</p><p>　　　　LB：你可以人机对话吗？</p><p>　　　　电脑：我可以人机对话！</p><p>　　　　LB：你会自己思考吗？</p><p>　　　　电脑：我会自己思考！</p><p>　　　　面试官也跃跃欲试：你可以滚出去吗？</p><p>　　　　电脑：我可以滚出去！</p><p>　　　　</p><p>  寒冷的冬天，外出的农夫，看见一条冻僵的蛇，于是把蛇带回了家，解冻之后，泡进酒里，蛇终于醒了，看到如此场景，蛇说:我也是醉了。</p><p>　　　　emmm~</p><p>　　　　言归正传，技术面就是看你的技术栈，然后结合项目去提问，并根据项目遇到的问题，要求回答出解决方案，并且根据遇到的问题会继续问深一层或者变形，考察你是否真的对问题进行了仔细的思考和深入的研究，以及问题对应的技术功底是否深厚，所以这里提到的重点是项目结合技术栈，如果你的项目没有用到你写的技术，那么就是扯蛋，那么面试官就会认为这个候选人只是停留在理论基础或者是初学，并没有实践，如果是应届生还说的过去，否则多半会被PASS。</p><p>　　　  那什么基础功底</p><p>　　　  比如问你某些关键字的作用如static</p><p>　　      如果你答出static修饰变量、修饰方法我会认为你合格，答出静态块，我会认为你不错，答出静态内部类我会认为你很好，答出静态导包我会对你很满意，满意的原因是能看出你确实非常热衷研究技术。这比你在自我评价写一万句本人热爱研究技术，学习能力强之类的废话更有说服力。</p><p>　　 　 又如问你对锁部分的了解　 </p><p>　　 　 1.一般人回答出Synchronized具有多线程的同步作用，能防止多个线性同时访问同一临界资源。</p><p> 2.但是却很少人提到 Synchronized的局限性（无法解決业务层面并发）。</p><p> 3.可以说明锁的用法，如可以创建 Reentrantlock类的可重入锁，而且可以通过其中的lock和unlock方法行加锁和解锁的操作。</p><p>　　　  4.说出可重入锁、公平锁和读写锁，如词锁的含义、公平数的含义，以及在创建 Reentrantlock和 Semaphore时如何通过参数强它是否是公平锁，也可以说明在读写锁中加读锁和写锁的条件，由此介绍通过读写线程吞吐量的做法。</p><p> 5.在协调多个线程处理临界资源时，可以使用锁，但这不是唯一的解决方法，还可以用 Condition和 Semaphore管理多线程竟争的方法。首先，说明这两个类的基本用法如可以通过 Reentrantlock来创建 Condition，过 Condition的awat和 signal来实现类似加锁和解锁的功能，可以通过 Semaphore acquire和 release方法来申请和释放资源。另外，说明用 Condition和 Semaphore的特点（在哪些场景下用它们比较合适）通过 Condition类的相关方法，可以在不同的线程中创建多个阻塞队列，从而能精准的控制唤醒某个阻塞队列的线程，而不是只唤醒默认的阻塞队列的线程，而 Semaphore可以用在多个线程竞争少量资源的场合中。如10张票，20个线程的抢购场景。</p><p>　　　　再如问你对框架里的了解　　　   </p><p>  因为一般的候选人，大多仅仅是能“山寨”别人的代码，也就是说能在现有框架的基础上，照着别人写的流程，扩展出新的功能模块。比如要写个股票挂单的功能模块，是会模仿现有的下单流程，然后从前端到后端再到数据库，依样画葫芦写一遍，最多把功能相关的代码点改掉。其实我们每个人都这样过来的，但在面试时，如果你仅仅表现出这样的能力，就和大多数人的水平差不多了，在这点就没法体现出你的优势了。</p><p>  我们知道，如果单纯使用SSM框架，大多数项目都会有痛点。比如数据库性能差，或者业务模块比较复杂，并发量比较高，用Spring MVC里的Controller无法满足跳转的需求。所以一般还会被问：你除了依照现有框架写业务代码时，还做了哪些改动？</p><p>　　　  对于这个问题，不在乎听到什么回答，只关心回答符不符逻辑。一般只要答对，面试官就会给出“在框架层面有自己的体会，有一定的了解”，否则，就只会给出“只能在项目经理带领下编写框架代码，对框架本身了解不多”。</p><p> 回答例如有：增加了Redis缓存，以避免频繁调用一些不变的数据。或者，在MyBitas的xml里，select语句where条件有isnull，即这个值有就增加一个where条件，对此，会对任何一个where增加一个不带isnull的查询条件，以免该语句当传入参数都是null时，做全表扫描。或者对返回信息做了压缩处理，以增加网络传输性能。</p><p>  小结：</p><p>  技术面试非常重要，这里说的重要不是说对于整个求职过程重要，因为在求职过程哪怕是HR面都有权利决定不要你，所以说没有重不重要的，这里说的重要的是指这是检验你自身水平的能力的考察，通过面试其实可以反映出你的自身很多问题，比如，知识面有了，但是不够全面，或者知识面全了但是不够深入，或者把需求转化为实际产品的能力不足等等，这些东西才是对于你来说是重要的，如果你的能力有了，还会害怕找不到工作吗？这里最怕的就是明知自己能力不足，又不愿意专研学习，还想着高新，只能说你不适合当一名程序员。</p><p>　　　　那么问题来了，我知道自己的情况，但是又不知道努力的方向，或者不知道怎么提升自己，怎么办？如果你能提出这样的问题，LB只能说，你独立解决问题能力确实也是挺差的，因为在我们开发当中，经常会遇到一些需求，都不知道怎么去做，或者用一些完全没接触过用的框架，如果团队中有人熟悉那还好，但是也别指望别人教你太多，所以这个时候就只能靠自己了，无它，需要你通过网上找教学资料（视频，博客，官方网）的方式快速学习，这些资料花几块钱随手可得，然后一步一个脚印慢慢的把产品做出来。</p><p>　　　　</p><p>　　　　HR跪舔与防坑宝典（LB总结了一些）</p><p>　　　　自我介绍　　</p><p>　　　　您好，很荣幸有机会来参加公司的面试</p><p>　　　　1.个人经历（我是谁，我来自哪里，年龄，学历，从业经历）实习加上正职　</p><p>　　　　2.公司为什么要选你（应聘岗位中最重要的3个技能点，说清楚相关经验）我能做好我要做的事情，我相信自己</p><p>　　　　3.你为什么要选这家公司（就公司的产品，文化，影响力等）着重说出你选择的理由如贵公司的高技术开发环境很吸引我，贵公司在近年来市场上很有竞争力，贵公司能够提供一个与众不同的发展道理</p><p>　　　　</p><p>　　　　高频问题　</p><p>　　　　1.上一家公司，你为什么会离职？</p><p>　　　　1.公司很好，但是公司调整了业务，接下来的发展路线和自己的目标不一致，所以要换工作</p><p>　　　　2.工作太清闲，学不到知识，我不怕累，就是想多锻炼自己，想找具有挑战力工作</p><p>　　　　3.公司的管理制度不也是很完善，没有晋升机会，我比较想进步，找一个更好的平台</p><p>　　　　4.我想去优秀的公司，让自己变得更好</p><p>　　　　2.为什么来我们这里？</p><p>　　　　1.对原单位充满感恩，这是我人生中非常重要的经历，我认同原单位领导和文化</p><p>   2.两份工作的本质是一致的，行业和工作性质都有紧密联系</p><p>   3.选择一份新的工作不代表背叛过去，发扬原公司魅力，同时为了寻求更大的成长和突破</p><p>   4.不承诺一份工作干一辈子，保证在我的任期内尽职尽责　</p><p>  3.你怎么看待自己以后的职涯？（包括工作和家庭的分配，怎么平衡家庭和工作的关系、加班、选择一家公司时的考量、地点等）（离职稳定性）</p><p>　　　　我准备在技术领域有所作为，我希望在我3到5年内，具备什么样的素质，在行业内达到什么样的水平，产出什么样的工作成果，将规划量化，具体化 </p><p>　　　　4.对薪资期望（不要直接说数，绝不能表现出没到多少钱或者什么层级我就不去）</p><p>　　　　薪资应该基于你求职行业的市场价格和自身的价值，例如目前这个岗位的平均工资是8K，虽然我刚毕业，但是在我工作期间已经有过两份的相关经验而且都是作为核心成员参与项目，因此可以很快上手这份工作，所以我希望能够在转正后的工资能达到10K等等　</p><p>　　　　5.可以接受降薪吗？（先了解公司薪酬体系，根据行业和自身能力来定位）</p><p>　　　　如果候选人的调性符合（足够官方），可以这么回答：我也了解咋们公司现在的薪资架构，我相信公司会根据我的能力给出一个合理的薪水方案，我相信只要把事情做好，该有的一定会有的对于这样的部门，“ 毕竟贵公司在做一个从来没有人做的这么好的事情，所以肯定是有难度的，肯定是要付出大量努力的 ”</p><p>　　　　6自己觉得自己工作上的短板/优点是什么？</p><p>　　　　1.不能避而不谈，</p><p>　　　　2.不能变相夸自己，</p><p>　　　　3.不能暴露重大缺陷，</p><p>　　　　4.可以将一些能接受能改进的缺点</p><p>　　　　综上：缺点加说明加改进</p><p>　　　　7.说说自己性格上的优缺点（描述一下自己的性格）</p><p>　　　　我不懂得如何拒绝他人，我拉不下面子去指出别人的问题，我做事的时候希望马上就能看到成效，有时候会比较贪心，想同时做好几项工作，我比较慢热，不善于和陌生人打交道，我有意识的让自己在改正，让自己更加有亲和力，我非常在意别人对自己的工作评价，得不到好评就会焦虑，其实我也在开导自己别太功利心了。沉着冷静，条例清楚，立场坚定，顽强向上，乐于助人和关心他人，适应能力等等</p><p>　　　　8.怎么看待加班（你能接受996、997、007吗）？</p><p>　　　　可以接受版本</p><p>　　　　如果候选人的调性符合（足够官方），可以这么回答：我觉得我们要实现梦想，一定是要付出比较多努力的，所以我已经做好了准备，也愿意和小伙伴们一起战斗我是可以加班的，我现在加班强度就是比较大的。因为我喜欢这个事情，我想把这个事情做好。项目忙的时候可能一个月都没有休息日，我觉得要应对这么忙的工作，光有心理准备其实还不够，还要有特别好的身体素质，所以我准备把健身的习惯一直坚持下去</p><p>　　　　不接受版本</p><p>　　　　加班是应该的，不加班也是应该的，没有把事情做完是不应该的，因为能力低完成工作慢造成的加班，并不是一件好事，不加班是能力，加班是态度，能力不够的情况下，态度去补。　　</p><p>　　　　9.你谈恋爱了没？（状态是否稳定，会不会因为感情影响工作，很快结婚，休婚假产假）</p><p>　　　　我还没有谈恋爱，目前不考虑恋爱问题，我希望自己变得更优秀以后，在谈一场稳定的恋爱，所以现在想把主要的精力放在工作上。</p><p>　　　   我已经有男朋友或女朋友，我们都在这个城市工作，目前准备先工作几年，有精力能力了在考虑结婚。　　　</p><p>　　　　10.是否还面试其他公司（HR确认求职意向与诚信度）</p><p>　　　　实话实说，选择名声较大较好的公司来说，职位和现在的求职相思相近，表是自己求职意向专一，还在等候结果　　　</p><p>　　　　11.项目中遇到的最大挑战是什么？怎么解决的？</p><p>　　　　因人而已，需要描述问题产生的原因，查找解决问题的方式，对比那种更加好，遇到什么问题，最终怎么一步一步解决的</p><p>　　　　12.最有成就感的事情是?　　</p><p>　　　　做有挑战性的事情，并且能够做好，或者是坚持一个习惯很久，如坚持写博客，坚持看书</p><p>　　　　13.你有什么问题想问的？　　</p><p>　　　　1.你作为一个资深的CODER，我想知道，你平时是怎么学习技术，有什么好的学习途径，怎么才能做到像你一样强呢？</p><p>　　　　2.公司的业务和技术栈是什么呢？</p><p>　　　　3.技术难点怎么解决，有什么技术支持</p><p>　　　　4.每天有多少时间花在写代码上　</p><p>　　　　14.收到OFFER该问的5个问题</p><p>　　　　1.试用期工资和时间（正常来说合同是3年，试用期是3个月）</p><p>　　　　2.转正考核的方式，转正工资</p><p>　　　　3.工作时间以及加班计算（一周五天工作制，一天8小时）</p><p>　　　　4.培训晋升机制</p><p>　　　　5.福利情况（五险一金，餐补，其他补贴如电脑补贴）</p><p>作者：卓庆森<br>出处：<a href="https://www.cnblogs.com/zhuoqingsen/" target="_blank" rel="noopener">https://www.cnblogs.com/zhuoqingsen/</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 面试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>产品经理如何让程序员放下手中的刀？</title>
       <link href="/2019/05/02/chan-pin-jing-li-ru-he-rang-cheng-xu-yuan-fang-xia-shou-zhong-de-dao/"/>
       <url>/2019/05/02/chan-pin-jing-li-ru-he-rang-cheng-xu-yuan-fang-xia-shou-zhong-de-dao/</url>
@@ -1146,6 +1171,31 @@
         <tags>
             
             <tag> 程序猿 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>金三银四铜五铁六</title>
+      <link href="/2019/05/02/jin-san-yin-si-tong-wu-tie-liu/"/>
+      <url>/2019/05/02/jin-san-yin-si-tong-wu-tie-liu/</url>
+      
+        <content type="html"><![CDATA[<p>鲁班简称LB</p><p>　　据说，金三银四，截止今天为止面试黄金时间已经过去十之八九，而LB恰逢是这批面试大军其中的一名小兵，很不幸今年恰逢遇上了互联网寒冬（即各大公司都在裁员，对外提供岗位相对较少的，这意味着很多猿即将面临着更多的竞争对手和相对较少的岗位困境），LB求职过程种种被虐，尸体趟过召唤师峡谷每个角落，如今历历在目，终究，当初的一名无名小卒如今已是一名超级兵哈哈，但是从这个事情上却学到了不少的东西，LB不亏。</p><p>　　经验也总是用来交流用的，于是LB觉得有必要记录下来，也许对猿们会有一丝帮助。</p><p>　　首先，找工作得有一份体面的简历，这里就会衍生一个如何书写简历的问题，LB将从如下角度总结：</p><p>　　关于简历</p><p>　　　　如何书写简历</p><p>　　　　HR角度较为关注信息</p><p>　　　　1.个人信息（年龄，联系方式等）</p><p>　　　　2.求职意向（工作年限，工作地，岗位）</p><p>　　　　3.教育经历（专业，学校，毕业时间） </p><p>　　　　证书（如ACM，软证，外语水平）</p><p>　　　　面试官角度较为关注信息</p><p>　　　　1.专业技能</p><p>　　　　　　4-5项熟悉2-3项了解，建议层次分明，逻辑有序，建议别写精通，除非很NB，不然被问到不是很深的问题你答不出，面试官认为你不真实。</p><p>　　　　2.自我评价</p><p>　　　　　　是否有博客（文章数太少不写，减分），是否有GITHUB（提交数和STRA太少不写，减分），是否有积极学网课（如极客时间星球，虚假减分）。</p><p>　　　　3.项目难点</p><p>　　　　　　队列和缓存高可用，分布式应用衍生问题解决方案，JVM的排查技能，数据库层面优化和分库分表等，这些东西都需要你嵌入到你的项目中。</p><p>　　　　那么什么是‘’优秀‘’的简历（网图）</p><p>　　　　　　　　　  看图</p><p>　　　　　　　　　<img src="https://img2018.cnblogs.com/blog/1294463/201904/1294463-20190424152346247-1028176075.png"></p><p>　　　　哈哈哈，我大佬说，看到这种简历直接扔垃圾桶吧，原因很简单，你既然那么牛逼还特么需要自己投简历找工作么，早就被挖了，这种一看就是啥经验都没有培训生或者不懂行规的应届生简历写的东西，那么合格的简历刚刚上面已经说了，专业技能模块不能写太多，层次分明就可以，大概这样：</p><p>　　　　<img src="https://img2018.cnblogs.com/blog/1294463/201904/1294463-20190424155304983-1975933906.png">　　　　　</p><p>　　　　暂不评价技术如何，光从这个专业技能在简历的书写规则上是很符合层次分明的，而且一行代表一个领域，总体上来看就是一个标准的JAVA后台开发路线的技术栈，而且从内容上来看，也有一定的侧重点，这样给面试官的感觉就会比较友好，提问方便。与人方便自己方便。</p><p>　　　　如何投递简历</p><p>　　　　拉钩，公司官方网</p><p>　　　　这种看RP了，有时候投出去也大概率不会被看到，称之为海投，收到面试邀请不管怎么样，去了再说，毕竟是一种经历，总能学到东西的，但如果是你比较想去的公司，没有很大得取胜信心，建议别投先，毕竟如果被刷，那就得含泪在等一年了。</p><p>　　　　BOSS直聘，脉脉</p><p>　　　　搜索你想去的公司，然后加HR或者技术官后给他们发简历，本质和BOSS直聘差不多，他们看到你的简历，并且觉得OK，一般都非常愿意帮你内推的，因为内推录用了，是有推荐金的。</p><p>　　　　朋友内推，猎头内推</p><p>　　　　这种获得面试机会几率较高，因为是直推的。</p><p>　　　　　  </p><p>　　关于面试</p><p>　　　　面试需要准备3个部分的东西</p><p>　　　　　　算法智力题笔试</p><p>　　　　　　项目技术面试</p><p>　　　　　　HR跪舔与防坑宝典</p><p>　　　　</p><p>　　　   首先是算法编程题</p><p>　　　　这个没办法的，会就会不会的话，短时间之内也是做不出来的，有些公司硬性规定必须要你写出来，否则免谈，LB遇到个一个很奇葩的一次面试就是，笔试题出了编程题目，没想到一面后面完了，还让你去做一道编程题，二面也是，估计HR面也是。。无可厚非，因为他们认为动手能力才是最重要的，所以对于猿们唯一的办法就是提前刷题，如果不是面试对算法有较高要求的公司，一般的公司只要把LeetCode简单的题目刷了就能做出来大部分的题目，甚至会遇到一模一样的题目，连标点符号也一样哦。</p><p>　　　   然后就是智力题</p><p>　　　　其实也不是什么智力题，网上一搜程序员面试智力题一大推，看来看去也就是那几类问题，头脑比较聪明的猿基本不需要准备。</p><p>　　　　这里重点讲讲技术面　　　　</p><p>　　　　面试官：能写出一段能体现你水平的代码~</p><p>　　　　LB:好的~</p><p>　　　　几秒后~</p><p>1 while{<br>2 　　Scanner scan = new Scanner(System.in);<br>3 　　String question = scan.nextLine();<br>4 　　String answer =question.replace (‘你’, ‘我’). replace (‘吗’, ‘ ‘). replace (‘?’, ‘!’) )；<br>5 　　Sysem.out.println (answer );<br>6 }<br>　　　　面试官：呀，这难道就是…..</p><p>　　　　LB：没错，是失传已久的Artificial Intelligence</p><p>　　　　面试官：你究竟是什么人？</p><p>　　　　LB：阁下莫问出处，这个程序我示范给您看下</p><p>　　　　面试官：好的</p><p>　　　　LB：在吗？</p><p>　　　　电脑：在！</p><p>　　　　LB：你可以人机对话吗？</p><p>　　　　电脑：我可以人机对话！</p><p>　　　　LB：你会自己思考吗？</p><p>　　　　电脑：我会自己思考！</p><p>　　　　面试官也跃跃欲试：你可以滚出去吗？</p><p>　　　　电脑：我可以滚出去！</p><p>　　　　</p><p>  寒冷的冬天，外出的农夫，看见一条冻僵的蛇，于是把蛇带回了家，解冻之后，泡进酒里，蛇终于醒了，看到如此场景，蛇说:我也是醉了。</p><p>　　　　emmm~</p><p>　　　　言归正传，技术面就是看你的技术栈，然后结合项目去提问，并根据项目遇到的问题，要求回答出解决方案，并且根据遇到的问题会继续问深一层或者变形，考察你是否真的对问题进行了仔细的思考和深入的研究，以及问题对应的技术功底是否深厚，所以这里提到的重点是项目结合技术栈，如果你的项目没有用到你写的技术，那么就是扯蛋，那么面试官就会认为这个候选人只是停留在理论基础或者是初学，并没有实践，如果是应届生还说的过去，否则多半会被PASS。</p><p>　　　  那什么基础功底</p><p>　　　  比如问你某些关键字的作用如static</p><p>　　      如果你答出static修饰变量、修饰方法我会认为你合格，答出静态块，我会认为你不错，答出静态内部类我会认为你很好，答出静态导包我会对你很满意，满意的原因是能看出你确实非常热衷研究技术。这比你在自我评价写一万句本人热爱研究技术，学习能力强之类的废话更有说服力。</p><p>　　 　 又如问你对锁部分的了解　 </p><p>　　 　 1.一般人回答出Synchronized具有多线程的同步作用，能防止多个线性同时访问同一临界资源。</p><p> 2.但是却很少人提到 Synchronized的局限性（无法解決业务层面并发）。</p><p> 3.可以说明锁的用法，如可以创建 Reentrantlock类的可重入锁，而且可以通过其中的lock和unlock方法行加锁和解锁的操作。</p><p>　　　  4.说出可重入锁、公平锁和读写锁，如词锁的含义、公平数的含义，以及在创建 Reentrantlock和 Semaphore时如何通过参数强它是否是公平锁，也可以说明在读写锁中加读锁和写锁的条件，由此介绍通过读写线程吞吐量的做法。</p><p> 5.在协调多个线程处理临界资源时，可以使用锁，但这不是唯一的解决方法，还可以用 Condition和 Semaphore管理多线程竟争的方法。首先，说明这两个类的基本用法如可以通过 Reentrantlock来创建 Condition，过 Condition的awat和 signal来实现类似加锁和解锁的功能，可以通过 Semaphore acquire和 release方法来申请和释放资源。另外，说明用 Condition和 Semaphore的特点（在哪些场景下用它们比较合适）通过 Condition类的相关方法，可以在不同的线程中创建多个阻塞队列，从而能精准的控制唤醒某个阻塞队列的线程，而不是只唤醒默认的阻塞队列的线程，而 Semaphore可以用在多个线程竞争少量资源的场合中。如10张票，20个线程的抢购场景。</p><p>　　　　再如问你对框架里的了解　　　   </p><p>  因为一般的候选人，大多仅仅是能“山寨”别人的代码，也就是说能在现有框架的基础上，照着别人写的流程，扩展出新的功能模块。比如要写个股票挂单的功能模块，是会模仿现有的下单流程，然后从前端到后端再到数据库，依样画葫芦写一遍，最多把功能相关的代码点改掉。其实我们每个人都这样过来的，但在面试时，如果你仅仅表现出这样的能力，就和大多数人的水平差不多了，在这点就没法体现出你的优势了。</p><p>  我们知道，如果单纯使用SSM框架，大多数项目都会有痛点。比如数据库性能差，或者业务模块比较复杂，并发量比较高，用Spring MVC里的Controller无法满足跳转的需求。所以一般还会被问：你除了依照现有框架写业务代码时，还做了哪些改动？</p><p>　　　  对于这个问题，不在乎听到什么回答，只关心回答符不符逻辑。一般只要答对，面试官就会给出“在框架层面有自己的体会，有一定的了解”，否则，就只会给出“只能在项目经理带领下编写框架代码，对框架本身了解不多”。</p><p> 回答例如有：增加了Redis缓存，以避免频繁调用一些不变的数据。或者，在MyBitas的xml里，select语句where条件有isnull，即这个值有就增加一个where条件，对此，会对任何一个where增加一个不带isnull的查询条件，以免该语句当传入参数都是null时，做全表扫描。或者对返回信息做了压缩处理，以增加网络传输性能。</p><p>  小结：</p><p>  技术面试非常重要，这里说的重要不是说对于整个求职过程重要，因为在求职过程哪怕是HR面都有权利决定不要你，所以说没有重不重要的，这里说的重要的是指这是检验你自身水平的能力的考察，通过面试其实可以反映出你的自身很多问题，比如，知识面有了，但是不够全面，或者知识面全了但是不够深入，或者把需求转化为实际产品的能力不足等等，这些东西才是对于你来说是重要的，如果你的能力有了，还会害怕找不到工作吗？这里最怕的就是明知自己能力不足，又不愿意专研学习，还想着高新，只能说你不适合当一名程序员。</p><p>　　　　那么问题来了，我知道自己的情况，但是又不知道努力的方向，或者不知道怎么提升自己，怎么办？如果你能提出这样的问题，LB只能说，你独立解决问题能力确实也是挺差的，因为在我们开发当中，经常会遇到一些需求，都不知道怎么去做，或者用一些完全没接触过用的框架，如果团队中有人熟悉那还好，但是也别指望别人教你太多，所以这个时候就只能靠自己了，无它，需要你通过网上找教学资料（视频，博客，官方网）的方式快速学习，这些资料花几块钱随手可得，然后一步一个脚印慢慢的把产品做出来。</p><p>　　　　</p><p>　　　　HR跪舔与防坑宝典（LB总结了一些）</p><p>　　　　自我介绍　　</p><p>　　　　您好，很荣幸有机会来参加公司的面试</p><p>　　　　1.个人经历（我是谁，我来自哪里，年龄，学历，从业经历）实习加上正职　</p><p>　　　　2.公司为什么要选你（应聘岗位中最重要的3个技能点，说清楚相关经验）我能做好我要做的事情，我相信自己</p><p>　　　　3.你为什么要选这家公司（就公司的产品，文化，影响力等）着重说出你选择的理由如贵公司的高技术开发环境很吸引我，贵公司在近年来市场上很有竞争力，贵公司能够提供一个与众不同的发展道理</p><p>　　　　</p><p>　　　　高频问题　</p><p>　　　　1.上一家公司，你为什么会离职？</p><p>　　　　1.公司很好，但是公司调整了业务，接下来的发展路线和自己的目标不一致，所以要换工作</p><p>　　　　2.工作太清闲，学不到知识，我不怕累，就是想多锻炼自己，想找具有挑战力工作</p><p>　　　　3.公司的管理制度不也是很完善，没有晋升机会，我比较想进步，找一个更好的平台</p><p>　　　　4.我想去优秀的公司，让自己变得更好</p><p>　　　　2.为什么来我们这里？</p><p>　　　　1.对原单位充满感恩，这是我人生中非常重要的经历，我认同原单位领导和文化</p><p>   2.两份工作的本质是一致的，行业和工作性质都有紧密联系</p><p>   3.选择一份新的工作不代表背叛过去，发扬原公司魅力，同时为了寻求更大的成长和突破</p><p>   4.不承诺一份工作干一辈子，保证在我的任期内尽职尽责　</p><p>  3.你怎么看待自己以后的职涯？（包括工作和家庭的分配，怎么平衡家庭和工作的关系、加班、选择一家公司时的考量、地点等）（离职稳定性）</p><p>　　　　我准备在技术领域有所作为，我希望在我3到5年内，具备什么样的素质，在行业内达到什么样的水平，产出什么样的工作成果，将规划量化，具体化 </p><p>　　　　4.对薪资期望（不要直接说数，绝不能表现出没到多少钱或者什么层级我就不去）</p><p>　　　　薪资应该基于你求职行业的市场价格和自身的价值，例如目前这个岗位的平均工资是8K，虽然我刚毕业，但是在我工作期间已经有过两份的相关经验而且都是作为核心成员参与项目，因此可以很快上手这份工作，所以我希望能够在转正后的工资能达到10K等等　</p><p>　　　　5.可以接受降薪吗？（先了解公司薪酬体系，根据行业和自身能力来定位）</p><p>　　　　如果候选人的调性符合（足够官方），可以这么回答：我也了解咋们公司现在的薪资架构，我相信公司会根据我的能力给出一个合理的薪水方案，我相信只要把事情做好，该有的一定会有的对于这样的部门，“ 毕竟贵公司在做一个从来没有人做的这么好的事情，所以肯定是有难度的，肯定是要付出大量努力的 ”</p><p>　　　　6自己觉得自己工作上的短板/优点是什么？</p><p>　　　　1.不能避而不谈，</p><p>　　　　2.不能变相夸自己，</p><p>　　　　3.不能暴露重大缺陷，</p><p>　　　　4.可以将一些能接受能改进的缺点</p><p>　　　　综上：缺点加说明加改进</p><p>　　　　7.说说自己性格上的优缺点（描述一下自己的性格）</p><p>　　　　我不懂得如何拒绝他人，我拉不下面子去指出别人的问题，我做事的时候希望马上就能看到成效，有时候会比较贪心，想同时做好几项工作，我比较慢热，不善于和陌生人打交道，我有意识的让自己在改正，让自己更加有亲和力，我非常在意别人对自己的工作评价，得不到好评就会焦虑，其实我也在开导自己别太功利心了。沉着冷静，条例清楚，立场坚定，顽强向上，乐于助人和关心他人，适应能力等等</p><p>　　　　8.怎么看待加班（你能接受996、997、007吗）？</p><p>　　　　可以接受版本</p><p>　　　　如果候选人的调性符合（足够官方），可以这么回答：我觉得我们要实现梦想，一定是要付出比较多努力的，所以我已经做好了准备，也愿意和小伙伴们一起战斗我是可以加班的，我现在加班强度就是比较大的。因为我喜欢这个事情，我想把这个事情做好。项目忙的时候可能一个月都没有休息日，我觉得要应对这么忙的工作，光有心理准备其实还不够，还要有特别好的身体素质，所以我准备把健身的习惯一直坚持下去</p><p>　　　　不接受版本</p><p>　　　　加班是应该的，不加班也是应该的，没有把事情做完是不应该的，因为能力低完成工作慢造成的加班，并不是一件好事，不加班是能力，加班是态度，能力不够的情况下，态度去补。　　</p><p>　　　　9.你谈恋爱了没？（状态是否稳定，会不会因为感情影响工作，很快结婚，休婚假产假）</p><p>　　　　我还没有谈恋爱，目前不考虑恋爱问题，我希望自己变得更优秀以后，在谈一场稳定的恋爱，所以现在想把主要的精力放在工作上。</p><p>　　　   我已经有男朋友或女朋友，我们都在这个城市工作，目前准备先工作几年，有精力能力了在考虑结婚。　　　</p><p>　　　　10.是否还面试其他公司（HR确认求职意向与诚信度）</p><p>　　　　实话实说，选择名声较大较好的公司来说，职位和现在的求职相思相近，表是自己求职意向专一，还在等候结果　　　</p><p>　　　　11.项目中遇到的最大挑战是什么？怎么解决的？</p><p>　　　　因人而已，需要描述问题产生的原因，查找解决问题的方式，对比那种更加好，遇到什么问题，最终怎么一步一步解决的</p><p>　　　　12.最有成就感的事情是?　　</p><p>　　　　做有挑战性的事情，并且能够做好，或者是坚持一个习惯很久，如坚持写博客，坚持看书</p><p>　　　　13.你有什么问题想问的？　　</p><p>　　　　1.你作为一个资深的CODER，我想知道，你平时是怎么学习技术，有什么好的学习途径，怎么才能做到像你一样强呢？</p><p>　　　　2.公司的业务和技术栈是什么呢？</p><p>　　　　3.技术难点怎么解决，有什么技术支持</p><p>　　　　4.每天有多少时间花在写代码上　</p><p>　　　　14.收到OFFER该问的5个问题</p><p>　　　　1.试用期工资和时间（正常来说合同是3年，试用期是3个月）</p><p>　　　　2.转正考核的方式，转正工资</p><p>　　　　3.工作时间以及加班计算（一周五天工作制，一天8小时）</p><p>　　　　4.培训晋升机制</p><p>　　　　5.福利情况（五险一金，餐补，其他补贴如电脑补贴）</p><p>作者：卓庆森<br>出处：<a href="https://www.cnblogs.com/zhuoqingsen/" target="_blank" rel="noopener">https://www.cnblogs.com/zhuoqingsen/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
             
         </tags>
       
@@ -1641,25 +1691,23 @@
     
     
     <entry>
-      <title>Java面试中最高频的那20%知识点！</title>
-      <link href="/2019/03/21/java-mian-shi/"/>
-      <url>/2019/03/21/java-mian-shi/</url>
+      <title>Java转型大数据开发技能</title>
+      <link href="/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
+      <url>/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</url>
       
-        <content type="html"><![CDATA[<p>Java目前已经不仅仅是一门开发语言，而是一整套生态体系。</p><p>作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。</p><p>但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的知识，就能解决80%的问题。</p><p>那么，Java程序员必须掌握的20%知识点都有哪些呢？</p><p>个人认为包括以下内容：</p><pre><code>Java基础知识，如集合类、IO、泛型等。JVM底层知识，如类加载机制、GC、JVM内存结构等。Java并发编程知识，如Java内存模型、并发包、线程池、netty等。开发框架知识，如Spring、mybatis、springboot、springMVC等。分布式相关知识，如CAP理论、分布式锁、分布式事务、Zookeeper、spring Cloud等。其他基础知识，编程语言、网络方面、数据库、数据结构和算法。中间件相关知识，如Redis、rabbitMQ、Dubbo等。服务器相关知识，如tomcat、jetty、jboss等。</code></pre><p>以上这些知识，就是最高频的面试问题，以及工作中需要用到的知识。当然，一个程序员想要掌握以上所有知识，可能需要花费很长时间。这个过程注定是漫长且孤独的。</p><p>来源：<br><a href="https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw</a></p>]]></content>
+        <content type="html"><![CDATA[<p>很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。</p><p>什么意思呢？</p><pre><code>就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。</code></pre><p>如此多的技术，怎么学得过来呢？</p><pre><code>我觉得以你自己的岗位为主，其他为辅，关于自己工作相关的技术，花更多的时间和精力，研究得更深入，其他领域的可以了解和关注，等到需要用到或者感兴趣的时候，在深入学习即可。</code></pre><p>那作为 Java 开发，除了 Java 还可以学什么？</p><pre><code>大数据可能是一个不错的方向。    一、转型大数据需要哪些技能？    技术层面来说，如果你初步掌握Java编程，转型大数据都是非常轻松的具有天然的优势。    Java编程是大数据开发的基础，Java编程是必备技能；    大数据使用的Hadoop(在分布式服务器集群上存储海量数据并运行分布式分析应用的一种方法)需要Java基础， 所以有很多搞Java的都在往这hadoop大数据方向转。</code></pre>]]></content>
       
       
       <categories>
           
-          <category> 面试 </category>
+          <category> 技术 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
-            
-            <tag> 面试 </tag>
+            <tag> 大数据 </tag>
             
         </tags>
       
@@ -1693,23 +1741,25 @@
     
     
     <entry>
-      <title>Java转型大数据开发技能</title>
-      <link href="/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/"/>
-      <url>/2019/03/21/java-zhuan-xing-da-shu-ju-kai-fa-ji-neng/</url>
+      <title>Java面试中最高频的那20%知识点！</title>
+      <link href="/2019/03/21/java-mian-shi/"/>
+      <url>/2019/03/21/java-mian-shi/</url>
       
-        <content type="html"><![CDATA[<p>很多做程序猿都知道，对于技术方面，擅长大家一直提倡的是精一门，再横向发展，多学一点总不是坏事。</p><p>什么意思呢？</p><pre><code>就是我们当前工作用到的那一门技术一定要学好、学精、学深，然后可以拓展其他相关的技术栈。</code></pre><p>如此多的技术，怎么学得过来呢？</p><pre><code>我觉得以你自己的岗位为主，其他为辅，关于自己工作相关的技术，花更多的时间和精力，研究得更深入，其他领域的可以了解和关注，等到需要用到或者感兴趣的时候，在深入学习即可。</code></pre><p>那作为 Java 开发，除了 Java 还可以学什么？</p><pre><code>大数据可能是一个不错的方向。    一、转型大数据需要哪些技能？    技术层面来说，如果你初步掌握Java编程，转型大数据都是非常轻松的具有天然的优势。    Java编程是大数据开发的基础，Java编程是必备技能；    大数据使用的Hadoop(在分布式服务器集群上存储海量数据并运行分布式分析应用的一种方法)需要Java基础， 所以有很多搞Java的都在往这hadoop大数据方向转。</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>Java目前已经不仅仅是一门开发语言，而是一整套生态体系。</p><p>作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。</p><p>但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的知识，就能解决80%的问题。</p><p>那么，Java程序员必须掌握的20%知识点都有哪些呢？</p><p>个人认为包括以下内容：</p><pre><code>Java基础知识，如集合类、IO、泛型等。JVM底层知识，如类加载机制、GC、JVM内存结构等。Java并发编程知识，如Java内存模型、并发包、线程池、netty等。开发框架知识，如Spring、mybatis、springboot、springMVC等。分布式相关知识，如CAP理论、分布式锁、分布式事务、Zookeeper、spring Cloud等。其他基础知识，编程语言、网络方面、数据库、数据结构和算法。中间件相关知识，如Redis、rabbitMQ、Dubbo等。服务器相关知识，如tomcat、jetty、jboss等。</code></pre><p>以上这些知识，就是最高频的面试问题，以及工作中需要用到的知识。当然，一个程序员想要掌握以上所有知识，可能需要花费很长时间。这个过程注定是漫长且孤独的。</p><p>来源：<br><a href="https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw</a></p>]]></content>
       
       
       <categories>
           
-          <category> 技术 </category>
+          <category> 面试 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 大数据 </tag>
+            <tag> java </tag>
+            
+            <tag> 面试 </tag>
             
         </tags>
       

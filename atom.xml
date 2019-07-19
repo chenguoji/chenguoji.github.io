@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-07-18T05:46:40.111Z</updated>
+  <updated>2019-07-19T08:54:54.615Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Github上10个开源免费的后台控制面板你值得拥有！</title>
+    <link href="http://chenguoji.com/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/"/>
+    <id>http://chenguoji.com/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/</id>
+    <published>2019-07-19T02:39:50.000Z</published>
+    <updated>2019-07-19T08:54:54.615Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 Top
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>开发中一些常会用到的sql和java语句</title>
     <link href="http://chenguoji.com/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
     <id>http://chenguoji.com/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
     <published>2019-07-18T02:39:50.000Z</published>
-    <updated>2019-07-18T05:46:40.111Z</updated>
+    <updated>2019-07-19T09:18:20.337Z</updated>
     
     <summary type="html">
     
@@ -30,6 +56,33 @@
         
         
           &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java开发必知道的国外20大网站</title>
+    <link href="http://chenguoji.com/2019/07/18/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
+    <id>http://chenguoji.com/2019/07/18/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</id>
+    <published>2019-07-18T02:39:50.000Z</published>
+    <updated>2019-07-19T09:17:37.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1、谷歌  &lt;a href=&quot;https://www.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.google.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a
         
       
     
@@ -483,58 +536,6 @@
         
         
           &lt;h1 id=&quot;一、什么是幻读&quot;&gt;&lt;a href=&quot;#一、什么是幻读&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>困扰我多年的Java泛型&lt;? extends T&gt; 和 &lt;? super T&gt;，终于搞清楚了！</title>
-    <link href="http://chenguoji.com/2019/05/20/kun-rao-wo-duo-nian-de-java-fan-xing-extends-t-he-super-t-zhong-yu-gao-qing-chu-liao/"/>
-    <id>http://chenguoji.com/2019/05/20/kun-rao-wo-duo-nian-de-java-fan-xing-extends-t-he-super-t-zhong-yu-gao-qing-chu-liao/</id>
-    <published>2019-05-20T02:39:50.000Z</published>
-    <updated>2019-06-03T10:06:12.944Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、为什么要用通配符和边界？&quot;&gt;&lt;a href=&quot;#一、为什么要用通配符和边界？&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 诞生日，Java 24 岁了！</title>
-    <link href="http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
-    <id>http://chenguoji.com/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</id>
-    <published>2019-05-19T02:39:50.000Z</published>
-    <updated>2019-05-30T03:22:41.956Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天是 Java 诞生日，Java 今年 24
         
       
     
