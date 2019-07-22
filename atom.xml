@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-07-19T08:54:54.615Z</updated>
+  <updated>2019-07-22T02:11:12.169Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Github上10个开源免费的后台控制面板你值得拥有！</title>
-    <link href="http://chenguoji.com/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/"/>
-    <id>http://chenguoji.com/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/</id>
-    <published>2019-07-19T02:39:50.000Z</published>
-    <updated>2019-07-19T08:54:54.615Z</updated>
+    <title>开发中一些常会用到的sql和java语句</title>
+    <link href="http://chenguoji.com/2019/07/22/zai-hua-wei-xie-liao-13-nian-dai-ma-du-shi-bao-gui-de-jing-yan/"/>
+    <id>http://chenguoji.com/2019/07/22/zai-hua-wei-xie-liao-13-nian-dai-ma-du-shi-bao-gui-de-jing-yan/</id>
+    <published>2019-07-22T02:39:50.000Z</published>
+    <updated>2019-07-22T02:11:12.169Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,34 @@
       
         
         
-          &lt;p&gt;Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 Top
+          &lt;p&gt;来源：&lt;a href=&quot;https://dwz.cn/dqgOrbQo&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java开发必知道的国外20大网站</title>
+    <link href="http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
+    <id>http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</id>
+    <published>2019-07-21T02:39:50.000Z</published>
+    <updated>2019-07-22T02:12:58.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1、谷歌  &lt;a href=&quot;https://www.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.google.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;a
         
       
     
@@ -44,10 +71,10 @@
   
   <entry>
     <title>开发中一些常会用到的sql和java语句</title>
-    <link href="http://chenguoji.com/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
-    <id>http://chenguoji.com/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
-    <published>2019-07-18T02:39:50.000Z</published>
-    <updated>2019-07-19T09:18:20.337Z</updated>
+    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
+    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
+    <published>2019-07-21T02:39:50.000Z</published>
+    <updated>2019-07-22T02:13:35.604Z</updated>
     
     <summary type="html">
     
@@ -69,11 +96,11 @@
   </entry>
   
   <entry>
-    <title>Java开发必知道的国外20大网站</title>
-    <link href="http://chenguoji.com/2019/07/18/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
-    <id>http://chenguoji.com/2019/07/18/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</id>
-    <published>2019-07-18T02:39:50.000Z</published>
-    <updated>2019-07-19T09:17:37.197Z</updated>
+    <title>Github上10个开源免费的后台控制面板你值得拥有！</title>
+    <link href="http://chenguoji.com/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/"/>
+    <id>http://chenguoji.com/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/</id>
+    <published>2019-07-19T02:39:50.000Z</published>
+    <updated>2019-07-19T08:54:54.615Z</updated>
     
     <summary type="html">
     
@@ -81,8 +108,7 @@
       
         
         
-          &lt;p&gt;1、谷歌  &lt;a href=&quot;https://www.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.google.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2、&lt;a
+          &lt;p&gt;Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 Top
         
       
     
@@ -469,33 +495,6 @@
   </entry>
   
   <entry>
-    <title>Eclipse 最常用的 10 组快捷键，个个牛逼！</title>
-    <link href="http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/"/>
-    <id>http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</id>
-    <published>2019-05-22T02:39:50.000Z</published>
-    <updated>2019-06-04T09:28:29.290Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。&lt;/p&gt;
-&lt;h3 id=&quot;1、打开资源&quot;&gt;&lt;a href=&quot;#1、打开资源&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>为什么培训班出来的程序员总遭人嫌弃？</title>
     <link href="http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
     <id>http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</id>
@@ -523,11 +522,11 @@
   </entry>
   
   <entry>
-    <title>MySQL 到底是怎么解决幻读的？</title>
-    <link href="http://chenguoji.com/2019/05/21/mysql-dao-di-shi-zen-me-jie-jue-huan-du-de/"/>
-    <id>http://chenguoji.com/2019/05/21/mysql-dao-di-shi-zen-me-jie-jue-huan-du-de/</id>
-    <published>2019-05-21T02:39:50.000Z</published>
-    <updated>2019-06-04T06:12:45.721Z</updated>
+    <title>Eclipse 最常用的 10 组快捷键，个个牛逼！</title>
+    <link href="http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/"/>
+    <id>http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</id>
+    <published>2019-05-22T02:39:50.000Z</published>
+    <updated>2019-06-04T09:28:29.290Z</updated>
     
     <summary type="html">
     
@@ -535,7 +534,8 @@
       
         
         
-          &lt;h1 id=&quot;一、什么是幻读&quot;&gt;&lt;a href=&quot;#一、什么是幻读&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。&lt;/p&gt;
+&lt;h3 id=&quot;1、打开资源&quot;&gt;&lt;a href=&quot;#1、打开资源&quot; class=&quot;headerlink&quot;
         
       
     

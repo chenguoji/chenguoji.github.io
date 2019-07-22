@@ -4,9 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="开发中一些常会用到的sql和java语句, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="一、ORACLE1.Oracle锁表与解锁查看锁表进程SQL语句    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; 
-杀掉锁表进程">
+    <meta name="keywords" content="Java开发必知道的国外20大网站, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="1、谷歌  https://www.google.com/
+2、https://stackoverflow.com里面包含各种开发遇到的问题及答案，质量比较高。
+3、https://github.com/免费的开源代码托管网站，包括了许多开">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>开发中一些常会用到的sql和java语句 | 陈国际博客</title>
+    <title>Java开发必知道的国外20大网站 | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -216,13 +217,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        开发中一些常会用到的sql和java语句
+                        Java开发必知道的国外20大网站
                     </div>
                 </div>
             </div>
@@ -357,21 +358,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-18
+                    2019-07-21
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        320
+                        578
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -387,24 +388,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、ORACLE"><a href="#一、ORACLE" class="headerlink" title="一、ORACLE"></a>一、ORACLE</h1><h2 id="1-Oracle锁表与解锁"><a href="#1-Oracle锁表与解锁" class="headerlink" title="1.Oracle锁表与解锁"></a>1.Oracle锁表与解锁</h2><p>查看锁表进程SQL语句<br>    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; </p>
-<p>杀掉锁表进程：<br>记录下SID和serial# ，分别替换掉下面的1155,39095，即可解除锁表</p>
-<pre><code>alter system kill session &apos;1155,39095&apos;; 
-</code></pre><p>对象锁与解锁</p>
-<p>这里以包为PKG_ZLGL_BASEDATA为例</p>
-<p>注意name为包或者存储过程等；</p>
-<pre><code>SELECT * FROM V$DB_OBJECT_CACHE WHERE name=&apos;PKG_ZLGL_BASEDATA&apos; AND LOCKS!=&apos;0&apos;;
-</code></pre><p>查看sid    注意object为包或者存储过程等；</p>
-<pre><code>SELECT SID from V$ACCESS WHERE object=&apos;PKG_ZLGL_BASEDATA&apos;;
-</code></pre><p>查看查看SID和SERIAL#  in后面的条件为上述查的sid</p>
-<pre><code>SELECT SID,SERIAL#,PADDR,STATUS FROM V$SESSION WHERE SID IN(&apos;283&apos;,&apos;343&apos;);
-</code></pre><p>杀进程 实例如下：  alter system kill session ‘sid,SERIAL’</p>
-<pre><code>alter system kill session &apos;283,50673&apos;
-</code></pre><p>/<em>查看被锁住的存储过程</em>/<br>SELECT <em> FROM V$DB_OBJECT_CACHE WHERE OWNER = ‘APPADMIN’ AND LOCKS != ‘0’;<br>SELECT </em> FROM DBA_DDL_LOCKS WHERE NAME = UPPER(‘TEMP_EXPORT’);<br>SELECT T.SID, T.SERIAL# FROM V$SESSION T WHERE T.SID = 24;</p>
-<p>/<em>查看被锁住的表</em>/<br>SELECT DO.OWNER, DO.OBJECT_NAME, LO.SESSION_ID, LO.LOCKED_MODE<br>  FROM V$LOCKED_OBJECT LO, DBA_OBJECTS DO<br> WHERE DO.OBJECT_ID = LO.OBJECT_ID;</p>
-<p>SELECT B.USERNAME, B.SID, B.SERIAL#, LOGON_TIME<br>  FROM V$LOCKED_OBJECT A, V$SESSION B<br> WHERE A.SESSION_ID = B.SID<br> ORDER BY B.LOGON_TIME;</p>
-<p>/<em>kill被锁的进程 ‘sid, serial#’ </em>/<br>ALTER SYSTEM KILL SESSION ‘24,30992’;</p>
-<p>/<em>lock相关表</em>/<br>SELECT <em> FROM V$LOCK;<br>SELECT </em> FROM V$SQLAREA;<br>SELECT <em> FROM V$SESSION;<br>SELECT </em> FROM V$PROCESS;<br>SELECT <em> FROM V$LOCKED_OBJECT;<br>SELECT </em> FROM ALL_OBJECTS;<br>SELECT * FROM V$SESSION_WAIT;    </p>
+                <p>1、谷歌  <a href="https://www.google.com/" target="_blank" rel="noopener">https://www.google.com/</a></p>
+<p>2、<a href="https://stackoverflow.com" target="_blank" rel="noopener">https://stackoverflow.com</a><br>里面包含各种开发遇到的问题及答案，质量比较高。</p>
+<p>3、<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>免费的开源代码托管网站，包括了许多开源的项目及示例项目等。</p>
+<p>4、<a href="https://dzone.com/" target="_blank" rel="noopener">https://dzone.com/</a><br>提供技术新闻、编程教程、及各种工具、开发者的博客等。</p>
+<p>5、<a href="http://www.programcreek.com/" target="_blank" rel="noopener">http://www.programcreek.com/</a><br>一个非常优秀的Java博客，包含很多精选文集。</p>
+<p>6、<a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a><br>免费代码托管网站，可以用来做私服，和GitHub最大区别是GitLab可以有私有项目。</p>
+<p>7、<a href="https://www.ibm.com/developerworks/learn/java/index.html" target="_blank" rel="noopener">https://www.ibm.com/developerworks/learn/java/index.html</a><br>IBM的JAVA开发者网站，很多干货。</p>
+<p>8、<a href="http://www.javaworld.com/" target="_blank" rel="noopener">http://www.javaworld.com/</a><br>一个不错的综合性的java网站。</p>
+<p>9、<a href="http://www.onjava.com/" target="_blank" rel="noopener">http://www.onjava.com/</a><br>某位国外大神的网站。</p>
+<p>10、<a href="http://www.oracle.com/technetwork/java/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/index.html</a><br>oracle java的官方网站。</p>
+<p>11、<a href="https://dzone.com/" target="_blank" rel="noopener">https://dzone.com/</a><br>DZone是一个提供编程，Web开发和DevOps新闻，教程和工具的网站。很多开发者在网站里分享其自己的博客文章。</p>
+<p>12、<a href="https://leetcode.com/" target="_blank" rel="noopener">https://leetcode.com/</a><br>LeetCode Online Judge是一个提供JavaScript和Ruby编程的网站。目前，网站提供9种编程语言：C，C ++，Java，Python，C＃，JavaScript，Ruby，Bash，MySQL。</p>
+<p>13、<a href="https://www.coursera.org/" target="_blank" rel="noopener">https://www.coursera.org/</a><br>Coursera是全球最好视频讲座网站，用户可以从著名的教授那里获得很多计算机科学课程。</p>
+<p>14、<a href="http://www.javaworld.com/" target="_blank" rel="noopener">http://www.javaworld.com/</a><br>JavaWorld是一个拥有大量关于各种Java主题教程资源的网站。网站里的很多文章写得非常好，并配有插图。JavaWorld可以作为一个深度学习的网站来阅读。</p>
+<p>15、<a href="https://en.wikipedia.org/" target="_blank" rel="noopener">https://en.wikipedia.org/</a><br>维基百科（Wikipedia）是开发人员查找和学习几乎任何编程概念最好的资源网站之一。作为一个有经验的Java开发人员，你可能只会一些概念，但了解不多。维基百科是一个免费了解最新信息的好地方，例如，什么是面向服务的编程。</p>
+<p>16、Program Creek<br>Program Creek是世界上排名前100的Java博客之一。用户可以找到一些没有被任何其他网站所写的主题，每篇文章总是包含很好的图表或代码示例。Program Creek包含研究和行业人员撰写的文章，并始终向Java开发人员分享优质文章。</p>
 
             </div>
             <hr>
@@ -560,9 +559,9 @@
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《开发中一些常会用到的sql和java语句》
+                    《Java开发必知道的国外20大网站》
                 </span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/18/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/" property="cc:attributionName" rel="cc:attributionURL">
                 chen guoji
             </a> under
             <a rel="license" href="cc_by_url">
@@ -864,24 +863,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/">
+                <a href="/2019/07/22/zai-hua-wei-xie-liao-13-nian-dai-ma-du-shi-bao-gui-de-jing-yan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Github上10个开源免费的后台控制面板你值得拥有！">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="开发中一些常会用到的sql和java语句">
                         
-                        <span class="card-title">Github上10个开源免费的后台控制面板你值得拥有！</span>
+                        <span class="card-title">开发中一些常会用到的sql和java语句</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 T
+                            来源：https://dwz.cn/dqgOrbQo
+本文来源华为人：徐宏伟，转给大家观摩下。
+一天晚上，我和老婆聊天，说部门要我写个“大咖谈软件”的文章，老婆斜了我一眼，淡淡地说：“Linus大神21岁就写出了Linux内核的雏形，缔造了
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-19
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-22
                         </span>
                         <span class="publish-author">
                             
@@ -913,26 +914,25 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/18/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/">
+                <a href="/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Java开发必知道的国外20大网站">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="开发中一些常会用到的sql和java语句">
                         
-                        <span class="card-title">Java开发必知道的国外20大网站</span>
+                        <span class="card-title">开发中一些常会用到的sql和java语句</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、谷歌  https://www.google.com/
-2、https://stackoverflow.com里面包含各种开发遇到的问题及答案，质量比较高。
-3、https://github.com/免费的开源代码托管网站，包括了许多开
+                            一、ORACLE1.Oracle锁表与解锁查看锁表进程SQL语句    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; 
+杀掉锁表进程
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-21
                             </span>
                         <span class="publish-author">
                             
@@ -1072,7 +1072,7 @@
 			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">117k</span>
+                <span class="white-color">120.5k</span>
             
 
             
