@@ -43,6 +43,33 @@
   </entry>
   
   <entry>
+    <title>运营学习的小总结</title>
+    <link href="http://chenguoji.com/2019/08/21/yun-ying-xue-xi-de-xiao-zong-jie/"/>
+    <id>http://chenguoji.com/2019/08/21/yun-ying-xue-xi-de-xiao-zong-jie/</id>
+    <published>2019-08-21T02:39:50.000Z</published>
+    <updated>2019-09-03T09:40:54.265Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;  作为一个4年的程序猿来说，运营之前给我的感觉就是“提需求的一类人”，对于产品啊、运营啊、市场等，都被我划到了一类，可见我对于他们的工作认识有多简（wu）单（zhi）粗（xiao）暴（bai）。&lt;/p&gt;
+&lt;p&gt; 
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我用50W+年薪的独角兽offer，犒劳自己一年的卧薪尝胆！不服输，你就不会输</title>
     <link href="http://chenguoji.com/2019/08/11/wo-yong-50w-nian-xin-de-du-jiao-shou-offer-kao-lao-zi-ji-yi-nian-de-wo-xin-chang-dan-bu-fu-shu-ni-jiu-bu-hui-shu/"/>
     <id>http://chenguoji.com/2019/08/11/wo-yong-50w-nian-xin-de-du-jiao-shou-offer-kao-lao-zi-ji-yi-nian-de-wo-xin-chang-dan-bu-fu-shu-ni-jiu-bu-hui-shu/</id>
@@ -122,6 +149,32 @@
   </entry>
   
   <entry>
+    <title>开发中一些常会用到的sql和java语句</title>
+    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
+    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
+    <published>2019-07-21T02:39:50.000Z</published>
+    <updated>2019-09-03T08:00:04.132Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java开发必知道的国外20大网站</title>
     <link href="http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
     <id>http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</id>
@@ -136,32 +189,6 @@
         
           &lt;p&gt;1、谷歌  &lt;a href=&quot;https://www.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.google.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2、&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发中一些常会用到的sql和java语句</title>
-    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
-    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
-    <published>2019-07-21T02:39:50.000Z</published>
-    <updated>2019-09-03T08:00:04.132Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
         
       
     
@@ -505,33 +532,6 @@
         
         
           &lt;h1 id=&quot;一、数据结构与算法基础&quot;&gt;&lt;a href=&quot;#一、数据结构与算法基础&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>12 岁开始学编程，17 岁总结了 7 个重要教训！</title>
-    <link href="http://chenguoji.com/2019/06/08/12-sui-kai-shi-xue-bian-cheng-17-sui-zong-jie-liao-7-ge-chong-yao-jiao-xun/"/>
-    <id>http://chenguoji.com/2019/06/08/12-sui-kai-shi-xue-bian-cheng-17-sui-zong-jie-liao-7-ge-chong-yao-jiao-xun/</id>
-    <published>2019-06-08T02:39:50.000Z</published>
-    <updated>2019-06-10T02:08:32.118Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;以下为译文：&lt;/p&gt;
-&lt;p&gt;大家好，我名叫Alec，今年17岁，我从12岁起就开始学习 Web
         
       
     

@@ -4,9 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="11个简单的Java性能调优技巧, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
-    <meta name="description" content="大多数开发人员理所当然地以为性能优化很复杂，需要大量的经验和知识。好吧，不能说这是完全错误的。优化应用程序以获得最佳性能不是一件容易的事情。但是，这并不意味着如果你不具备这些知识，就不能做任何事情。
-这里有11个易于遵循的建议和最佳实践可以">
+    <meta name="keywords" content="运营学习的小总结, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="  作为一个4年的程序猿来说，运营之前给我的感觉就是“提需求的一类人”，对于产品啊、运营啊、市场等，都被我划到了一类，可见我对于他们的工作认识有多简（wu）单（zhi）粗（xiao）暴（bai）。
+  现在，通过一段时间的学习，我对运营，有">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>11个简单的Java性能调优技巧 | 陈国际博客</title>
+    <title>运营学习的小总结 | 陈国际博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -216,13 +216,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        11个简单的Java性能调优技巧
+                        运营学习的小总结
                     </div>
                 </div>
             </div>
@@ -337,10 +337,6 @@
                                 <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/面试/" target="_blank">
-                                <span class="chip bg-color">面试</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -349,8 +345,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/面试/" class="post-category" target="_blank">
-                                面试
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                java
                             </a>
                         
                     </div>
@@ -361,21 +357,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-03-28
+                    2019-08-21
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        3k
+                        1.8k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        10 分
+                        5 分
                     </div>
                     
                 
@@ -391,79 +387,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>大多数开发人员理所当然地以为性能优化很复杂，需要大量的经验和知识。好吧，不能说这是完全错误的。<br>优化应用程序以获得最佳性能不是一件容易的事情。但是，这并不意味着如果你不具备这些知识，就不能做任何事情。</p>
-<p>这里有11个易于遵循的建议和最佳实践可以帮助你创建一个性能良好的应用程序。</p>
-<p>大部分建议是针对Java的。但也有若干建议是与语言无关的，可以应用于所有应用程序和编程语言。<br>在讨论专门针对Java的性能调优技巧之前，让我们先来看看通用技巧。</p>
-<h1 id="1-在你知道必要之前不要优化"><a href="#1-在你知道必要之前不要优化" class="headerlink" title="1.在你知道必要之前不要优化"></a>1.在你知道必要之前不要优化</h1><p>这可能是最重要的性能调整技巧之一。你应该遵循常见的最佳实践做法并尝试高效地实现用例。<br>但是，这并不意味着在你证明必要之前，你应该更换任何标准库或构建复杂的优化。</p>
-<p>在大多数情况下，过早优化不但会占用大量时间，而且会使代码变得难以阅读和维护。<br>更糟糕的是，这些优化通常不会带来任何好处，因为你花费大量时间来优化的是应用程序的非关键部分。</p>
-<p>那么，你如何证明你需要优化一些东西呢？</p>
-<p>首先，你需要定义应用程序代码的速度得多快，例如，为所有API调用指定最大响应时间，或者指定在特定时间范围内要导入的记录数量。<br>在完成这些之后，你就可以测量应用程序的哪些部分太慢需要改进。然后，接着看第二个技巧。</p>
-<h1 id="2-使用分析器查找真正的瓶颈"><a href="#2-使用分析器查找真正的瓶颈" class="headerlink" title="2.使用分析器查找真正的瓶颈"></a>2.使用分析器查找真正的瓶颈</h1><p>在你遵循第一个建议并确定了应用程序的某些部分需要改进后，那么从哪里开始呢？</p>
-<p>你可以用两种方法来解决问题：</p>
-<pre><code>查看你的代码，并从看起来可疑或者你觉得可能会产生问题的部分开始。
-或者使用分析器并获取有关代码每个部分的行为和性能的详细信息。
-</code></pre><p>希望不需要我解释为什么应该始终遵循第二种方法的原因。</p>
-<p>很明显，基于分析器的方法可以让你更好地理解代码的性能影响，并使你能够专注于最关键的部分。<br>如果你曾使用过分析器，那么你一定记得曾经你是多么惊讶于一下就找到了代码的哪些部分产生了性能问题。<br>老实说，我第一次的猜测不止一次地导致我走错了方向。    </p>
-<h1 id="3-为整个应用程序创建性能测试套件"><a href="#3-为整个应用程序创建性能测试套件" class="headerlink" title="3.为整个应用程序创建性能测试套件"></a>3.为整个应用程序创建性能测试套件</h1><p>这是另一个通用技巧，可以帮助你避免在将性能改进部署到生产后经常会发生的许多意外问题。<br>你应该总是定义一个测试整个应用程序的性能测试套件，并在性能改进之前和之后运行它。</p>
-<p>这些额外的测试运行将帮助你识别更改的功能和性能副作用，并确保不会导致弊大于利的更新。<br>如果你工作于被应用程序若干不同部分使用的组件，如数据库或缓存，那么这一点就尤其重要。</p>
-<h1 id="4-首先处理最大的瓶颈"><a href="#4-首先处理最大的瓶颈" class="headerlink" title="4.首先处理最大的瓶颈"></a>4.首先处理最大的瓶颈</h1><p>在创建测试套件并使用分析器分析应用程序之后，你可以列出一系列需要解决以提高性能的问题。<br>这很好，但它仍然不能回答你应该从哪里开始的问题。你可以专注于速效方案，或从最重要的问题开始。<br><a href="https://mp.weixin.qq.com/s/yzSR_vkI7-WR71l2A0cq2w" target="_blank" rel="noopener">Java 程序员必须清楚的 7 个性能指标</a>，这个你也必须会。</p>
-<p>速效方案一开始可能会很有吸引力，因为你可以很快显示第一个成果。<br>但有时，可能需要你说服其他团队成员或管理层认为性能分析是值得的——因为暂时看不到效果。</p>
-<p>但总的来说，我建议首先处理最重要的性能问题。这将为你提供最大的性能改进，而且可能再也不需要去解决其中一些为了满足性能需求的问题。<br>常见的性能调整技巧到此结束。下面让我们仔细看看一些特定于Java的技巧。</p>
-<h1 id="5-使用StringBuilder以编程方式连接String"><a href="#5-使用StringBuilder以编程方式连接String" class="headerlink" title="5.使用StringBuilder以编程方式连接String"></a>5.使用StringBuilder以编程方式连接String</h1><p>有很多不同的选项来连接Java中的String。例如，你可以使用简单的+或+ =，以及StringBuffer或StringBuilder。String 真的是不可变的吗？</p>
-<p>那么，你应该选择哪种方法？</p>
-<p>答案取决于连接String的代码。如果你是以编程方式添加新内容到String中，例如在for循环中，那么你应该使用StringBuilder。<br>它很容易使用，并提供比StringBuffer更好的性能。但请记住，与StringBuffer相比，StringBuilder不是线程安全的，可能不适合所有用例。<br>StringBuffer 和 StringBuilder 的 3 个区别，这个你必须清楚。</p>
-<p>你只需要实例化一个新的StringBuilder并调用append方法来向String中添加一个新的部分。<br>在你添加了所有的部分之后，你就可以调用toString()方法来检索连接的String。</p>
-<p>下面的代码片段显示了一个简单的例子。在每次迭代期间，这个循环将i转换为一个String，并将它与一个空格一起添加到StringBuilder sb中。<br>所以，最后，这段代码将在日志文件中写入“This is a test0 1 2 3 4 5 6 7 8 9”。</p>
-<pre><code>StringBuilder sb = new StringBuilder(“This is a test”);
-for (int i=0; i&lt;10; i++) {
-sb.append(i);
-sb.append(” “);
-}
-log.info(sb.toString());
-</code></pre><p>正如在代码片段中看到的那样，你可以将String的第一个元素提供给构造方法。<br>这将创建一个新的StringBuilder，新的StringBuilder包含提供的String和16个额外字符的容量。<br>当你向StringBuilder添加更多字符时，JVM将动态增加StringBuilder的大小。</p>
-<p>如果你已经知道你的String将包含多少个字符，则可以将该数字提供给不同的构造方法以实例化具有定义容量的StringBuilder。<br>这进一步提高了效率，因为它不需要动态扩展其容量。</p>
-<h1 id="6-使用-连接一个语句中的String"><a href="#6-使用-连接一个语句中的String" class="headerlink" title="6.使用+连接一个语句中的String"></a>6.使用+连接一个语句中的String</h1><p>当你用Java实现你的第一个应用程序时，可能有人告诉过你不应该用+来连接String。如果你是在应用程序逻辑中连接字符串，这是正确的。<br>字符串是不可变的，每个字符串的连接结果都存储在一个新的String对象中。这需要额外的内存，会减慢你的应用程序，特别是如果你在一个循环内连接多个字符串的话。</p>
-<p>在这些情况下，你应该遵循技巧5并使用StringBuilder。</p>
-<p>但是，如果你只是将字符串分成多行来改善代码的可读性，那情况就不一样了。</p>
-<pre><code>Query q = em.createQuery(“SELECT a.id, a.firstName, a.lastName ”
-+ “FROM Author a ”
-+ “WHERE a.id = :id”);
-</code></pre><p>在这些情况下，你应该用一个简单的+来连接你的字符串。Java编译器会对此优化并在编译时执行连接。所以，在运行时，你的代码将只使用1个String，不需要连接。</p>
-<h1 id="7-尽可能使用基元"><a href="#7-尽可能使用基元" class="headerlink" title="7.尽可能使用基元"></a>7.尽可能使用基元</h1><p>避免任何开销并提高应用程序性能的另一个简便而快速的方法是使用基本类型而不是其包装类。<br>所以，最好使用int来代替Integer，使用double来代替Double。这允许JVM将值存储在堆栈而不是堆中以减少内存消耗，并作出更有效的处理。</p>
-<h1 id="8-试着避免BigInteger和BigDecimal"><a href="#8-试着避免BigInteger和BigDecimal" class="headerlink" title="8.试着避免BigInteger和BigDecimal"></a>8.试着避免BigInteger和BigDecimal</h1><p>既然我们在讨论数据类型，那么我们也快速浏览一下BigInteger和BigDecimal吧。<br>尤其是后者因其精确性而受到大家的欢迎。但是这是有代价的。</p>
-<p>BigInteger和BigDecimal比简单的long或double需要更多的内存，并且会显著减慢所有计算。<br>所以，你如果需要额外的精度，或者数字将超过long的范围，那么最好三思而后行。<br>这可能是你需要更改以解决性能问题的唯一方法，特别是在实现数学算法的时候。<br><a href="https://mp.weixin.qq.com/s/NFLfeZLjMuZELEh2Cx7cIA" target="_blank" rel="noopener">金融系统中正确的金额计算及存储方式</a>，这个你了解下。</p>
-<p>9.首先检查当前日志级别</p>
-<p>这个建议应该是显而易见的，但不幸的是，很多程序员在写代码的时候都会大多会忽略它。<br>在你创建调试消息之前，始终应该首先检查当前日志级别。否则，你可能会创建一个之后会被忽略的日志消息字符串。</p>
-<p>这里有两个反面例子。</p>
-<pre><code>// don’t do this
-log.debug(“User [” + userName + “] called method X with [” + i + “]”);
+                <p>  作为一个4年的程序猿来说，运营之前给我的感觉就是“提需求的一类人”，对于产品啊、运营啊、市场等，都被我划到了一类，可见我对于他们的工作认识有多简（wu）单（zhi）粗（xiao）暴（bai）。</p>
+<p>  现在，通过一段时间的学习，我对运营，有了一个新的认识，它对于我来说，不在简简单单是一个名词。下面，我来讲一下，现在，我眼中的运营。</p>
+<h1 id="运营的定义"><a href="#运营的定义" class="headerlink" title="运营的定义"></a>运营的定义</h1><pre><code>运营就是互联网环境下，为了获得用户增长，做好用户维系，提升收入，我们所需要的一切手段。
+通过这个定义，你知道运营是什么了吗？
 
-// or this
-log.debug(String.format(“User [%s] called method X with [%d]”, userName, i));
-</code></pre><p>在上面两种情况中，你都将执行创建日志消息所有必需的步骤，在不知道日志框架是否将使用日志消息的前提下。<br>因此在创建调试消息之前，最好先检查当前的日志级别。</p>
-<pre><code>// do this
-if (log.isDebugEnabled()) { 
-  log.debug(“User [” + userName + “] called method X with [” + i + “]”);
-}
-</code></pre><h1 id="10-使用Apache-Commons-StringUtils-Replace而不是String-replace"><a href="#10-使用Apache-Commons-StringUtils-Replace而不是String-replace" class="headerlink" title="10.使用Apache Commons StringUtils.Replace而不是String.replace"></a>10.使用Apache Commons StringUtils.Replace而不是String.replace</h1><p>一般来说，String.replace方法工作正常，效率很高，尤其是在使用Java 9的情况下。<br>但是，如果你的应用程序需要大量的替换操作，并且没有更新到最新的Java版本，那么我们依然有必要查找更快和更有效的替代品。</p>
-<p>有一个备选答案是Apache Commons Lang的StringUtils.replace方法。<br>正如Lukas Eder在他最近的一篇博客文章中所描述的，StringUtils.replace方法远胜Java 8的String.replace方法。</p>
-<p>而且它只需要很小的改动。即添加Apache Commons Lang项目的Maven依赖项到应用程序pom.xml中，并将String.replace方法的所有调用替换为StringUtils.replace方法。</p>
-<pre><code>// replace this
-test.replace(“test”, “simple test”);
+哈哈哈哈哈，是不是
 
-// with this
-StringUtils.replace(test, “test”, “simple test”);
-</code></pre><h1 id="11-缓存昂贵的资源，如数据库连接"><a href="#11-缓存昂贵的资源，如数据库连接" class="headerlink" title="11.缓存昂贵的资源，如数据库连接"></a>11.缓存昂贵的资源，如数据库连接</h1><p>缓存是避免重复执行昂贵或常用代码片段的流行解决方案。总的思路很简单：重复使用这些资源比反复创建新的资源要便宜。</p>
-<p>一个典型的例子是缓存池中的数据库连接。新连接的创建需要时间，如果你重用现有连接，则可以避免这种情况。</p>
-<p>你还可以在Java语言本身找到其他例子。例如，Integer类的valueOf方法缓存了-128到127之间的值。<br>你可能会说创建一个新的Integer并不是太昂贵，但是由于它经常被使用，以至于缓存最常用的值也可以提供性能优势。</p>
-<p>但是，当你考虑缓存时，请记住缓存实现也会产生开销。你需要花费额外的内存来存储可重用资源，因此你可能需要管理缓存以使资源可访问，以及删除过时的资源。</p>
-<p>所以，在开始缓存任何资源之前，请确保实施缓存是值得的，也就是说必须足够多地使用它们。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>正如你所看到的，有时不需要太多工作就可以提高应用程序的性能。本文中的大部分建议只需要你稍作努力就可以将它们应用于你的代码。</p>
-<p>但是，最重要的还是那些与是什么编程语言无关的技巧：</p>
-<pre><code>在你知道必要之前不要优化
-使用分析器查找真正的瓶颈
-首先处理最大的瓶颈
-</code></pre><p>来源：<br>原文：11 Simple Java Performance Tuning Tips<br>译文：<a href="http://www.codeceo.com/article/11-simple-java-performance-tips.html" target="_blank" rel="noopener">http://www.codeceo.com/article/11-simple-java-performance-tips.html</a> </p>
+
+安了安了，解释不会仅仅只有这个的。
+</code></pre><h1 id="运营的日常工作"><a href="#运营的日常工作" class="headerlink" title="运营的日常工作"></a>运营的日常工作</h1><pre><code>比如说公司做教育的，他有学员来听课，这个时候，就需要有个类似于班主任的一个人，来对一个班级的学员进行管理和维护。像在班级群里发布一些群规，发一些通知，比如课程时间啊，作业啊什么的。如果学员遇到问题，要及时进行问题解答或者1对1的沟通等。
+
+比如新媒体运营小编的日常工作，在微博啊，公众号啊，知乎啊等各大平台上去发表一些文章。找到一些有趣的话题，去给到客户，与客户互动；寻找内容、创作、排版后发布，让更多人阅读和传播等。
+
+比如产品内部运营，像app内，将产品进行特色规划，制作专题区域，像活动专区，新品专区，恶搞专区等等，将产品二次归类，寻找特定位置，引导客户使用。
+
+比如活动运营，日常工作包括策划、构思活动主题，活动要以什么样的方式进行，考虑活动的时间，地点，规模等，最终将活动落地实施，来获得用户的参与和关注，想之前我参加过的自如的免费观影活动。
+
+说到这里，应该对运营有了一个大概的感觉了吧？
+</code></pre><h1 id="运营的职业分工"><a href="#运营的职业分工" class="headerlink" title="运营的职业分工"></a>运营的职业分工</h1><pre><code>一般来说，运营分为以下几类：
+</code></pre><h2 id="内容运营"><a href="#内容运营" class="headerlink" title="内容运营"></a>内容运营</h2><pre><code>内容运营是指通过创造、编辑、组织产品的内容，并将合适的内容推到合适的用户去使用，从而制造出对用户的拉新、留存产生一定的正面的作用。平日的主要职责就是对产品内容的数量，话题访问数，站内热门话题的审核推荐等负责，定时的更新、筛选、生产内容或刺激用户生产内容等。
+</code></pre><h2 id="活动运营"><a href="#活动运营" class="headerlink" title="活动运营"></a>活动运营</h2><pre><code>活动运营是指通过制定一些活动策划，如线上的拉新活动，线下组织一些社团活动等，并且通过这些活动，来刺激用户，进而获得可观的正向反馈。不管是日常活动，还是特定时间内的时效性大型活动，都属于活动运营的工作范畴。
+</code></pre><h2 id="用户运营"><a href="#用户运营" class="headerlink" title="用户运营"></a>用户运营</h2><pre><code>用户运营就是指对于特定一群用户，进行有针对性的管理和维系，以活跃、留存、付费为目标，结合用户需求，去制定一系列方法和机制。在不同时期会有不同工作重点，比如初期，就是引入新用户并且寻找优质客户，中期会更偏向于用户黏度的提高，后期就是付费和持续付费的引导。
+</code></pre><h2 id="渠道（推广）运营"><a href="#渠道（推广）运营" class="headerlink" title="渠道（推广）运营"></a>渠道（推广）运营</h2><pre><code>渠道推广运营的职责就是负责流量引入，并对引入的数量和质量进行优化。渠道推广运营的工作就是对接各种渠道，并熟悉各种渠道的变化和使用方法。
+
+当然还有很多，像新媒体运营、社区运营、产品运营等。
+</code></pre><h1 id="运营人的职业发展"><a href="#运营人的职业发展" class="headerlink" title="运营人的职业发展"></a>运营人的职业发展</h1><pre><code>大概知道了运营是什么后，那么如何从运营新人成长为一个专家级别的运营呢？
+
+一般来说，都会经历这么五个阶段：小白，初级，骨干，专家，高级。每个阶段，要具备的能力和所做的事都是不一样的。
+
+小白阶段：新人小白是指刚入门运营、零经验的人。这个时期的工作内容相对来说偏体力活，基本上是一些执行打杂的事情。能力方面可以有空白区，但是需要有较强的学习能力，执行能力和逻辑分析能力方面上，需要不断的锻炼，多做多思考多总结来提高自己的行动力和执行力。
+
+初级阶段：对于这一阶段的工作人员来说，执行力和逻辑分析应该达到一定水平，并且已掌握了一定的专业技能，比如文案，策划等。在工作上可以慢慢独立负责一些小项目，并对项目的整体完成度负责。这个时候可能对于用户分析，行业分析，业务分析这些能力的要求会加大，需要多积累相关知识进一步提升自己。
+
+骨干阶段：这一阶段一般要求对一两项技能达到专精的程度，在工作上能对业务对产品有了一定的理解，思维方法和宏观逻辑有了一定提高，开始可以负责一些数据、思考策略了。这个阶段的要求更多的是在管理能力以及复杂问题的拆解上，此时的学习应该多体验多分析产品及用户，从多维度去思考问题，各种业务都了解，做到相对无短板。
+
+专家阶段：这一阶段一般就可以开始带团队，独立运营策略并推动完成了。这个时候的横向能力也需要达到一定高度，比如行业感知、对于运营各个模块之间的认知、对于业务流程的整体感知，这一阶段的学习，可能更多的是领导力、管理能力的提高以及体系化的思考，多积累各个行业的知识和新的运营方法的学习，建立自己对运营的理解。
+
+高级专家阶段：这一阶段一般是指各方面能力都很出众的人，可以说是一个全面性人才。这一时期的学习，主要是整体的策略的理解、制定、施行，引导力和领导力的突破，这些一般都是靠时间积累起来的，需要更多的见识和思考，把自己的格局提高。
+
+以上是我这段时间的学习总结，目前，我还是小白阶段，需要更多的学习和实际操作，用老师的一句话来结尾：
+
+    知识可以被学会，而技巧只能被习得！
+</code></pre><p>来源：<br><a href="https://www.jianshu.com/p/a630fa6a677a" target="_blank" rel="noopener">https://www.jianshu.com/p/a630fa6a677a</a></p>
 
             </div>
             <hr>
@@ -619,9 +585,9 @@ StringUtils.replace(test, “test”, “simple test”);
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《11个简单的Java性能调优技巧》
+                    《运营学习的小总结》
                 </span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/03/28/11-ge-jian-dan-de-java-xing-neng-diao-you-ji-qiao/" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/21/yun-ying-xue-xi-de-xiao-zong-jie/" property="cc:attributionName" rel="cc:attributionURL">
                 chen guoji
             </a> under
             <a rel="license" href="cc_by_url">
@@ -923,32 +889,33 @@ StringUtils.replace(test, “test”, “simple test”);
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/04/03/gao-ji-cheng-xu-yuan-vs-pu-tong-cheng-xu-yuan-chai-ju-dao-di-zai-na/">
+                <a href="/2019/09/01/financial-software-systems-xiao-yuan-mian-shi-jing-yan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="高级程序员VS普通程序员，差距到底在哪？">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Financial Software Systems校园面试经验">
                         
-                        <span class="card-title">高级程序员VS普通程序员，差距到底在哪？</span>
+                        <span class="card-title">Financial Software Systems校园面试经验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            踏上了编程之路，也就意味着你选择了一种终身学习的生活方式。每一个程序员都要练就十八般武艺，而掌握数据结构与算法就像修炼了九阳神功。换句话说，掌握了数据结构与算法，你的内功修炼速度就会有质的飞跃。
-“初级程序员才比招式，高级程序员只看内功”，
+                            财务软件系统访谈经验| 第1集（校园内）最近，Financial Software Systems访问了我们的校园进行招聘。基本上有4轮：
+第一回合这是一次在线能力测试……有60个问题必须在60分钟内完成。大多数问题都非常简单。
+大约有60
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-03
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-01
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                    技术
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                    java
                                 </a>
                             
                             
@@ -973,26 +940,26 @@ StringUtils.replace(test, “test”, “simple test”);
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/03/26/mian-shi-bu-dong-wei-fu-wu-jia-gou-yuan-li-bu-pa-bei-pass-liao/">
+                <a href="/2019/08/11/wo-yong-50w-nian-xin-de-du-jiao-shou-offer-kao-lao-zi-ji-yi-nian-de-wo-xin-chang-dan-bu-fu-shu-ni-jiu-bu-hui-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="面试不懂「微服务架构」原理？不怕被pass了？">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="我用50W+年薪的独角兽offer，犒劳自己一年的卧薪尝胆！不服输，你就不会输">
                         
-                        <span class="card-title">面试不懂「微服务架构」原理？不怕被pass了？</span>
+                        <span class="card-title">我用50W+年薪的独角兽offer，犒劳自己一年的卧薪尝胆！不服输，你就不会输</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            近几年，微服务架构迅速在整个技术社区窜红，被认为是 IT 软件架构的未来方向。
-一线互联网公司由于具有大量的业务体量和业务场景，比如阿里、百度、网易，很早就开始入坑微服务架构。
-但说起微服务，不少人还是有这样的困惑：“作为一个开发，微服务架
+                            写在前面：
+首先做个自我介绍，楼主男，渣本毕业，坐标帝都，差 4 个月 4 年工作经验。本次面试了几家独角兽和一线大厂，都拿了offer，几乎100%的命中率。
+在整个面试过程中，石杉老师的指导给了我很大的帮助，因此将此次面试的经历以及个人
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-26
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-11
                             </span>
                         <span class="publish-author">
                             
@@ -1009,12 +976,8 @@ StringUtils.replace(test, “test”, “simple test”);
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/微服务/" target="_blank">
-                        <span class="chip bg-color">微服务</span>
-                    </a>
-                    
-                    <a href="/tags/原理/" target="_blank">
-                        <span class="chip bg-color">原理</span>
+                    <a href="/tags/java面试/" target="_blank">
+                        <span class="chip bg-color">java面试</span>
                     </a>
                     
                 </div>
