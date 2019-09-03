@@ -1,0 +1,1318 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="彻底干掉恶心的 SQL 注入漏洞， 一网打尽！, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="简介文章主要内容包括：Java 持久层技术/框架简单介绍
+不同场景/框架下易导致 SQL 注入的写法
+如何避免和修复 SQL 注入
+JDBC介绍JDBC：全称 Java Database Connectivity
+是 Java 访问数据库的">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>彻底干掉恶心的 SQL 注入漏洞， 一网打尽！ | 陈国际博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">陈国际博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories/毕业设计/" class="waves-effect waves-light">
+            
+            <i class="fa fa-align-justify"></i>
+            
+            <span>毕设</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">陈国际博客</div>
+        <div class="logo-desc">
+            
+            为中华软件之崛起而编程 ,努力做有价值的技术文章
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories/毕业设计/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-align-justify"></i>
+                
+                毕设
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        彻底干掉恶心的 SQL 注入漏洞， 一网打尽！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/" target="_blank">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                java
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-07-26
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        2.1k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        9 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="文章主要内容包括："><a href="#文章主要内容包括：" class="headerlink" title="文章主要内容包括："></a>文章主要内容包括：</h2><pre><code>Java 持久层技术/框架简单介绍
+不同场景/框架下易导致 SQL 注入的写法
+如何避免和修复 SQL 注入
+</code></pre><h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="JDBC："><a href="#JDBC：" class="headerlink" title="JDBC："></a>JDBC：</h3><pre><code>全称 Java Database Connectivity
+是 Java 访问数据库的 API，不依赖于特定数据库 ( database-independent )
+所有 Java 持久层技术都基于 JDBC
+</code></pre><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>直接使用 JDBC 的场景，如果代码中存在拼接 SQL 语句，那么很有可能会产生注入，如</p>
+<pre><code>// concat sql
+String sql = &quot;SELECT * FROM users WHERE name =&apos;&quot;+ name + &quot;&apos;&quot;;
+Statement stmt = connection.createStatement();
+ResultSet rs = stmt.executeQuery(sql);
+</code></pre><p>安全的写法是使用 参数化查询 ( parameterized queries )，即 SQL 语句中使用参数绑定( ? 占位符 ) 和 PreparedStatement，如</p>
+<pre><code>// use ? to bind variables
+String sql = &quot;SELECT * FROM users WHERE name= ? &quot;;
+PreparedStatement ps = connection.prepareStatement(sql);
+// 参数 index 从 1 开始
+ps.setString(1, name);
+</code></pre><p>还有一些情况，比如 order by、column name，不能使用参数绑定，此时需要手工过滤，如通常 order by 的字段名是有限的，因此可以使用白名单的方式来限制参数值</p>
+<p>这里需要注意的是，使用了 PreparedStatement 并不意味着不会产生注入，如果在使用 PreparedStatement之前，存在拼接 sql 语句，那么仍然会导致注入，如</p>
+<pre><code>// 拼接 sql
+String sql = &quot;SELECT * FROM users WHERE name =&apos;&quot;+ name + &quot;&apos;&quot;;
+PreparedStatement ps = connection.prepareStatement(sql);    
+</code></pre><p>看到这里，大家肯定会好奇 PreparedStatement 是如何防止 SQL 注入的，来了解一下</p>
+<p>正常情况下，用户的输入是作为参数值的，而在 SQL 注入中，用户的输入是作为 SQL 指令的一部分，会被数据库进行编译/解释执行。</p>
+<p>当使用了 PreparedStatement，带占位符 ( ? ) 的 sql 语句只会被编译一次，之后执行只是将占位符替换为用户输入，并不会再次编译/解释，因此从根本上防止了 SQL 注入问题。</p>
+<h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><h2 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h2><pre><code>首个 class persistence framework
+介于 JDBC (raw SQL) 和 Hibernate (ORM)
+简化绝大部分 JDBC 代码、手工设置参数和获取结果
+灵活，使用者能够完全控制 SQL，支持高级映射
+</code></pre><p>更多请参考: <a href="http://www.mybatis.org" target="_blank" rel="noopener">http://www.mybatis.org</a>    </p>
+<h2 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h2><p>在 MyBatis 中，使用 XML 文件 或 Annotation 来进行配置和映射，将 interfaces 和 Java POJOs (Plain Old Java Objects) 映射到 database records。    </p>
+<h3 id="XML-例子"><a href="#XML-例子" class="headerlink" title="XML 例子"></a>XML 例子</h3><p>Mapper Interface    </p>
+<pre><code>@Mapper
+public  interface UserMapper {
+    User getById(int id);
+}    
+</code></pre><p>XML 配置文件</p>
+<pre><code>&lt;select id=&quot;getById&quot; resultType=&quot;org.example.User&quot;&gt;
+    SELECT * FROM user WHERE id = #{id}
+&lt;/select&gt;    
+</code></pre><p>Annotation 例子</p>
+<pre><code>@Mapper
+public interface UserMapper {
+    @Select(&quot;SELECT * FROM user WHERE id= #{id}&quot;)
+    User getById(@Param(&quot;id&quot;) int id);
+}    
+</code></pre><p>可以看到，使用者需要自己编写 SQL 语句，因此当使用不当时，会导致注入问题与使用 JDBC 不同的是，MyBatis 使用 #{} 和 ${} 来进行参数值替换。推荐：Mybatis传递多个参数的4种方式。</p>
+<p>使用 #{} 语法时，MyBatis 会自动生成 PreparedStatement ，使用参数绑定 ( ?) 的方式来设置值，上述两个例子等价的 JDBC 查询代码如下：</p>
+<pre><code>String sql = &quot;SELECT * FROM users WHERE id = ?&quot;;
+PreparedStatement ps = connection.prepareStatement(sql);
+ps.setInt(1, id);
+</code></pre><p>因此 #{} 可以有效防止 SQL 注入，详细可参考 <a href="http://www.mybatis.org/mybatis-3/sqlmap-xml.html" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/sqlmap-xml.html</a> String Substitution 部分。</p>
+<p>而使用 ${} 语法时，MyBatis 会直接注入原始字符串，即相当于拼接字符串，因而会导致 SQL 注入，如</p>
+<pre><code>&lt;select id=&quot;getByName&quot; resultType=&quot;org.example.User&quot;&gt;
+    SELECT * FROM user WHERE name = &apos;${name}&apos; limit 1
+&lt;/select&gt;
+</code></pre><p>name 值为 ‘ or ‘1’=’1，实际执行的语句为</p>
+<pre><code>SELECT * FROM user WHERE name = &apos;&apos; or &apos;1&apos;=&apos;1&apos; limit 1
+</code></pre><p>因此建议尽量使用 #{}，但有些时候，如 order by 语句，使用 #{} 会导致出错，如</p>
+<pre><code>ORDER BY #{sortBy}
+</code></pre><p>sortBy 参数值为 name ，替换后会成为</p>
+<pre><code>ORDER BY &quot;name&quot;
+</code></pre><p>即以字符串 “name” 来排序，而非按照 name 字段排序<br>详细可参考: <a href="https://stackoverflow.com/a/32996866/6467552" target="_blank" rel="noopener">https://stackoverflow.com/a/32996866/6467552</a></p>
+<p>这种情况就需要使用 ${}</p>
+<pre><code>ORDER BY ${sortBy}
+</code></pre><p>使用了 ${}后，使用者需要自行过滤输入，方法有：</p>
+<p>代码层使用白名单的方式，限制 sortBy 允许的值，如只能为 name, email 字段，异常情况则设置为默认值 name</p>
+<p>在 XML 配置文件中，使用 if 标签来进行判断</p>
+<p>Mapper 接口方法</p>
+<pre><code>List&lt;User&gt; getUserListSortBy(@Param(&quot;sortBy&quot;) String sortBy);
+</code></pre><p>xml 配置文件</p>
+<pre><code>&lt;select id=&quot;getUserListSortBy&quot; resultType=&quot;org.example.User&quot;&gt;
+    SELECT * FROM user  
+    &lt;if test=&quot;sortBy == &apos;name&apos; or sortBy == &apos;email&apos;&quot;&gt;
+        order by ${sortBy}  
+    &lt;/if&gt;
+&lt;/select&gt;
+</code></pre><p>因为 Mybatis 不支持 else，需要默认值的情况，可以使用 choose(when,otherwise)</p>
+<pre><code>&lt;select id=&quot;getUserListSortBy&quot; resultType=&quot;org.example.User&quot;&gt;
+  SELECT * FROM user  
+    &lt;choose&gt;    
+        &lt;when  test=&quot;sortBy == &apos;name&apos; or sortBy == &apos;email&apos;&quot;&gt;
+              order by ${sortBy}
+        &lt;/when&gt;    
+        &lt;otherwise&gt;
+              order by name    
+        &lt;/otherwise&gt;  
+    &lt;/choose&gt;
+&lt;/select&gt;
+</code></pre><h2 id="更多场景"><a href="#更多场景" class="headerlink" title="更多场景"></a>更多场景</h2><p>除了 orderby之外，还有一些可能会使用到 ${} 情况，可以使用其他方法避免，如</p>
+<h3 id="like-语句"><a href="#like-语句" class="headerlink" title="like 语句"></a>like 语句</h3><pre><code>如需要使用通配符 ( wildcard characters % 和 _) ，可以
+在代码层，在参数值两边加上 %，然后再使用 #{}
+使用 bind 标签来构造新参数，然后再使用 #{}
+</code></pre><p>Mapper 接口方法</p>
+<pre><code>List&lt;User&gt; getUserListLike(@Param(&quot;name&quot;) String name);
+</code></pre><p>xml 配置文件</p>
+<pre><code>&lt;select id=&quot;getUserListLike&quot; resultType=&quot;org.example.User&quot;&gt;
+    &lt;bind name=&quot;pattern&quot; value=&quot;&apos;%&apos; + name + &apos;%&apos;&quot; /&gt;
+    SELECT * FROM user   
+    WHERE name LIKE #{pattern}
+&lt;/select&gt;
+</code></pre><p><bind> 语句内的 value 为 OGNL expression</bind></p>
+<p>具体可参考 :<br><a href="http://www.mybatis.org/mybatis-3/dynamic-sql.html" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/dynamic-sql.html</a> </p>
+<p>bind 部分使用 SQL concat() 函数</p>
+<pre><code>&lt;select id=&quot;getUserListLikeConcat&quot;    resultType=&quot;org.example.User&quot;&gt;
+    SELECT * FROM user WHERE name LIKE concat (&apos;%&apos;, #{name}, &apos;%&apos;)
+&lt;/select&gt;
+</code></pre><p>除了注入问题之外，这里还需要对用户的输入进行过滤，不允许有通配符，否则在表中数据量较多的时候，假设用户输入为 %%，会进行全表模糊查询，严重情况下可导致 DOS</p>
+<p>参考:<br> <a href="http://www.tothenew.com/blog/sql-wildcards-is-your-application-safe" target="_blank" rel="noopener">http://www.tothenew.com/blog/sql-wildcards-is-your-application-safe</a></p>
+<h3 id="IN-条件"><a href="#IN-条件" class="headerlink" title="IN 条件"></a>IN 条件</h3><p>使用 <foreach> 和 #{}<br>Mapper 接口方法</foreach></p>
+<pre><code>List&lt;User&gt; getUserListIn(@Param(&quot;nameList&quot;) List&lt;String&gt; nameList);
+</code></pre><p>xml 配置文件</p>
+<pre><code>&lt;select id=&quot;selectUserIn&quot; resultType=&quot;com.example.User&quot;&gt;
+    SELECT * FROM user WHERE name in  
+    &lt;foreach item=&quot;name&quot; collection=&quot;nameList&quot;            
+        open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
+        #{name}
+    &lt;/foreach&gt;
+&lt;/select&gt;
+</code></pre><p>具体可参考<br><a href="http://www.mybatis.org/mybatis-3/dynamic-sql.html" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/dynamic-sql.html</a> </p>
+<p>foreach 部分</p>
+<h3 id="limit-语句"><a href="#limit-语句" class="headerlink" title="limit 语句"></a>limit 语句</h3><p>直接使用 #{} 即可<br>Mapper 接口方法</p>
+<pre><code>List&lt;User&gt; getUserListLimit(@Param(&quot;offset&quot;) int offset, @Param(&quot;limit&quot;) int limit);
+</code></pre><p>xml 配置文件</p>
+<pre><code>&lt;select    id=&quot;getUserListLimit&quot; resultType=&quot;org.example.User&quot;&gt;
+    SELECT * FROM user limit #{offset}, #{limit}
+&lt;/select&gt;
+</code></pre><h1 id="JPA-amp-Hibernate"><a href="#JPA-amp-Hibernate" class="headerlink" title="JPA &amp; Hibernate"></a>JPA &amp; Hibernate</h1><p>介绍</p>
+<h2 id="JPA"><a href="#JPA" class="headerlink" title="JPA:"></a>JPA:</h2><pre><code>全称 Java Persistence API
+ORM (object-relational mapping) 持久层 API，需要有具体的实现
+</code></pre><p>更多请参考：<br><a href="https://en.wikipedia.org/wiki/JavaPersistenceAPI" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/JavaPersistenceAPI</a></p>
+<h2 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate:"></a>Hibernate:</h2><pre><code>JPA ORM 实现
+</code></pre><p>更多请参考 <a href="http://hibernate.org。" target="_blank" rel="noopener">http://hibernate.org。</a></p>
+<h2 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h2><p>这里有一种错误的认识，使用了 ORM 框架，就不会有 SQL 注入。而实际上，在 Hibernate 中，支持 HQL (Hibernate Query Language) 和 native sql 查询，前者存在 HQL 注入，后者和之前 JDBC 存在相同的注入问题，来具体看一下。</p>
+<h2 id="HQL"><a href="#HQL" class="headerlink" title="HQL"></a>HQL</h2><p>HQL 查询例子</p>
+<pre><code>Query&lt;User&gt; query = session.createQuery(&quot;from User where name = &apos;&quot; + name + &quot;&apos;&quot;, User.class);
+User user = query.getSingleResult();
+</code></pre><p>这里的 User 为类名，和原生 SQL 类似，拼接会导致注入。</p>
+<p>正确的用法：</p>
+<p>位置参数 (Positional parameter)</p>
+<pre><code>Query&lt;User&gt; query = session.createQuery(&quot;from User where name = ?&quot;, User.class);
+query.setParameter(0, name);
+</code></pre><p>命名参数 (named parameter)</p>
+<pre><code>Query&lt;User&gt; query = session.createQuery(&quot;from User where name = :name&quot;, User.class);
+query.setParameter(&quot;name&quot;, name);
+</code></pre><p>命名参数 list (named parameter list)</p>
+<pre><code>Query&lt;User&gt; query = session.createQuery(&quot;from User where name in (:nameList)&quot;, User.class);
+query.setParameterList(&quot;nameList&quot;, Arrays.asList(&quot;lisi&quot;, &quot;zhaowu&quot;));
+</code></pre><p>类实例 (JavaBean)</p>
+<pre><code>User user = new User();
+user.setName(&quot;zhaowu&quot;);
+Query&lt;User&gt; query = session.createQuery(&quot;from User where name = :name&quot;, User.class);
+// User 类需要有 getName() 方法
+query.setProperties(user);
+</code></pre><h2 id="Native-SQL"><a href="#Native-SQL" class="headerlink" title="Native SQL"></a>Native SQL</h2><p>存在 SQL 注入</p>
+<pre><code>String sql = &quot;select * from user where name = &apos;&quot; + name + &quot;&apos;&quot;;
+// deprecated
+// Query query = session.createSQLQuery(sql);
+Query query = session.createNativeQuery(sql);
+</code></pre><p>使用参数绑定来设置参数值</p>
+<pre><code>String sql = &quot;select * from user where name = :name&quot;;
+// deprecated
+// Query query = session.createSQLQuery(sql);
+Query query = session.createNativeQuery(sql);
+query.setParameter(&quot;name&quot;, name);
+</code></pre><h2 id="JPA-1"><a href="#JPA-1" class="headerlink" title="JPA"></a>JPA</h2><p>JPA 中使用 JPQL (Java Persistence Query Language)，同时也支持 native sql，因此和 Hibernate 存在类似的问题，这里就不再细说，感兴趣的可以参考：</p>
+<p><a href="https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-persistence-api-jpa" target="_blank" rel="noopener">https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-persistence-api-jpa</a>    </p>
+<p>来源：b1ngz.github.io/java-sql-injection-note/</p>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载请注明</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="cc_by_url">
+                    <img alt style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png">
+                </a>
+            </div>
+            <br>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+                    《彻底干掉恶心的 SQL 注入漏洞， 一网打尽！》
+                </span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/26/che-di-gan-diao-e-xin-de-sql-zhu-ru-lou-dong-yi-wang-da-jin/" property="cc:attributionName" rel="cc:attributionURL">
+                chen guoji
+            </a> under
+            <a rel="license" href="cc_by_url">
+                cc_by_name
+            </a>licensed
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>pleaseFollowReprintPolicy</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">checkPolicy</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'sLQDMQ9rXtxonsupRe4YLCBD-gzGzoHsz',
+        appKey: 'eiVU90k574vUVACVPNeizAv9',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '说点什么吧'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/09/01/financial-software-systems-xiao-yuan-mian-shi-jing-yan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Financial Software Systems校园面试经验">
+                        
+                        <span class="card-title">Financial Software Systems校园面试经验</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            财务软件系统访谈经验| 第1集（校园内）最近，Financial Software Systems访问了我们的校园进行招聘。基本上有4轮：
+第一回合这是一次在线能力测试……有60个问题必须在60分钟内完成。大多数问题都非常简单。
+大约有60
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                    java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/07/22/zai-hua-wei-xie-liao-13-nian-dai-ma-du-shi-bao-gui-de-jing-yan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="在华为写了 13 年代码，都是宝贵的经验">
+                        
+                        <span class="card-title">在华为写了 13 年代码，都是宝贵的经验</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            来源：https://dwz.cn/dqgOrbQo
+本文来源华为人：徐宏伟，转给大家观摩下。
+一天晚上，我和老婆聊天，说部门要我写个“大咖谈软件”的文章，老婆斜了我一眼，淡淡地说：“Linus大神21岁就写出了Linux内核的雏形，缔造了
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                    java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1,h2, h3, h4,h5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4,h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://github.com/chenguoji" target="_blank"> chenguoji </a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
+			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
+			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">123.6k</span>
+            
+
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:chenguo_ji@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=971919782" class="tooltipped" data-tooltip="QQ联系我: 971919782" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

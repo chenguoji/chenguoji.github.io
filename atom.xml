@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-07-22T03:14:25.373Z</updated>
+  <updated>2019-09-03T07:16:23.479Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Financial Software Systems校园面试经验</title>
+    <link href="http://chenguoji.com/2019/09/01/financial-software-systems-xiao-yuan-mian-shi-jing-yan/"/>
+    <id>http://chenguoji.com/2019/09/01/financial-software-systems-xiao-yuan-mian-shi-jing-yan/</id>
+    <published>2019-09-01T02:39:50.000Z</published>
+    <updated>2019-09-03T07:16:23.479Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;财务软件系统访谈经验-第1集（校园内）&quot;&gt;&lt;a href=&quot;#财务软件系统访谈经验-第1集（校园内）&quot; class=&quot;headerlink&quot; title=&quot;财务软件系统访谈经验| 第1集（校园内）&quot;&gt;&lt;/a&gt;财务软件系统访谈经验|
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>彻底干掉恶心的 SQL 注入漏洞， 一网打尽！</title>
+    <link href="http://chenguoji.com/2019/07/26/che-di-gan-diao-e-xin-de-sql-zhu-ru-lou-dong-yi-wang-da-jin/"/>
+    <id>http://chenguoji.com/2019/07/26/che-di-gan-diao-e-xin-de-sql-zhu-ru-lou-dong-yi-wang-da-jin/</id>
+    <published>2019-07-26T02:39:50.000Z</published>
+    <updated>2019-07-26T02:26:29.530Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;h2 id=&quot;文章主要内容包括：&quot;&gt;&lt;a href=&quot;#文章主要内容包括：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>在华为写了 13 年代码，都是宝贵的经验</title>
@@ -43,32 +95,6 @@
   </entry>
   
   <entry>
-    <title>开发中一些常会用到的sql和java语句</title>
-    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
-    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
-    <published>2019-07-21T02:39:50.000Z</published>
-    <updated>2019-07-22T02:13:35.604Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java开发必知道的国外20大网站</title>
     <link href="http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
     <id>http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</id>
@@ -83,6 +109,32 @@
         
           &lt;p&gt;1、谷歌  &lt;a href=&quot;https://www.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.google.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2、&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发中一些常会用到的sql和java语句</title>
+    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
+    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
+    <published>2019-07-21T02:39:50.000Z</published>
+    <updated>2019-08-12T06:09:47.188Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
         
       
     
@@ -482,60 +534,6 @@
 &lt;h2 id=&quot;排序的分类&quot;&gt;&lt;a href=&quot;#排序的分类&quot; class=&quot;headerlink&quot; title=&quot;排序的分类&quot;&gt;&lt;/a&gt;排序的分类&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;根据在排序过程中带排序的记录是否全部被放置在内存中，排序分为：
 
  
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Eclipse 最常用的 10 组快捷键，个个牛逼！</title>
-    <link href="http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/"/>
-    <id>http://chenguoji.com/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</id>
-    <published>2019-05-22T02:39:50.000Z</published>
-    <updated>2019-06-04T09:28:29.290Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。&lt;/p&gt;
-&lt;h3 id=&quot;1、打开资源&quot;&gt;&lt;a href=&quot;#1、打开资源&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么培训班出来的程序员总遭人嫌弃？</title>
-    <link href="http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
-    <id>http://chenguoji.com/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</id>
-    <published>2019-05-22T02:39:50.000Z</published>
-    <updated>2019-06-04T09:32:27.159Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。&lt;br&gt;于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。&lt;/p&gt;
-&lt;h3
         
       
     

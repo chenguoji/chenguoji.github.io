@@ -364,14 +364,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        320
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        4 分
                     </div>
                     
                 
@@ -405,6 +405,37 @@
 <p>SELECT B.USERNAME, B.SID, B.SERIAL#, LOGON_TIME<br>  FROM V$LOCKED_OBJECT A, V$SESSION B<br> WHERE A.SESSION_ID = B.SID<br> ORDER BY B.LOGON_TIME;</p>
 <p>/<em>kill被锁的进程 ‘sid, serial#’ </em>/<br>ALTER SYSTEM KILL SESSION ‘24,30992’;</p>
 <p>/<em>lock相关表</em>/<br>SELECT <em> FROM V$LOCK;<br>SELECT </em> FROM V$SQLAREA;<br>SELECT <em> FROM V$SESSION;<br>SELECT </em> FROM V$PROCESS;<br>SELECT <em> FROM V$LOCKED_OBJECT;<br>SELECT </em> FROM ALL_OBJECTS;<br>SELECT * FROM V$SESSION_WAIT;    </p>
+<p>1、修改字段名：</p>
+<p>　　alter table 表名 rename column A to B</p>
+<p>2、修改字段类型：</p>
+<p>　　alter table 表名 alter column 字段名 type not null</p>
+<p>3、修改字段默认值<br>　　alter table 表名 add default (0) for 字段名 with values</p>
+<p>　　如果字段有默认值，则需要先删除字段的约束，在添加新的默认值，</p>
+<p>　　select c.name from sysconstraints a<br>　　inner join syscolumns b on a.colid=b.colid<br>　　inner join sysobjects c on a.constid=c.id<br>　　where a.id=object_id(‘表名’)<br>　　and b.name=’字段名’</p>
+<p>　　根据约束名称删除约束</p>
+<p>　　alter table 表名 drop constraint 约束名</p>
+<p>　　根据表名向字段中增加新的默认值</p>
+<p>　　alter table 表名 add default (0) for 字段名 with values</p>
+<p>4、增加字段：</p>
+<p>　　alter table 表名 add 字段名 type not null default 0</p>
+<p>5、删除字段：</p>
+<p>　　alter table 表名 drop column 字段名;</p>
+<h1 id="CHARINDEX-作用"><a href="#CHARINDEX-作用" class="headerlink" title="CHARINDEX 作用"></a>CHARINDEX 作用</h1><p>　　写SQL语句我们经常需要判断一个字符串中是否包含另一个字符串，但是SQL SERVER中并没有像C#提供了Contains函数，不过SQL SERVER中提供了一个叫CHAEINDX的函数，顾名思义就是找到字符（char）的位置（index），既然能够知道所在的位置，当然就可以判断是否包含在其中了。</p>
+<pre><code>    通过CHARINDEX如果能够找到对应的字符串，则返回该字符串位置，否则返回0。
+
+基本语法如下：
+</code></pre><p>　　CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )</p>
+<pre><code>expressionToFind ：目标字符串，就是想要找到的字符串，最大长度为8000 。
+</code></pre><p>　　expressionToSearch ：用于被查找的字符串。</p>
+<pre><code>start_location：开始查找的位置，为空时默认从第一位开始查找。
+</code></pre><h1 id="PATINDEX"><a href="#PATINDEX" class="headerlink" title="PATINDEX"></a>PATINDEX</h1><p>　　和CHARINDEX类似，PATINDEX也可以用来判断一个字符串中是否包含另一个字符串，两种的差异在于，前者是全匹配，后者支持模糊匹配。</p>
+<p>　　1.简单示例</p>
+<p>　　select PATINDEX(‘%ter%’,’interesting data’)</p>
+<h1 id="STUFF-character-expression-start-length-character-expression"><a href="#STUFF-character-expression-start-length-character-expression" class="headerlink" title="STUFF ( character_expression , start , length ,character_expression )"></a>STUFF ( character_expression , start , length ,character_expression )</h1><p>参数<br>character_expression<br>一个字符数据表达式。character_expression 可以是常量、变量，也可以是字符列或二进制数据列。</p>
+<p>start<br>一个整数值，指定删除和插入的开始位置。如果 start 或 length 为负，则返回空字符串。如果 start 比第一个character_expression 长，则返回空字符串。start 可以是 bigint 类型。</p>
+<p>length<br>一个整数，指定要删除的字符数。如果 length 比第一个 character_expression 长，则最多删除到最后一个character_expression 中的最后一个字符。length 可以是 bigint 类型。</p>
+<p>返回类型<br>如果 character_expression 是受支持的字符数据类型，则返回字符数据。如果 character_expression 是一个受支持的 binary 数据类型，则返回二进制数据。</p>
+<p>备注<br>如果开始位置或长度值是负数，或者如果开始位置大于第一个字符串的长度，将返回空字符串。如果要删除的长度大于第一个字符串的长度，将删除到第一个字符串中的第一个字符。<br>如果结果值大于返回类型支持的最大值，则产生错误。</p>
 
             </div>
             <hr>
@@ -864,26 +895,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/07/22/zai-hua-wei-xie-liao-13-nian-dai-ma-du-shi-bao-gui-de-jing-yan/">
+                <a href="/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="在华为写了 13 年代码，都是宝贵的经验">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Java开发必知道的国外20大网站">
                         
-                        <span class="card-title">在华为写了 13 年代码，都是宝贵的经验</span>
+                        <span class="card-title">Java开发必知道的国外20大网站</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            来源：https://dwz.cn/dqgOrbQo
-本文来源华为人：徐宏伟，转给大家观摩下。
-一天晚上，我和老婆聊天，说部门要我写个“大咖谈软件”的文章，老婆斜了我一眼，淡淡地说：“Linus大神21岁就写出了Linux内核的雏形，缔造了
+                            1、谷歌  https://www.google.com/
+2、https://stackoverflow.com里面包含各种开发遇到的问题及答案，质量比较高。
+3、https://github.com/免费的开源代码托管网站，包括了许多开
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-22
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-21
                         </span>
                         <span class="publish-author">
                             
@@ -915,26 +946,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/">
+                <a href="/2019/07/19/github-shang-10-ge-kai-yuan-mian-fei-de-hou-tai-kong-zhi-mian-ban-ni-zhi-de-yong-you/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Java开发必知道的国外20大网站">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Github上10个开源免费的后台控制面板你值得拥有！">
                         
-                        <span class="card-title">Java开发必知道的国外20大网站</span>
+                        <span class="card-title">Github上10个开源免费的后台控制面板你值得拥有！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、谷歌  https://www.google.com/
-2、https://stackoverflow.com里面包含各种开发遇到的问题及答案，质量比较高。
-3、https://github.com/免费的开源代码托管网站，包括了许多开
+                            Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 T
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-19
                             </span>
                         <span class="publish-author">
                             
@@ -1074,7 +1103,7 @@
 			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">120.5k</span>
+                <span class="white-color">123.6k</span>
             
 
             
