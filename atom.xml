@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2019-09-03T07:16:23.479Z</updated>
+  <updated>2019-09-18T09:34:21.294Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>普通二本，毕业三年，北漂之后，我是怎样成为程序猿的</title>
+    <link href="http://chenguoji.com/2019/09/18/pu-tong-er-ben-bi-ye-san-nian-bei-piao-zhi-hou-wo-shi-zen-yang-cheng-wei-cheng-xu-yuan-de/"/>
+    <id>http://chenguoji.com/2019/09/18/pu-tong-er-ben-bi-ye-san-nian-bei-piao-zhi-hou-wo-shi-zen-yang-cheng-wei-cheng-xu-yuan-de/</id>
+    <published>2019-09-18T02:39:50.000Z</published>
+    <updated>2019-09-18T09:34:21.294Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="经历" scheme="http://chenguoji.com/categories/%E7%BB%8F%E5%8E%86/"/>
+    
+    
+      <category term="经历" scheme="http://chenguoji.com/tags/%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Financial Software Systems校园面试经验</title>
@@ -47,7 +73,7 @@
     <link href="http://chenguoji.com/2019/08/21/yun-ying-xue-xi-de-xiao-zong-jie/"/>
     <id>http://chenguoji.com/2019/08/21/yun-ying-xue-xi-de-xiao-zong-jie/</id>
     <published>2019-08-21T02:39:50.000Z</published>
-    <updated>2019-09-03T09:40:54.265Z</updated>
+    <updated>2019-09-03T10:00:24.968Z</updated>
     
     <summary type="html">
     
@@ -506,32 +532,6 @@
         
           &lt;p&gt;最近在写一个功能点，用了 Java 中的可变参数，真是把我搞得够惨。。&lt;/p&gt;
 &lt;h2 id=&quot;什么是可变参数？&quot;&gt;&lt;a href=&quot;#什么是可变参数？&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>想成为顶尖 Java 程序员？先过了下面这些问题！</title>
-    <link href="http://chenguoji.com/2019/06/09/xiang-cheng-wei-ding-jian-java-cheng-xu-yuan-xian-guo-liao-xia-mian-zhe-xie-wen-ti/"/>
-    <id>http://chenguoji.com/2019/06/09/xiang-cheng-wei-ding-jian-java-cheng-xu-yuan-xian-guo-liao-xia-mian-zhe-xie-wen-ti/</id>
-    <published>2019-06-09T02:39:50.000Z</published>
-    <updated>2019-06-10T02:05:21.691Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、数据结构与算法基础&quot;&gt;&lt;a href=&quot;#一、数据结构与算法基础&quot; class=&quot;headerlink&quot;
         
       
     
