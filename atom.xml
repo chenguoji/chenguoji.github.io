@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2020-06-12T13:48:06.314Z</updated>
+  <updated>2020-06-12T13:59:50.572Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://chenguoji.com/2019/12/21/2019-nian-du-zong-jie/"/>
     <id>http://chenguoji.com/2019/12/21/2019-nian-du-zong-jie/</id>
     <published>2019-12-21T02:39:50.000Z</published>
-    <updated>2020-06-12T13:48:06.314Z</updated>
+    <updated>2020-06-12T13:59:50.572Z</updated>
     
     <summary type="html">
     
@@ -35,10 +35,10 @@
     
     </summary>
     
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+      <category term="年度总结" scheme="http://chenguoji.com/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+      <category term="年度总结" scheme="http://chenguoji.com/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -255,6 +255,32 @@
   </entry>
   
   <entry>
+    <title>开发中一些常会用到的sql和java语句</title>
+    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
+    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
+    <published>2019-07-21T02:39:50.000Z</published>
+    <updated>2019-09-03T08:00:04.132Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java开发必知道的国外20大网站</title>
     <link href="http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
     <id>http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</id>
@@ -269,32 +295,6 @@
         
           &lt;p&gt;1、谷歌  &lt;a href=&quot;https://www.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.google.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2、&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发中一些常会用到的sql和java语句</title>
-    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
-    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
-    <published>2019-07-21T02:39:50.000Z</published>
-    <updated>2019-09-03T08:00:04.132Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
         
       
     

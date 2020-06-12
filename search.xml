@@ -13,14 +13,14 @@
       
       <categories>
           
-          <category> java </category>
+          <category> 年度总结 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
+            <tag> 年度总结 </tag>
             
         </tags>
       
@@ -229,11 +229,11 @@
     
     
     <entry>
-      <title>Java开发必知道的国外20大网站</title>
-      <link href="/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
-      <url>/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</url>
+      <title>开发中一些常会用到的sql和java语句</title>
+      <link href="/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
+      <url>/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</url>
       
-        <content type="html"><![CDATA[<p>1、谷歌  <a href="https://www.google.com/" target="_blank" rel="noopener">https://www.google.com/</a></p><p>2、<a href="https://stackoverflow.com" target="_blank" rel="noopener">https://stackoverflow.com</a><br>里面包含各种开发遇到的问题及答案，质量比较高。</p><p>3、<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>免费的开源代码托管网站，包括了许多开源的项目及示例项目等。</p><p>4、<a href="https://dzone.com/" target="_blank" rel="noopener">https://dzone.com/</a><br>提供技术新闻、编程教程、及各种工具、开发者的博客等。</p><p>5、<a href="http://www.programcreek.com/" target="_blank" rel="noopener">http://www.programcreek.com/</a><br>一个非常优秀的Java博客，包含很多精选文集。</p><p>6、<a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a><br>免费代码托管网站，可以用来做私服，和GitHub最大区别是GitLab可以有私有项目。</p><p>7、<a href="https://www.ibm.com/developerworks/learn/java/index.html" target="_blank" rel="noopener">https://www.ibm.com/developerworks/learn/java/index.html</a><br>IBM的JAVA开发者网站，很多干货。</p><p>8、<a href="http://www.javaworld.com/" target="_blank" rel="noopener">http://www.javaworld.com/</a><br>一个不错的综合性的java网站。</p><p>9、<a href="http://www.onjava.com/" target="_blank" rel="noopener">http://www.onjava.com/</a><br>某位国外大神的网站。</p><p>10、<a href="http://www.oracle.com/technetwork/java/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/index.html</a><br>oracle java的官方网站。</p><p>11、<a href="https://dzone.com/" target="_blank" rel="noopener">https://dzone.com/</a><br>DZone是一个提供编程，Web开发和DevOps新闻，教程和工具的网站。很多开发者在网站里分享其自己的博客文章。</p><p>12、<a href="https://leetcode.com/" target="_blank" rel="noopener">https://leetcode.com/</a><br>LeetCode Online Judge是一个提供JavaScript和Ruby编程的网站。目前，网站提供9种编程语言：C，C ++，Java，Python，C＃，JavaScript，Ruby，Bash，MySQL。</p><p>13、<a href="https://www.coursera.org/" target="_blank" rel="noopener">https://www.coursera.org/</a><br>Coursera是全球最好视频讲座网站，用户可以从著名的教授那里获得很多计算机科学课程。</p><p>14、<a href="http://www.javaworld.com/" target="_blank" rel="noopener">http://www.javaworld.com/</a><br>JavaWorld是一个拥有大量关于各种Java主题教程资源的网站。网站里的很多文章写得非常好，并配有插图。JavaWorld可以作为一个深度学习的网站来阅读。</p><p>15、<a href="https://en.wikipedia.org/" target="_blank" rel="noopener">https://en.wikipedia.org/</a><br>维基百科（Wikipedia）是开发人员查找和学习几乎任何编程概念最好的资源网站之一。作为一个有经验的Java开发人员，你可能只会一些概念，但了解不多。维基百科是一个免费了解最新信息的好地方，例如，什么是面向服务的编程。</p><p>16、Program Creek<br>Program Creek是世界上排名前100的Java博客之一。用户可以找到一些没有被任何其他网站所写的主题，每篇文章总是包含很好的图表或代码示例。Program Creek包含研究和行业人员撰写的文章，并始终向Java开发人员分享优质文章。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="一、ORACLE"><a href="#一、ORACLE" class="headerlink" title="一、ORACLE"></a>一、ORACLE</h1><h2 id="1-Oracle锁表与解锁"><a href="#1-Oracle锁表与解锁" class="headerlink" title="1.Oracle锁表与解锁"></a>1.Oracle锁表与解锁</h2><p>查看锁表进程SQL语句<br>    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; </p><p>杀掉锁表进程：<br>记录下SID和serial# ，分别替换掉下面的1155,39095，即可解除锁表</p><pre><code>alter system kill session &apos;1155,39095&apos;; </code></pre><p>对象锁与解锁</p><p>这里以包为PKG_ZLGL_BASEDATA为例</p><p>注意name为包或者存储过程等；</p><pre><code>SELECT * FROM V$DB_OBJECT_CACHE WHERE name=&apos;PKG_ZLGL_BASEDATA&apos; AND LOCKS!=&apos;0&apos;;</code></pre><p>查看sid    注意object为包或者存储过程等；</p><pre><code>SELECT SID from V$ACCESS WHERE object=&apos;PKG_ZLGL_BASEDATA&apos;;</code></pre><p>查看查看SID和SERIAL#  in后面的条件为上述查的sid</p><pre><code>SELECT SID,SERIAL#,PADDR,STATUS FROM V$SESSION WHERE SID IN(&apos;283&apos;,&apos;343&apos;);</code></pre><p>杀进程 实例如下：  alter system kill session ‘sid,SERIAL’</p><pre><code>alter system kill session &apos;283,50673&apos;</code></pre><p>/<em>查看被锁住的存储过程</em>/<br>SELECT <em> FROM V$DB_OBJECT_CACHE WHERE OWNER = ‘APPADMIN’ AND LOCKS != ‘0’;<br>SELECT </em> FROM DBA_DDL_LOCKS WHERE NAME = UPPER(‘TEMP_EXPORT’);<br>SELECT T.SID, T.SERIAL# FROM V$SESSION T WHERE T.SID = 24;</p><p>/<em>查看被锁住的表</em>/<br>SELECT DO.OWNER, DO.OBJECT_NAME, LO.SESSION_ID, LO.LOCKED_MODE<br>  FROM V$LOCKED_OBJECT LO, DBA_OBJECTS DO<br> WHERE DO.OBJECT_ID = LO.OBJECT_ID;</p><p>SELECT B.USERNAME, B.SID, B.SERIAL#, LOGON_TIME<br>  FROM V$LOCKED_OBJECT A, V$SESSION B<br> WHERE A.SESSION_ID = B.SID<br> ORDER BY B.LOGON_TIME;</p><p>/<em>kill被锁的进程 ‘sid, serial#’ </em>/<br>ALTER SYSTEM KILL SESSION ‘24,30992’;</p><p>/<em>lock相关表</em>/<br>SELECT <em> FROM V$LOCK;<br>SELECT </em> FROM V$SQLAREA;<br>SELECT <em> FROM V$SESSION;<br>SELECT </em> FROM V$PROCESS;<br>SELECT <em> FROM V$LOCKED_OBJECT;<br>SELECT </em> FROM ALL_OBJECTS;<br>SELECT * FROM V$SESSION_WAIT;    </p><p>1、修改字段名：</p><p>　　alter table 表名 rename column A to B</p><p>2、修改字段类型：</p><p>　　alter table 表名 alter column 字段名 type not null</p><p>3、修改字段默认值<br>　　alter table 表名 add default (0) for 字段名 with values</p><p>　　如果字段有默认值，则需要先删除字段的约束，在添加新的默认值，</p><p>　　select c.name from sysconstraints a<br>　　inner join syscolumns b on a.colid=b.colid<br>　　inner join sysobjects c on a.constid=c.id<br>　　where a.id=object_id(‘表名’)<br>　　and b.name=’字段名’</p><p>　　根据约束名称删除约束</p><p>　　alter table 表名 drop constraint 约束名</p><p>　　根据表名向字段中增加新的默认值</p><p>　　alter table 表名 add default (0) for 字段名 with values</p><p>4、增加字段：</p><p>　　alter table 表名 add 字段名 type not null default 0</p><p>5、删除字段：</p><p>　　alter table 表名 drop column 字段名;</p><h1 id="CHARINDEX-作用"><a href="#CHARINDEX-作用" class="headerlink" title="CHARINDEX 作用"></a>CHARINDEX 作用</h1><p>　　写SQL语句我们经常需要判断一个字符串中是否包含另一个字符串，但是SQL SERVER中并没有像C#提供了Contains函数，不过SQL SERVER中提供了一个叫CHAEINDX的函数，顾名思义就是找到字符（char）的位置（index），既然能够知道所在的位置，当然就可以判断是否包含在其中了。</p><pre><code>    通过CHARINDEX如果能够找到对应的字符串，则返回该字符串位置，否则返回0。基本语法如下：</code></pre><p>　　CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )</p><pre><code>expressionToFind ：目标字符串，就是想要找到的字符串，最大长度为8000 。</code></pre><p>　　expressionToSearch ：用于被查找的字符串。</p><pre><code>start_location：开始查找的位置，为空时默认从第一位开始查找。</code></pre><h1 id="PATINDEX"><a href="#PATINDEX" class="headerlink" title="PATINDEX"></a>PATINDEX</h1><p>　　和CHARINDEX类似，PATINDEX也可以用来判断一个字符串中是否包含另一个字符串，两种的差异在于，前者是全匹配，后者支持模糊匹配。</p><p>　　1.简单示例</p><p>　　select PATINDEX(‘%ter%’,’interesting data’)</p><h1 id="STUFF-character-expression-start-length-character-expression"><a href="#STUFF-character-expression-start-length-character-expression" class="headerlink" title="STUFF ( character_expression , start , length ,character_expression )"></a>STUFF ( character_expression , start , length ,character_expression )</h1><p>参数<br>character_expression<br>一个字符数据表达式。character_expression 可以是常量、变量，也可以是字符列或二进制数据列。</p><p>start<br>一个整数值，指定删除和插入的开始位置。如果 start 或 length 为负，则返回空字符串。如果 start 比第一个character_expression 长，则返回空字符串。start 可以是 bigint 类型。</p><p>length<br>一个整数，指定要删除的字符数。如果 length 比第一个 character_expression 长，则最多删除到最后一个character_expression 中的最后一个字符。length 可以是 bigint 类型。</p><p>返回类型<br>如果 character_expression 是受支持的字符数据类型，则返回字符数据。如果 character_expression 是一个受支持的 binary 数据类型，则返回二进制数据。</p><p>备注<br>如果开始位置或长度值是负数，或者如果开始位置大于第一个字符串的长度，将返回空字符串。如果要删除的长度大于第一个字符串的长度，将删除到第一个字符串中的第一个字符。<br>如果结果值大于返回类型支持的最大值，则产生错误。</p><h1 id="html选择器"><a href="#html选择器" class="headerlink" title="html选择器"></a>html选择器</h1><p>1.通过 id 来查找 HTML 元素<br>2.通过标签名来查找 HTML 元素<br>3.通过类名来查找 HTML 元素<br>4.通过 CSS 选择器查找 HTML 元素</p>]]></content>
       
       
       <categories>
@@ -254,11 +254,11 @@
     
     
     <entry>
-      <title>开发中一些常会用到的sql和java语句</title>
-      <link href="/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
-      <url>/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</url>
+      <title>Java开发必知道的国外20大网站</title>
+      <link href="/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
+      <url>/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</url>
       
-        <content type="html"><![CDATA[<h1 id="一、ORACLE"><a href="#一、ORACLE" class="headerlink" title="一、ORACLE"></a>一、ORACLE</h1><h2 id="1-Oracle锁表与解锁"><a href="#1-Oracle锁表与解锁" class="headerlink" title="1.Oracle锁表与解锁"></a>1.Oracle锁表与解锁</h2><p>查看锁表进程SQL语句<br>    select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID; </p><p>杀掉锁表进程：<br>记录下SID和serial# ，分别替换掉下面的1155,39095，即可解除锁表</p><pre><code>alter system kill session &apos;1155,39095&apos;; </code></pre><p>对象锁与解锁</p><p>这里以包为PKG_ZLGL_BASEDATA为例</p><p>注意name为包或者存储过程等；</p><pre><code>SELECT * FROM V$DB_OBJECT_CACHE WHERE name=&apos;PKG_ZLGL_BASEDATA&apos; AND LOCKS!=&apos;0&apos;;</code></pre><p>查看sid    注意object为包或者存储过程等；</p><pre><code>SELECT SID from V$ACCESS WHERE object=&apos;PKG_ZLGL_BASEDATA&apos;;</code></pre><p>查看查看SID和SERIAL#  in后面的条件为上述查的sid</p><pre><code>SELECT SID,SERIAL#,PADDR,STATUS FROM V$SESSION WHERE SID IN(&apos;283&apos;,&apos;343&apos;);</code></pre><p>杀进程 实例如下：  alter system kill session ‘sid,SERIAL’</p><pre><code>alter system kill session &apos;283,50673&apos;</code></pre><p>/<em>查看被锁住的存储过程</em>/<br>SELECT <em> FROM V$DB_OBJECT_CACHE WHERE OWNER = ‘APPADMIN’ AND LOCKS != ‘0’;<br>SELECT </em> FROM DBA_DDL_LOCKS WHERE NAME = UPPER(‘TEMP_EXPORT’);<br>SELECT T.SID, T.SERIAL# FROM V$SESSION T WHERE T.SID = 24;</p><p>/<em>查看被锁住的表</em>/<br>SELECT DO.OWNER, DO.OBJECT_NAME, LO.SESSION_ID, LO.LOCKED_MODE<br>  FROM V$LOCKED_OBJECT LO, DBA_OBJECTS DO<br> WHERE DO.OBJECT_ID = LO.OBJECT_ID;</p><p>SELECT B.USERNAME, B.SID, B.SERIAL#, LOGON_TIME<br>  FROM V$LOCKED_OBJECT A, V$SESSION B<br> WHERE A.SESSION_ID = B.SID<br> ORDER BY B.LOGON_TIME;</p><p>/<em>kill被锁的进程 ‘sid, serial#’ </em>/<br>ALTER SYSTEM KILL SESSION ‘24,30992’;</p><p>/<em>lock相关表</em>/<br>SELECT <em> FROM V$LOCK;<br>SELECT </em> FROM V$SQLAREA;<br>SELECT <em> FROM V$SESSION;<br>SELECT </em> FROM V$PROCESS;<br>SELECT <em> FROM V$LOCKED_OBJECT;<br>SELECT </em> FROM ALL_OBJECTS;<br>SELECT * FROM V$SESSION_WAIT;    </p><p>1、修改字段名：</p><p>　　alter table 表名 rename column A to B</p><p>2、修改字段类型：</p><p>　　alter table 表名 alter column 字段名 type not null</p><p>3、修改字段默认值<br>　　alter table 表名 add default (0) for 字段名 with values</p><p>　　如果字段有默认值，则需要先删除字段的约束，在添加新的默认值，</p><p>　　select c.name from sysconstraints a<br>　　inner join syscolumns b on a.colid=b.colid<br>　　inner join sysobjects c on a.constid=c.id<br>　　where a.id=object_id(‘表名’)<br>　　and b.name=’字段名’</p><p>　　根据约束名称删除约束</p><p>　　alter table 表名 drop constraint 约束名</p><p>　　根据表名向字段中增加新的默认值</p><p>　　alter table 表名 add default (0) for 字段名 with values</p><p>4、增加字段：</p><p>　　alter table 表名 add 字段名 type not null default 0</p><p>5、删除字段：</p><p>　　alter table 表名 drop column 字段名;</p><h1 id="CHARINDEX-作用"><a href="#CHARINDEX-作用" class="headerlink" title="CHARINDEX 作用"></a>CHARINDEX 作用</h1><p>　　写SQL语句我们经常需要判断一个字符串中是否包含另一个字符串，但是SQL SERVER中并没有像C#提供了Contains函数，不过SQL SERVER中提供了一个叫CHAEINDX的函数，顾名思义就是找到字符（char）的位置（index），既然能够知道所在的位置，当然就可以判断是否包含在其中了。</p><pre><code>    通过CHARINDEX如果能够找到对应的字符串，则返回该字符串位置，否则返回0。基本语法如下：</code></pre><p>　　CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )</p><pre><code>expressionToFind ：目标字符串，就是想要找到的字符串，最大长度为8000 。</code></pre><p>　　expressionToSearch ：用于被查找的字符串。</p><pre><code>start_location：开始查找的位置，为空时默认从第一位开始查找。</code></pre><h1 id="PATINDEX"><a href="#PATINDEX" class="headerlink" title="PATINDEX"></a>PATINDEX</h1><p>　　和CHARINDEX类似，PATINDEX也可以用来判断一个字符串中是否包含另一个字符串，两种的差异在于，前者是全匹配，后者支持模糊匹配。</p><p>　　1.简单示例</p><p>　　select PATINDEX(‘%ter%’,’interesting data’)</p><h1 id="STUFF-character-expression-start-length-character-expression"><a href="#STUFF-character-expression-start-length-character-expression" class="headerlink" title="STUFF ( character_expression , start , length ,character_expression )"></a>STUFF ( character_expression , start , length ,character_expression )</h1><p>参数<br>character_expression<br>一个字符数据表达式。character_expression 可以是常量、变量，也可以是字符列或二进制数据列。</p><p>start<br>一个整数值，指定删除和插入的开始位置。如果 start 或 length 为负，则返回空字符串。如果 start 比第一个character_expression 长，则返回空字符串。start 可以是 bigint 类型。</p><p>length<br>一个整数，指定要删除的字符数。如果 length 比第一个 character_expression 长，则最多删除到最后一个character_expression 中的最后一个字符。length 可以是 bigint 类型。</p><p>返回类型<br>如果 character_expression 是受支持的字符数据类型，则返回字符数据。如果 character_expression 是一个受支持的 binary 数据类型，则返回二进制数据。</p><p>备注<br>如果开始位置或长度值是负数，或者如果开始位置大于第一个字符串的长度，将返回空字符串。如果要删除的长度大于第一个字符串的长度，将删除到第一个字符串中的第一个字符。<br>如果结果值大于返回类型支持的最大值，则产生错误。</p><h1 id="html选择器"><a href="#html选择器" class="headerlink" title="html选择器"></a>html选择器</h1><p>1.通过 id 来查找 HTML 元素<br>2.通过标签名来查找 HTML 元素<br>3.通过类名来查找 HTML 元素<br>4.通过 CSS 选择器查找 HTML 元素</p>]]></content>
+        <content type="html"><![CDATA[<p>1、谷歌  <a href="https://www.google.com/" target="_blank" rel="noopener">https://www.google.com/</a></p><p>2、<a href="https://stackoverflow.com" target="_blank" rel="noopener">https://stackoverflow.com</a><br>里面包含各种开发遇到的问题及答案，质量比较高。</p><p>3、<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>免费的开源代码托管网站，包括了许多开源的项目及示例项目等。</p><p>4、<a href="https://dzone.com/" target="_blank" rel="noopener">https://dzone.com/</a><br>提供技术新闻、编程教程、及各种工具、开发者的博客等。</p><p>5、<a href="http://www.programcreek.com/" target="_blank" rel="noopener">http://www.programcreek.com/</a><br>一个非常优秀的Java博客，包含很多精选文集。</p><p>6、<a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a><br>免费代码托管网站，可以用来做私服，和GitHub最大区别是GitLab可以有私有项目。</p><p>7、<a href="https://www.ibm.com/developerworks/learn/java/index.html" target="_blank" rel="noopener">https://www.ibm.com/developerworks/learn/java/index.html</a><br>IBM的JAVA开发者网站，很多干货。</p><p>8、<a href="http://www.javaworld.com/" target="_blank" rel="noopener">http://www.javaworld.com/</a><br>一个不错的综合性的java网站。</p><p>9、<a href="http://www.onjava.com/" target="_blank" rel="noopener">http://www.onjava.com/</a><br>某位国外大神的网站。</p><p>10、<a href="http://www.oracle.com/technetwork/java/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/index.html</a><br>oracle java的官方网站。</p><p>11、<a href="https://dzone.com/" target="_blank" rel="noopener">https://dzone.com/</a><br>DZone是一个提供编程，Web开发和DevOps新闻，教程和工具的网站。很多开发者在网站里分享其自己的博客文章。</p><p>12、<a href="https://leetcode.com/" target="_blank" rel="noopener">https://leetcode.com/</a><br>LeetCode Online Judge是一个提供JavaScript和Ruby编程的网站。目前，网站提供9种编程语言：C，C ++，Java，Python，C＃，JavaScript，Ruby，Bash，MySQL。</p><p>13、<a href="https://www.coursera.org/" target="_blank" rel="noopener">https://www.coursera.org/</a><br>Coursera是全球最好视频讲座网站，用户可以从著名的教授那里获得很多计算机科学课程。</p><p>14、<a href="http://www.javaworld.com/" target="_blank" rel="noopener">http://www.javaworld.com/</a><br>JavaWorld是一个拥有大量关于各种Java主题教程资源的网站。网站里的很多文章写得非常好，并配有插图。JavaWorld可以作为一个深度学习的网站来阅读。</p><p>15、<a href="https://en.wikipedia.org/" target="_blank" rel="noopener">https://en.wikipedia.org/</a><br>维基百科（Wikipedia）是开发人员查找和学习几乎任何编程概念最好的资源网站之一。作为一个有经验的Java开发人员，你可能只会一些概念，但了解不多。维基百科是一个免费了解最新信息的好地方，例如，什么是面向服务的编程。</p><p>16、Program Creek<br>Program Creek是世界上排名前100的Java博客之一。用户可以找到一些没有被任何其他网站所写的主题，每篇文章总是包含很好的图表或代码示例。Program Creek包含研究和行业人员撰写的文章，并始终向Java开发人员分享优质文章。</p>]]></content>
       
       
       <categories>
@@ -654,11 +654,11 @@
     
     
     <entry>
-      <title>Eclipse 最常用的 10 组快捷键，个个牛逼！</title>
-      <link href="/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/"/>
-      <url>/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</url>
+      <title>为什么培训班出来的程序员总遭人嫌弃？</title>
+      <link href="/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
+      <url>/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</url>
       
-        <content type="html"><![CDATA[<p>今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。</p><h3 id="1、打开资源"><a href="#1、打开资源" class="headerlink" title="1、打开资源"></a>1、打开资源</h3><pre><code>CTRL + SHIFT + R：打开所有类型文件，不包括 JAR 包；  CTRL + SHIFT + T：打开 Java 类型文件，包括 JAR 包；</code></pre><h3 id="2、查找资源"><a href="#2、查找资源" class="headerlink" title="2、查找资源"></a>2、查找资源</h3><pre><code>CTRL + F：查找当前编辑器内容； CTRL + H：查找所有文件内容；  CTRL + SHIFT + G：快速查找所有引用的地方；</code></pre><h3 id="3、代码整理"><a href="#3、代码整理" class="headerlink" title="3、代码整理"></a>3、代码整理</h3><pre><code>CTRL + SHIFT + F：格式化代码； CTRL + SHIFT + O：去除没有用到的引用；  CTRL + SHIFT + M：导入需要的类引用；</code></pre><h3 id="4、重命名"><a href="#4、重命名" class="headerlink" title="4、重命名"></a>4、重命名</h3><pre><code>ALT + SHIFT + R：重命名； CTRL + SHIFT + X：转换大写； CTRL + SHIFT + Y：转换小写；</code></pre><h3 id="5、切换编辑器"><a href="#5、切换编辑器" class="headerlink" title="5、切换编辑器"></a>5、切换编辑器</h3><pre><code>CTRL + E：显示所有打开的编辑器列表；  CTRL + SHIFT + E：显示更详细的所有打开的编辑器列表； ALT + 左右方向键：回到上一次/下一次编辑所在的代码；</code></pre><h3 id="6、快速处理行"><a href="#6、快速处理行" class="headerlink" title="6、快速处理行"></a>6、快速处理行</h3><pre><code>CTRL + D：删除当前行；  CTRL + ALT + 上下方向键：向上/下复制当前行； ALT + 上下方向键：向上/下替换行；</code></pre><h3 id="7、类继承关系"><a href="#7、类继承关系" class="headerlink" title="7、类继承关系"></a>7、类继承关系</h3><pre><code>CTRL + T：显示当前类继承关系列表；  F4：打开当前类继承关系对话框；  CTRL + SHIFT + H：打开指定的类继承关系对话框；</code></pre><h3 id="8、快速修复"><a href="#8、快速修复" class="headerlink" title="8、快速修复"></a>8、快速修复</h3><pre><code>CTRL + 1：快速修复问题；</code></pre><h3 id="9、重构"><a href="#9、重构" class="headerlink" title="9、重构"></a>9、重构</h3><pre><code>ALT + SHIFT + L：提取出局部变量；  ALT + SHIFT + M：提取出方法； ALT + SHIFT + C：修改当前方法构造；</code></pre><h3 id="10-添加注释"><a href="#10-添加注释" class="headerlink" title="10.添加注释"></a>10.添加注释</h3><pre><code>CTRL + /：用行注释注释当前行或者选择的行； CTRL + SHIFT + C：和上面一样； CTRL + SHIFT + /：用块注释注释选择的行；</code></pre><p>大概是这些了，服不服？<br>还有一个 CTRL + SHIFT + L 万能快捷键，不知道有什么按什么快捷键，可以按一组这个快捷键查看，要修改快捷键，就连续按两个这个组合键。</p>]]></content>
+        <content type="html"><![CDATA[<p>由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。<br>于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。</p><h3 id="“0基础入学，三个月包就业”"><a href="#“0基础入学，三个月包就业”" class="headerlink" title="“0基础入学，三个月包就业”"></a>“0基础入学，三个月包就业”</h3><h3 id="“毕业月入不过万，不收学费”"><a href="#“毕业月入不过万，不收学费”" class="headerlink" title="“毕业月入不过万，不收学费”"></a>“毕业月入不过万，不收学费”</h3><h3 id="“从前是你找工作，接下来是工作找你”"><a href="#“从前是你找工作，接下来是工作找你”" class="headerlink" title="“从前是你找工作，接下来是工作找你”"></a>“从前是你找工作，接下来是工作找你”</h3><h3 id="真是人有多大胆，口号就有多不要脸。"><a href="#真是人有多大胆，口号就有多不要脸。" class="headerlink" title="真是人有多大胆，口号就有多不要脸。"></a>真是人有多大胆，口号就有多不要脸。</h3><p>对于迫切想改变自己境遇的人来说，这些口号无疑是很具诱惑力的。在培训机构的宣传下，好像软件开发行业是一个门槛低，收入高，只要几个月的培训就可以月入过万，实现人生理想的好职业。</p><p>可现实是越来越多的企业不想招，甚至明言不招培训班出来的学生。而不少培训班也会教学生隐瞒自己的培训经历，会教学生面试的技巧，包装简历，虚报学历和工作经历，把学生包装成一个具有两年项目开发经验的软件工程师，而且开价往往都不低，动不动就8k以上…</p><h3 id="为什么会被嫌弃"><a href="#为什么会被嫌弃" class="headerlink" title="为什么会被嫌弃"></a>为什么会被嫌弃</h3><p>培训班出身的学生被嫌弃的原因主要有以下几个：</p><p>计算机基础知识极其薄弱，基本上只是会简单的业务逻辑，懂得基本的增删改查，自学能力弱，在短期培训过程中，接收的是填鸭式的教育，即使讲师的教学水平极高，学生极努力，也不可能在短时间内将这些知识消化，大多数只是一知半解，知道有这么个概念罢了，面试时也许可以做到应答自如，可实操能力极弱。而且习惯的是视频式的、类似于手把手教学的模式。对于新知识的自学能力是很差的，看文档的能力很弱。</p><p>开价高，心浮气躁。大多数参加培训的都不是学计算机专业的。有些甚至以前连电脑都没怎么用过，连打字都很慢。这些人之所以去培训，是因为在原行业混得不好，又听说it行业工资高，才转行过去。</p><p>有这种心态的人，做哪个行业都很难有成就，但别说在it行业，要做好软件开发，专注、执着、认真是必备的素质。为钱而来的还是请退场吧。你们把因果关系颠倒了。不是it行业高薪，而是因为专注于这个行业，才高薪。那些靠混的，凭借着互联网热潮上位的，是有可能混到一份不错的offer，可不会长久。</p><h3 id="你弱你还有理了"><a href="#你弱你还有理了" class="headerlink" title="你弱你还有理了"></a>你弱你还有理了</h3><p>有些人因为培训班的身份被拒还很委屈，认为企业对他们有歧视。在此，引用时下热门的句式：“你弱，你还有理了”。</p><p>你弱，你还有理了。</p><p>不否认，有些人虽然是培训班出身，但很优秀，可这个占比太小了。对于企业用人部门来说，他们不值得去为此而冒险，优秀的企业在招人时是很慎重的，招一个人的成本也是相当高，企业招一个人肯定会综合衡量利弊。尤其是软件开发行业，优秀与平庸的人相差太多了，效率上可能相差十倍以上。</p><p>一个优秀的程序员写出诗一样的代码，一个平庸的写出的是屎一样的代码。不仅不可用，还会对整个项目起到污染，连累他人擦屁股。</p><p>换位思考，当你处于企业用人单位的角色，你也不会选择冒险去招培训班出身人的，宁愿多花时间，提高offer去招更有可能是靠谱的人。</p><p>毕竟，好的程序员是写代码，差的程序员是写bug…</p><h3 id="别以为自己真有两年经验"><a href="#别以为自己真有两年经验" class="headerlink" title="别以为自己真有两年经验"></a>别以为自己真有两年经验</h3><p>千万别相信讲师给你灌输的鬼话：“这几个月就已经让你们有两年的项目经验了”。</p><p>复制代码，跟实际经验完全不同！</p><p>那几个月，你学到的只是知识，只是最基础的知识，你并没有得到半点经验！经验是不可能靠他人传授的，因为自己经历过才算得上是经验！没有经历过项目deadline，没有被莫名其妙的bug弄得焦头烂额，没有真正的团队合作经历，就够那几个月复制讲师的代码，就说自己有两年的开发经验了。</p><h3 id="打铁还需自身硬"><a href="#打铁还需自身硬" class="headerlink" title="打铁还需自身硬"></a>打铁还需自身硬</h3><p>那么是不是培训班出身的人就没有机会了？</p><p>当然不是，出身不好，起点差都不代表着前面的路就被堵死了。前面说了那么多嫌弃的话，主要是要让你认识到自己为什么会被嫌弃，而不是以受害者的心态自怨自艾（“受害者心态无济于事”）。</p><p>以下是对于真正想从事软件开发行业的人提供的建议：</p><p>认清自己的能力，不骄狂自大：因为你真的很弱。不妄自菲薄：因为每个人都是从弱小中成长的。认清自己的能力，是成长的第一步。</p><p>尽快摆脱填鸭式教育带来的被动学习方式。诚然，几个月的学习对于新人来说，是极其高效的，能以最快的速度踏入编程的门槛。但绝不能再依赖培训班的学习方式，要知道，你是毕业了，但对于软件开发，你的路还是刚开始，往后的学习是以看文档、看书、搜索资料为主。现在开始就要改变自己的学习习惯，认真地看书，你会发现，那些原本你以为自己懂了的知识，在看书后，才知道自己原先的认知是多么浅薄。</p><p>证明自己的能力。程序员证明自己能力最简单的方式就是代码。“Talk is cheap, Show me the code”. 从现在开始，你就要养成输出知识的习惯，可以是写技术博客，也可以是构建个人网站，把这些作品展示出来，现在免费的展示平台那么多，你一定要长久地积累，这些就是你最好的简历。</p><p>忘记自己是从培训班出来的，把自己当成一个自学者。优秀的程序员都是野生的，培训班出来的是只是宠物，面试时不用提你培训的经历，虽然这并不丢人，但可能会带来偏见。只要你能展示你的作品，表现你的自学能力，而你自身的能力又过关，其实不管你是什么出身，都无关紧要。（我自己就是文科出身，毕业前连半句代码都看不懂）</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>嫌弃的不是你的出身，而是你的综合素养。</p><p>总之，出身差，就靠实力，实力差，就靠态度。你之所以会被嫌弃，不是因为你来自培训班，而是因为你没有摆脱培训班，没有构建自己的知识体系。当然，这些积累是需要长时间的，所以慢慢来，只要你不是奔着钱来的，你总能找到工作，也总能得到成长。</p><p>作者：塞亚猫<br><a href="http://www.jianshu.com/p/a3f650d93216" target="_blank" rel="noopener">http://www.jianshu.com/p/a3f650d93216</a></p>]]></content>
       
       
       <categories>
@@ -679,11 +679,11 @@
     
     
     <entry>
-      <title>为什么培训班出来的程序员总遭人嫌弃？</title>
-      <link href="/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/"/>
-      <url>/2019/05/22/wei-shi-me-pei-xun-ban-chu-lai-de-cheng-xu-yuan-zong-zao-ren-xian-qi/</url>
+      <title>Eclipse 最常用的 10 组快捷键，个个牛逼！</title>
+      <link href="/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/"/>
+      <url>/2019/05/22/eclipse-zui-chang-yong-de-10-zu-kuai-jie-jian-ge-ge-niu-bi/</url>
       
-        <content type="html"><![CDATA[<p>由于it软件行业对人才的需求很大，很多传统行业也纷纷创办“互联网+”项目，加上app开发热潮，微信公众平台也催生了更多的就业岗位。<br>于是it从业人员的薪水也随之水涨船高。同时it培训班也随雨后春笋般涌出，一个个打出的口号都很响。</p><h3 id="“0基础入学，三个月包就业”"><a href="#“0基础入学，三个月包就业”" class="headerlink" title="“0基础入学，三个月包就业”"></a>“0基础入学，三个月包就业”</h3><h3 id="“毕业月入不过万，不收学费”"><a href="#“毕业月入不过万，不收学费”" class="headerlink" title="“毕业月入不过万，不收学费”"></a>“毕业月入不过万，不收学费”</h3><h3 id="“从前是你找工作，接下来是工作找你”"><a href="#“从前是你找工作，接下来是工作找你”" class="headerlink" title="“从前是你找工作，接下来是工作找你”"></a>“从前是你找工作，接下来是工作找你”</h3><h3 id="真是人有多大胆，口号就有多不要脸。"><a href="#真是人有多大胆，口号就有多不要脸。" class="headerlink" title="真是人有多大胆，口号就有多不要脸。"></a>真是人有多大胆，口号就有多不要脸。</h3><p>对于迫切想改变自己境遇的人来说，这些口号无疑是很具诱惑力的。在培训机构的宣传下，好像软件开发行业是一个门槛低，收入高，只要几个月的培训就可以月入过万，实现人生理想的好职业。</p><p>可现实是越来越多的企业不想招，甚至明言不招培训班出来的学生。而不少培训班也会教学生隐瞒自己的培训经历，会教学生面试的技巧，包装简历，虚报学历和工作经历，把学生包装成一个具有两年项目开发经验的软件工程师，而且开价往往都不低，动不动就8k以上…</p><h3 id="为什么会被嫌弃"><a href="#为什么会被嫌弃" class="headerlink" title="为什么会被嫌弃"></a>为什么会被嫌弃</h3><p>培训班出身的学生被嫌弃的原因主要有以下几个：</p><p>计算机基础知识极其薄弱，基本上只是会简单的业务逻辑，懂得基本的增删改查，自学能力弱，在短期培训过程中，接收的是填鸭式的教育，即使讲师的教学水平极高，学生极努力，也不可能在短时间内将这些知识消化，大多数只是一知半解，知道有这么个概念罢了，面试时也许可以做到应答自如，可实操能力极弱。而且习惯的是视频式的、类似于手把手教学的模式。对于新知识的自学能力是很差的，看文档的能力很弱。</p><p>开价高，心浮气躁。大多数参加培训的都不是学计算机专业的。有些甚至以前连电脑都没怎么用过，连打字都很慢。这些人之所以去培训，是因为在原行业混得不好，又听说it行业工资高，才转行过去。</p><p>有这种心态的人，做哪个行业都很难有成就，但别说在it行业，要做好软件开发，专注、执着、认真是必备的素质。为钱而来的还是请退场吧。你们把因果关系颠倒了。不是it行业高薪，而是因为专注于这个行业，才高薪。那些靠混的，凭借着互联网热潮上位的，是有可能混到一份不错的offer，可不会长久。</p><h3 id="你弱你还有理了"><a href="#你弱你还有理了" class="headerlink" title="你弱你还有理了"></a>你弱你还有理了</h3><p>有些人因为培训班的身份被拒还很委屈，认为企业对他们有歧视。在此，引用时下热门的句式：“你弱，你还有理了”。</p><p>你弱，你还有理了。</p><p>不否认，有些人虽然是培训班出身，但很优秀，可这个占比太小了。对于企业用人部门来说，他们不值得去为此而冒险，优秀的企业在招人时是很慎重的，招一个人的成本也是相当高，企业招一个人肯定会综合衡量利弊。尤其是软件开发行业，优秀与平庸的人相差太多了，效率上可能相差十倍以上。</p><p>一个优秀的程序员写出诗一样的代码，一个平庸的写出的是屎一样的代码。不仅不可用，还会对整个项目起到污染，连累他人擦屁股。</p><p>换位思考，当你处于企业用人单位的角色，你也不会选择冒险去招培训班出身人的，宁愿多花时间，提高offer去招更有可能是靠谱的人。</p><p>毕竟，好的程序员是写代码，差的程序员是写bug…</p><h3 id="别以为自己真有两年经验"><a href="#别以为自己真有两年经验" class="headerlink" title="别以为自己真有两年经验"></a>别以为自己真有两年经验</h3><p>千万别相信讲师给你灌输的鬼话：“这几个月就已经让你们有两年的项目经验了”。</p><p>复制代码，跟实际经验完全不同！</p><p>那几个月，你学到的只是知识，只是最基础的知识，你并没有得到半点经验！经验是不可能靠他人传授的，因为自己经历过才算得上是经验！没有经历过项目deadline，没有被莫名其妙的bug弄得焦头烂额，没有真正的团队合作经历，就够那几个月复制讲师的代码，就说自己有两年的开发经验了。</p><h3 id="打铁还需自身硬"><a href="#打铁还需自身硬" class="headerlink" title="打铁还需自身硬"></a>打铁还需自身硬</h3><p>那么是不是培训班出身的人就没有机会了？</p><p>当然不是，出身不好，起点差都不代表着前面的路就被堵死了。前面说了那么多嫌弃的话，主要是要让你认识到自己为什么会被嫌弃，而不是以受害者的心态自怨自艾（“受害者心态无济于事”）。</p><p>以下是对于真正想从事软件开发行业的人提供的建议：</p><p>认清自己的能力，不骄狂自大：因为你真的很弱。不妄自菲薄：因为每个人都是从弱小中成长的。认清自己的能力，是成长的第一步。</p><p>尽快摆脱填鸭式教育带来的被动学习方式。诚然，几个月的学习对于新人来说，是极其高效的，能以最快的速度踏入编程的门槛。但绝不能再依赖培训班的学习方式，要知道，你是毕业了，但对于软件开发，你的路还是刚开始，往后的学习是以看文档、看书、搜索资料为主。现在开始就要改变自己的学习习惯，认真地看书，你会发现，那些原本你以为自己懂了的知识，在看书后，才知道自己原先的认知是多么浅薄。</p><p>证明自己的能力。程序员证明自己能力最简单的方式就是代码。“Talk is cheap, Show me the code”. 从现在开始，你就要养成输出知识的习惯，可以是写技术博客，也可以是构建个人网站，把这些作品展示出来，现在免费的展示平台那么多，你一定要长久地积累，这些就是你最好的简历。</p><p>忘记自己是从培训班出来的，把自己当成一个自学者。优秀的程序员都是野生的，培训班出来的是只是宠物，面试时不用提你培训的经历，虽然这并不丢人，但可能会带来偏见。只要你能展示你的作品，表现你的自学能力，而你自身的能力又过关，其实不管你是什么出身，都无关紧要。（我自己就是文科出身，毕业前连半句代码都看不懂）</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>嫌弃的不是你的出身，而是你的综合素养。</p><p>总之，出身差，就靠实力，实力差，就靠态度。你之所以会被嫌弃，不是因为你来自培训班，而是因为你没有摆脱培训班，没有构建自己的知识体系。当然，这些积累是需要长时间的，所以慢慢来，只要你不是奔着钱来的，你总能找到工作，也总能得到成长。</p><p>作者：塞亚猫<br><a href="http://www.jianshu.com/p/a3f650d93216" target="_blank" rel="noopener">http://www.jianshu.com/p/a3f650d93216</a></p>]]></content>
+        <content type="html"><![CDATA[<p>今天，我大概整理了 10 组 Eclipse 我觉得比较常用的牛逼快捷键，希望对你有帮助。</p><h3 id="1、打开资源"><a href="#1、打开资源" class="headerlink" title="1、打开资源"></a>1、打开资源</h3><pre><code>CTRL + SHIFT + R：打开所有类型文件，不包括 JAR 包；  CTRL + SHIFT + T：打开 Java 类型文件，包括 JAR 包；</code></pre><h3 id="2、查找资源"><a href="#2、查找资源" class="headerlink" title="2、查找资源"></a>2、查找资源</h3><pre><code>CTRL + F：查找当前编辑器内容； CTRL + H：查找所有文件内容；  CTRL + SHIFT + G：快速查找所有引用的地方；</code></pre><h3 id="3、代码整理"><a href="#3、代码整理" class="headerlink" title="3、代码整理"></a>3、代码整理</h3><pre><code>CTRL + SHIFT + F：格式化代码； CTRL + SHIFT + O：去除没有用到的引用；  CTRL + SHIFT + M：导入需要的类引用；</code></pre><h3 id="4、重命名"><a href="#4、重命名" class="headerlink" title="4、重命名"></a>4、重命名</h3><pre><code>ALT + SHIFT + R：重命名； CTRL + SHIFT + X：转换大写； CTRL + SHIFT + Y：转换小写；</code></pre><h3 id="5、切换编辑器"><a href="#5、切换编辑器" class="headerlink" title="5、切换编辑器"></a>5、切换编辑器</h3><pre><code>CTRL + E：显示所有打开的编辑器列表；  CTRL + SHIFT + E：显示更详细的所有打开的编辑器列表； ALT + 左右方向键：回到上一次/下一次编辑所在的代码；</code></pre><h3 id="6、快速处理行"><a href="#6、快速处理行" class="headerlink" title="6、快速处理行"></a>6、快速处理行</h3><pre><code>CTRL + D：删除当前行；  CTRL + ALT + 上下方向键：向上/下复制当前行； ALT + 上下方向键：向上/下替换行；</code></pre><h3 id="7、类继承关系"><a href="#7、类继承关系" class="headerlink" title="7、类继承关系"></a>7、类继承关系</h3><pre><code>CTRL + T：显示当前类继承关系列表；  F4：打开当前类继承关系对话框；  CTRL + SHIFT + H：打开指定的类继承关系对话框；</code></pre><h3 id="8、快速修复"><a href="#8、快速修复" class="headerlink" title="8、快速修复"></a>8、快速修复</h3><pre><code>CTRL + 1：快速修复问题；</code></pre><h3 id="9、重构"><a href="#9、重构" class="headerlink" title="9、重构"></a>9、重构</h3><pre><code>ALT + SHIFT + L：提取出局部变量；  ALT + SHIFT + M：提取出方法； ALT + SHIFT + C：修改当前方法构造；</code></pre><h3 id="10-添加注释"><a href="#10-添加注释" class="headerlink" title="10.添加注释"></a>10.添加注释</h3><pre><code>CTRL + /：用行注释注释当前行或者选择的行； CTRL + SHIFT + C：和上面一样； CTRL + SHIFT + /：用块注释注释选择的行；</code></pre><p>大概是这些了，服不服？<br>还有一个 CTRL + SHIFT + L 万能快捷键，不知道有什么按什么快捷键，可以按一组这个快捷键查看，要修改快捷键，就连续按两个这个组合键。</p>]]></content>
       
       
       <categories>
@@ -754,31 +754,6 @@
     
     
     <entry>
-      <title>Java 诞生日，Java 24 岁了！</title>
-      <link href="/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
-      <url>/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</url>
-      
-        <content type="html"><![CDATA[<p>今天是 Java 诞生日，Java 今年 24 岁了，比栈长还年轻。。还有得搞，别慌！作为一名Java语言的学习者，对Java的起源和发展有个大概的了解应是必要的。</p><p>1991年，Sun公司成立Green项目。Oak语言诞生。</p><p>1992年11月，Sun公司为Green项目成立FirstPerson公司。</p><p>1992年12月3日，被命名为Star7的面向一种类PDA的这台设备进行了展示，这种设备有鲜艳的图形界面和被称为“Duke”的智能代理来帮助用户。</p><p>1993年，FirstPerson公司重定位Oak。转向到网络应用领域（背景：WWW开始席卷全球）。</p><h4 id="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"><a href="#1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器" class="headerlink" title="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"></a>1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器</h4><p>WebRunner，后更名为Hotjava。Oak编写的Applet让网页由静态转成动态。</p><h4 id="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"><a href="#1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。" class="headerlink" title="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"></a>1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。</h4><p>1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。</p><p>1996年1月，Sun公司发布了Java的第一个开发工具包（JDK 1.0），这是Java发展历程中的重要里程碑，标志着Java成为一种独立的开发工具。</p><p>1996年9月，约8.3万个网页应用了Java技术来制作。</p><p>1996年10月，Sun公司发布了Java平台的第一个即时（JIT）编译器。</p><p>1997年2月，JDK1.1发布，在随后的3周时间里，达到了22万次的下载量。</p><p>1997年4月，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录。</p><p>1997年9月，JavaDeveloperConnection社区成员超过十万。</p><p>1998年2月，JDK1.1被下载超过2,000,000次。</p><p>1998年12月8日，JAVA2企业平台J2EE发布。</p><p>1999年4月27日，HotSpot虚拟机发布。HotSpot虚拟机发布时是作为JDK 1.2的附加程序提供的，后来它成为了JDK 1.3及之后所有版本的Sun JDK的默认虚拟机。</p><p>1999年6月，SUN公司发布Java的三个版本：标准版（JavaSE,以前是J2SE）、企业版（JavaEE以前是J2EE）和微型版（JavaME，以前是J2ME）。</p><p>2000年5月，JDK1.3，JDK1.4相继发布。</p><p>2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机。</p><p>2001年9月24日，J2EE1.3发布。</p><p>2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升。</p><h4 id="2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。"><a href="#2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。" class="headerlink" title="2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。"></a>2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。</h4><p>2005年6月，JavaOne大会召开，SUN公司公开JavaSE6。此时，Java的各种版本已经更名，以取消其中的数字”2″：J2EE更名为JavaEE，J2SE更名为JavaSE，J2ME更名为JavaME。</p><p>2006年11月13日，Java技术的发明者Sun公司宣布，将Java技术作为免费软件对外发布。Sun公司正式发布的有关Java平台标准版的第一批源代码，以及Java迷你版的可执行源代码。</p><p>2006年12月，SUN公司发布JRE6.0。</p><p>2007年3月起，全世界所有的开发人员均可对Java源代码进行修改 。</p><p>2009年4月，甲骨文74亿美元收购Sun。取得java的版权。</p><p>2011年7月28日，甲骨文发布java7.0的正式版。</p><p>2014年，甲骨文（O）公司发布了Java8正式版。</p><p>2017年，甲骨文发布Java9。</p><p>2018年3月，甲骨文发布Java10。</p><p>2018年9月，甲骨文发布Java11。</p><p>2019年3月，甲骨文发布Java12。</p><p>参考：<a href="http://www.sohu.com/a/194505161_775404" target="_blank" rel="noopener">www.sohu.com/a/194505161_775404</a></p><p>最后祝我大Java生日快乐！！！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>SQL Server 日期时间如何处理</title>
       <link href="/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/"/>
       <url>/2019/05/19/sql-server-ri-qi-shi-jian-ru-he-chu-li/</url>
@@ -796,6 +771,31 @@
         <tags>
             
             <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java 诞生日，Java 24 岁了！</title>
+      <link href="/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/"/>
+      <url>/2019/05/19/java-dan-sheng-ri-java-24-sui-liao/</url>
+      
+        <content type="html"><![CDATA[<p>今天是 Java 诞生日，Java 今年 24 岁了，比栈长还年轻。。还有得搞，别慌！作为一名Java语言的学习者，对Java的起源和发展有个大概的了解应是必要的。</p><p>1991年，Sun公司成立Green项目。Oak语言诞生。</p><p>1992年11月，Sun公司为Green项目成立FirstPerson公司。</p><p>1992年12月3日，被命名为Star7的面向一种类PDA的这台设备进行了展示，这种设备有鲜艳的图形界面和被称为“Duke”的智能代理来帮助用户。</p><p>1993年，FirstPerson公司重定位Oak。转向到网络应用领域（背景：WWW开始席卷全球）。</p><h4 id="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"><a href="#1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器" class="headerlink" title="1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器"></a>1994年6月，Oak技术包括源代码全部免费公开。Oak开发出小型万维网浏览器</h4><p>WebRunner，后更名为Hotjava。Oak编写的Applet让网页由静态转成动态。</p><h4 id="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"><a href="#1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。" class="headerlink" title="1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。"></a>1995年，Oak注册登记时，发现该名已被占用，遂更名为Java。</h4><p>1995年5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。</p><p>1996年1月，Sun公司发布了Java的第一个开发工具包（JDK 1.0），这是Java发展历程中的重要里程碑，标志着Java成为一种独立的开发工具。</p><p>1996年9月，约8.3万个网页应用了Java技术来制作。</p><p>1996年10月，Sun公司发布了Java平台的第一个即时（JIT）编译器。</p><p>1997年2月，JDK1.1发布，在随后的3周时间里，达到了22万次的下载量。</p><p>1997年4月，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录。</p><p>1997年9月，JavaDeveloperConnection社区成员超过十万。</p><p>1998年2月，JDK1.1被下载超过2,000,000次。</p><p>1998年12月8日，JAVA2企业平台J2EE发布。</p><p>1999年4月27日，HotSpot虚拟机发布。HotSpot虚拟机发布时是作为JDK 1.2的附加程序提供的，后来它成为了JDK 1.3及之后所有版本的Sun JDK的默认虚拟机。</p><p>1999年6月，SUN公司发布Java的三个版本：标准版（JavaSE,以前是J2SE）、企业版（JavaEE以前是J2EE）和微型版（JavaME，以前是J2ME）。</p><p>2000年5月，JDK1.3，JDK1.4相继发布。</p><p>2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机。</p><p>2001年9月24日，J2EE1.3发布。</p><p>2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升。</p><h4 id="2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。"><a href="#2004年9月30日，J2SE1-5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1-5更名为JavaSE5-0。" class="headerlink" title="2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。"></a>2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为JavaSE5.0。</h4><p>2005年6月，JavaOne大会召开，SUN公司公开JavaSE6。此时，Java的各种版本已经更名，以取消其中的数字”2″：J2EE更名为JavaEE，J2SE更名为JavaSE，J2ME更名为JavaME。</p><p>2006年11月13日，Java技术的发明者Sun公司宣布，将Java技术作为免费软件对外发布。Sun公司正式发布的有关Java平台标准版的第一批源代码，以及Java迷你版的可执行源代码。</p><p>2006年12月，SUN公司发布JRE6.0。</p><p>2007年3月起，全世界所有的开发人员均可对Java源代码进行修改 。</p><p>2009年4月，甲骨文74亿美元收购Sun。取得java的版权。</p><p>2011年7月28日，甲骨文发布java7.0的正式版。</p><p>2014年，甲骨文（O）公司发布了Java8正式版。</p><p>2017年，甲骨文发布Java9。</p><p>2018年3月，甲骨文发布Java10。</p><p>2018年9月，甲骨文发布Java11。</p><p>2019年3月，甲骨文发布Java12。</p><p>参考：<a href="http://www.sohu.com/a/194505161_775404" target="_blank" rel="noopener">www.sohu.com/a/194505161_775404</a></p><p>最后祝我大Java生日快乐！！！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -1104,6 +1104,31 @@
     
     
     <entry>
+      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
+      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
+      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
+      
+        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>宁南山：说下996</title>
       <link href="/2019/05/07/ning-nan-shan-shuo-xia-996/"/>
       <url>/2019/05/07/ning-nan-shan-shuo-xia-996/</url>
@@ -1146,31 +1171,6 @@
         <tags>
             
             <tag> 程序猿 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
-      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
-      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
-      
-        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
             
         </tags>
       
@@ -1445,7 +1445,7 @@
       
         <tags>
             
-            <tag> Java </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -1916,23 +1916,25 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/2019/03/21/about/"/>
-      <url>/2019/03/21/about/</url>
+      <title>Java面试中最高频的那20%知识点！</title>
+      <link href="/2019/03/21/java-mian-shi/"/>
+      <url>/2019/03/21/java-mian-shi/</url>
       
-        <content type="html"><![CDATA[<h1 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h1><p>博主是一名Java码农。</p><p>虽然还未走上人生巅峰，但是一直保持着一个码农的自我修养。</p><p>用一句话概括博主：每天瞎逼忙，还没赚到钱。</p><p>但是博主有一颗分享技术的心，我会尽量用通俗易懂的方式，分享个人的知识。</p><p>博客的宗旨就是分享知识，分享技术，不一定高深，但一定是博主用心写作而成的。</p><p>所有人都是从0开始起步，在学习过程中，会遇到各种困难，这个时候如果可以借鉴别人的经验，会让我们省力不少，希望我的博客也能帮助到你。</p>]]></content>
+        <content type="html"><![CDATA[<p>Java目前已经不仅仅是一门开发语言，而是一整套生态体系。</p><p>作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。</p><p>但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的知识，就能解决80%的问题。</p><p>那么，Java程序员必须掌握的20%知识点都有哪些呢？</p><p>个人认为包括以下内容：</p><pre><code>Java基础知识，如集合类、IO、泛型等。JVM底层知识，如类加载机制、GC、JVM内存结构等。Java并发编程知识，如Java内存模型、并发包、线程池、netty等。开发框架知识，如Spring、mybatis、springboot、springMVC等。分布式相关知识，如CAP理论、分布式锁、分布式事务、Zookeeper、spring Cloud等。其他基础知识，编程语言、网络方面、数据库、数据结构和算法。中间件相关知识，如Redis、rabbitMQ、Dubbo等。服务器相关知识，如tomcat、jetty、jboss等。</code></pre><p>以上这些知识，就是最高频的面试问题，以及工作中需要用到的知识。当然，一个程序员想要掌握以上所有知识，可能需要花费很长时间。这个过程注定是漫长且孤独的。</p><p>来源：<br><a href="https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw</a></p>]]></content>
       
       
       <categories>
           
-          <category> 关于 </category>
+          <category> 面试 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 博客说明 </tag>
+            <tag> java </tag>
+            
+            <tag> 面试 </tag>
             
         </tags>
       
@@ -1966,25 +1968,23 @@
     
     
     <entry>
-      <title>Java面试中最高频的那20%知识点！</title>
-      <link href="/2019/03/21/java-mian-shi/"/>
-      <url>/2019/03/21/java-mian-shi/</url>
+      <title>关于</title>
+      <link href="/2019/03/21/about/"/>
+      <url>/2019/03/21/about/</url>
       
-        <content type="html"><![CDATA[<p>Java目前已经不仅仅是一门开发语言，而是一整套生态体系。</p><p>作为一个Java程序员，既是幸运的，也是不幸的。幸运的是我们有很多轮子可以拿过来用，不幸的是我们有太多的轮子需要学习。</p><p>但是，无论是日常工作还是面试问题，也都符合二八原则。即掌握20%的知识，就能解决80%的问题。</p><p>那么，Java程序员必须掌握的20%知识点都有哪些呢？</p><p>个人认为包括以下内容：</p><pre><code>Java基础知识，如集合类、IO、泛型等。JVM底层知识，如类加载机制、GC、JVM内存结构等。Java并发编程知识，如Java内存模型、并发包、线程池、netty等。开发框架知识，如Spring、mybatis、springboot、springMVC等。分布式相关知识，如CAP理论、分布式锁、分布式事务、Zookeeper、spring Cloud等。其他基础知识，编程语言、网络方面、数据库、数据结构和算法。中间件相关知识，如Redis、rabbitMQ、Dubbo等。服务器相关知识，如tomcat、jetty、jboss等。</code></pre><p>以上这些知识，就是最高频的面试问题，以及工作中需要用到的知识。当然，一个程序员想要掌握以上所有知识，可能需要花费很长时间。这个过程注定是漫长且孤独的。</p><p>来源：<br><a href="https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Ws79USt9mkkANGrVwdpkpw</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h1><p>博主是一名Java码农。</p><p>虽然还未走上人生巅峰，但是一直保持着一个码农的自我修养。</p><p>用一句话概括博主：每天瞎逼忙，还没赚到钱。</p><p>但是博主有一颗分享技术的心，我会尽量用通俗易懂的方式，分享个人的知识。</p><p>博客的宗旨就是分享知识，分享技术，不一定高深，但一定是博主用心写作而成的。</p><p>所有人都是从0开始起步，在学习过程中，会遇到各种困难，这个时候如果可以借鉴别人的经验，会让我们省力不少，希望我的博客也能帮助到你。</p>]]></content>
       
       
       <categories>
           
-          <category> 面试 </category>
+          <category> 关于 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
-            
-            <tag> 面试 </tag>
+            <tag> 博客说明 </tag>
             
         </tags>
       
