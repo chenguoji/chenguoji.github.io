@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>JVM 史上最最最完整深入解析</title>
+      <link href="/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/"/>
+      <url>/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/</url>
+      
+        <content type="html"><![CDATA[<p>转自：SegmentFault   作者：Huangy远<br>segmentfault.com/a/1190000014395186</p><h1 id="Java运行时数据区："><a href="#Java运行时数据区：" class="headerlink" title="Java运行时数据区："></a>Java运行时数据区：</h1><p>Java虚拟机在执行Java程序的过程中会将其管理的内存划分为若干个不同的数据区域，这些区域有各自的用途、创建和销毁的时间，有些区域随虚拟机进程的启动而存在，有<br>些区域则是依赖用户线程的启动和结束来建立和销毁。Java虚拟机所管理的内存包括以下几个运行时数据区域，如图：</p><img src="/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/1.jpg"><h2 id="1、程序计数器："><a href="#1、程序计数器：" class="headerlink" title="1、程序计数器："></a>1、程序计数器：</h2><pre><code>指向当前线程正在执行的字节码指令。线程私有的。</code></pre><h2 id="2、虚拟机栈："><a href="#2、虚拟机栈：" class="headerlink" title="2、虚拟机栈："></a>2、虚拟机栈：</h2><pre><code>虚拟机栈是Java执行方法的内存模型。每个方法被执行的时候，都会创建一个栈帧，把栈帧压人栈，当方法正常返回或者抛出未捕获的异常时，栈帧就会出栈。</code></pre><p>（1）栈帧：栈帧存储方法的相关信息，包含局部变量数表、返回值、操作数栈、动态链接</p><pre><code>a、局部变量表：包含了方法执行过程中的所有变量。局部变量数组所需要的空间在编译期间完成分配，在方法运行期间不会改变局部变量数组的大小。b、返回值：如果有返回值的话，压入调用者栈帧中的操作数栈中，并且把PC的值指向 方法调用指令 后面的一条指令地址。c、操作数栈：操作变量的内存模型。操作数栈的最大深度在编译的时候已经确定（写入方法区code属性的max_stacks项中）。操作数栈的的元素可以是任意Java类型，包括long和double，32位数据占用栈空间为1，64位数据占用2。方法刚开始执行的时候，栈是空的，当方法执行过程中，各种字节码指令往栈中存取数据。d、动态链接：每个栈帧都持有在运行时常量池中该栈帧所属方法的引用，持有这个引用是为了支持方法调用过程中的动态链接。</code></pre><p>（2）线程私有；</p><h2 id="3、本地方法栈："><a href="#3、本地方法栈：" class="headerlink" title="3、本地方法栈："></a>3、本地方法栈：</h2><p>（1）调用本地native的内存模型。</p><p>（2）线程独享。</p><h2 id="4、方法区："><a href="#4、方法区：" class="headerlink" title="4、方法区："></a>4、方法区：</h2><pre><code>用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据</code></pre><p>（1）线程共享的；</p><p>（2）运行时常量池：</p><pre><code>A、是方法区的一部分B、存放编译期生成的各种字面量和符号引用C、Class文件中除了存有类的版本、字段、方法、接口等描述信息，还有一项是常量池，存有这个类的 编译期生成的各种字面量和符号引用，这部分内容将在类加载后，存放到方法区的运行时常量池中。</code></pre><h2 id="5、堆（Heap）："><a href="#5、堆（Heap）：" class="headerlink" title="5、堆（Heap）："></a>5、堆（Heap）：</h2><pre><code>Java对象存储的地方</code></pre><p>（1）Java堆是虚拟机管理的内存中最大的一块</p><p>（2）Java堆是所有线程共享的区域</p><p>（3）在虚拟机启动时创建</p><p>（4）此内存区域的唯一目的就是存放对象实例，几乎所有对象实例都在这里分配内存。存放new生成的对象和数组</p><p>（5）Java堆是垃圾收集器管理的内存区域，因此很多时候称为“GC堆”</p><h1 id="JMM-Java内存模型："><a href="#JMM-Java内存模型：" class="headerlink" title="JMM Java内存模型："></a>JMM Java内存模型：</h1><p>1、 Java的并发采用“共享内存”模型，线程之间通过读写内存的公共状态进行通讯。多个线程之间是不能通过直接传递数据交互的，它们之间交互只能通过共享变量实现。</p><p>2、 主要目的是定义程序中各个变量的访问规则。</p><p>3、 Java内存模型规定所有变量都存储在主内存中，每个线程还有自己的工作内存。</p><pre><code>（1） 线程的工作内存中保存了被该线程使用到的变量的拷贝（从主内存中拷贝过来），线程对变量的所有操作都必须在工作内存中执行，而不能直接访问主内存中的变量。（2） 不同线程之间无法直接访问对方工作内存的变量，线程间变量值的传递都要通过主内存来完成。（3） 主内存主要对应Java堆中实例数据部分。工作内存对应于虚拟机栈中部分区域。</code></pre><img src="/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/2.jpg"><p>4、Java线程之间的通信由内存模型JMM（Java Memory Model）控制。</p><pre><code>（1）JMM决定一个线程对变量的写入何时对另一个线程可见。（2）线程之间共享变量存储在主内存中（3）每个线程有一个私有的本地内存，里面存储了读/写共享变量的副本。（4）JMM通过控制每个线程的本地内存之间的交互，来为程序员提供内存可见性保证。</code></pre><p>5、可见性、有序性：</p><pre><code>（1）当一个共享变量在多个本地内存中有副本时，如果一个本地内存修改了该变量的副本，其他变量应该能够看到修改后的值，此为可见性。（2）保证线程的有序执行，这个为有序性。（保证线程安全）</code></pre><p>6、内存间交互操作：</p><pre><code>（1）lock（锁定）：作用于主内存的变量，把一个变量标识为一条线程独占状态。（2）unlock（解锁）：作用于主内存的变量，把一个处于锁定状态的变量释放出来，释放后的变量才可以被其他线程锁定。（3）read（读取）：作用于主内存变量，把主内存的一个变量读取到工作内存中。（4）load（载入）：作用于工作内存，把read操作读取到工作内存的变量载入到工作内存的变量副本中（5）use（使用）：作用于工作内存的变量，把工作内存中的变量值传递给一个执行引擎。（6）assign（赋值）：作用于工作内存的变量。把执行引擎接收到的值赋值给工作内存的变量。（7）store（存储）：把工作内存的变量的值传递给主内存（8）write（写入）：把store操作的值入到主内存的变量中</code></pre><p>6.1、注意：</p><pre><code>（1）不允许read、load、store、write操作之一单独出现（2）不允许一个线程丢弃assgin操作（3）不允许一个线程不经过assgin操作，就把工作内存中的值同步到主内存中（4）一个新的变量只能在主内存中生成（5）一个变量同一时刻只允许一条线程对其进行lock操作。但lock操作可以被同一条线程执行多次，只有执行相同次数的unlock操作，变量才会解锁（6）如果对一个变量进行lock操作，将会清空工作内存中此变量的值，在执行引擎使用这个变量前，需要重新执行load或者assgin操作初始化变量的值。（7）如果一个变量没有被锁定，不允许对其执行unlock操作，也不允许unlock一个被其他线程锁定的变量（8）对一个变量执行unlock操作之前，需要将该变量同步回主内存中</code></pre><h1 id="堆的内存划分："><a href="#堆的内存划分：" class="headerlink" title="堆的内存划分："></a>堆的内存划分：</h1><img src="/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/3.png"><p>Java堆的内存划分如图所示，分别为年轻代、Old Memory（老年代）、Perm（永久代）。其中在Jdk1.8中，永久代被移除，使用MetaSpace代替。</p><h2 id="1、新生代："><a href="#1、新生代：" class="headerlink" title="1、新生代："></a>1、新生代：</h2><p>（1）使用复制清除算法（Copinng算法），原因是年轻代每次GC都要回收大部分对象。新生代里面分成一份较大的Eden空间和两份较小的Survivor空间。每次只使用Eden和其中一块Survivor空间，然后垃圾回收的时候，把存活对象放到未使用的Survivor（划分出from、to）空间中，清空Eden和刚才使用过的Survivor空间。</p><p>（2）分为Eden、Survivor From、Survivor To，比例默认为8：1：1</p><p>（3）内存不足时发生Minor GC2</p><h2 id="2、老年代："><a href="#2、老年代：" class="headerlink" title="2、老年代："></a>2、老年代：</h2><p>（1）采用标记-整理算法（mark-compact），原因是老年代每次GC只会回收少部分对象。</p><h2 id="3、Perm：用来存储类的元数据，也就是方法区。"><a href="#3、Perm：用来存储类的元数据，也就是方法区。" class="headerlink" title="3、Perm：用来存储类的元数据，也就是方法区。"></a>3、Perm：用来存储类的元数据，也就是方法区。</h2><p>（1）Perm的废除：在jdk1.8中，Perm被替换成MetaSpace，MetaSpace存放在本地内存中。原因是永久代进场内存不够用，或者发生内存泄漏。</p><p>（2）MetaSpace（元空间）：元空间的本质和永久代类似，都是对JVM规范中方法区的实现。不过元空间与永久代之间最大的区别在于：元空间并不在虚拟机中，而是使用本地内存。</p><h2 id="4、堆内存的划分在JVM里面的示意图："><a href="#4、堆内存的划分在JVM里面的示意图：" class="headerlink" title="4、堆内存的划分在JVM里面的示意图："></a>4、堆内存的划分在JVM里面的示意图：</h2><img src="/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/4.png"><h1 id="GC垃圾回收："><a href="#GC垃圾回收：" class="headerlink" title="GC垃圾回收："></a>GC垃圾回收：</h1><h2 id="一、-判断对象是否要回收的方法：可达性分析法"><a href="#一、-判断对象是否要回收的方法：可达性分析法" class="headerlink" title="一、 判断对象是否要回收的方法：可达性分析法"></a>一、 判断对象是否要回收的方法：可达性分析法</h2><h3 id="1、-可达性分析法："><a href="#1、-可达性分析法：" class="headerlink" title="1、 可达性分析法："></a>1、 可达性分析法：</h3><pre><code>通过一系列“GC Roots”对象作为起点进行搜索，如果在“GC Roots”和一个对象之间没有可达路径，则称该对象是不可达的。不可达对象不一定会成为可回收对象。进入DEAD状态的线程还可以恢复，GC不会回收它的内存。（把一些对象当做root对象，JVM认为root对象是不可回收的，并且root对象引用的对象也是不可回收的）</code></pre><h3 id="2、-以下对象会被认为是root对象："><a href="#2、-以下对象会被认为是root对象：" class="headerlink" title="2、 以下对象会被认为是root对象："></a>2、 以下对象会被认为是root对象：</h3><pre><code>（1） 虚拟机栈（栈帧中本地变量表）中引用的对象（2） 方法区中静态属性引用的对象（3） 方法区中常量引用的对象（4） 本地方法栈中Native方法引用的对象</code></pre><h3 id="3、-对象被判定可被回收，需要经历两个阶段："><a href="#3、-对象被判定可被回收，需要经历两个阶段：" class="headerlink" title="3、 对象被判定可被回收，需要经历两个阶段："></a>3、 对象被判定可被回收，需要经历两个阶段：</h3><pre><code>（1） 第一个阶段是可达性分析，分析该对象是否可达（2） 第二个阶段是当对象没有重写finalize()方法或者finalize()方法已经被调用过，虚拟机认为该对象不可以被救活，因此回收该对象。（finalize()方法在垃圾回收中的作用是，给该对象一次救活的机会）</code></pre><h3 id="4、-方法区中的垃圾回收："><a href="#4、-方法区中的垃圾回收：" class="headerlink" title="4、 方法区中的垃圾回收："></a>4、 方法区中的垃圾回收：</h3><pre><code>（1） 常量池中一些常量、符号引用没有被引用，则会被清理出常量池（2） 无用的类：被判定为无用的类，会被清理出方法区。判定方法如下：A、 该类的所有实例被回收B、 加载该类的ClassLoader被回收C、 该类的Class对象没有被引用</code></pre><h3 id="5、-finalize"><a href="#5、-finalize" class="headerlink" title="5、 finalize():"></a>5、 finalize():</h3><pre><code>（1） GC垃圾回收要回收一个对象的时候，调用该对象的finalize()方法。然后在下一次垃圾回收的时候，才去回收这个对象的内存。（2） 可以在该方法里面，指定一些对象在释放前必须执行的操作。</code></pre><h2 id="二、-发现虚拟机频繁full-GC时应该怎么办："><a href="#二、-发现虚拟机频繁full-GC时应该怎么办：" class="headerlink" title="二、 发现虚拟机频繁full GC时应该怎么办："></a>二、 发现虚拟机频繁full GC时应该怎么办：</h2><pre><code>（full GC指的是清理整个堆空间，包括年轻代和永久代）</code></pre><p>（1） 首先用命令查看触发GC的原因是什么 jstat –gccause 进程id</p><p>（2） 如果是System.gc()，则看下代码哪里调用了这个方法</p><p>（3） 如果是heap inspection(内存检查)，可能是哪里执行jmap –histo[:live]命令</p><p>（4） 如果是GC locker，可能是程序依赖的JNI库的原因</p><h2 id="三、常见的垃圾回收算法："><a href="#三、常见的垃圾回收算法：" class="headerlink" title="三、常见的垃圾回收算法："></a>三、常见的垃圾回收算法：</h2><h3 id="1、Mark-Sweep（标记-清除算法）："><a href="#1、Mark-Sweep（标记-清除算法）：" class="headerlink" title="1、Mark-Sweep（标记-清除算法）："></a>1、Mark-Sweep（标记-清除算法）：</h3><p>（1）思想：标记清除算法分为两个阶段，标记阶段和清除阶段。标记阶段任务是标记出所有需要回收的对象，清除阶段就是清除被标记对象的空间。</p><p>（2）优缺点：实现简单，容易产生内存碎片</p><h3 id="2、Copying（复制清除算法）："><a href="#2、Copying（复制清除算法）：" class="headerlink" title="2、Copying（复制清除算法）："></a>2、Copying（复制清除算法）：</h3><p>（1）思想：将可用内存划分为大小相等的两块，每次只使用其中的一块。当进行垃圾回收的时候了，把其中存活对象全部复制到另外一块中，然后把已使用的内存空间一次清空掉。</p><p>（2）优缺点：不容易产生内存碎片；可用内存空间少；存活对象多的话，效率低下。</p><h3 id="3、Mark-Compact（标记-整理算法）："><a href="#3、Mark-Compact（标记-整理算法）：" class="headerlink" title="3、Mark-Compact（标记-整理算法）："></a>3、Mark-Compact（标记-整理算法）：</h3><p>（1）思想：先标记存活对象，然后把存活对象向一边移动，然后清理掉端边界以外的内存。</p><p>（2）优缺点：不容易产生内存碎片；内存利用率高；存活对象多并且分散的时候，移动次数多，效率低下</p><h3 id="4、分代收集算法：（目前大部分JVM的垃圾收集器所采用的算法）："><a href="#4、分代收集算法：（目前大部分JVM的垃圾收集器所采用的算法）：" class="headerlink" title="4、分代收集算法：（目前大部分JVM的垃圾收集器所采用的算法）："></a>4、分代收集算法：（目前大部分JVM的垃圾收集器所采用的算法）：</h3><pre><code>思想：把堆分成新生代和老年代。（永久代指的是方法区）</code></pre><p>（1） 因为新生代每次垃圾回收都要回收大部分对象，所以新生代采用Copying算法。新生代里面分成一份较大的Eden空间和两份较小的Survivor空间。每次只使用Eden和其中一块Survivor空间，然后垃圾回收的时候，把存活对象放到未使用的Survivor（划分出from、to）空间中，清空Eden和刚才使用过的Survivor空间。</p><p>（2） 由于老年代每次只回收少量的对象，因此采用mark-compact算法。</p><p>（3） 在堆区外有一个永久代。对永久代的回收主要是无效的类和常量</p><h3 id="5、GC使用时对程序的影响？"><a href="#5、GC使用时对程序的影响？" class="headerlink" title="5、GC使用时对程序的影响？"></a>5、GC使用时对程序的影响？</h3><pre><code>垃圾回收会影响程序的性能，Java虚拟机必须要追踪运行程序中的有用对象，然后释放没用对象，这个过程消耗处理器时间</code></pre><h3 id="6、几种不同的垃圾回收类型："><a href="#6、几种不同的垃圾回收类型：" class="headerlink" title="6、几种不同的垃圾回收类型："></a>6、几种不同的垃圾回收类型：</h3><p>（1）Minor GC：从年轻代（包括Eden、Survivor区）回收内存。</p><pre><code>A、当JVM无法为一个新的对象分配内存的时候，越容易触发Minor GC。所以分配率越高，内存越来越少，越频繁执行Minor GCB、执行Minor GC操作的时候，不会影响到永久代（Tenured）。从永久代到年轻代的引用，被当成GC Roots，从年轻代到老年代的引用在标记阶段直接被忽略掉。</code></pre><p>（2）Major GC：清理整个老年代，当eden区内存不足时触发。</p><p>（3）Full GC：清理整个堆空间，包括年轻代和老年代。当老年代内存不足时触发</p><h1 id="HotSpot-虚拟机详解："><a href="#HotSpot-虚拟机详解：" class="headerlink" title="HotSpot 虚拟机详解："></a>HotSpot 虚拟机详解：</h1><h2 id="1、-Java对象创建过程："><a href="#1、-Java对象创建过程：" class="headerlink" title="1、 Java对象创建过程："></a>1、 Java对象创建过程：</h2><p>（1）虚拟机遇到一条new指令时，首先检查这个指令的参数能否在常量池中定位到一个类的符号引用，并检查这个符号引用代表的类是否已经加载、连接和初始化。如果没有，就执行该类的加载过程。</p><p>（2）为该对象分配内存。</p><pre><code>A、假设Java堆是规整的，所有用过的内存放在一边，空闲的内存放在另外一边，中间放着一个指针作为分界点的指示器。那分配内存只是把指针向空闲空间那边挪动与对象大小相等的距离，这种分配称为“指针碰撞”B、假设Java堆不是规整的，用过的内存和空闲的内存相互交错，那就没办法进行“指针碰撞”。虚拟机通过维护一个列表，记录哪些内存块是可用的，在分配的时候找出一块足够大的空间分配给对象实例，并更新表上的记录。这种分配方式称为“空闲列表“。C、使用哪种分配方式由Java堆是否规整决定。Java堆是否规整由所采用的垃圾收集器是否带有压缩整理功能决定。D、分配对象保证线程安全的做法：虚拟机使用CAS失败重试的方式保证更新操作的原子性。（实际上还有另外一种方案：每个线程在Java堆中预先分配一小块内存，称为本地线程分配缓冲，TLAB。哪个线程要分配内存，就在哪个线程的TLAB上分配，只有TLAB用完并分配新的TLAB时，才进行同步锁定。虚拟机是否使用TLAB，由-XX:+/-UseTLAB参数决定）</code></pre><p>（3）虚拟机为分配的内存空间初始化为零值（默认值）</p><p>（4）虚拟机对对象进行必要的设置，例如这个对象是哪个类的实例、如何才能找到对象的元数据信息、对象的Hash码、对象的GC分代年龄等信息。这些信息存放在对象的对象头中。</p><p>（5） 执行方法，把对象按照程序员的意愿进行初始化。</p><h2 id="2、-对象的定位访问的方式（通过引用如何去定位到堆上的具体对象的位置）："><a href="#2、-对象的定位访问的方式（通过引用如何去定位到堆上的具体对象的位置）：" class="headerlink" title="2、 对象的定位访问的方式（通过引用如何去定位到堆上的具体对象的位置）："></a>2、 对象的定位访问的方式（通过引用如何去定位到堆上的具体对象的位置）：</h2><p>（1）句柄：使用句柄的方式，Java堆中将会划分出一块内存作为作为句柄池，引用中存储的就是对象的句柄的地址。而句柄中包含了对象实例数据和对象类型数据的地址。</p><img src="/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/5.jpg"><p>（2）直接指针：使用直接指针的方式，引用中存储的就是对象的地址。Java堆对象的布局必须必须考虑如何去访问对象类型数据。</p><img src="/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/6.jpg"><p>（3）两种方式各有优点：</p><pre><code>A、使用句柄访问的好处是引用中存放的是稳定的句柄地址，当对象被移动（比如说垃圾回收时移动对象），只会改变句柄中实例数据指针，而引用本身不会被修改。B、使用直接指针，节省了一次指针定位的时间开销。</code></pre><h2 id="3、HotSpot的GC算法实现："><a href="#3、HotSpot的GC算法实现：" class="headerlink" title="3、HotSpot的GC算法实现："></a>3、HotSpot的GC算法实现：</h2><p>（1）HotSpot怎么快速找到GC Root？<br>    HotSpot使用一组称为OopMap的数据结构。在类加载完成的时候，HotSpot就把对象内什么偏移量上是什么类型的数据计算出来，在JIT编译过程中，也会在栈和寄存器中哪些位置是引用。这样子，在GC扫描的时候，就可以直接知道哪些是可达对象了。</p><p>（2）安全点：</p><pre><code>A、HotSpot只在特定的位置生成OopMap，这些位置称为安全点。B、程序执行过程中并非所有地方都可以停下来开始GC，只有在到达安全点是才可以暂停。C、安全点的选定基本上以“是否具有让程序长时间执行“的特征选定的。比如说方法调用、循环跳转、异常跳转等。具有这些功能的指令才会产生Safepoint。</code></pre><p>（3）中断方式：</p><pre><code>A、抢占式中断：在GC发生时，首先把所有线程中断，如果发现有线程不在安全点上，就恢复线程，让它跑到安全点上。B、主动式中断：GC需要中断线程时，不直接对线程操作，仅仅设置一个标志，各个线程执行时主动去轮询这个标志，当发现中断标记为真就自己中断挂起。轮询标记的地方和安全点是重合的。</code></pre><p>（4）安全区域：<br>    一段代码片段中，对象的引用关系不会发生变化，在这个区域中任何地方开始GC都是安全的。在线程进入安全区域时，它首先标志自己已经进入安全区域，在这段时间里，当JVM发起GC时，就不用管进入安全区域的线程了。在线程将要离开安全区域时，它检查系统是否完成了GC过程，如果完成了，它就继续前行。否则，它就必须等待直到收到可以离开安全区域的信号。</p><h2 id="4、-GC时为什么要停顿所有Java线程？"><a href="#4、-GC时为什么要停顿所有Java线程？" class="headerlink" title="4、 GC时为什么要停顿所有Java线程？"></a>4、 GC时为什么要停顿所有Java线程？</h2><p>因为GC先进行可达性分析。可达性分析是判断GC Root对象到其他对象是否可达，假如分析过程中对象的引用关系在不断变化，分析结果的准确性就无法得到保证。</p><h2 id="5、-CMS收集器："><a href="#5、-CMS收集器：" class="headerlink" title="5、 CMS收集器："></a>5、 CMS收集器：</h2><p>（1）一种以获取最短回收停顿时间为目标的收集器。</p><p>（2）一般用于互联网站或者B/S系统的服务端</p><p>（3）基于标记-清除算法的实现，不过更为复杂，整个过程为4个步骤：</p><pre><code>A、初始标记：标记GC Root能直接引用的对象B、并发标记：利用多线程对每个GC Root对象进行tracing搜索，在堆中查找其下所有能关联到的对象。C、重新标记：为了修正并发标记期间，用户程序继续运作而导致标志产生变动的那一部分对象的标记记录。D、并发清除：利用多个线程对标记的对象进行清除</code></pre><p>（4）由于耗时最长的并发标记和并发清除操作都是用户线程一起工作，所以总体来说，CMS的内存回收工作是和用户线程一起并发执行的。</p><p>（5）缺点：</p><pre><code>A、对CPU资源占用比较多。可能因为占用一部分CPU资源导致应用程序响应变慢。B、CMS无法处理浮动垃圾。在并发清除阶段，用户程序继续运行，可能产生新的内存垃圾，这一部分垃圾出现在标记过程之后，因此，CMS无法清除。这部分垃圾称为“浮动垃圾“C、需要预留一部分内存，在垃圾回收时，给用户程序使用。D、基于标记-清除算法，容易产生大量内存碎片，导致full GC（full GC进行内存碎片的整理）</code></pre><h2 id="6、-对象头部分的内存布局："><a href="#6、-对象头部分的内存布局：" class="headerlink" title="6、 对象头部分的内存布局："></a>6、 对象头部分的内存布局：</h2><p>HotSpot的对象头分为两部分，第一部分用于存储对象自身的运行时数据，比如哈希码、GC分代年龄等。另外一部分用于指向方法区对象类型数据的指针。</p><h2 id="7、-偏向锁："><a href="#7、-偏向锁：" class="headerlink" title="7、 偏向锁："></a>7、 偏向锁：</h2><p>偏向锁偏向于第一个获取它的线程，如果在接下来的执行过程，没有其他线程获取该锁，则持有偏向锁的线程永远不需要同步。（当一个线程获取偏向锁，它每次进入这个锁相关的同步块，虚拟机不在进行任何同步操作。当有另外一个线程尝试获取这个锁时，偏向模式宣告结束）</p><h1 id="JVM优化："><a href="#JVM优化：" class="headerlink" title="JVM优化："></a>JVM优化：</h1><p>1、一般来说，当survivor区不够大或者占用量达到50%，就会把一些对象放到老年区。通过设置合理的eden区，survivor区及使用率，可以将年轻对象保存在年轻代，从而避免full GC，使用-Xmn设置年轻代的大小</p><p>2、对于占用内存比较多的大对象，一般会选择在老年代分配内存。如果在年轻代给大对象分配内存，年轻代内存不够了，就要在eden区移动大量对象到老年代，然后这些移动的对象可能很快消亡，因此导致full GC。通过设置参数：-XX:PetenureSizeThreshold=1000000，单位为B，标明对象大小超过1M时，在老年代(tenured)分配内存空间。</p><p>3、一般情况下，年轻对象放在eden区，当第一次GC后，如果对象还存活，放到survivor区，此后，每GC一次，年龄增加1，当对象的年龄达到阈值，就被放到tenured老年区。这个阈值可以同构-XX:MaxTenuringThreshold设置。如果想让对象留在年轻代，可以设置比较大的阈值。</p><p>4、设置最小堆和最大堆：-Xmx和-Xms稳定的堆大小堆垃圾回收是有利的，获得一个稳定的堆大小的方法是设置-Xms和-Xmx的值一样，即最大堆和最小堆一样，如果这样子设置，系统在运行时堆大小理论上是恒定的，稳定的堆空间可以减少GC次数，因此，很多服务端都会将这两个参数设置为一样的数值。稳定的堆大小虽然减少GC次数，但是增加每次GC的时间，因为每次GC要把堆的大小维持在一个区间内。</p><p>5、一个不稳定的堆并非毫无用处。在系统不需要使用大内存的时候，压缩堆空间，使得GC每次应对一个较小的堆空间，加快单次GC次数。基于这种考虑，JVM提供两个参数，用于压缩和扩展堆空间。</p><pre><code>（1）-XX:MinHeapFreeRatio 参数用于设置堆空间的最小空闲比率。默认值是40，当堆空间的空闲内存比率小于40，JVM便会扩展堆空间（2）-XX:MaxHeapFreeRatio 参数用于设置堆空间的最大空闲比率。默认值是70， 当堆空间的空闲内存比率大于70，JVM便会压缩堆空间。（3）当-Xmx和-Xmx相等时，上面两个参数无效</code></pre><p>6、通过增大吞吐量提高系统性能，可以通过设置并行垃圾回收收集器。</p><pre><code>（1）-XX:+UseParallelGC:年轻代使用并行垃圾回收收集器。这是一个关注吞吐量的收集器，可以尽可能的减少垃圾回收时间。（2）-XX:+UseParallelOldGC:设置老年代使用并行垃圾回收收集器。</code></pre><p>7、尝试使用大的内存分页：使用大的内存分页增加CPU的内存寻址能力，从而系统的性能。-XX:+LargePageSizeInBytes 设置内存页的大小</p><p>8、使用非占用的垃圾收集器。-XX:+UseConcMarkSweepGC老年代使用CMS收集器降低停顿。</p><p>9、-XXSurvivorRatio=3，表示年轻代中的分配比率：survivor:eden = 2:3</p><p>10、JVM性能调优的工具：</p><pre><code>（1）jps（Java Process Status）：输出JVM中运行的进程状态信息(现在一般使用jconsole)（2）jstack：查看java进程内线程的堆栈信息。（3）jmap：用于生成堆转存快照（4）jhat：用于分析jmap生成的堆转存快照（一般不推荐使用，而是使用Ecplise Memory Analyzer）（5）jstat是JVM统计监测工具。可以用来显示垃圾回收信息、类加载信息、新生代统计信息等。（6）VisualVM：故障处理工具</code></pre><h1 id="类加载机制："><a href="#类加载机制：" class="headerlink" title="类加载机制："></a>类加载机制：</h1><h2 id="一、-概念："><a href="#一、-概念：" class="headerlink" title="一、 概念："></a>一、 概念：</h2><p>类加载器把class文件中的二进制数据读入到内存中，存放在方法区，然后在堆区创建一个java.lang.Class对象，用来封装类在方法区内的数据结构。</p><p>类加载的步骤如下：</p><p>1、加载：查找并加载类的二进制数据（把class文件里面的信息加载到内存里面）</p><p>2、连接：把内存中类的二进制数据合并到虚拟机的运行时环境中</p><p>（1）验证：确保被加载的类的正确性。包括：</p><pre><code>A、类文件的结构检查：检查是否满足Java类文件的固定格式B、语义检查：确保类本身符合Java的语法规范C、字节码验证：确保字节码流可以被Java虚拟机安全的执行。字节码流是操作码组成的序列。每一个操作码后面都会跟着一个或者多个操作数。字节码检查这个步骤会检查每一个操作码是否合法。D、二进制兼容性验证：确保相互引用的类之间是协调一致的。</code></pre><p>（2）准备：为类的静态变量分配内存，并将其初始化为默认值</p><p>（3）解析：把类中的符号引用转化为直接引用（比如说方法的符号引用，是有方法名和相关描述符组成，在解析阶段，JVM把符号引用替换成一个指针，这个指针就是直接引用，它指向该类的该方法在方法区中的内存位置）</p><p>3、初始化：为类的静态变量赋予正确的初始值。当静态变量的等号右边的值是一个常量表达式时，不会调用static代码块进行初始化。只有等号右边的值是一个运行时运算出来的值，才会调用static初始化。</p><h2 id="二、双亲委派模型："><a href="#二、双亲委派模型：" class="headerlink" title="二、双亲委派模型："></a>二、双亲委派模型：</h2><p>1、当一个类加载器收到类加载请求的时候，它首先不会自己去加载这个类的信息，而是把该请求转发给父类加载器，依次向上。所以所有的类加载请求都会被传递到父类加载器中，只有当父类加载器中无法加载到所需的类，子类加载器才会自己尝试去加载该类。当当前类加载器和所有父类加载器都无法加载该类时，抛出ClassNotFindException异常。</p><p>2、意义：提高系统的安全性。用户自定义的类加载器不可能加载应该由父加载器加载的可靠类。（比如用户定义了一个恶意代码，自定义的类加载器首先让系统加载器去加载，系统加载器检查该代码不符合规范，于是就不继续加载了）</p><p>3、定义类加载器：如果某个类加载器能够加载一个类，那么这个类加载器就叫做定义类加载器</p><p>4、初始类加载器：定义类加载器及其所有子加载器都称作初始类加载器。</p><p>5、运行时包：</p><pre><code>（1）由同一个类加载器加载并且拥有相同包名的类组成运行时包（2）只有属于同一个运行时包的类，才能访问包可见（default）的类和类成员。作用是 限制用户自定义的类冒充核心类库的类去访问核心类库的包可见成员。</code></pre><p>6、加载两份相同的class对象的情况：A和B不属于父子类加载器关系，并且各自都加载了同一个类。</p><h2 id="三、特点："><a href="#三、特点：" class="headerlink" title="三、特点："></a>三、特点：</h2><p>1、全盘负责：当一个类加载器加载一个类时，该类所依赖的其他类也会被这个类加载器加载到内存中。</p><p>2、缓存机制：所有的Class对象都会被缓存，当程序需要使用某个Class时，类加载器先从缓存中查找，找不到，才从class文件中读取数据，转化成Class对象，存入缓存中。</p><h2 id="四、-类加载器：两种类型的类加载器："><a href="#四、-类加载器：两种类型的类加载器：" class="headerlink" title="四、 类加载器：两种类型的类加载器："></a>四、 类加载器：两种类型的类加载器：</h2><p>1、 JVM自带的类加载器（3种）：<br>（1）根类加载器（Bootstrap）：</p><pre><code>a、C++编写的，程序员无法在程序中获取该类b、负责加载虚拟机的核心库，比如java.lang.Objectc、没有继承ClassLoader类</code></pre><p>（2）扩展类加载器（Extension）：</p><pre><code>a、Java编写的，从指定目录中加载类库b、父加载器是根类加载器c、是ClassLoader的子类d、如果用户把创建的jar文件放到指定目录中，也会被扩展加载器加载。</code></pre><p>（3）系统加载器（System）或者应用加载器(App)：</p><pre><code>a、Java编写的b、父加载器是扩展类加载器c、从环境变量或者class.path中加载类d、是用户自定义类加载的默认父加载器e、是ClassLoader的子类</code></pre><h3 id="2、用户自定义的类加载器："><a href="#2、用户自定义的类加载器：" class="headerlink" title="2、用户自定义的类加载器："></a>2、用户自定义的类加载器：</h3><p>（1）Java.lang.ClassLoader类的子类</p><p>（2）用户可以定制类的加载方式</p><p>（3）父类加载器是系统加载器</p><p>（4）编写步骤：A、继承ClassLoaderB、重写findClass方法。从特定位置加载class文件，得到字节数组，然后利用defineClass把字节数组转化为Class对象</p><p>（5）为什么要自定义类加载器？</p><pre><code>A、可以从指定位置加载class文件，比如说从数据库、云端加载class文件B、加密：Java代码可以被轻易的反编译，因此，如果需要对代码进行加密，那么加密以后的代码，就不能使用Java自带的ClassLoader来加载这个类了，需要自定义ClassLoader，对这个类进行解密，然后加载。</code></pre><h2 id="问题：Java程序对类的执行有几种方式："><a href="#问题：Java程序对类的执行有几种方式：" class="headerlink" title="问题：Java程序对类的执行有几种方式："></a>问题：Java程序对类的执行有几种方式：</h2><p>1、 主动使用（6种情况）：JVM必须在每个类“首次 主动使用”的时候，才会初始化这些类。</p><pre><code>（1） 创建类的实例（2） 读写某个类或者接口的静态变量（3） 调用类的静态方法（4） 同过反射的API（Class.forName()）获取类（5） 初始化一个类的子类（6） JVM启动的时候，被标明启动类的类（包含Main方法的类）只有当程序使用的静态变量或者静态方法确实在该类中定义时，该可以认为是对该类或者接口的主动使用。</code></pre><p>2、 被动使用：除了主动使用的6种情况，其他情况都是被动使用，都不会导致类的初始化。</p><p>3、 JVM规范允许类加载器在预料某个类将要被使用的时候，就预先加载它。如果该class文件缺失或者存在错误，则在程序“首次 主动使用”的时候，才报告这个错误。（Linkage Error错误）。如果这个类一直没有被程序“主动使用”，就不会报错。</p><h2 id="类加载机制与接口："><a href="#类加载机制与接口：" class="headerlink" title="类加载机制与接口："></a>类加载机制与接口：</h2><p>1、 当Java虚拟机初始化一个类时，不会初始化该类实现的接口。</p><p>2、 在初始化一个接口时，不会初始化这个接口父接口。</p><p>3、 只有当程序首次使用该接口的静态变量时，才导致该接口的初始化。</p><h2 id="ClassLoader："><a href="#ClassLoader：" class="headerlink" title="ClassLoader："></a>ClassLoader：</h2><p>1、 调用Classloader的loadClass方法去加载一个类，不是主动使用，因此不会进行类的初始化。</p><h2 id="类的卸载："><a href="#类的卸载：" class="headerlink" title="类的卸载："></a>类的卸载：</h2><p>1、 有JVM自带的三种类加载器（根、扩展、系统）加载的类始终不会卸载。因为JVM始终引用这些类加载器，这些类加载器使用引用他们所加载的类，因此这些Class类对象始终是可到达的。</p><p>2、 由用户自定义类加载器加载的类，是可以被卸载的。</p><h1 id="JDK和JRK"><a href="#JDK和JRK" class="headerlink" title="JDK和JRK"></a>JDK和JRK</h1><p>（1）JDK ：Java Development Kit，开发的时候用到的类包。<br>（2）JRE ：Java Runtime Environment，Java运行的基础，包含运行时需要的所有类库。</p><p>图解java文件转化成机器码</p><img src="/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/7.png"><p>JVM虚拟机先将java文件编译成class文件（字节码文件），然后再将class文件转换成所有操作系统都能运行的机器指令。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2019年度总结</title>
       <link href="/2019/12/21/2019-nian-du-zong-jie/"/>
       <url>/2019/12/21/2019-nian-du-zong-jie/</url>
@@ -804,31 +829,6 @@
     
     
     <entry>
-      <title>html中横线使用</title>
-      <link href="/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
-      <url>/2019/05/18/html-zhong-heng-xian-shi-yong/</url>
-      
-        <content type="html"><![CDATA[<pre><code>第一种：&lt;hr style=&quot; height:2px;border:none;border-top:2px dotted #185598;&quot; /&gt;   园点虚线height:2px;是hr的高度border:none;是没有边框border-top:2px dotted #185598;是设置横线的样式dotted  虚线  #185598  颜色第二种：&lt;hr style=&quot;height:1px;border:none;border-top:1px dashed #0066CC;&quot; /&gt;    块虚线第三种：&lt;hr style=&quot;height:1px;border:none;border-top:1px solid #555555;&quot; /&gt;  实线，一条直线第四种：&lt;hr style=&quot;height:3px;border:none;border-top:3px double red;&quot; /&gt; 两条紧密实线，第五种：&lt;hr style=&quot;height:5px;border:none;border-top:5px ridge green;&quot; /&gt; 两种颜色第六种：&lt;hr style=&quot;height:10px;border:none;border-top:10px groove skyblue;&quot; /&gt;  两种颜色border-top:10px groove skyblue;    groove  上颜色        skyblue   下颜色.style-one {/*内嵌水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 0;    border-top: 1px solid rgba(0, 0, 0, 0.1);    border-bottom: 1px solid rgba(255, 255, 255, 0.3);}.style-two {/*透明渐变水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));}.style-three{/*渐变*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background: #333;    background-image: linear-gradient(to right, #ccc, #333, #ccc);}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> html </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>这 17 个 JVM 参数，高级 Java 必须掌握！</title>
       <link href="/2019/05/18/zhe-17-ge-jvm-can-shu-gao-ji-java-bi-xu-zhang-wo/"/>
       <url>/2019/05/18/zhe-17-ge-jvm-can-shu-gao-ji-java-bi-xu-zhang-wo/</url>
@@ -846,6 +846,31 @@
         <tags>
             
             <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html中横线使用</title>
+      <link href="/2019/05/18/html-zhong-heng-xian-shi-yong/"/>
+      <url>/2019/05/18/html-zhong-heng-xian-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<pre><code>第一种：&lt;hr style=&quot; height:2px;border:none;border-top:2px dotted #185598;&quot; /&gt;   园点虚线height:2px;是hr的高度border:none;是没有边框border-top:2px dotted #185598;是设置横线的样式dotted  虚线  #185598  颜色第二种：&lt;hr style=&quot;height:1px;border:none;border-top:1px dashed #0066CC;&quot; /&gt;    块虚线第三种：&lt;hr style=&quot;height:1px;border:none;border-top:1px solid #555555;&quot; /&gt;  实线，一条直线第四种：&lt;hr style=&quot;height:3px;border:none;border-top:3px double red;&quot; /&gt; 两条紧密实线，第五种：&lt;hr style=&quot;height:5px;border:none;border-top:5px ridge green;&quot; /&gt; 两种颜色第六种：&lt;hr style=&quot;height:10px;border:none;border-top:10px groove skyblue;&quot; /&gt;  两种颜色border-top:10px groove skyblue;    groove  上颜色        skyblue   下颜色.style-one {/*内嵌水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 0;    border-top: 1px solid rgba(0, 0, 0, 0.1);    border-bottom: 1px solid rgba(255, 255, 255, 0.3);}.style-two {/*透明渐变水平线*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));}.style-three{/*渐变*/    width:80%;    margin:0 auto;    border: 0;    height: 1px;    background: #333;    background-image: linear-gradient(to right, #ccc, #333, #ccc);}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
             
         </tags>
       
@@ -1104,23 +1129,23 @@
     
     
     <entry>
-      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
-      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
-      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
+      <title>965 是一种生活态度，996 也是</title>
+      <link href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
+      <url>/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</url>
       
-        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
+        <content type="html"><![CDATA[<p>996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。<br>在今天的大多数看来，在一家公司里待满 5 年，可能不是件有意思的事——生活总会有各种的无奈。</p><p>5 年的时间，不长也不短。朋友变成了同事，网友变成了同事，同事变成了前同事，前同事变成了同事（笑~）。人呢，都是有自己的想法：</p><p>1.965 的工作太『安逸』——赚不了多少钱。</p><p>2.996 的生活太『辛苦』——没时间去花钱。</p><p>矛盾之下，有人选择将 965 的生活，变成了 996；有些则是选择将 996 的生活，变成了 965。</p><p>生活总是这么有趣。有光的一画，自然而然地，也就有阴影的一面；被某些人喜欢着，也必然意味着被某些人讨厌着；有很多的粉丝， 也同时意味着有很多的黑粉。</p><p>没有对与错，只有自己的选择与利益。</p><h1 id="965"><a href="#965" class="headerlink" title="965"></a>965</h1><p>作为一个农村里出来的穷孩子，我在今年里存款才突破 100,000——2018 年存下的，相当于现在大部分程序员一年的存款。以前的钱呢，都在帮家里还钱。你要是说呢，钱对于我也很重要，但是还有很多事情也很重要——生活、爱情、自我。所以，选择 965，对于我来说是一种平衡。</p><p>编程是一种兴趣。编程说是我的兴趣吧，倒也不是，我只是喜欢创造，就好比是个手工艺人一样。</p><p>生活是一种平衡。人是有生活的，机器人才没有。</p><p>家庭是一个归属。你有男朋友/老婆/儿子/女儿，你需要花时间在他/她们身上。</p><p>从这等角度来看，我到底是那种喜欢马拉松式生活的人，缓慢而又持久（笑）。所以我喜欢制定一个长期的计划，然后慢慢去执行，每天总能收获一点点。从长期来看，养成了一个好的习惯，就能构建长久的职业生涯。哪怕是有一天出去创业了，好的习惯也会带来一定的助力。</p><p>说是 965，但是这并不意味着不加班，只是很多工作可以回家里完成。如果从这等角度上来看，我到底也是加班过的：</p><p>1、深入研究项目上的技术栈</p><p>2、调研项目要使用的新技术栈</p><p>只是呢，这算是加班吗？哈哈~，我回家也是研究技术。若是自己能力不足，这种加班倒是也</p><h1 id="996"><a href="#996" class="headerlink" title="996"></a>996</h1><p>所以呢，为了钱去选择 996 也是一种生活态度。赚够钱了呢，就可以过退休般的生活，每天花很多时间去写想写的代码。前期呢，累是累了点，但是总是值得的。</p><p>赚钱是一种需求。总有那么一些人，就喜欢赚钱，赚钱是一种快感，比如唐老鸭的叔叔——最有钱的虚拟人物。</p><p>证明自己是一种需求。有的人，选择 996 的大公司，出自于自我实现的需要。在大的平台上，去创造一系列的精彩，而自己便是优秀的那个人。</p><p>在不了解自己想要什么，迷茫的时候，选择 996 是一种更有效的方式。对于你而言，965 带给你反而是一种时间上的浪费。6 点多回到了家里，却也不知道做些什么。那还不如，在公司混混沌沌地把钱赚了。</p><p>也因此呢，还有一种情况是：</p><p>在公司加班是一种享受。令人津津乐道的是，对于如我一样来大城市 “务工” 的程序员来说，回到住的地方反而更无聊。在公司里，还有同事可以聊天 ，还有零食可以吃，还有帅哥和靓妹可以看，何乐而不为。加班时，有免费的晚饭吃，到了 9 点回家还可以打车报销。</p><p>我们在说 996 的时候，指的是强制性的加班，而不是这种自主性的加班。</p><h1 id="965-与-996-徘徊者"><a href="#965-与-996-徘徊者" class="headerlink" title="965 与 996 徘徊者"></a>965 与 996 徘徊者</h1><p>在 TWU 的时候，我的人生有过一次的转变。那时是在 2014 年 10 月，我第一次了解到除了男性、女性，还有其 x 的性别。然后，性别在我的眼里，就变成了五种选项。从现象上来看，他/她们可能是 996 的人，又或者是 965 的人，但是实际上可能是：</p><pre><code>965 的人996 的人995 但是认为自己是 996 的人996 但是认为自己是 995 的人即不是 995 也不是 996 的人</code></pre><p>可是呢，生活是一种选择。选择了 965，可能就没有 996 的工资；选择了 996，可能就没有 965 的工资。</p><p>让我们来做个简单的自述，把你的 996 的工作变成了 965，算算你的时薪，看看你还能在现在拿多少钱？以一个月四周来看：</p><pre><code>965 意味着，一天 8 小时，一周 40 小时，一个月 160 小时。996 意味着，一天 10 小时，一周 60 小时，一个月 240 小时。</code></pre><p>所以，如果把你的 965 的工作时间换成了 996，那么你的工资应该至少要涨 50%（不包含加班费）。把你的 996 的工作时间换成了 965，那么你的工资应该减少 1/3。</p><p>最后，问题也就来了，你现在的工资少 1/3，你干吗？——你可能马上骂娘了。</p><p>你，可能会立马变成那个吐槽为什么不 996 的人呢？所以，生活并不会有太多的选择。你既要 996，又想要保持现在的工资和绩效，有点难——站着，还把钱赚了，不是一件容易的事。</p><p>生活就是这么需要一些同理心，人呢，有时要站在别人的角度来考虑问题。</p><h1 id="那么，你呢？"><a href="#那么，你呢？" class="headerlink" title="那么，你呢？"></a>那么，你呢？</h1><p>当然了，这些道理，我们都是知道的。</p><p>你呢，若是你，你会选择 965，又或者是 996，为什么呢？</p><p>来源：mp.weixin.qq.com/s/x8d4yRY6o_HISn4fqwx-Ig</p>]]></content>
       
       
       <categories>
           
-          <category> 技术 </category>
+          <category> 程序猿 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
+            <tag> 程序猿 </tag>
             
         </tags>
       
@@ -1154,23 +1179,23 @@
     
     
     <entry>
-      <title>965 是一种生活态度，996 也是</title>
-      <link href="/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/"/>
-      <url>/2019/05/07/965-shi-yi-chong-sheng-huo-tai-du-996-ye-shi/</url>
+      <title>SpringMVC方法四种类型返回值总结，你用过几种？</title>
+      <link href="/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/"/>
+      <url>/2019/05/07/springmvc-fang-fa-si-chong-lei-xing-fan-hui-zhi-zong-jie-ni-yong-guo-ji-chong/</url>
       
-        <content type="html"><![CDATA[<p>996 的苦，我大抵是不懂得的。我工作快 5 年了，在这 5 年的时光里，都是以 965 的形式度过的。说是幸运，那倒也是，没有遇到过加班的项目。说是不幸，那也只能说是，也没有遇到有挑战的项目。<br>在今天的大多数看来，在一家公司里待满 5 年，可能不是件有意思的事——生活总会有各种的无奈。</p><p>5 年的时间，不长也不短。朋友变成了同事，网友变成了同事，同事变成了前同事，前同事变成了同事（笑~）。人呢，都是有自己的想法：</p><p>1.965 的工作太『安逸』——赚不了多少钱。</p><p>2.996 的生活太『辛苦』——没时间去花钱。</p><p>矛盾之下，有人选择将 965 的生活，变成了 996；有些则是选择将 996 的生活，变成了 965。</p><p>生活总是这么有趣。有光的一画，自然而然地，也就有阴影的一面；被某些人喜欢着，也必然意味着被某些人讨厌着；有很多的粉丝， 也同时意味着有很多的黑粉。</p><p>没有对与错，只有自己的选择与利益。</p><h1 id="965"><a href="#965" class="headerlink" title="965"></a>965</h1><p>作为一个农村里出来的穷孩子，我在今年里存款才突破 100,000——2018 年存下的，相当于现在大部分程序员一年的存款。以前的钱呢，都在帮家里还钱。你要是说呢，钱对于我也很重要，但是还有很多事情也很重要——生活、爱情、自我。所以，选择 965，对于我来说是一种平衡。</p><p>编程是一种兴趣。编程说是我的兴趣吧，倒也不是，我只是喜欢创造，就好比是个手工艺人一样。</p><p>生活是一种平衡。人是有生活的，机器人才没有。</p><p>家庭是一个归属。你有男朋友/老婆/儿子/女儿，你需要花时间在他/她们身上。</p><p>从这等角度来看，我到底是那种喜欢马拉松式生活的人，缓慢而又持久（笑）。所以我喜欢制定一个长期的计划，然后慢慢去执行，每天总能收获一点点。从长期来看，养成了一个好的习惯，就能构建长久的职业生涯。哪怕是有一天出去创业了，好的习惯也会带来一定的助力。</p><p>说是 965，但是这并不意味着不加班，只是很多工作可以回家里完成。如果从这等角度上来看，我到底也是加班过的：</p><p>1、深入研究项目上的技术栈</p><p>2、调研项目要使用的新技术栈</p><p>只是呢，这算是加班吗？哈哈~，我回家也是研究技术。若是自己能力不足，这种加班倒是也</p><h1 id="996"><a href="#996" class="headerlink" title="996"></a>996</h1><p>所以呢，为了钱去选择 996 也是一种生活态度。赚够钱了呢，就可以过退休般的生活，每天花很多时间去写想写的代码。前期呢，累是累了点，但是总是值得的。</p><p>赚钱是一种需求。总有那么一些人，就喜欢赚钱，赚钱是一种快感，比如唐老鸭的叔叔——最有钱的虚拟人物。</p><p>证明自己是一种需求。有的人，选择 996 的大公司，出自于自我实现的需要。在大的平台上，去创造一系列的精彩，而自己便是优秀的那个人。</p><p>在不了解自己想要什么，迷茫的时候，选择 996 是一种更有效的方式。对于你而言，965 带给你反而是一种时间上的浪费。6 点多回到了家里，却也不知道做些什么。那还不如，在公司混混沌沌地把钱赚了。</p><p>也因此呢，还有一种情况是：</p><p>在公司加班是一种享受。令人津津乐道的是，对于如我一样来大城市 “务工” 的程序员来说，回到住的地方反而更无聊。在公司里，还有同事可以聊天 ，还有零食可以吃，还有帅哥和靓妹可以看，何乐而不为。加班时，有免费的晚饭吃，到了 9 点回家还可以打车报销。</p><p>我们在说 996 的时候，指的是强制性的加班，而不是这种自主性的加班。</p><h1 id="965-与-996-徘徊者"><a href="#965-与-996-徘徊者" class="headerlink" title="965 与 996 徘徊者"></a>965 与 996 徘徊者</h1><p>在 TWU 的时候，我的人生有过一次的转变。那时是在 2014 年 10 月，我第一次了解到除了男性、女性，还有其 x 的性别。然后，性别在我的眼里，就变成了五种选项。从现象上来看，他/她们可能是 996 的人，又或者是 965 的人，但是实际上可能是：</p><pre><code>965 的人996 的人995 但是认为自己是 996 的人996 但是认为自己是 995 的人即不是 995 也不是 996 的人</code></pre><p>可是呢，生活是一种选择。选择了 965，可能就没有 996 的工资；选择了 996，可能就没有 965 的工资。</p><p>让我们来做个简单的自述，把你的 996 的工作变成了 965，算算你的时薪，看看你还能在现在拿多少钱？以一个月四周来看：</p><pre><code>965 意味着，一天 8 小时，一周 40 小时，一个月 160 小时。996 意味着，一天 10 小时，一周 60 小时，一个月 240 小时。</code></pre><p>所以，如果把你的 965 的工作时间换成了 996，那么你的工资应该至少要涨 50%（不包含加班费）。把你的 996 的工作时间换成了 965，那么你的工资应该减少 1/3。</p><p>最后，问题也就来了，你现在的工资少 1/3，你干吗？——你可能马上骂娘了。</p><p>你，可能会立马变成那个吐槽为什么不 996 的人呢？所以，生活并不会有太多的选择。你既要 996，又想要保持现在的工资和绩效，有点难——站着，还把钱赚了，不是一件容易的事。</p><p>生活就是这么需要一些同理心，人呢，有时要站在别人的角度来考虑问题。</p><h1 id="那么，你呢？"><a href="#那么，你呢？" class="headerlink" title="那么，你呢？"></a>那么，你呢？</h1><p>当然了，这些道理，我们都是知道的。</p><p>你呢，若是你，你会选择 965，又或者是 996，为什么呢？</p><p>来源：mp.weixin.qq.com/s/x8d4yRY6o_HISn4fqwx-Ig</p>]]></content>
+        <content type="html"><![CDATA[<p>SpringMVC 现在算是 Java 领域的一个基础性框架了，很多人天天用，可是对于 SpringMVC 方法的返回值，你又是否完全清楚呢？<br>今天我就来和大家聊一聊 SpringMVC 中四种不同类型的返回值，看看有没有 get 到你的知识盲点？</p><h1 id="1-ModelAndView"><a href="#1-ModelAndView" class="headerlink" title="1. ModelAndView"></a>1. ModelAndView</h1><p>以前前后端不分的情况下，ModelAndView 应该是最最常见的返回值类型了，现在前后端分离后，后端都是以返回 JSON 数据为主了。后端返回 ModelAndView 这个比较容易理解，<br>开发者可以在 ModelAndView 对象中指定视图名称，然后也可以绑定数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/test1&quot;)public ModelAndView getAllTest1(){    ModelAndView mv = new ModelAndView();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    // 指定数据模型    mv.addObject(&quot;bs&quot;, books);    mv.setViewName(&quot;book&quot;);    // 指定视图名    return mv;}</code></pre><p>返回 ModelAndView ，最常见的两个操作就是指定数据模型+指定视图名 。</p><h1 id="2-Void"><a href="#2-Void" class="headerlink" title="2. Void"></a>2. Void</h1><p>返回值为 void 时，可能是你真的没有值要返回，也可能是你有其他办法，我将之归为如下四类，大伙来看下。</p><h2 id="2-1-没有值"><a href="#2-1-没有值" class="headerlink" title="2.1 没有值"></a>2.1 没有值</h2><p>如果确实没有返回值，那就返回 void ，但是一定要注意，此时，方法上需要添加 @ResponseBody 注解，像下面这样：</p><pre><code>@RequestMapping(&quot;/test2&quot;)@ResponseBodypublic void test2() {    // 你的代码}</code></pre><h2 id="2-2-重定向"><a href="#2-2-重定向" class="headerlink" title="2.2 重定向"></a>2.2 重定向</h2><p>由于 SpringMVC 中的方法默认都具备 HttpServletResponse 参数，因此可以重拾 Servlet/Jsp 中的技能，可以实现重定向，像下面这样手动设置响应头：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.setStatus(302);    resp.addHeader(&quot;Location&quot;, &quot;/html/index&quot;);}</code></pre><p>也可以像下面这样直接调用重定向的方法：</p><pre><code>@RequestMapping(&quot;/test3&quot;)@ResponseBodypublic void test3(HttpServletResponse resp) {    resp.sendRedirect(&quot;/html/index&quot;);}</code></pre><p>当然，重定向无论你怎么写，都是 Servlet/Jsp 中的知识点，上面两种写法都相当于是重回远古时代。</p><h2 id="2-3-服务端跳转"><a href="#2-3-服务端跳转" class="headerlink" title="2.3 服务端跳转"></a>2.3 服务端跳转</h2><p>既然可以重定向，当然也可以服务端跳转，像下面这样：</p><pre><code>@GetMapping(&quot;/test4&quot;)public void test4(HttpServletRequest req, HttpServletResponse resp){    req.getRequestDispatcher(&quot;/WEB-INF/jsp/index.jsp&quot;).forward(req, resp);}</code></pre><h2 id="2-4-返回字符串"><a href="#2-4-返回字符串" class="headerlink" title="2.4 返回字符串"></a>2.4 返回字符串</h2><p>当然也可以利用 HttpServletResponse 返回其他字符串数据，包括但不局限于 JSON，像下面这样：</p><pre><code>@RequestMapping(&quot;/test5&quot;)@ResponseBodypublic void test5(HttpServletResponse resp) throws IOException{    resp.setContentType(&quot;application/json;charset=utf-8&quot;);    PrintWriter out = resp.getWriter();    List&lt;Book&gt; books = new ArrayList&lt;&gt;();    Book b1 = new Book();    b1.setId(1);    b1.setName(&quot;三国演义&quot;);    b1.setAuthor(&quot;罗贯中&quot;);    books.add(b1);    Book b2 = new Book();    b2.setId(2);    b2.setName(&quot;红楼梦&quot;);    b2.setAuthor(&quot;曹雪芹&quot;);    books.add(b2);    String s = new Gson().toJson(books);    out.write(s);    out.flush();    out.close();}</code></pre><p>这是返回值为 void 时候的情况，方法返回值为 void ，不一定就真的不返回了，可能还有其他的方式给前端数据。</p><h1 id="3-String"><a href="#3-String" class="headerlink" title="3. String"></a>3. String</h1><p>当 SpringMVC 方法的返回值为 String 类型时，也有几种不同情况。</p><h2 id="3-1-逻辑视图名"><a href="#3-1-逻辑视图名" class="headerlink" title="3.1 逻辑视图名"></a>3.1 逻辑视图名</h2><p>返回String 最常见的是逻辑视图名， 这种时候一般利用默认的参数 Model 来传递数据，像下面这样：</p><pre><code>@RequestMapping(&quot;/hello&quot;)public String aaa(Model model){    model.addAttribute(&quot;username&quot;, &quot;张三&quot;);    return &quot;hello&quot;;}</code></pre><p>此时返回的 hello 就是逻辑视图名， 需要携带的数据放在 model 中。    </p><h2 id="3-2-重定向"><a href="#3-2-重定向" class="headerlink" title="3.2 重定向"></a>3.2 重定向</h2><p>也可以重定向，事实上， 如果在 SpringMVC 中有重定向的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test6&quot;)public String test6(){    return &quot;redirect:/html/index&quot;;}</code></pre><h2 id="3-3-forward-转发"><a href="#3-3-forward-转发" class="headerlink" title="3.3 forward 转发"></a>3.3 forward 转发</h2><p>也可以 forward 转发，事实上，如果在 SpringMVC 中有 forward 转发的需求，一般采用这种方式：</p><pre><code>@RequestMapping(&quot;/test7&quot;)public String test7(){    return &quot;forward:/WEB-INF/jsp/order.jsp&quot;;}</code></pre><h2 id="3-4-真的是-String"><a href="#3-4-真的是-String" class="headerlink" title="3.4 真的是 String"></a>3.4 真的是 String</h2><p>当然，也有一种情况，就是你真的想返回一个 String ，此时，只要在方法上加上 @ResponseBody 注解即可，或者 Controller 上本身添加的是组合注解 @RestController，像下面这样：</p><pre><code>@RestControllerpublic class HelloController {    @GetMapping(&quot;/hello&quot;)    public String hello() {        return &quot;hello provider!&quot;;    }}</code></pre><p>也可以像下面这样：</p><pre><code>@Controllerpublic class HelloController{    @GetMapping(&quot;/hello&quot;)    @ResponseBody    public String hello()    {        return &quot;hello provider!&quot;;    }}</code></pre><p>这是返回值为 String 的几种情况。</p><h1 id="4-JSON"><a href="#4-JSON" class="headerlink" title="4.JSON"></a>4.JSON</h1><p>返回 JSON 算是最最常见的了，现在前后端分离的趋势下，大部分后端只需要返回 JSON 即可，那么常见的 List 集合、Map，实体类等都可以返回，这些数据由 HttpMessageConverter 自动转为 JSON ，<br>如果大家用了 Jackson 或者  Gson ，不需要额外配置就可以自动返回 JSON 了，因为框架帮我们提供了对应的 HttpMessageConverter ，如果大家使用了 Alibaba 的 Fastjson 的话，<br>则需要自己手动提供一个相应的 HttpMessageConverter 的实例，方法的返回值像下面这样：</p><pre><code>@GetMapping(&quot;/user&quot;)@ResponseBodypublic User getUser() {    User user = new User();    List&lt;String&gt; favorites = new ArrayList&lt;&gt;();    favorites.add(&quot;足球&quot;);    favorites.add(&quot;篮球&quot;);    user.setFavorites(favorites);    user.setUsername(&quot;chenguoji&quot;);    user.setPassword(&quot;123&quot;);    return user;}@GetMapping(&quot;/users&quot;)@ResponseBodypublic List&lt;User&gt; getALlUser() {    List&lt;User&gt; users = new ArrayList&lt;&gt;();    for (int i = 0; i &lt; 100; i++) {        User e = new User();        e.setUsername(&quot;username:&quot; + i);        e.setPassword(&quot;pwd:&quot; + i);        users.add(e);    }    return users;}</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>好了，这是我为大伙总结的 SpringMVC 方法四种不同类型的返回值，难倒是不难！有问题欢迎大伙留言讨论。</p>]]></content>
       
       
       <categories>
           
-          <category> 程序猿 </category>
+          <category> 技术 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 程序猿 </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -1229,31 +1254,6 @@
     
     
     <entry>
-      <title>我们搞开发的为什么会感觉到累</title>
-      <link href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
-      <url>/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</url>
-      
-        <content type="html"><![CDATA[<h1 id="引题"><a href="#引题" class="headerlink" title="引题"></a>引题</h1><p>昨天下班坐公车，听到一个和我年纪相仿的哥们儿打电话，隐约听到电话那边好像是他女朋友问他现在饿不饿，他说“我已经饿的不饿啦”。</p><p>饿的不饿了，听起来很幽默，对我很有触动，我在思考，我此时站在公车中部，手扶着杆有点酸，你问我手有多酸，借用打电话的那个哥们的话，随着日复一日这样的酸痛感受的反复刺激，已经酸的不酸了，你问我饿不饿，我也说不上来，飘飘渺渺，因为做编程这行几年下来，我自己的感受是，虽到了吃饭时间，但是感觉似饿非饿，吃饭感觉只是个形式。</p><p>以上都是是大多数在一线城市奋斗的人们所经历的可以忽略不计的一些事，我这里想聊聊为什么我们做IT的大多数都很累？</p><p>什么叫累，古代私塾先生教书的时候解释说，累字拆分意义是田系在头上，白话文讲就是“头上有田方知累也”。这是上古时代“累”的含义，当然现在还有大多数人为了我们国家的发展在辛勤劳累的种田，他们很辛苦。</p><h2 id="我们的累"><a href="#我们的累" class="headerlink" title="我们的累"></a>我们的累</h2><pre><code>回到标题，我觉得我门做编程的大多数人都很累，为什么累呢？</code></pre><p>到一个新公司上班，公司预先说要做一个项目或产品，你不知道到底有多复杂或简单，心里些许担心或不安，因为这些东西有可能在你预想的基础上会变的。</p><p>准备启动项目或产品，开始做需求，由于老板把时间压得紧，需求可能有些粗糙，开发时间也被压很短，因为这样，担心和紧张感铺面而来，需求会不会变，会不会遇到技术障碍，都是可变的。</p><p>开发过程中，由于需求做的不够精细（这太正常了，客户或老板都不知道他要什么），接二连三的变动和更改，紧张万分，不知道哪一会儿会又变动。</p><p>累死累活做完了，开始测试了，啊，XXX这里点击没反应，邮件怎么没发送成功，怎么发送成功了没收到，又报黄页，js错误……时刻有可能出bug。</p><p>终于上线了，客户出了个error，你帮忙看看吧（测试阶段都没有这问题哦）；日志记录了不少错误哦，你给定位下；客户投单没成功，肯定他妈的第三方接口问题；客户IE6下按钮点不了，下拉框出不来；oh shit ……</p><p>又开始新的项目了，新的一轮紧张挑战拉开帷幕……之前上线的项目或产品还会时不时给你来些心跳，下一秒未可知，明天未可知。</p><p>循环ing……</p><p>大伙可能要说担心或不安是多余的，那是你技术水平太垃圾吧，我之前的技术leader技术很好，很牛逼，平常他说的最多的是未雨绸缪，居安思危，人无远虑必有近忧这些句话。他时常会研究新东西，新技术，给我们安排好书去读让我们保持进步，说实话过程中有点反感但从中受益。</p><p>有时候我们自己需要被迫去变，因为现在大的背景变化非常大，PC向移动的迁移，时刻在变，我们也时刻因为这些变而被动变，或被这些变影响我们的生活，苹果开发初级10k左右起，直接秒了我们大部分搞了3年左右.net或java的人，听过好多身边做pc开发的都呐喊过说想变，但是真正主动承受痛苦去变成功的没多少人。</p><p>有的人可能会说了，赶紧努力吧，做管理，当领导，呵呵，我发现那些大部分位置越高的人头发越稀落，医学上说头发稀落和肾功能衰弱有关，常言道，恐伤肾，可想是担受了多少惊恐与变数，过几年你很有可能就成了他们。中层领导有来自高层的压力，高层来自boss的压力，boss来自生存的压力和股东投资者的压力等……有时候麻雀没有变成凤凰未尝不是一种解脱啊，我说这话你可以说我是个loser思维，我也诚然。我想告诉大家的是珍惜当下吧！我现在特别怀念刚参加工作那会儿，激情，敢说敢做，敢表现神经质……</p><p>所以说，我们累是因为我们所从事的事情变数很多，人最恐惧未来，因为未来不可知，上至诸侯王下至编户百姓无一幸免，我们就活在这样变化无常的区域里面，紧张嘻嘻，正是这样，久而久之变得抑郁，神经衰弱，麻木不仁，懒得动，懒得说话……恶性循环。</p><p>我们现在就是忙于应付这些变，所以搞的自己紧张忙碌，最终却没多大所获。这是我们大多数人的现状。</p><h1 id="新生"><a href="#新生" class="headerlink" title="新生"></a>新生</h1><p>  希望2019大伙都少些加班，把有限的业余时间拿来好好放松自己，勤跑步，多看书，充实自己，做到可持续发展，主动改变自己，无论您今年多大了都应该充满理想，因为中国历史上历来不缺少枯木逢春、老来发迹的例子。大器晚成的人他没有年少轻狂，没有少不更事；年轮的重叠使他们更加珍视机遇，岁月的磨砺让他们事事洞明、人情练达。我希望大伙都能达到自己的理想，并且在很嫩的时候。</p><p>  最后，关于加班我讲个小故事，希望能影响到一点点正在加班的同胞们，故事名字叫奴性是怎样练成的：第1天抽他100鞭子，他很愤怒但没敢说；第2天抽他80鞭子，他看到了生活的希望；第3天抽他50鞭子，他夸抽他的人进步了；第4天抽了他30鞭子，他跪下感动流涕；第5天抽他了20鞭子，他感恩戴德；第6天7天他已习惯了在感动中挨鞭子。并开始用鞭子抽那些同情他的人。</p><p>来源：施瓦小辛格<br><a href="http://www.cnblogs.com/wenyang-rio/p/4261987.html" target="_blank" rel="noopener">www.cnblogs.com/wenyang-rio/p/4261987.html</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 开发 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>程序员的眼界真的不要，也不能只局限于技术</title>
       <link href="/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/"/>
       <url>/2019/05/05/cheng-xu-yuan-de-yan-jie-zhen-de-bu-yao-ye-bu-neng-zhi-ju-xian-yu-ji-zhu/</url>
@@ -1271,6 +1271,31 @@
         <tags>
             
             <tag> 程序猿 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我们搞开发的为什么会感觉到累</title>
+      <link href="/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/"/>
+      <url>/2019/05/05/wo-men-gao-kai-fa-de-wei-shi-me-hui-gan-jue-dao-lei/</url>
+      
+        <content type="html"><![CDATA[<h1 id="引题"><a href="#引题" class="headerlink" title="引题"></a>引题</h1><p>昨天下班坐公车，听到一个和我年纪相仿的哥们儿打电话，隐约听到电话那边好像是他女朋友问他现在饿不饿，他说“我已经饿的不饿啦”。</p><p>饿的不饿了，听起来很幽默，对我很有触动，我在思考，我此时站在公车中部，手扶着杆有点酸，你问我手有多酸，借用打电话的那个哥们的话，随着日复一日这样的酸痛感受的反复刺激，已经酸的不酸了，你问我饿不饿，我也说不上来，飘飘渺渺，因为做编程这行几年下来，我自己的感受是，虽到了吃饭时间，但是感觉似饿非饿，吃饭感觉只是个形式。</p><p>以上都是是大多数在一线城市奋斗的人们所经历的可以忽略不计的一些事，我这里想聊聊为什么我们做IT的大多数都很累？</p><p>什么叫累，古代私塾先生教书的时候解释说，累字拆分意义是田系在头上，白话文讲就是“头上有田方知累也”。这是上古时代“累”的含义，当然现在还有大多数人为了我们国家的发展在辛勤劳累的种田，他们很辛苦。</p><h2 id="我们的累"><a href="#我们的累" class="headerlink" title="我们的累"></a>我们的累</h2><pre><code>回到标题，我觉得我门做编程的大多数人都很累，为什么累呢？</code></pre><p>到一个新公司上班，公司预先说要做一个项目或产品，你不知道到底有多复杂或简单，心里些许担心或不安，因为这些东西有可能在你预想的基础上会变的。</p><p>准备启动项目或产品，开始做需求，由于老板把时间压得紧，需求可能有些粗糙，开发时间也被压很短，因为这样，担心和紧张感铺面而来，需求会不会变，会不会遇到技术障碍，都是可变的。</p><p>开发过程中，由于需求做的不够精细（这太正常了，客户或老板都不知道他要什么），接二连三的变动和更改，紧张万分，不知道哪一会儿会又变动。</p><p>累死累活做完了，开始测试了，啊，XXX这里点击没反应，邮件怎么没发送成功，怎么发送成功了没收到，又报黄页，js错误……时刻有可能出bug。</p><p>终于上线了，客户出了个error，你帮忙看看吧（测试阶段都没有这问题哦）；日志记录了不少错误哦，你给定位下；客户投单没成功，肯定他妈的第三方接口问题；客户IE6下按钮点不了，下拉框出不来；oh shit ……</p><p>又开始新的项目了，新的一轮紧张挑战拉开帷幕……之前上线的项目或产品还会时不时给你来些心跳，下一秒未可知，明天未可知。</p><p>循环ing……</p><p>大伙可能要说担心或不安是多余的，那是你技术水平太垃圾吧，我之前的技术leader技术很好，很牛逼，平常他说的最多的是未雨绸缪，居安思危，人无远虑必有近忧这些句话。他时常会研究新东西，新技术，给我们安排好书去读让我们保持进步，说实话过程中有点反感但从中受益。</p><p>有时候我们自己需要被迫去变，因为现在大的背景变化非常大，PC向移动的迁移，时刻在变，我们也时刻因为这些变而被动变，或被这些变影响我们的生活，苹果开发初级10k左右起，直接秒了我们大部分搞了3年左右.net或java的人，听过好多身边做pc开发的都呐喊过说想变，但是真正主动承受痛苦去变成功的没多少人。</p><p>有的人可能会说了，赶紧努力吧，做管理，当领导，呵呵，我发现那些大部分位置越高的人头发越稀落，医学上说头发稀落和肾功能衰弱有关，常言道，恐伤肾，可想是担受了多少惊恐与变数，过几年你很有可能就成了他们。中层领导有来自高层的压力，高层来自boss的压力，boss来自生存的压力和股东投资者的压力等……有时候麻雀没有变成凤凰未尝不是一种解脱啊，我说这话你可以说我是个loser思维，我也诚然。我想告诉大家的是珍惜当下吧！我现在特别怀念刚参加工作那会儿，激情，敢说敢做，敢表现神经质……</p><p>所以说，我们累是因为我们所从事的事情变数很多，人最恐惧未来，因为未来不可知，上至诸侯王下至编户百姓无一幸免，我们就活在这样变化无常的区域里面，紧张嘻嘻，正是这样，久而久之变得抑郁，神经衰弱，麻木不仁，懒得动，懒得说话……恶性循环。</p><p>我们现在就是忙于应付这些变，所以搞的自己紧张忙碌，最终却没多大所获。这是我们大多数人的现状。</p><h1 id="新生"><a href="#新生" class="headerlink" title="新生"></a>新生</h1><p>  希望2019大伙都少些加班，把有限的业余时间拿来好好放松自己，勤跑步，多看书，充实自己，做到可持续发展，主动改变自己，无论您今年多大了都应该充满理想，因为中国历史上历来不缺少枯木逢春、老来发迹的例子。大器晚成的人他没有年少轻狂，没有少不更事；年轮的重叠使他们更加珍视机遇，岁月的磨砺让他们事事洞明、人情练达。我希望大伙都能达到自己的理想，并且在很嫩的时候。</p><p>  最后，关于加班我讲个小故事，希望能影响到一点点正在加班的同胞们，故事名字叫奴性是怎样练成的：第1天抽他100鞭子，他很愤怒但没敢说；第2天抽他80鞭子，他看到了生活的希望；第3天抽他50鞭子，他夸抽他的人进步了；第4天抽了他30鞭子，他跪下感动流涕；第5天抽他了20鞭子，他感恩戴德；第6天7天他已习惯了在感动中挨鞭子。并开始用鞭子抽那些同情他的人。</p><p>来源：施瓦小辛格<br><a href="http://www.cnblogs.com/wenyang-rio/p/4261987.html" target="_blank" rel="noopener">www.cnblogs.com/wenyang-rio/p/4261987.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 开发 </tag>
             
         </tags>
       
@@ -1916,6 +1941,31 @@
     
     
     <entry>
+      <title>关于</title>
+      <link href="/2019/03/21/about/"/>
+      <url>/2019/03/21/about/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h1><p>博主是一名Java码农。</p><p>虽然还未走上人生巅峰，但是一直保持着一个码农的自我修养。</p><p>用一句话概括博主：每天瞎逼忙，还没赚到钱。</p><p>但是博主有一颗分享技术的心，我会尽量用通俗易懂的方式，分享个人的知识。</p><p>博客的宗旨就是分享知识，分享技术，不一定高深，但一定是博主用心写作而成的。</p><p>所有人都是从0开始起步，在学习过程中，会遇到各种困难，这个时候如果可以借鉴别人的经验，会让我们省力不少，希望我的博客也能帮助到你。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 关于 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客说明 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java面试中最高频的那20%知识点！</title>
       <link href="/2019/03/21/java-mian-shi/"/>
       <url>/2019/03/21/java-mian-shi/</url>
@@ -1960,31 +2010,6 @@
         <tags>
             
             <tag> 大数据 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于</title>
-      <link href="/2019/03/21/about/"/>
-      <url>/2019/03/21/about/</url>
-      
-        <content type="html"><![CDATA[<h1 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h1><p>博主是一名Java码农。</p><p>虽然还未走上人生巅峰，但是一直保持着一个码农的自我修养。</p><p>用一句话概括博主：每天瞎逼忙，还没赚到钱。</p><p>但是博主有一颗分享技术的心，我会尽量用通俗易懂的方式，分享个人的知识。</p><p>博客的宗旨就是分享知识，分享技术，不一定高深，但一定是博主用心写作而成的。</p><p>所有人都是从0开始起步，在学习过程中，会遇到各种困难，这个时候如果可以借鉴别人的经验，会让我们省力不少，希望我的博客也能帮助到你。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 关于 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客说明 </tag>
             
         </tags>
       

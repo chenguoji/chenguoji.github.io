@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2020-06-12T13:59:50.572Z</updated>
+  <updated>2020-06-24T06:48:26.695Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM 史上最最最完整深入解析</title>
+    <link href="http://chenguoji.com/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/"/>
+    <id>http://chenguoji.com/2020/06/01/jvm-shi-shang-zui-zui-zui-wan-zheng-shen-ru-jie-xi/</id>
+    <published>2020-06-01T02:39:50.000Z</published>
+    <updated>2020-06-24T06:48:26.695Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;转自：SegmentFault   作者：Huangy远&lt;br&gt;segmentfault.com/a/1190000014395186&lt;/p&gt;
+&lt;h1 id=&quot;Java运行时数据区：&quot;&gt;&lt;a href=&quot;#Java运行时数据区：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>2019年度总结</title>
@@ -516,32 +543,6 @@
     
     
       <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>8种常见SQL错误用法，你中招了吗？</title>
-    <link href="http://chenguoji.com/2019/06/18/8-chong-chang-jian-sql-cuo-wu-yong-fa-ni-zhong-zhao-liao-ma/"/>
-    <id>http://chenguoji.com/2019/06/18/8-chong-chang-jian-sql-cuo-wu-yong-fa-ni-zhong-zhao-liao-ma/</id>
-    <published>2019-06-18T02:39:50.000Z</published>
-    <updated>2019-06-20T07:01:19.234Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1、LIMIT-语句&quot;&gt;&lt;a href=&quot;#1、LIMIT-语句&quot; class=&quot;headerlink&quot; title=&quot;1、LIMIT 语句&quot;&gt;&lt;/a&gt;1、LIMIT
-        
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库" scheme="http://chenguoji.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
