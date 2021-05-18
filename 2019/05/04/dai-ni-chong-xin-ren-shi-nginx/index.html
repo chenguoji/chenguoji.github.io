@@ -1,0 +1,1316 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="带你重新认识Nginx！, 这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；这里，只帮助开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。">
+    <meta name="description" content="前言作为一名开发人员，你是不是经常碰到领导让你上服务器去修改 Nginx 配置，然而你会以“我是开发，这个我不会”为理由搪塞过去呢！今天就让我们一起告别这种尴尬，向“真正”的程序员迈进！！！
+Nginx 概述Nginx 是开源、高性能、高可">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>带你重新认识Nginx！ | 陈国际博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">陈国际博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories/毕业设计/" class="waves-effect waves-light">
+            
+            <i class="fa fa-align-justify"></i>
+            
+            <span>毕设</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">陈国际博客</div>
+        <div class="logo-desc">
+            
+            为中华软件之崛起而编程 ,努力做有价值的技术文章
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories/毕业设计/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-align-justify"></i>
+                
+                毕设
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        带你重新认识Nginx！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/nginx/" target="_blank">
+                                <span class="chip bg-color">nginx</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/nginx/" class="post-category" target="_blank">
+                                nginx
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-05-04
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        3.5k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        13 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一名开发人员，你是不是经常碰到领导让你上服务器去修改 Nginx 配置，然而你会以“我是开发，这个我不会”为理由搪塞过去呢！<br>今天就让我们一起告别这种尴尬，向“真正”的程序员迈进！！！</p>
+<h1 id="Nginx-概述"><a href="#Nginx-概述" class="headerlink" title="Nginx 概述"></a>Nginx 概述</h1><p>Nginx 是开源、高性能、高可靠的 Web 和反向代理服务器，而且支持热部署，几乎可以做到 7 * 24 小时不间断运行，即使运行几个月也不需要重新启动，<br>还能在不间断服务的情况下对软件版本进行热更新。性能是 Nginx 最重要的考量，其占用内存少、并发能力强、能支持高达 5w 个并发连接数，<br>最重要的是， Nginx 是免费的并可以商业化，配置使用也比较简单。</p>
+<h1 id="Nginx-特点"><a href="#Nginx-特点" class="headerlink" title="Nginx 特点"></a>Nginx 特点</h1><p>高并发、高性能；<br>模块化架构使得它的扩展性非常好；<br>异步非阻塞的事件驱动模型这点和 Node.js 相似；<br>相对于其它服务器来说它可以连续几个月甚至更长而不需要重启服务器使得它具有高可靠性；<br>热部署、平滑升级；<br>完全开源，生态繁荣；</p>
+<h1 id="Nginx-作用"><a href="#Nginx-作用" class="headerlink" title="Nginx 作用"></a>Nginx 作用</h1><p>Nginx 的最重要的几个使用场景：</p>
+<p>静态资源服务，通过本地文件系统提供服务；<br>反向代理服务，延伸出包括缓存、负载均衡等；<br>API 服务， OpenResty ；</p>
+<p>对于前端来说 Node.js 并不陌生， Nginx 和 Node.js 的很多理念类似， HTTP 服务器、事件驱动、异步非阻塞等，且 Nginx 的大部分功能使用 Node.js 也可以实现，<br>但 Nginx 和 Node.js 并不冲突，都有自己擅长的领域。Nginx 擅长于底层服务器端资源的处理（静态资源处理转发、反向代理，负载均衡等），<br> Node.js 更擅长上层具体业务逻辑的处理，两者可以完美组合。</p>
+<h1 id="Nginx-安装"><a href="#Nginx-安装" class="headerlink" title="Nginx 安装"></a>Nginx 安装</h1><p>本文演示的是 Linux centOS 7.x 的操作系统上安装 Nginx ，至于在其它操作系统上进行安装可以网上自行搜索，都非常简单的。</p>
+<p>使用 yum 安装 Nginx ：</p>
+<pre><code>yum install nginx -y
+</code></pre><p>安装完成后，通过 rpm -ql nginx 命令查看 Nginx 的安装信息：</p>
+<pre><code># Nginx配置文件
+/etc/nginx/nginx.conf # nginx 主配置文件
+/etc/nginx/nginx.conf.default
+
+# 可执行程序文件
+/usr/bin/nginx-upgrade
+/usr/sbin/nginx
+
+# nginx库文件
+/usr/lib/systemd/system/nginx.service # 用于配置系统守护进程
+/usr/lib64/nginx/modules # Nginx模块目录
+
+# 帮助文档
+/usr/share/doc/nginx-1.16.1
+/usr/share/doc/nginx-1.16.1/CHANGES
+/usr/share/doc/nginx-1.16.1/README
+/usr/share/doc/nginx-1.16.1/README.dynamic
+/usr/share/doc/nginx-1.16.1/UPGRADE-NOTES-1.6-to-1.10
+
+# 静态资源目录
+/usr/share/nginx/html/404.html
+/usr/share/nginx/html/50x.html
+/usr/share/nginx/html/index.html
+
+# 存放Nginx日志文件
+/var/log/nginx
+</code></pre><p>主要关注的文件夹有两个：</p>
+<p>/etc/nginx/conf.d/ 是子配置项存放处， /etc/nginx/nginx.conf 主配置文件会默认把这个文件夹中所有子配置项都引入；<br>/usr/share/nginx/html/ 静态文件都放在这个文件夹，也可以根据你自己的习惯放在其他地方；</p>
+<h1 id="Nginx-常用命令"><a href="#Nginx-常用命令" class="headerlink" title="Nginx 常用命令"></a>Nginx 常用命令</h1><h2 id="systemctl-系统命令："><a href="#systemctl-系统命令：" class="headerlink" title="systemctl 系统命令："></a>systemctl 系统命令：</h2><pre><code># 开机配置
+systemctl enable nginx # 开机自动启动
+systemctl disable nginx # 关闭开机自动启动
+
+# 启动Nginx
+systemctl start nginx # 启动Nginx成功后，可以直接访问主机IP，此时会展示Nginx默认页面
+
+# 停止Nginx
+systemctl stop nginx
+
+# 重启Nginx
+systemctl restart nginx
+
+# 重新加载Nginx
+systemctl reload nginx
+
+# 查看 Nginx 运行状态
+systemctl status nginx
+
+# 查看Nginx进程
+ps -ef | grep nginx
+
+# 杀死Nginx进程
+kill -9 pid # 根据上面查看到的Nginx进程号，杀死Nginx进程，-9 表示强制结束进程
+</code></pre><h2 id="Nginx-应用程序命令："><a href="#Nginx-应用程序命令：" class="headerlink" title="Nginx 应用程序命令："></a>Nginx 应用程序命令：</h2><pre><code>nginx -s reload  # 向主进程发送信号，重新加载配置文件，热重启
+nginx -s reopen  # 重启 
+Nginxnginx -s stop    # 快速关闭
+nginx -s quit    # 等待工作进程处理完成后关闭
+nginx -T         # 查看当前 Nginx 最终的配置
+nginx -t         # 检查配置是否有问题    
+</code></pre><h1 id="Nginx-核心配置"><a href="#Nginx-核心配置" class="headerlink" title="Nginx 核心配置"></a>Nginx 核心配置</h1><p>配置文件结构<br>Nginx 的典型配置示例：</p>
+<pre><code># main段配置信息
+user  nginx;                        # 运行用户，默认即是nginx，可以不进行设置
+worker_processes  auto;             # Nginx 进程数，一般设置为和 CPU 核数一样
+error_log  /var/log/nginx/error.log warn;   # Nginx 的错误日志存放目录
+pid        /var/run/nginx.pid;      # Nginx 服务启动时的 pid 存放位置
+
+# events段配置信息
+events {
+    use epoll;     # 使用epoll的I/O模型(如果你不知道Nginx该使用哪种轮询方法，会自动选择一个最适合你操作系统的)
+    worker_connections 1024;   # 每个进程允许最大并发数
+}
+
+# http段配置信息
+# 配置使用最频繁的部分，代理、缓存、日志定义等绝大多数功能和第三方模块的配置都在这里设置
+http { 
+    # 设置日志模式
+    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;
+                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;
+                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;
+
+    access_log  /var/log/nginx/access.log  main;   # Nginx访问日志存放位置
+
+    sendfile            on;   # 开启高效传输模式
+    tcp_nopush          on;   # 减少网络报文段的数量
+    tcp_nodelay         on;
+    keepalive_timeout   65;   # 保持连接的时间，也叫超时时间，单位秒
+    types_hash_max_size 2048;
+
+    include             /etc/nginx/mime.types;      # 文件扩展名与类型映射表
+    default_type        application/octet-stream;   # 默认文件类型
+
+    include /etc/nginx/conf.d/*.conf;   # 加载子配置项
+
+    # server段配置信息
+    server {
+     listen       80;       # 配置监听的端口
+     server_name  localhost;    # 配置的域名
+
+     # location段配置信息
+     location / {
+      root   /usr/share/nginx/html;  # 网站根目录
+      index  index.html index.htm;   # 默认首页文件
+      deny 172.168.22.11;   # 禁止访问的ip地址，可以为all
+      allow 172.168.33.44；# 允许访问的ip地址，可以为all
+     }
+
+     error_page 500 502 503 504 /50x.html;  # 默认50x对应的访问页面
+     error_page 400 404 error.html;   # 同上
+    }
+}
+</code></pre><p>main 全局配置，对全局生效；<br>events 配置影响 Nginx 服务器与用户的网络连接；<br>http 配置代理，缓存，日志定义等绝大多数功能和第三方模块的配置；<br>server 配置虚拟主机的相关参数，一个 http 块中可以有多个 server 块；<br>location 用于配置匹配的 uri ；<br>upstream 配置后端服务器具体地址，负载均衡配置不可或缺的部分；</p>
+<p>配置文件 main 段核心参数</p>
+<p>user<br>指定运行 Nginx 的 woker 子进程的属主和属组，其中组可以不指定。</p>
+<pre><code>user USERNAME [GROUP]
+
+user nginx lion; # 用户是nginx;组是lion
+</code></pre><p>pid<br>指定运行 Nginx master 主进程的 pid 文件存放路径。</p>
+<pre><code>pid /opt/nginx/logs/nginx.pid # master主进程的的pid存放在nginx.pid的文件
+</code></pre><p>worker_rlimit_nofile_number<br>指定 worker 子进程可以打开的最大文件句柄数。</p>
+<pre><code>worker_rlimit_nofile 20480; # 可以理解成每个worker子进程的最大连接数量。
+</code></pre><p>worker_rlimit_core<br>指定 worker 子进程异常终止后的 core 文件，用于记录分析问题。</p>
+<pre><code>worker_rlimit_core 50M; # 存放大小限制working_directory /opt/nginx/tmp; # 存放目录
+</code></pre><p>worker_processes_number<br>指定 Nginx 启动的 worker 子进程数量。</p>
+<pre><code>worker_processes 4; # 指定具体子进程数量
+worker_processes auto; # 与当前cpu物理核心数一致
+</code></pre><p>worker_cpu_affinity<br>将每个 worker 子进程与我们的 cpu 物理核心绑定。</p>
+<pre><code>worker_cpu_affinity 0001 0010 0100 1000; # 4个物理核心，4个worker子进程
+</code></pre><p>将每个 worker 子进程与特定 CPU 物理核心绑定，优势在于，避免同一个 worker 子进程在不同的 CPU 核心上切换，缓存失效，降低性能。但其并不能真正的避免进程切换。</p>
+<p>worker_priority<br>指定 worker 子进程的 nice 值，以调整运行 Nginx 的优先级，通常设定为负值，以优先调用 Nginx 。</p>
+<pre><code>worker_priority -10; # 120-10=110，110就是最终的优先级
+</code></pre><p>Linux 默认进程的优先级值是120，值越小越优先；nice 定范围为 -20 到 +19</p>
+<p>[备注] 应用的默认优先级值是120加上 nice 值等于它最终的值，这个值越小，优先级越高。</p>
+<p>worker_shutdown_timeout<br>指定 worker 子进程优雅退出时的超时时间。</p>
+<pre><code>worker_shutdown_timeout 5s;timer_resolution
+</code></pre><p>worker 子进程内部使用的计时器精度，调整时间间隔越大，系统调用越少，有利于性能提升；反之，系统调用越多，性能下降。</p>
+<p>timer_resolution 100ms;<br>在 Linux 系统中，用户需要获取计时器时需要向操作系统内核发送请求，有请求就必然会有开销，因此这个间隔越大开销就越小。</p>
+<p>daemon<br>指定 Nginx 的运行方式，前台还是后台，前台用于调试，后台用于生产。</p>
+<pre><code>daemon off; # 默认是on，后台运行模式
+</code></pre><h1 id="Nginx-应用核心概念"><a href="#Nginx-应用核心概念" class="headerlink" title="Nginx 应用核心概念"></a>Nginx 应用核心概念</h1><p>代理是在服务器和客户端之间假设的一层服务器，代理将接收客户端的请求并将它转发给服务器，然后将服务端的响应转发给客户端。</p>
+<p>不管是正向代理还是反向代理，实现的都是上面的功能。</p>
+<h2 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h2><p>正向代理，意思是一个位于客户端和原始服务器(origin server)之间的服务器，为了从原始服务器取得内容，客户端向代理发送一个请求并指定目标(原始服务器)，<br>然后代理向原始服务器转交请求并将获得的内容返回给客户端。</p>
+<p>正向代理是为我们服务的，即为客户端服务的，客户端可以根据正向代理访问到它本身无法访问到的服务器资源。</p>
+<p>正向代理对我们是透明的，对服务端是非透明的，即服务端并不知道自己收到的是来自代理的访问还是来自真实客户端的访问。</p>
+<h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><p>反向代理*（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，<br>此时代理服务器对外就表现为一个反向代理服务器。</p>
+<p>反向代理是为服务端服务的，反向代理可以帮助服务器接收来自客户端的请求，帮助服务器做请求转发，负载均衡等。<br>反向代理对服务端是透明的，对我们是非透明的，即我们并不知道自己访问的是代理服务器，而服务器知道反向代理在为他服务。<br>反向代理的优势：</p>
+<p>隐藏真实服务器；<br>负载均衡便于横向扩充后端动态服务；<br>动静分离，提升系统健壮性；</p>
+<p>那么“动静分离”是什么？负载均衡又是什么？</p>
+<h1 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h1><p>动静分离是指在 web 服务器架构中，将静态页面与动态页面或者静态内容接口和动态内容接口分开不同系统访问的架构设计方法，进而提示整个服务的访问性和可维护性。</p>
+<p>一般来说，都需要将动态资源和静态资源分开，由于 Nginx 的高并发和静态资源缓存等特性，经常将静态资源部署在 Nginx 上。如果请求的是静态资源，直接到静态资源目录获取资源，<br>如果是动态资源的请求，则利用反向代理的原理，把请求转发给对应后台应用去处理，从而实现动静分离。</p>
+<p>使用前后端分离后，可以很大程度提升静态资源的访问速度，即使动态服务不可用，静态资源的访问也不会受到影响。</p>
+<h1 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h1><p>一般情况下，客户端发送多个请求到服务器，服务器处理请求，其中一部分可能要操作一些资源比如数据库、静态资源等，服务器处理完毕后，再将结果返回给客户端。</p>
+<p>这种模式对于早期的系统来说，功能要求不复杂，且并发请求相对较少的情况下还能胜任，成本也低。随着信息数量不断增长，访问量和数据量飞速增长，<br>以及系统业务复杂度持续增加，这种做法已无法满足要求，并发量特别大时，服务器容易崩。</p>
+<p>很明显这是由于服务器性能的瓶颈造成的问题，除了堆机器之外，最重要的做法就是负载均衡。</p>
+<p>请求爆发式增长的情况下，单个机器性能再强劲也无法满足要求了，这个时候集群的概念产生了，单个服务器解决不了的问题，可以使用多个服务器，然后将请求分发到各个服务器上，<br>将负载分发到不同的服务器，这就是负载均衡，核心是「分摊压力」。 Nginx 实现负载均衡，一般来说指的是将请求转发给服务器集群。</p>
+<p>举个具体的例子，晚高峰乘坐地铁的时候，入站口经常会有地铁工作人员大喇叭“请走 B 口， B 口人少车空….”，这个工作人员的作用就是负载均衡。</p>
+<h2 id="Nginx-实现负载均衡的策略："><a href="#Nginx-实现负载均衡的策略：" class="headerlink" title="Nginx 实现负载均衡的策略："></a>Nginx 实现负载均衡的策略：</h2><p>轮询策略：默认情况下采用的策略，将所有客户端请求轮询分配给服务端。这种策略是可以正常工作的，但是如果其中某一台服务器压力太大，出现延迟，会影响所有分配在这台服务器下的用户。<br>最小连接数策略：将请求优先分配给压力较小的服务器，它可以平衡每个队列的长度，并避免向压力大的服务器添加更多的请求。<br>最快响应时间策略：优先分配给响应时间最短的服务器。<br>客户端 ip 绑定策略：来自同一个 ip 的请求永远只分配一台服务器，有效解决了动态网页存在的 session 共享问题。</p>
+<p>来源：<a href="https://juejin.cn/post/6942607113118023710" target="_blank" rel="noopener">https://juejin.cn/post/6942607113118023710</a></p>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载请注明</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="cc_by_url">
+                    <img alt style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png">
+                </a>
+            </div>
+            <br>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+                    《带你重新认识Nginx！》
+                </span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/04/dai-ni-chong-xin-ren-shi-nginx/" property="cc:attributionName" rel="cc:attributionURL">
+                chen guoji
+            </a> under
+            <a rel="license" href="cc_by_url">
+                cc_by_name
+            </a>licensed
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>pleaseFollowReprintPolicy</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">checkPolicy</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'sLQDMQ9rXtxonsupRe4YLCBD-gzGzoHsz',
+        appKey: 'eiVU90k574vUVACVPNeizAv9',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '说点什么吧'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/05/04/cheng-xu-yuan-ni-gai-wei-zi-ji-jia-xin-yong-qian-sheng-qian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="程序猿，你该为自己加薪--用钱生钱">
+                        
+                        <span class="card-title">程序猿，你该为自己加薪--用钱生钱</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            “如果你没找到一个当你睡觉时还能挣钱的方法，你将工作到死。” ——巴菲特
+前言唯金钱与技术不可辜负。
+作为智商比较高的程序员，这么难的程序都能学会，投资理财就更不用说啦。
+金钱是有规律的，只要掌握了一定的规律，虽说不能一夜暴富，但是把掌握的
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/程序猿/" target="_blank">
+                        <span class="chip bg-color">程序猿</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/04/cheng-xu-yuan-wei-shi-me-bu-xie-wen-dang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="程序员为什么不写文档？">
+                        
+                        <span class="card-title">程序员为什么不写文档？</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            写在前面为什么程序员不写文档？是不想写吗？最近，资深软件工程师 Kislay Verma 分析了背后的深层原因。
+他认为软件工程师不写文档有以下两个主要原因。
+#写作太难了
+和所有人一样，软件工程师不写文档的原因是写作非常难。
+写作本身是一
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/程序猿/" class="post-category" target="_blank">
+                                    程序猿
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/程序猿/" target="_blank">
+                        <span class="chip bg-color">程序猿</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1,h2, h3, h4,h5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4,h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://github.com/chenguoji" target="_blank"> chenguoji </a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 
+			<p>免责申明：网站所有作品均来自于互联网，仅供读者预览及学习交流使用，如果喜欢请购买正版资源！<br> 原作者如果认为本站侵犯了您的版权，可<a href="http://wpa.qq.com/msgrd?v=3&uin=971919782&site=qq&menu=yes"> 联系本人 </a>  会立即删除!</p>
+			<p> 欢迎加入官方Q群交流：<a href="https://jq.qq.com/?_wv=1027&k=5WCEBNR"> Java毕设分享官方群 </a> </p>
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">163k</span>
+            
+
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:chenguo_ji@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=971919782" class="tooltipped" data-tooltip="QQ联系我: 971919782" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

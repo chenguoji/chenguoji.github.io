@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenguoji.com/"/>
-  <updated>2020-06-24T06:48:26.695Z</updated>
+  <updated>2021-03-27T13:54:09.467Z</updated>
   <id>http://chenguoji.com/</id>
   
   <author>
@@ -15,6 +15,138 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Boot 实战</title>
+    <link href="http://chenguoji.com/2021/03/21/springboot-shi-zhan-di-yi-jie/"/>
+    <id>http://chenguoji.com/2021/03/21/springboot-shi-zhan-di-yi-jie/</id>
+    <published>2021-03-21T03:39:50.000Z</published>
+    <updated>2021-03-27T13:54:09.467Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;认识一下Spring-Boot&quot;&gt;&lt;a href=&quot;#认识一下Spring-Boot&quot; class=&quot;headerlink&quot; title=&quot;认识一下Spring Boot&quot;&gt;&lt;/a&gt;认识一下Spring
+        
+      
+    
+    </summary>
+    
+      <category term="SpringBoot" scheme="http://chenguoji.com/categories/SpringBoot/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工作中碰上那些给你挖坑或者带你踩坑的猪队友，你会怎么办？</title>
+    <link href="http://chenguoji.com/2021/03/05/gong-zuo-zhong-peng-shang-na-xie-gei-ni-wa-keng-huo-zhe-dai-ni-cai-keng-de-zhu-dui-you-ni-hui-zen-me-ban/"/>
+    <id>http://chenguoji.com/2021/03/05/gong-zuo-zhong-peng-shang-na-xie-gei-ni-wa-keng-huo-zhe-dai-ni-cai-keng-de-zhu-dui-you-ni-hui-zen-me-ban/</id>
+    <published>2021-03-05T03:39:50.000Z</published>
+    <updated>2021-05-13T01:54:08.257Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;如果你在工作中碰上那些给你挖坑或者带你踩坑的猪队友，你会怎么办？&lt;/p&gt;
+&lt;h1 id=&quot;正文&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="职场" scheme="http://chenguoji.com/categories/%E8%81%8C%E5%9C%BA/"/>
+    
+    
+      <category term="团队" scheme="http://chenguoji.com/tags/%E5%9B%A2%E9%98%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离职的时候不能说的十句话</title>
+    <link href="http://chenguoji.com/2021/03/01/chi-zhi-de-shi-hou-bu-neng-shuo-de-shi-ju-hua/"/>
+    <id>http://chenguoji.com/2021/03/01/chi-zhi-de-shi-hou-bu-neng-shuo-de-shi-ju-hua/</id>
+    <published>2021-03-01T03:39:50.000Z</published>
+    <updated>2021-05-13T01:52:16.911Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;又是一年一季的跳槽季，也不知道此刻的你是不是正打算离职了，如果打算离职那你应该好好看看这篇文章。&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="职场" scheme="http://chenguoji.com/categories/%E8%81%8C%E5%9C%BA/"/>
+    
+    
+      <category term="离职" scheme="http://chenguoji.com/tags/%E7%A6%BB%E8%81%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java之多线程</title>
+    <link href="http://chenguoji.com/2020/10/26/java-zhi-duo-xian-cheng/"/>
+    <id>http://chenguoji.com/2020/10/26/java-zhi-duo-xian-cheng/</id>
+    <published>2020-10-26T02:39:50.000Z</published>
+    <updated>2020-10-31T05:45:07.855Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;多线程多态的实现机制&quot;&gt;&lt;a href=&quot;#多线程多态的实现机制&quot; class=&quot;headerlink&quot; title=&quot;多线程多态的实现机制:&quot;&gt;&lt;/a&gt;多线程多态的实现机制:&lt;/h1&gt;&lt;p&gt;(1) 掌握 Executors
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL Server日期与字符串之间的转换</title>
+    <link href="http://chenguoji.com/2020/07/01/sql-server-ri-qi-yu-zi-fu-chuan-zhi-jian-de-zhuan-huan/"/>
+    <id>http://chenguoji.com/2020/07/01/sql-server-ri-qi-yu-zi-fu-chuan-zhi-jian-de-zhuan-huan/</id>
+    <published>2020-07-01T02:39:50.000Z</published>
+    <updated>2020-07-17T07:38:21.441Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、日期转换为字符串、日期格式&quot;&gt;&lt;a href=&quot;#一、日期转换为字符串、日期格式&quot; class=&quot;headerlink&quot; title=&quot;一、日期转换为字符串、日期格式&quot;&gt;&lt;/a&gt;一、日期转换为字符串、日期格式&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://chenguoji.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="SQL Server" scheme="http://chenguoji.com/tags/SQL-Server/"/>
+    
+  </entry>
   
   <entry>
     <title>JVM 史上最最最完整深入解析</title>
@@ -282,32 +414,6 @@
   </entry>
   
   <entry>
-    <title>开发中一些常会用到的sql和java语句</title>
-    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
-    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
-    <published>2019-07-21T02:39:50.000Z</published>
-    <updated>2019-09-03T08:00:04.132Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java开发必知道的国外20大网站</title>
     <link href="http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/"/>
     <id>http://chenguoji.com/2019/07/21/java-kai-fa-bi-zhi-dao-de-guo-wai-20-da-wang-zhan/</id>
@@ -322,6 +428,32 @@
         
           &lt;p&gt;1、谷歌  &lt;a href=&quot;https://www.google.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.google.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2、&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发中一些常会用到的sql和java语句</title>
+    <link href="http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/"/>
+    <id>http://chenguoji.com/2019/07/21/kai-fa-zhong-yi-xie-chang-hui-yong-dao-de-sql-he-java-yu-ju/</id>
+    <published>2019-07-21T02:39:50.000Z</published>
+    <updated>2019-09-03T08:00:04.132Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、ORACLE&quot;&gt;&lt;a href=&quot;#一、ORACLE&quot; class=&quot;headerlink&quot; title=&quot;一、ORACLE&quot;&gt;&lt;/a&gt;一、ORACLE&lt;/h1&gt;&lt;h2 id=&quot;1-Oracle锁表与解锁&quot;&gt;&lt;a href=&quot;#1-Oracle锁表与解锁&quot;
         
       
     
@@ -409,140 +541,6 @@
     
     
       <category term="面试" scheme="http://chenguoji.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>系统运行缓慢，CPU 100%，Full GC次数过多，这一招帮你全搞定！</title>
-    <link href="http://chenguoji.com/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/"/>
-    <id>http://chenguoji.com/2019/07/01/xi-tong-yun-xing-huan-man-cpu-100-full-gc-ci-shu-guo-duo-zhe-yi-zhao-bang-ni-quan-gao-ding/</id>
-    <published>2019-07-01T02:39:50.000Z</published>
-    <updated>2019-07-08T03:08:32.175Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;处理过线上问题的同学基本上都会遇到系统突然运行缓慢，CPU 100%，以及Full
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这么牛逼的正则表达式，可惜你不会写！</title>
-    <link href="http://chenguoji.com/2019/06/28/zhe-me-niu-bi-de-zheng-ze-biao-da-shi-ke-xi-ni-bu-hui-xie/"/>
-    <id>http://chenguoji.com/2019/06/28/zhe-me-niu-bi-de-zheng-ze-biao-da-shi-ke-xi-ni-bu-hui-xie/</id>
-    <published>2019-06-28T02:39:50.000Z</published>
-    <updated>2019-06-28T01:50:33.548Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、校验数字的表达式&quot;&gt;&lt;a href=&quot;#一、校验数字的表达式&quot; class=&quot;headerlink&quot; title=&quot;一、校验数字的表达式&quot;&gt;&lt;/a&gt;一、校验数字的表达式&lt;/h1&gt;&lt;p&gt;数字：&lt;br&gt;    ^[0-9]*$&lt;/p&gt;
-&lt;p&gt;n位的数字：&lt;br&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自动创建Spring Boot 工程，太爽了！</title>
-    <link href="http://chenguoji.com/2019/06/24/zi-dong-chuang-jian-spring-boot-gong-cheng-tai-shuang-liao/"/>
-    <id>http://chenguoji.com/2019/06/24/zi-dong-chuang-jian-spring-boot-gong-cheng-tai-shuang-liao/</id>
-    <published>2019-06-24T02:39:50.000Z</published>
-    <updated>2019-06-24T02:47:26.203Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Spring Boot 大家都知道是啥吧？&lt;/p&gt;
-&lt;p&gt;顺便再往下看，今天博主给你带来年轻人的第一个 Spring Boot 工程，撸码史无前例的轻松，那就一个字：爽！&lt;/p&gt;
-&lt;h1 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【美团】Java岗154道面试题</title>
-    <link href="http://chenguoji.com/2019/06/21/mei-tuan-java-gang-154-dao-mian-shi-ti/"/>
-    <id>http://chenguoji.com/2019/06/21/mei-tuan-java-gang-154-dao-mian-shi-ti/</id>
-    <published>2019-06-21T02:39:50.000Z</published>
-    <updated>2019-06-21T05:27:07.213Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Java集合22题&quot;&gt;&lt;a href=&quot;#Java集合22题&quot; class=&quot;headerlink&quot; title=&quot;Java集合22题&quot;&gt;&lt;/a&gt;Java集合22题&lt;/h1&gt;&lt;p&gt;ArrayList 和 Vector 的区别。&lt;br&gt;说说
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何写出让同事无法维护的代码？</title>
-    <link href="http://chenguoji.com/2019/06/20/ru-he-xie-chu-rang-tong-shi-wu-fa-wei-hu-de-dai-ma/"/>
-    <id>http://chenguoji.com/2019/06/20/ru-he-xie-chu-rang-tong-shi-wu-fa-wei-hu-de-dai-ma/</id>
-    <published>2019-06-20T02:39:50.000Z</published>
-    <updated>2019-06-21T05:42:49.748Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;对，你没看错，本文就是教你怎么写出让同事无法维护的代码。&lt;/p&gt;
-&lt;h1 id=&quot;一、程序命名&quot;&gt;&lt;a href=&quot;#一、程序命名&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://chenguoji.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chenguoji.com/tags/java/"/>
     
   </entry>
   
